@@ -69,7 +69,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="bg-white p-4 sm:p-6 rounded-xl shadow-lg border border-gray-100 max-w-lg"
+              className="bg-white lg:mb-4 p-4 sm:p-6 rounded-xl shadow-lg border border-gray-100 max-w-lg"
             >
               <div className="flex items-center gap-2 mb-3 sm:mb-4">
                 <div className="w-5 h-5 sm:w-6 sm:h-6 bg-red-500 rounded-full flex items-center justify-center">
@@ -132,6 +132,8 @@ export default function Hero() {
               fill
               className="object-contain object-right"
               priority
+              quality={100}
+              sizes="(min-width: 1024px) 60vw, 100vw"
             />
           </motion.div>
 
@@ -148,6 +150,8 @@ export default function Hero() {
               fill
               className="object-contain"
               priority
+              quality={100}
+              sizes="(max-width: 1023px) 100vw, 0vw"
             />
           </motion.div>
         </div>

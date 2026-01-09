@@ -112,11 +112,23 @@ export default function Header() {
                     : "border-gray-200 hover:bg-gray-50"
                 }`}
               >
-                <svg className="w-5 h-4 rounded-sm shadow-sm" viewBox="0 0 30 20">
-                  <rect width="30" height="20" fill="#DA251D"/>
-                  <polygon points="15,4 16.76,9.41 22.5,9.41 17.87,12.59 19.63,18 15,14.82 10.37,18 12.13,12.59 7.5,9.41 13.24,9.41" fill="#FFFF00"/>
+                <svg
+                  className="w-5 h-4 rounded-sm shadow-sm"
+                  viewBox="0 0 30 20"
+                >
+                  <rect width="30" height="20" fill="#DA251D" />
+                  <polygon
+                    points="15,4 16.76,9.41 22.5,9.41 17.87,12.59 19.63,18 15,14.82 10.37,18 12.13,12.59 7.5,9.41 13.24,9.41"
+                    fill="#FFFF00"
+                  />
                 </svg>
-                <span className={`text-xs font-medium ${language === "vi" ? "text-green-primary" : "text-gray-600"}`}>VI</span>
+                <span
+                  className={`text-xs font-medium ${
+                    language === "vi" ? "text-green-primary" : "text-gray-600"
+                  }`}
+                >
+                  VI
+                </span>
               </button>
               <button
                 onClick={() => setLanguage("en")}
@@ -126,14 +138,35 @@ export default function Header() {
                     : "border-gray-200 hover:bg-gray-50"
                 }`}
               >
-                <svg className="w-5 h-4 rounded-sm shadow-sm" viewBox="0 0 30 20">
-                  <rect width="30" height="20" fill="#012169"/>
-                  <path d="M0,0 L30,20 M30,0 L0,20" stroke="#FFF" strokeWidth="3"/>
-                  <path d="M0,0 L30,20 M30,0 L0,20" stroke="#C8102E" strokeWidth="2"/>
-                  <path d="M15,0 V20 M0,10 H30" stroke="#FFF" strokeWidth="5"/>
-                  <path d="M15,0 V20 M0,10 H30" stroke="#C8102E" strokeWidth="3"/>
+                <svg
+                  className="w-5 h-4 rounded-sm shadow-sm"
+                  viewBox="0 0 30 20"
+                >
+                  <rect width="30" height="20" fill="#012169" />
+                  <path
+                    d="M0,0 L30,20 M30,0 L0,20"
+                    stroke="#FFF"
+                    strokeWidth="3"
+                  />
+                  <path
+                    d="M0,0 L30,20 M30,0 L0,20"
+                    stroke="#C8102E"
+                    strokeWidth="2"
+                  />
+                  <path d="M15,0 V20 M0,10 H30" stroke="#FFF" strokeWidth="5" />
+                  <path
+                    d="M15,0 V20 M0,10 H30"
+                    stroke="#C8102E"
+                    strokeWidth="3"
+                  />
                 </svg>
-                <span className={`text-xs font-medium ${language === "en" ? "text-green-primary" : "text-gray-600"}`}>EN</span>
+                <span
+                  className={`text-xs font-medium ${
+                    language === "en" ? "text-green-primary" : "text-gray-600"
+                  }`}
+                >
+                  EN
+                </span>
               </button>
             </div>
             <Button className="bg-green-primary hover:bg-green-dark text-white px-6">
@@ -212,9 +245,15 @@ export default function Header() {
                             : "text-gray-600 hover:bg-gray-100 border-gray-200"
                         }`}
                       >
-                        <svg className="w-5 h-3.5 rounded-sm" viewBox="0 0 30 20">
-                          <rect width="30" height="20" fill="#DA251D"/>
-                          <polygon points="15,4 16.76,9.41 22.5,9.41 17.87,12.59 19.63,18 15,14.82 10.37,18 12.13,12.59 7.5,9.41 13.24,9.41" fill="#FFFF00"/>
+                        <svg
+                          className="w-5 h-3.5 rounded-sm"
+                          viewBox="0 0 30 20"
+                        >
+                          <rect width="30" height="20" fill="#DA251D" />
+                          <polygon
+                            points="15,4 16.76,9.41 22.5,9.41 17.87,12.59 19.63,18 15,14.82 10.37,18 12.13,12.59 7.5,9.41 13.24,9.41"
+                            fill="#FFFF00"
+                          />
                         </svg>
                         <span className="text-sm font-medium">VI</span>
                       </button>
@@ -226,12 +265,31 @@ export default function Header() {
                             : "text-gray-600 hover:bg-gray-100 border-gray-200"
                         }`}
                       >
-                        <svg className="w-5 h-3.5 rounded-sm" viewBox="0 0 30 20">
-                          <rect width="30" height="20" fill="#012169"/>
-                          <path d="M0,0 L30,20 M30,0 L0,20" stroke="#FFF" strokeWidth="3"/>
-                          <path d="M0,0 L30,20 M30,0 L0,20" stroke="#C8102E" strokeWidth="2"/>
-                          <path d="M15,0 V20 M0,10 H30" stroke="#FFF" strokeWidth="5"/>
-                          <path d="M15,0 V20 M0,10 H30" stroke="#C8102E" strokeWidth="3"/>
+                        <svg
+                          className="w-5 h-3.5 rounded-sm"
+                          viewBox="0 0 30 20"
+                        >
+                          <rect width="30" height="20" fill="#012169" />
+                          <path
+                            d="M0,0 L30,20 M30,0 L0,20"
+                            stroke="#FFF"
+                            strokeWidth="3"
+                          />
+                          <path
+                            d="M0,0 L30,20 M30,0 L0,20"
+                            stroke="#C8102E"
+                            strokeWidth="2"
+                          />
+                          <path
+                            d="M15,0 V20 M0,10 H30"
+                            stroke="#FFF"
+                            strokeWidth="5"
+                          />
+                          <path
+                            d="M15,0 V20 M0,10 H30"
+                            stroke="#C8102E"
+                            strokeWidth="3"
+                          />
                         </svg>
                         <span className="text-sm font-medium">EN</span>
                       </button>

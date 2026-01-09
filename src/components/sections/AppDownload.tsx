@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function AppDownload() {
   return (
@@ -25,16 +26,14 @@ export default function AppDownload() {
             className="flex-shrink-0"
           >
             <div className="relative w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 lg:w-80 lg:h-80">
-              {/* Placeholder for mascot - replace with actual image later */}
-              <div className="w-full h-full flex items-center justify-center">
-                <div className="text-center">
-                  <div className="w-40 h-40 sm:w-48 sm:h-48 md:w-56 md:h-56 lg:w-64 lg:h-64 bg-green-primary/20 rounded-full flex items-center justify-center border-4 border-green-primary border-dashed">
-                    <span className="text-white/60 text-xs sm:text-sm">
-                      Mascot Image
-                    </span>
-                  </div>
-                </div>
-              </div>
+              <Image
+                src="https://mediaimages.vps.vn/Main/2024/072024/14/dowloadapp.png"
+                alt="NETCO App Download"
+                fill
+                className="object-contain"
+                quality={100}
+                sizes="(max-width: 640px) 192px, (max-width: 768px) 224px, (max-width: 1024px) 256px, 320px"
+              />
             </div>
           </motion.div>
 
