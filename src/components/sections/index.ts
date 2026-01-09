@@ -1,0 +1,9 @@
+export { default as Hero } from "./Hero";
+export { default as TrustedBy } from "./TrustedBy";
+export { default as Stats } from "./Stats";
+export { default as Services } from "./Services";
+export { default as About } from "./About";
+export { default as HowItWorks } from "./HowItWorks";
+export { default as RequestQuote } from "./RequestQuote";
+export { default as Blog } from "./Blog";
+export { default as CTA } from "./CTA";
