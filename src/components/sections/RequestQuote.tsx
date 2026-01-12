@@ -6,7 +6,7 @@ import { useTranslations } from "next-intl";
 
 export default function RequestQuote() {
   const t = useTranslations("requestQuote");
-  
+
   return (
     <section className="relative overflow-visible bg-green-primary">
       {/* Box Image - Absolute positioned outside container */}
@@ -15,11 +15,11 @@ export default function RequestQuote() {
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8 }}
-        whileHover={{ 
+        whileHover={{
           scale: 1.15,
           rotateY: 15,
           rotateX: -5,
-          transition: { duration: 0.3, ease: "easeOut" }
+          transition: { duration: 0.3, ease: "easeOut" },
         }}
         className="absolute left-0 top-0 z-20 cursor-pointer hidden lg:block"
         style={{ perspective: "1000px" }}
@@ -37,7 +37,7 @@ export default function RequestQuote() {
       </motion.div>
 
       <div className="container mx-auto px-4">
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 py-12 md:py-16 lg:py-20">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-8">
           {/* Left Content - Title and Rule Image */}
           <div className="flex flex-col justify-center">
             {/* Box Image - Mobile/Tablet only */}
@@ -46,11 +46,11 @@ export default function RequestQuote() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              whileHover={{ 
+              whileHover={{
                 scale: 1.15,
                 rotateY: 15,
                 rotateX: -5,
-                transition: { duration: 0.3, ease: "easeOut" }
+                transition: { duration: 0.3, ease: "easeOut" },
               }}
               className="relative z-10 cursor-pointer lg:hidden mb-8"
               style={{ perspective: "1000px" }}
@@ -73,9 +73,9 @@ export default function RequestQuote() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="mb-8 lg:mb-12 lg:mt-32"
+              className="mb-8 lg:mb-12 lg:mt-96"
             >
-              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white uppercase tracking-wider leading-tight">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-bold text-white  tracking-wider leading-tight">
                 {t("sectionTitle")}
               </h2>
             </motion.div>
@@ -88,7 +88,7 @@ export default function RequestQuote() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="w-full"
             >
-              <div className="relative w-full h-64 sm:h-80 md:h-96 lg:h-[450px] xl:h-[500px]">
+              <div className="relative w-full h-64 sm:h-80 md:h-96 ">
                 <Image
                   src="/rule.png"
                   alt={t("images.ruleAlt")}
