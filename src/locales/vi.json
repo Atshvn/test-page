@@ -1,0 +1,229 @@
+{
+  "header": {
+    "nav": {
+      "home": "Trang chủ",
+      "services": "Dịch vụ",
+      "about": "Giới thiệu",
+      "tracking": "Tra cứu",
+      "blog": "Tin tức",
+      "contact": "Liên hệ"
+    },
+    "submenu": {
+      "airFreight": "Vận tải hàng không",
+      "roadFreight": "Vận tải đường bộ",
+      "oceanFreight": "Vận tải đường biển",
+      "railFreight": "Vận tải đường sắt"
+    },
+    "hotline": "1900 6463",
+    "login": "Đăng nhập",
+    "language": "Ngôn ngữ"
+  },
+  "hero": {
+    "title": {
+      "line1": "Nâng tầm",
+      "line2": "ngành",
+      "line3": "Logistics"
+    },
+    "subtitle": "Chúng tôi thiết lập tiêu chuẩn trong vận chuyển hàng hóa từ điểm A đến điểm B.",
+    "getQuote": "Nhận báo giá",
+    "callUs": "Hãy gọi cho chúng tôi:",
+    "tracking": {
+      "title": "Theo dõi (các) lô hàng của bạn",
+      "trackingCode": "Mã vận đơn.",
+      "partnerCode": "Mã DO (Đối tác)",
+      "placeholder": "Nhập mã vận đơn...",
+      "button": "Theo dõi"
+    }
+  },
+  "services": {
+    "title": "Dịch vụ vận chuyển và hậu cần",
+    "list": {
+      "airFreight": {
+        "title": "Vận tải hàng không",
+        "description": "Chúng tôi giúp bạn dễ dàng tìm kiếm các giải pháp lưu trữ hàng hóa bằng vận tải hàng không."
+      },
+      "roadFreight": {
+        "title": "Vận tải đường bộ",
+        "description": "Vận tải đường bộ đóng vai trò vô cùng quan trọng trong việc vận chuyển hàng hóa và con người."
+      },
+      "oceanFreight": {
+        "title": "Vận tải đường biển",
+        "description": "Thương mại toàn cầu vận chuyển hiệu quả nhiều loại hàng hóa khác nhau trên khắp các vùng biển quốc tế."
+      },
+      "railFreight": {
+        "title": "Vận tải đường sắt",
+        "description": "Giải pháp vận tải đường sắt kết nối các khu kinh tế lớn, thân thiện với môi trường."
+      },
+      "warehousing": {
+        "title": "Dịch vụ kho bãi",
+        "description": "Hệ thống kho bãi hiện đại, đáp ứng nhu cầu lưu trữ và quản lý hàng hóa chuyên nghiệp."
+      },
+      "expressDelivery": {
+        "title": "Giao hàng nhanh",
+        "description": "Dịch vụ giao hàng nhanh trong ngày, đảm bảo hàng hóa đến tay khách hàng đúng hẹn."
+      }
+    }
+  },
+  "about": {
+    "title": "Dịch vụ vận chuyển liền mạch kết nối với toàn thế giới.",
+    "description": "Tại NETCO, chúng tôi luôn nỗ lực hướng tới mục tiêu cách mạng hóa ngành vận tải và cung cấp dịch vụ vượt trội cho khách hàng. Mục tiêu bao quát của chúng tôi là...",
+    "imageAlt": "NETCO - 23 năm phát triển",
+    "vision": {
+      "title": "Tầm nhìn",
+      "description": "Mang lại sự tăng trưởng bền vững để hướng tới một thế giới tốt đẹp hơn."
+    },
+    "mission": {
+      "title": "Sứ mệnh",
+      "description": "Hài hòa con người và công nghệ để thúc đẩy sự phát triển của doanh nghiệp tới khắp nơi."
+    },
+    "features": {
+      "feature1": "Mạng lưới vận chuyển phủ khắp 34 tỉnh thành",
+      "feature2": "Hỗ trợ khách hàng và theo dõi đơn hàng 24/7",
+      "feature3": "Giải pháp logistics tùy chỉnh theo nhu cầu",
+      "feature4": "Giá cả cạnh tranh và minh bạch",
+      "feature5": "Đội ngũ nhân viên chuyên nghiệp, giàu kinh nghiệm",
+      "feature6": "Ứng dụng công nghệ hiện đại trong vận hành"
+    },
+    "learnMore": "Tìm hiểu thêm về chúng tôi",
+    "stats": {
+      "provinces": "Tỉnh thành",
+      "branches": "Bưu cục, chi nhánh",
+      "vehicles": "Phương tiện",
+      "centers": "Trung tâm",
+      "employees": "Nhân sự"
+    }
+  },
+  "howItWorks": {
+    "badge": "Quy trình hoạt động",
+    "title": "Cách thức hoạt động",
+    "description": "Quy trình vận chuyển chuyên nghiệp, minh bạch từ khi tiếp nhận đến khi hoàn tất giao hàng",
+    "steps": {
+      "step1": {
+        "step": "Bước 1",
+        "title": "Tạo đơn hàng",
+        "description": "Khách hàng đăng ký đơn hàng trực tuyến hoặc liên hệ hotline"
+      },
+      "step2": {
+        "step": "Bước 2",
+        "title": "Tiếp nhận & Kiểm tra",
+        "description": "Tiếp nhận đơn hàng và tiến hành kiểm tra theo từng yêu cầu khách hàng"
+      },
+      "step3": {
+        "step": "Bước 3",
+        "title": "Phân loại & Phân tuyến",
+        "description": "Vận chuyển về kho để chia chọn và tiến hành phân tuyến"
+      },
+      "step4": {
+        "step": "Bước 4",
+        "title": "Trung chuyển",
+        "description": "Trung chuyển hàng hóa đến các điểm đích trên toàn quốc"
+      },
+      "step5": {
+        "step": "Bước 5",
+        "title": "Phát hàng & Thu hồi",
+        "description": "Phát hàng, đồng kiểm, thu hồi chứng từ theo yêu cầu và cập nhật báo phát"
+      },
+      "step6": {
+        "step": "Bước 6",
+        "title": "Báo cáo & Hoàn tất",
+        "description": "Tổng hợp báo cáo, trả báo phát và biên bản cho khách hàng"
+      }
+    }
+  },
+  "requestQuote": {
+    "sectionTitle": "Cách thức hoạt động",
+    "title": "Yêu cầu báo giá",
+    "form": {
+      "name": "Nhập tên",
+      "cargoType": "Loại hàng hóa",
+      "email": "Nhập email",
+      "deliveryCity": "Thành phố giao hàng",
+      "departureCity": "Thành phố khởi hành",
+      "weight": "Cân nặng",
+      "phone": "Nhập số",
+      "height": "Chiều cao",
+      "submit": "Gửi yêu cầu"
+    },
+    "images": {
+      "boxAlt": "NETCO Box",
+      "ruleAlt": "Quy trình hoạt động NETCO"
+    }
+  },
+  "blog": {
+    "badge": "Tin tức mới nhất",
+    "title": "Tin tức & Blog",
+    "viewAll": "Xem tất cả bài viết",
+    "posts": {
+      "post1": {
+        "title": "Tương lai của quản lý chuỗi cung ứng toàn cầu",
+        "excerpt": "Khám phá cách công nghệ đang thay đổi ngành logistics và ý nghĩa của nó đối với doanh nghiệp của bạn.",
+        "category": "Xu hướng ngành",
+        "author": "Nguyễn Văn A",
+        "date": "15/12/2025"
+      },
+      "post2": {
+        "title": "5 Mẹo quản lý kho hàng hiệu quả",
+        "excerpt": "Tìm hiểu các phương pháp tốt nhất để tối ưu hóa hoạt động kho và giảm chi phí.",
+        "category": "Mẹo & Hướng dẫn",
+        "author": "Trần Thị B",
+        "date": "10/12/2025"
+      },
+      "post3": {
+        "title": "Vận chuyển bền vững: Xanh hóa ngành Logistics",
+        "excerpt": "Khám phá các giải pháp vận chuyển thân thiện môi trường mang lại lợi ích cho cả doanh nghiệp và môi trường.",
+        "category": "Phát triển bền vững",
+        "author": "Lê Văn C",
+        "date": "05/12/2025"
+      }
+    }
+  },
+  "cta": {
+    "badge": "Vận chuyển toàn cầu",
+    "title": "Gửi hàng của bạn đến bất kỳ đâu trên thế giới",
+    "description": "Hàng ngàn doanh nghiệp đã tin tưởng giao phó nhu cầu logistics cho chúng tôi. Bắt đầu ngay hôm nay và trải nghiệm dịch vụ vận chuyển liền mạch.",
+    "getStarted": "Bắt đầu ngay",
+    "learnMore": "Tìm hiểu thêm",
+    "stats": {
+      "provinces": "Tỉnh thành phủ sóng",
+      "customers": "Khách hàng hài lòng",
+      "onTime": "Giao hàng đúng hẹn",
+      "support": "Hỗ trợ khách hàng"
+    }
+  },
+  "appDownload": {
+    "title": "TẢI ỨNG DỤNG",
+    "description": "Thao tác đơn giản, kiểm soát thông tin dễ dàng và hàng ngàn ưu đãi!",
+    "imageAlt": "NETCO App Download",
+    "googlePlay": {
+      "getItOn": "GET IT ON",
+      "store": "Google Play"
+    },
+    "appStore": {
+      "downloadOn": "Download on the",
+      "store": "App Store"
+    }
+  },
+  "footer": {
+    "companyName": "CÔNG TY CỔ PHẦN THƯƠNG MẠI VÀ CHUYỂN PHÁT NHANH NỘI BÀI",
+    "businessLicense": "Giấy chứng nhận đăng ký kinh doanh: 0101344790",
+    "issuedDate": "Cấp ngày 10/03/2003 do Sở kế hoạch và đầu tư TP Hà Nội cấp",
+    "headquarters": "(TRỤ SỞ CHÍNH)",
+    "supportHotline": "TỔNG ĐÀI HỖ TRỢ",
+    "email": "Email: info@netco.com.vn",
+    "hotline": "Hotline: 19000112",
+    "regions": {
+      "north": "Miền Bắc",
+      "central": "Miền Trung",
+      "south": "HCM & Miền Tây",
+      "east": "Bình Dương & Miền Đông Tây Nguyên"
+    },
+    "cta": {
+      "question": "Chúng tôi giao hàng toàn cầu. Bạn đã sẵn sàng giao hàng cùng chúng tôi chưa?",
+      "sendPackage": "GỬI GÓI HÀNG CỦA BẠN"
+    },
+    "connect": "KẾT NỐI VỚI CHÚNG TÔI",
+    "copyright": "NETCO. Tất cả quyền được bảo lưu.",
+    "privacy": "Chính sách bảo mật",
+    "terms": "Điều khoản sử dụng"
+  }
+}

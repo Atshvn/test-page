@@ -1,32 +1,6 @@
-import { Header, Footer } from "@/components/layout";
-import {
-  Hero,
-  Services,
-  About,
-  HowItWorks,
-  RequestQuote,
-  Blog,
-  CTA,
-} from "@/components/sections";
-import AppDownload from "@/components/sections/AppDownload";
+import { redirect } from "next/navigation";
 
-export default function Home() {
-  return (
-    <>
-      <Header />
-      <main>
-        <Hero />
-        {/* <TrustedBy />
-        <Stats /> */}
-        <Services />
-        <About />
-        <HowItWorks />
-        <RequestQuote />
-        <Blog />
-        <CTA />
-      </main>
-      <AppDownload />
-      <Footer />
-    </>
-  );
+export default function RootPage() {
+  // Redirect to default locale
+  redirect("/vi");
 }

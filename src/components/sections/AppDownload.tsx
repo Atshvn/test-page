@@ -2,8 +2,11 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 export default function AppDownload() {
+  const t = useTranslations("appDownload");
+  
   return (
     <section className="relative bg-gray-800 overflow-hidden">
       {/* Background Image */}
@@ -28,7 +31,7 @@ export default function AppDownload() {
             <div className="relative w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 lg:w-80 lg:h-80">
               <Image
                 src="https://mediaimages.vps.vn/Main/2024/072024/14/dowloadapp.png"
-                alt="NETCO App Download"
+                alt={t("imageAlt")}
                 fill
                 className="object-contain"
                 quality={100}
@@ -46,11 +49,10 @@ export default function AppDownload() {
             className="flex-1 text-center lg:text-right"
           >
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-3 md:mb-4">
-              TẢI ỨNG DỤNG
+              {t("title")}
             </h2>
             <p className="text-white/80 text-sm md:text-base lg:text-lg mb-6 md:mb-8 max-w-md mx-auto lg:mx-0 lg:ml-auto">
-              Thao tác đơn giản, kiểm soát thông tin dễ dàng và hàng ngàn ưu
-              đãi!
+              {t("description")}
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-end gap-4 sm:gap-6">
@@ -104,10 +106,10 @@ export default function AppDownload() {
                     </svg>
                     <div className="text-white text-left">
                       <p className="text-[10px] leading-none opacity-80">
-                        GET IT ON
+                        {t("googlePlay.getItOn")}
                       </p>
                       <p className="text-base font-semibold leading-tight">
-                        Google Play
+                        {t("googlePlay.store")}
                       </p>
                     </div>
                   </div>
@@ -125,10 +127,10 @@ export default function AppDownload() {
                     </svg>
                     <div className="text-white text-left">
                       <p className="text-[10px] leading-none opacity-80">
-                        Download on the
+                        {t("appStore.downloadOn")}
                       </p>
                       <p className="text-base font-semibold leading-tight">
-                        App Store
+                        {t("appStore.store")}
                       </p>
                     </div>
                   </div>

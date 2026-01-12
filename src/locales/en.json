@@ -1,0 +1,229 @@
+{
+  "header": {
+    "nav": {
+      "home": "Home",
+      "services": "Services",
+      "about": "About",
+      "tracking": "Tracking",
+      "blog": "Blog",
+      "contact": "Contact"
+    },
+    "submenu": {
+      "airFreight": "Air Freight",
+      "roadFreight": "Road Freight",
+      "oceanFreight": "Ocean Freight",
+      "railFreight": "Rail Freight"
+    },
+    "hotline": "1900 6463",
+    "login": "Login",
+    "language": "Language"
+  },
+  "hero": {
+    "title": {
+      "line1": "Elevating",
+      "line2": "the",
+      "line3": "Logistics"
+    },
+    "subtitle": "We set the standard in freight transportation from point A to point B.",
+    "getQuote": "Get a Quote",
+    "callUs": "Call us:",
+    "tracking": {
+      "title": "Track your shipment(s)",
+      "trackingCode": "Tracking Code",
+      "partnerCode": "DO Code (Partner)",
+      "placeholder": "Enter tracking code...",
+      "button": "Track"
+    }
+  },
+  "services": {
+    "title": "Transportation and Logistics Services",
+    "list": {
+      "airFreight": {
+        "title": "Air Freight",
+        "description": "We help you easily find air freight storage solutions for your cargo needs."
+      },
+      "roadFreight": {
+        "title": "Road Freight",
+        "description": "Road freight plays a crucial role in transporting goods and people efficiently."
+      },
+      "oceanFreight": {
+        "title": "Ocean Freight",
+        "description": "Global trade efficiently transporting various types of cargo across international waters."
+      },
+      "railFreight": {
+        "title": "Rail Freight",
+        "description": "Rail transportation solutions connecting major economic zones, environmentally friendly."
+      },
+      "warehousing": {
+        "title": "Warehousing Services",
+        "description": "Modern warehouse system, meeting professional storage and cargo management needs."
+      },
+      "expressDelivery": {
+        "title": "Express Delivery",
+        "description": "Same-day express delivery service, ensuring goods reach customers on time."
+      }
+    }
+  },
+  "about": {
+    "title": "Seamless shipping services connecting you to the world.",
+    "description": "At NETCO, we strive to revolutionize the transportation industry and provide exceptional services to our customers. Our comprehensive goal is...",
+    "imageAlt": "NETCO - 23 years of development",
+    "vision": {
+      "title": "Vision",
+      "description": "Delivering sustainable growth towards a better world."
+    },
+    "mission": {
+      "title": "Mission",
+      "description": "Harmonizing people and technology to drive business development everywhere."
+    },
+    "features": {
+      "feature1": "Transportation network covering all 34 provinces",
+      "feature2": "24/7 customer support and order tracking",
+      "feature3": "Customized logistics solutions tailored to needs",
+      "feature4": "Competitive and transparent pricing",
+      "feature5": "Professional and experienced team",
+      "feature6": "Modern technology applications in operations"
+    },
+    "learnMore": "Learn more about us",
+    "stats": {
+      "provinces": "Provinces",
+      "branches": "Branches",
+      "vehicles": "Vehicles",
+      "centers": "Centers",
+      "employees": "Employees"
+    }
+  },
+  "howItWorks": {
+    "badge": "How It Works",
+    "title": "Our Process",
+    "description": "Professional and transparent shipping process from receiving to delivery completion",
+    "steps": {
+      "step1": {
+        "step": "Step 1",
+        "title": "Create Order",
+        "description": "Customers register orders online or contact our hotline"
+      },
+      "step2": {
+        "step": "Step 2",
+        "title": "Receive & Inspect",
+        "description": "Receive orders and conduct inspections according to customer requirements"
+      },
+      "step3": {
+        "step": "Step 3",
+        "title": "Sort & Route",
+        "description": "Transport to warehouse for sorting and routing assignment"
+      },
+      "step4": {
+        "step": "Step 4",
+        "title": "Transit",
+        "description": "Transit cargo to destinations nationwide"
+      },
+      "step5": {
+        "step": "Step 5",
+        "title": "Delivery & Collection",
+        "description": "Deliver goods, joint inspection, collect documents as required and update delivery report"
+      },
+      "step6": {
+        "step": "Step 6",
+        "title": "Report & Complete",
+        "description": "Compile reports, return delivery reports and records to customers"
+      }
+    }
+  },
+  "requestQuote": {
+    "sectionTitle": "How It Works",
+    "title": "Request a Quote",
+    "form": {
+      "name": "Enter name",
+      "cargoType": "Cargo type",
+      "email": "Enter email",
+      "deliveryCity": "Delivery city",
+      "departureCity": "Departure city",
+      "weight": "Weight",
+      "phone": "Enter phone",
+      "height": "Height",
+      "submit": "Submit request"
+    },
+    "images": {
+      "boxAlt": "NETCO Box",
+      "ruleAlt": "NETCO Operation Process"
+    }
+  },
+  "blog": {
+    "badge": "Latest News",
+    "title": "News & Blog",
+    "viewAll": "View all posts",
+    "posts": {
+      "post1": {
+        "title": "The Future of Global Supply Chain Management",
+        "excerpt": "Discover how technology is transforming the logistics industry and what it means for your business.",
+        "category": "Industry Trends",
+        "author": "John Nguyen",
+        "date": "12/15/2025"
+      },
+      "post2": {
+        "title": "5 Tips for Efficient Warehouse Management",
+        "excerpt": "Learn the best practices to optimize warehouse operations and reduce costs.",
+        "category": "Tips & Guides",
+        "author": "Mary Tran",
+        "date": "12/10/2025"
+      },
+      "post3": {
+        "title": "Sustainable Transportation: Greening the Logistics Industry",
+        "excerpt": "Explore eco-friendly shipping solutions that benefit both business and the environment.",
+        "category": "Sustainability",
+        "author": "Peter Le",
+        "date": "12/05/2025"
+      }
+    }
+  },
+  "cta": {
+    "badge": "Global Shipping",
+    "title": "Ship your goods anywhere in the world",
+    "description": "Thousands of businesses have trusted us with their logistics needs. Start today and experience seamless shipping services.",
+    "getStarted": "Get Started",
+    "learnMore": "Learn More",
+    "stats": {
+      "provinces": "Provinces covered",
+      "customers": "Satisfied customers",
+      "onTime": "On-time delivery",
+      "support": "Customer support"
+    }
+  },
+  "appDownload": {
+    "title": "DOWNLOAD APP",
+    "description": "Simple operations, easy information control, and thousands of deals!",
+    "imageAlt": "NETCO App Download",
+    "googlePlay": {
+      "getItOn": "GET IT ON",
+      "store": "Google Play"
+    },
+    "appStore": {
+      "downloadOn": "Download on the",
+      "store": "App Store"
+    }
+  },
+  "footer": {
+    "companyName": "NOI BAI TRADING AND EXPRESS JOINT STOCK COMPANY",
+    "businessLicense": "Business Registration Certificate: 0101344790",
+    "issuedDate": "Issued on March 10, 2003 by Hanoi Department of Planning and Investment",
+    "headquarters": "(HEADQUARTERS)",
+    "supportHotline": "SUPPORT HOTLINE",
+    "email": "Email: info@netco.com.vn",
+    "hotline": "Hotline: 19000112",
+    "regions": {
+      "north": "Northern Region",
+      "central": "Central Region",
+      "south": "HCM & Western Region",
+      "east": "Binh Duong & Eastern Highlands"
+    },
+    "cta": {
+      "question": "We deliver globally. Are you ready to ship with us?",
+      "sendPackage": "SEND YOUR PACKAGE"
+    },
+    "connect": "CONNECT WITH US",
+    "copyright": "NETCO. All rights reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service"
+  }
+}

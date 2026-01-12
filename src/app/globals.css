@@ -46,8 +46,8 @@
   --radius-4xl: calc(var(--radius) + 16px);
   
   /* Custom theme colors */
-  --color-green-primary: #10b981;
-  --color-green-dark: #065f46;
+  --color-green-primary: #16A34A;
+  --color-green-dark: #166534;
   --color-orange-primary: #f97316;
   --color-blue-primary: #1a56db;
 }
@@ -88,7 +88,7 @@
   
   /* Custom colors */
   --green-primary: #10b981;
-  --green-dark: #065f46;
+  --green-dark: #166534;
   --orange-primary: #f97316;
   --blue-primary: #1a56db;
 }

@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Cargon - Reliable Logistics Solutions",
+  title: "Netco Post",
   description:
     "We deliver your cargo safely and on time, anywhere in the world. Experience seamless shipping with real-time tracking and dedicated support.",
   keywords: [

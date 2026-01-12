@@ -1,0 +1,6 @@
+<svg width="1600" height="200" viewBox="0 0 1600 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+<!-- Main path - horizontal line from left, curves down at right end -->
+<path d="M-100 30 L1300 30 Q1380 30 1420 70 Q1450 110 1450 180 L1450 300" stroke="#10b981" stroke-width="6" stroke-linecap="round" fill="none"/>
+<!-- Shadow path for depth effect -->
+<path d="M-100 40 L1290 40 Q1370 40 1410 80 Q1440 120 1440 190 L1440 300" stroke="#059669" stroke-width="4" stroke-linecap="round" fill="none" stroke-opacity="0.4"/>
+</svg>

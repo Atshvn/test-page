@@ -2,38 +2,65 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { useTranslations, useLocale } from "next-intl";
+import { usePathname } from "next/navigation";
 
 import { Button } from "@/components/ui/button";
 import { ArrowRight, ArrowUp, Phone, Mail } from "lucide-react";
 
-// Office locations data
-const offices = [
-  {
-    city: "HÀ NỘI",
-    label: "(TRỤ SỞ CHÍNH)",
-    address:
-      "Tầng 8, Khối B, Tòa nhà Sông Đà, đường Phạm Hùng, phường Từ Liêm, Thành phố Hà Nội, Việt Nam",
-  },
-  {
-    city: "ĐÀ NẴNG",
-    address: "11 Ký Đồng, Phường Thanh Khê, Thành phố Đà Nẵng, Việt Nam",
-  },
-  {
-    city: "HỒ CHÍ MINH",
-    address:
-      "Lầu 3, Tòa nhà TLE, 36A Đường Trường Sơn, Phường Tân Sơn Hòa, Thành phố Hồ Chí Minh, Việt Nam",
-  },
-];
-
-// Hotline data by region
-const hotlines = [
-  { region: "Miền Bắc", phone: "0981 143 131" },
-  { region: "Miền Trung", phone: "0909 012 528" },
-  { region: "HCM & Miền Tây", phone: "0919 549 738" },
-  { region: "Bình Dương & Miền Đông Tây Nguyên", phone: "0945 843 131" },
-];
-
 export default function Footer() {
+  const t = useTranslations("footer");
+  const locale = useLocale();
+  const pathname = usePathname();
+
+  // Office locations data
+  const offices = [
+    {
+      city: "HÀ NỘI",
+      label: t("headquarters"),
+      address:
+        "Tầng 8, Khối B, Tòa nhà Sông Đà, đường Phạm Hùng, phường Từ Liêm, Thành phố Hà Nội, Việt Nam",
+    },
+    {
+      city: "ĐÀ NẴNG",
+      label: "",
+      address: "11 Ký Đồng, Phường Thanh Khê, Thành phố Đà Nẵng, Việt Nam",
+    },
+    {
+      city: "HỒ CHÍ MINH",
+      label: "",
+      address:
+        "Lầu 3, Tòa nhà TLE, 36A Đường Trường Sơn, Phường Tân Sơn Hòa, Thành phố Hồ Chí Minh, Việt Nam",
+    },
+  ];
+
+  // Hotline data by region
+  const hotlines = [
+    { region: t("regions.north"), phone: "0981 143 131" },
+    { region: t("regions.central"), phone: "0909 012 528" },
+    { region: t("regions.south"), phone: "0919 549 738" },
+    { region: t("regions.east"), phone: "0945 843 131" },
+  ];
+
+  const switchLanguage = (newLocale: string) => {
+    if (!pathname) return;
+
+    // Extract the path without locale
+    const segments = pathname.split("/").filter(Boolean);
+    const pathnameWithoutLocale =
+      segments[0] === "vi" || segments[0] === "en"
+        ? "/" + segments.slice(1).join("/")
+        : pathname;
+
+    // Build new path with new locale
+    const newPath = `/${newLocale}${
+      pathnameWithoutLocale === "/" ? "" : pathnameWithoutLocale
+    }`;
+
+    // Use window.location for a hard navigation to ensure locale change
+    window.location.href = newPath;
+  };
+
   return (
     <footer className="bg-green-primary text-white relative overflow-hidden">
       {/* World Map Background */}
@@ -55,12 +82,12 @@ export default function Footer() {
           <div className="space-y-4 md:space-y-6">
             <div>
               <h2 className="text-sm md:text-lg font-bold uppercase tracking-wide mb-3 md:mb-4">
-                CÔNG TY CỔ PHẦN THƯƠNG MẠI VÀ CHUYỂN PHÁT NHANH NỘI BÀI
+                {t("companyName")}
               </h2>
               <p className="text-white/80 text-xs md:text-sm">
-                Giấy chứng nhận đăng ký kinh doanh: 0101344790
+                {t("businessLicense")}
                 <br />
-                Cấp ngày 10/03/2003 do Sở kế hoạch và đầu tư TP Hà Nội cấp
+                {t("issuedDate")}
               </p>
             </div>
 
@@ -85,7 +112,7 @@ export default function Footer() {
           {/* Support Hotlines */}
           <div className="space-y-4 md:space-y-6">
             <h2 className="text-sm md:text-lg font-bold uppercase tracking-wide">
-              TỔNG ĐÀI HỖ TRỢ
+              {t("supportHotline")}
             </h2>
 
             <div className="space-y-2 md:space-y-3">
@@ -94,7 +121,7 @@ export default function Footer() {
                 className="flex items-center gap-2 text-white/90 hover:text-white transition-colors text-sm"
               >
                 <Mail className="w-3.5 h-3.5 md:w-4 md:h-4" />
-                <span>Email: info@netco.com.vn</span>
+                <span>{t("email")}</span>
               </a>
 
               <a
@@ -102,7 +129,7 @@ export default function Footer() {
                 className="flex items-center gap-2 text-white/90 hover:text-white transition-colors text-sm"
               >
                 <Phone className="w-3.5 h-3.5 md:w-4 md:h-4" />
-                <span>Hotline: 19000112</span>
+                <span>{t("hotline")}</span>
               </a>
             </div>
 
@@ -128,30 +155,44 @@ export default function Footer() {
           <div className="flex flex-col justify-between">
             <div>
               <p className="text-xl md:text-2xl lg:text-3xl font-semibold text-white leading-relaxed mb-4 md:mb-6">
-                Chúng tôi giao hàng toàn cầu. Bạn đã sẵn sàng giao hàng cùng
-                chúng tôi chưa?
+                {t("cta.question")}
               </p>
+
               <Button
                 asChild
                 size="lg"
                 variant="outline"
-                className="w-full sm:w-auto border-2 border-white text-green-primary bg-white hover:bg-white/90 hover:text-green-dark font-bold uppercase tracking-wide text-sm"
+                className="w-full sm:w-auto border-2 border-red-500 bg-red-500 hover:bg-red-600 text-white hover:text-white font-bold uppercase tracking-wide text-sm"
               >
-                <Link href="/contact">
-                  GỬI GÓI HÀNG CỦA BẠN
+                <Link href={`/${locale}/contact`}>
+                  {t("cta.sendPackage")}
                   <ArrowRight className="w-4 h-4 md:w-5 md:h-5 ml-2" />
                 </Link>
               </Button>
             </div>
 
-            {/* Language Selector (Optional) */}
+            {/* Language Selector */}
             <div className="mt-4 md:mt-6 flex items-center gap-2">
-              <button className="flex items-center gap-1 text-white/70 hover:text-white transition-colors text-sm">
+              <button
+                onClick={() => switchLanguage("vi")}
+                className={`flex items-center gap-1 transition-colors text-sm ${
+                  locale === "vi"
+                    ? "text-white"
+                    : "text-white/70 hover:text-white"
+                }`}
+              >
                 <span className="text-base md:text-lg">🇻🇳</span>
                 <span>VI</span>
               </button>
               <span className="text-white/50">|</span>
-              <button className="flex items-center gap-1 text-white/70 hover:text-white transition-colors text-sm">
+              <button
+                onClick={() => switchLanguage("en")}
+                className={`flex items-center gap-1 transition-colors text-sm ${
+                  locale === "en"
+                    ? "text-white"
+                    : "text-white/70 hover:text-white"
+                }`}
+              >
                 <span className="text-base md:text-lg">🇬🇧</span>
                 <span>EN</span>
               </button>
@@ -167,7 +208,7 @@ export default function Footer() {
               variant="outline"
               className="w-full sm:w-auto border-2 border-white text-white bg-transparent hover:bg-white hover:text-green-primary font-bold uppercase text-sm"
             >
-              KẾT NỐI VỚI CHÚNG TÔI
+              {t("connect")}
             </Button>
 
             {/* Center: App Store Links */}
@@ -287,20 +328,20 @@ export default function Footer() {
           {/* Copyright */}
           <div className="mt-6 md:mt-8 pt-4 md:pt-6 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-3 md:gap-4">
             <p className="text-white/60 text-xs md:text-sm text-center md:text-left">
-              © {new Date().getFullYear()} NETCO. Tất cả quyền được bảo lưu.
+              © {new Date().getFullYear()} {t("copyright")}
             </p>
             <div className="flex gap-4 md:gap-6">
               <Link
-                href="/privacy"
+                href={`/${locale}/privacy`}
                 className="text-white/60 hover:text-white text-xs md:text-sm transition-colors"
               >
-                Chính sách bảo mật
+                {t("privacy")}
               </Link>
               <Link
-                href="/terms"
+                href={`/${locale}/terms`}
                 className="text-white/60 hover:text-white text-xs md:text-sm transition-colors"
               >
-                Điều khoản sử dụng
+                {t("terms")}
               </Link>
             </div>
           </div>

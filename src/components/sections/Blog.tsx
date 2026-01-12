@@ -3,47 +3,48 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Calendar, User } from "lucide-react";
 import Link from "next/link";
-
-const posts = [
-  {
-    id: 1,
-    title: "Tương lai của quản lý chuỗi cung ứng toàn cầu",
-    excerpt:
-      "Khám phá cách công nghệ đang thay đổi ngành logistics và ý nghĩa của nó đối với doanh nghiệp của bạn.",
-    image:
-      "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    category: "Xu hướng ngành",
-    author: "Nguyễn Văn A",
-    date: "15/12/2025",
-    slug: "tuong-lai-chuoi-cung-ung",
-  },
-  {
-    id: 2,
-    title: "5 Mẹo quản lý kho hàng hiệu quả",
-    excerpt:
-      "Tìm hiểu các phương pháp tốt nhất để tối ưu hóa hoạt động kho và giảm chi phí.",
-    image:
-      "https://images.unsplash.com/photo-1553413077-190dd305871c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    category: "Mẹo & Hướng dẫn",
-    author: "Trần Thị B",
-    date: "10/12/2025",
-    slug: "quan-ly-kho-hang-hieu-qua",
-  },
-  {
-    id: 3,
-    title: "Vận chuyển bền vững: Xanh hóa ngành Logistics",
-    excerpt:
-      "Khám phá các giải pháp vận chuyển thân thiện môi trường mang lại lợi ích cho cả doanh nghiệp và môi trường.",
-    image:
-      "https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    category: "Phát triển bền vững",
-    author: "Lê Văn C",
-    date: "05/12/2025",
-    slug: "van-chuyen-ben-vung",
-  },
-];
+import { useTranslations, useLocale } from "next-intl";
 
 export default function Blog() {
+  const t = useTranslations("blog");
+  const locale = useLocale();
+  
+  const posts = [
+    {
+      id: 1,
+      title: t("posts.post1.title"),
+      excerpt: t("posts.post1.excerpt"),
+      image:
+        "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      category: t("posts.post1.category"),
+      author: t("posts.post1.author"),
+      date: t("posts.post1.date"),
+      slug: "tuong-lai-chuoi-cung-ung",
+    },
+    {
+      id: 2,
+      title: t("posts.post2.title"),
+      excerpt: t("posts.post2.excerpt"),
+      image:
+        "https://images.unsplash.com/photo-1553413077-190dd305871c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      category: t("posts.post2.category"),
+      author: t("posts.post2.author"),
+      date: t("posts.post2.date"),
+      slug: "quan-ly-kho-hang-hieu-qua",
+    },
+    {
+      id: 3,
+      title: t("posts.post3.title"),
+      excerpt: t("posts.post3.excerpt"),
+      image:
+        "https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      category: t("posts.post3.category"),
+      author: t("posts.post3.author"),
+      date: t("posts.post3.date"),
+      slug: "van-chuyen-ben-vung",
+    },
+  ];
+
   return (
     <section className="py-12 md:py-16 lg:py-20 bg-white">
       <div className="container mx-auto px-4">
@@ -57,17 +58,17 @@ export default function Blog() {
         >
           <div>
             <span className="inline-block bg-green-100 text-green-primary px-3 md:px-4 py-1.5 md:py-2 rounded-full text-xs md:text-sm font-medium mb-3 md:mb-4">
-              Tin tức mới nhất
+              {t("badge")}
             </span>
             <h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-green-dark">
-              Tin tức & Blog
+              {t("title")}
             </h2>
           </div>
           <Link
-            href="/blog"
+            href={`/${locale}/blog`}
             className="flex items-center gap-2 text-green-primary font-medium mt-4 md:mt-0 hover:gap-3 transition-all text-sm md:text-base"
           >
-            Xem tất cả bài viết
+            {t("viewAll")}
             <ArrowRight className="w-4 h-4 md:w-5 md:h-5" />
           </Link>
         </motion.div>
@@ -83,7 +84,7 @@ export default function Blog() {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               className="group"
             >
-              <Link href={`/blog/${post.slug}`}>
+              <Link href={`/${locale}/blog/${post.slug}`}>
                 <div className="relative overflow-hidden rounded-xl md:rounded-2xl mb-4 md:mb-5">
                   <img
                     src={post.image}

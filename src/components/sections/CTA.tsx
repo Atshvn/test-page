@@ -4,8 +4,12 @@ import { motion } from "framer-motion";
 import { ArrowRight, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { useTranslations, useLocale } from "next-intl";
 
 export default function CTA() {
+  const t = useTranslations("cta");
+  const locale = useLocale();
+  
   return (
     <section className="py-20 bg-gradient-to-r from-green-primary to-green-dark relative overflow-hidden">
       {/* Background Pattern */}
@@ -24,17 +28,15 @@ export default function CTA() {
           >
             <div className="inline-flex items-center gap-2 bg-white/10 text-white px-4 py-2 rounded-full mb-6">
               <Globe className="w-4 h-4" />
-              <span className="text-sm font-medium">Vận chuyển toàn cầu</span>
+              <span className="text-sm font-medium">{t("badge")}</span>
             </div>
 
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Gửi hàng của bạn đến bất kỳ đâu trên thế giới
+              {t("title")}
             </h2>
 
             <p className="text-xl text-white/80 mb-8 max-w-2xl mx-auto">
-              Hàng ngàn doanh nghiệp đã tin tưởng giao phó nhu cầu logistics cho
-              chúng tôi. Bắt đầu ngay hôm nay và trải nghiệm dịch vụ vận chuyển
-              liền mạch.
+              {t("description")}
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -43,8 +45,8 @@ export default function CTA() {
                 size="lg"
                 className="bg-red-500 hover:bg-red-600 text-white px-8 py-6.5 text-lg "
               >
-                <Link href="/contact">
-                  Bắt đầu ngay
+                <Link href={`/${locale}/contact`}>
+                  {t("getStarted")}
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Link>
               </Button>
@@ -54,7 +56,7 @@ export default function CTA() {
                 variant="outline"
                 className="border-white hover:bg-white hover:text-green-dark px-8 py-6 text-lg"
               >
-                <Link href="/about">Tìm hiểu thêm</Link>
+                <Link href={`/${locale}/about`}>{t("learnMore")}</Link>
               </Button>
             </div>
           </motion.div>
@@ -69,19 +71,19 @@ export default function CTA() {
           >
             <div>
               <p className="text-4xl font-bold text-white">34+</p>
-              <p className="text-white/70">Tỉnh thành phủ sóng</p>
+              <p className="text-white/70">{t("stats.provinces")}</p>
             </div>
             <div>
               <p className="text-4xl font-bold text-white">15K+</p>
-              <p className="text-white/70">Khách hàng hài lòng</p>
+              <p className="text-white/70">{t("stats.customers")}</p>
             </div>
             <div>
               <p className="text-4xl font-bold text-white">99%</p>
-              <p className="text-white/70">Giao hàng đúng hẹn</p>
+              <p className="text-white/70">{t("stats.onTime")}</p>
             </div>
             <div>
               <p className="text-4xl font-bold text-white">24/7</p>
-              <p className="text-white/70">Hỗ trợ khách hàng</p>
+              <p className="text-white/70">{t("stats.support")}</p>
             </div>
           </motion.div>
         </div>

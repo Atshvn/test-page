@@ -4,59 +4,57 @@ import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
-
-const services = [
-  {
-    number: "01",
-    title: "Vận tải hàng không",
-    description:
-      "Chúng tôi giúp bạn dễ dàng tìm kiếm các giải pháp lưu trữ hàng hóa bằng vận tải hàng không.",
-    image: "/xe-oto.png",
-    link: "/services/air-freight",
-  },
-  {
-    number: "02",
-    title: "Vận tải đường bộ",
-    description:
-      "Vận tải đường bộ đóng vai trò vô cùng quan trọng trong việc vận chuyển hàng hóa và con người.",
-    image: "/xe-oto.png",
-    link: "/services/road-freight",
-  },
-  {
-    number: "03",
-    title: "Vận tải đường biển",
-    description:
-      "Thương mại toàn cầu vận chuyển hiệu quả nhiều loại hàng hóa khác nhau trên khắp các vùng biển quốc tế.",
-    image: "/xe-oto.png",
-    link: "/services/ocean-freight",
-  },
-  {
-    number: "04",
-    title: "Vận tải đường sắt",
-    description:
-      "Giải pháp vận tải đường sắt kết nối các khu kinh tế lớn, thân thiện với môi trường.",
-    image: "/xe-oto.png",
-    link: "/services/rail-freight",
-  },
-  {
-    number: "05",
-    title: "Dịch vụ kho bãi",
-    description:
-      "Hệ thống kho bãi hiện đại, đáp ứng nhu cầu lưu trữ và quản lý hàng hóa chuyên nghiệp.",
-    image: "/xe-oto.png",
-    link: "/services/warehousing",
-  },
-  {
-    number: "06",
-    title: "Giao hàng nhanh",
-    description:
-      "Dịch vụ giao hàng nhanh trong ngày, đảm bảo hàng hóa đến tay khách hàng đúng hẹn.",
-    image: "/xe-oto.png",
-    link: "/services/express-delivery",
-  },
-];
+import { useTranslations, useLocale } from "next-intl";
 
 export default function Services() {
+  const t = useTranslations("services");
+  const locale = useLocale();
+
+  const services = [
+    {
+      number: "01",
+      title: t("list.airFreight.title"),
+      description: t("list.airFreight.description"),
+      image: "/xe-oto.png",
+      link: "/services/air-freight",
+    },
+    {
+      number: "02",
+      title: t("list.roadFreight.title"),
+      description: t("list.roadFreight.description"),
+      image: "/xe-oto.png",
+      link: "/services/road-freight",
+    },
+    {
+      number: "03",
+      title: t("list.oceanFreight.title"),
+      description: t("list.oceanFreight.description"),
+      image: "/xe-oto.png",
+      link: "/services/ocean-freight",
+    },
+    {
+      number: "04",
+      title: t("list.railFreight.title"),
+      description: t("list.railFreight.description"),
+      image: "/xe-oto.png",
+      link: "/services/rail-freight",
+    },
+    {
+      number: "05",
+      title: t("list.warehousing.title"),
+      description: t("list.warehousing.description"),
+      image: "/xe-oto.png",
+      link: "/services/warehousing",
+    },
+    {
+      number: "06",
+      title: t("list.expressDelivery.title"),
+      description: t("list.expressDelivery.description"),
+      image: "/xe-oto.png",
+      link: "/services/express-delivery",
+    },
+  ];
+
   return (
     <section className="py-12 md:py-20 bg-white">
       <div className="container mx-auto px-4">
@@ -68,8 +66,8 @@ export default function Services() {
           transition={{ duration: 0.6 }}
           className="mb-8 md:mb-12"
         >
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-green-dark">
-            Dịch vụ vận chuyển và hậu cần
+          <h2 className="text-2xl md:text-3xl lg:text-5xl font-bold text-green-dark">
+            {t("title")}
           </h2>
         </motion.div>
 
@@ -83,7 +81,7 @@ export default function Services() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
-              <Link href={service.link}>
+              <Link href={`/${locale}${service.link}`}>
                 <div className="group flex flex-col md:grid md:grid-cols-12 items-start md:items-center py-6 md:py-10 border-b border-gray-200 transition-colors duration-300 cursor-pointer gap-3 md:gap-0">
                   {/* Left - Number & Description */}
                   <div className="md:col-span-3">

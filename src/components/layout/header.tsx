@@ -7,32 +7,48 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, ChevronDown, Phone, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-
-const navItems = [
-  { name: "Trang chủ", href: "/" },
-  {
-    name: "Dịch vụ",
-    href: "/services",
-    submenu: [
-      { name: "Vận tải hàng không", href: "/services/air-freight" },
-      { name: "Vận tải đường bộ", href: "/services/road-freight" },
-      { name: "Vận tải đường biển", href: "/services/ocean-freight" },
-      { name: "Vận tải đường sắt", href: "/services/rail-freight" },
-    ],
-  },
-  { name: "Giới thiệu", href: "/about" },
-  { name: "Tra cứu", href: "/tracking" },
-  { name: "Tin tức", href: "/blog" },
-  { name: "Liên hệ", href: "/contact" },
-];
+import { useTranslations, useLocale } from "next-intl";
+import { usePathname } from "next/navigation";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null);
-  const [language, setLanguage] = useState<"vi" | "en">("vi");
+  const t = useTranslations("header");
+  const locale = useLocale();
+  const pathname = usePathname();
 
-  const toggleLanguage = () => {
-    setLanguage(language === "vi" ? "en" : "vi");
+  const navItems = [
+    { name: t("nav.home"), href: "/" },
+    {
+      name: t("nav.services"),
+      href: "/services",
+      submenu: [
+        { name: t("submenu.airFreight"), href: "/services/air-freight" },
+        { name: t("submenu.roadFreight"), href: "/services/road-freight" },
+        { name: t("submenu.oceanFreight"), href: "/services/ocean-freight" },
+        { name: t("submenu.railFreight"), href: "/services/rail-freight" },
+      ],
+    },
+    { name: t("nav.about"), href: "/about" },
+    { name: t("nav.tracking"), href: "/tracking" },
+    { name: t("nav.blog"), href: "/blog" },
+    { name: t("nav.contact"), href: "/contact" },
+  ];
+
+  const switchLanguage = (newLocale: string) => {
+    if (!pathname) return;
+    
+    // Extract the path without locale
+    const segments = pathname.split('/').filter(Boolean);
+    const pathnameWithoutLocale = segments[0] === 'vi' || segments[0] === 'en' 
+      ? '/' + segments.slice(1).join('/') 
+      : pathname;
+    
+    // Build new path with new locale
+    const newPath = `/${newLocale}${pathnameWithoutLocale === '/' ? '' : pathnameWithoutLocale}`;
+    
+    // Use window.location for a hard navigation to ensure locale change
+    window.location.href = newPath;
   };
 
   return (
@@ -40,7 +56,7 @@ export default function Header() {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2">
+          <Link href={`/${locale}`} className="flex items-center gap-2">
             <Image
               src="https://mediaimages.vps.vn/Main/2024/072024/14/logonew.png"
               alt="NETCO Logo"
@@ -61,7 +77,7 @@ export default function Header() {
                 onMouseLeave={() => setActiveSubmenu(null)}
               >
                 <Link
-                  href={item.href}
+                  href={`/${locale}${item.href}`}
                   className="flex items-center gap-1 text-gray-700 hover:text-green-primary transition-colors font-medium"
                 >
                   {item.name}
@@ -80,7 +96,7 @@ export default function Header() {
                       {item.submenu.map((subItem) => (
                         <Link
                           key={subItem.name}
-                          href={subItem.href}
+                          href={`/${locale}${subItem.href}`}
                           className="block px-4 py-2 text-gray-700 hover:bg-green-50 hover:text-green-primary transition-colors"
                         >
                           {subItem.name}
@@ -100,14 +116,14 @@ export default function Header() {
               className="flex items-center gap-2 text-gray-700 hover:text-green-primary transition-colors"
             >
               <Phone className="w-5 h-5" />
-              <span className="font-medium">1900 6463</span>
+              <span className="font-medium">{t("hotline")}</span>
             </a>
             {/* Language Switcher */}
             <div className="flex items-center">
               <button
-                onClick={() => setLanguage("vi")}
+                onClick={() => switchLanguage("vi")}
                 className={`flex items-center gap-1.5 px-2.5 py-1.5 rounded-l-lg border transition-all ${
-                  language === "vi"
+                  locale === "vi"
                     ? "bg-green-50 border-green-primary"
                     : "border-gray-200 hover:bg-gray-50"
                 }`}
@@ -124,16 +140,16 @@ export default function Header() {
                 </svg>
                 <span
                   className={`text-xs font-medium ${
-                    language === "vi" ? "text-green-primary" : "text-gray-600"
+                    locale === "vi" ? "text-green-primary" : "text-gray-600"
                   }`}
                 >
                   VI
                 </span>
               </button>
               <button
-                onClick={() => setLanguage("en")}
+                onClick={() => switchLanguage("en")}
                 className={`flex items-center gap-1.5 px-2.5 py-1.5 rounded-r-lg border-t border-r border-b transition-all ${
-                  language === "en"
+                  locale === "en"
                     ? "bg-green-50 border-green-primary"
                     : "border-gray-200 hover:bg-gray-50"
                 }`}
@@ -162,7 +178,7 @@ export default function Header() {
                 </svg>
                 <span
                   className={`text-xs font-medium ${
-                    language === "en" ? "text-green-primary" : "text-gray-600"
+                    locale === "en" ? "text-green-primary" : "text-gray-600"
                   }`}
                 >
                   EN
@@ -170,7 +186,7 @@ export default function Header() {
               </button>
             </div>
             <Button className="bg-green-primary hover:bg-green-dark text-white px-6">
-              Đăng nhập
+              {t("login")}
             </Button>
           </div>
 
@@ -203,7 +219,7 @@ export default function Header() {
                         className="border-b border-gray-50 pb-2"
                       >
                         <Link
-                          href={item.href}
+                          href={`/${locale}${item.href}`}
                           className="block py-3 text-lg font-medium text-gray-800 hover:text-green-primary transition-colors"
                           onClick={() => !item.submenu && setIsOpen(false)}
                         >
@@ -214,7 +230,7 @@ export default function Header() {
                             {item.submenu.map((subItem) => (
                               <Link
                                 key={subItem.name}
-                                href={subItem.href}
+                                href={`/${locale}${subItem.href}`}
                                 className="block py-2 text-gray-600 hover:text-green-primary transition-colors text-base"
                                 onClick={() => setIsOpen(false)}
                               >
@@ -234,13 +250,13 @@ export default function Header() {
                   <div className="flex items-center justify-between mb-4 p-3 bg-white rounded-lg border border-gray-200">
                     <span className="text-sm text-gray-600 flex items-center gap-2">
                       <Globe className="w-4 h-4" />
-                      Ngôn ngữ
+                      {t("language")}
                     </span>
                     <div className="flex items-center">
                       <button
-                        onClick={() => setLanguage("vi")}
+                        onClick={() => switchLanguage("vi")}
                         className={`flex items-center gap-1.5 px-3 py-1.5 rounded-l-lg border transition-all ${
-                          language === "vi"
+                          locale === "vi"
                             ? "bg-green-primary text-white border-green-primary"
                             : "text-gray-600 hover:bg-gray-100 border-gray-200"
                         }`}
@@ -258,9 +274,9 @@ export default function Header() {
                         <span className="text-sm font-medium">VI</span>
                       </button>
                       <button
-                        onClick={() => setLanguage("en")}
+                        onClick={() => switchLanguage("en")}
                         className={`flex items-center gap-1.5 px-3 py-1.5 rounded-r-lg border-t border-r border-b transition-all ${
-                          language === "en"
+                          locale === "en"
                             ? "bg-green-primary text-white border-green-primary"
                             : "text-gray-600 hover:bg-gray-100 border-gray-200"
                         }`}
@@ -304,14 +320,14 @@ export default function Header() {
                     </div>
                     <div>
                       <p className="text-xs text-gray-500">Hotline</p>
-                      <p className="font-semibold text-green-dark">1900 6463</p>
+                      <p className="font-semibold text-green-dark">{t("hotline")}</p>
                     </div>
                   </a>
                   <Button
                     className="w-full bg-green-primary hover:bg-green-dark text-white"
                     onClick={() => setIsOpen(false)}
                   >
-                    Đăng nhập
+                    {t("login")}
                   </Button>
                 </div>
               </div>
