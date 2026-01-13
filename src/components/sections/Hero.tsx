@@ -39,16 +39,27 @@ export default function Hero() {
   return (
     <section
       ref={containerRef}
-      className="relative min-h-screen w-full overflow-hidden mt-20"
+      className="relative min-h-[auto] lg:min-h-[calc(100vh-80px)] w-full overflow-hidden mt-20 bg-gray-50 lg:bg-transparent pb-8 lg:pb-0"
       style={{
-        backgroundImage: "url(/bg.png)",
+        backgroundImage: "var(--hero-bg)",
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center",
         backgroundSize: "cover",
       }}
     >
+      {/* CSS variable for background - hidden on mobile */}
+      <style jsx>{`
+        section {
+          --hero-bg: none;
+        }
+        @media (min-width: 1024px) {
+          section {
+            --hero-bg: url(/bg.png);
+          }
+        }
+      `}</style>
       {/* Main Content */}
-      <div className="container mx-auto px-4 pt-24 sm:pt-28 lg:pt-10 relative z-10">
+      <div className="container mx-auto px-4 pt-8 sm:pt-12 lg:pt-6 xl:pt-10 relative z-10">
         <div className="grid lg:grid-cols-2 gap-6 lg:gap-8 items-start">
           {/* Left Content - Text and Animation */}
           <motion.div
@@ -57,7 +68,7 @@ export default function Hero() {
             transition={{ duration: 0.8 }}
             className="relative z-20 max-w-xl"
           >
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold text-green-dark leading-[1.1] mb-4 sm:mb-6 md:mb-8">
+            <h1 className="text-4xl sm:text-5xl md:text-5xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-bold text-green-dark leading-[1.1] mb-4 sm:mb-6 md:mb-8">
               {t("title.line1")}
               <br />
               {t("title.line2")}
@@ -68,12 +79,12 @@ export default function Hero() {
               .
             </h1>
 
-            <p className="text-gray-500 mb-4 sm:mb-6 md:mb-10 text-sm sm:text-base md:text-lg">
+            <p className="text-gray-500 mb-4 sm:mb-6 md:mb-10 lg:mb-6 xl:mb-10 text-base sm:text-lg lg:text-base xl:text-lg">
               {t("subtitle")}
             </p>
 
             {/* CTA - Get Quote & Call */}
-            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-6 mb-6 md:mb-12">
+            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 mb-6 md:mb-12 lg:mb-8 xl:mb-12">
               <Link
                 href={`/${locale}/contact`}
                 className="text-green-dark font-semibold underline underline-offset-4 hover:text-green-primary transition-colors text-base sm:text-lg"
@@ -99,14 +110,14 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Tracking Box - Bottom Right */}
+      {/* Tracking Box - Bottom Right on desktop, centered on mobile */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.4 }}
-        className="absolute bottom-8 right-4 sm:right-8 lg:right-16 z-30 w-full max-w-sm sm:max-w-md lg:max-w-lg"
+        className="relative lg:absolute lg:bottom-6 xl:bottom-8 lg:right-8 xl:right-16 z-30 w-full px-4 lg:px-0 lg:max-w-md xl:max-w-lg mt-6 lg:mt-0"
       >
-        <div className="bg-white p-4 sm:p-6 rounded-xl shadow-lg border border-gray-100">
+        <div className="bg-white p-4 sm:p-6 lg:p-5 xl:p-6 rounded-xl shadow-lg border border-gray-100 max-w-md mx-auto lg:max-w-md xl:max-w-lg lg:mx-0 lg:ml-auto">
           <div className="flex items-center gap-2 mb-3 sm:mb-4">
             <div className="w-5 h-5 sm:w-6 sm:h-6 bg-red-500 rounded-full flex items-center justify-center">
               <Search className="w-2.5 h-2.5 sm:w-3 sm:h-3 text-white" />

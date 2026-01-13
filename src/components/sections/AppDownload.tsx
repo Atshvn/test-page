@@ -6,14 +6,14 @@ import { useTranslations } from "next-intl";
 
 export default function AppDownload() {
   const t = useTranslations("appDownload");
-  
+
   return (
     <section className="relative bg-gray-800 overflow-hidden">
       {/* Background Image */}
       <div
-        className="absolute inset-0 bg-cover bg-center opacity-60"
+        className="absolute inset-0 bg-cover bg-bottom opacity-60"
         style={{
-          backgroundImage: `url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')`,
+          backgroundImage: `url('/downloadbg.png')`,
         }}
       />
       <div className="absolute inset-0 bg-gradient-to-r from-gray-900/80 to-gray-900/40" />
