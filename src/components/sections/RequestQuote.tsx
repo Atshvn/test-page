@@ -8,7 +8,12 @@ export default function RequestQuote() {
   const t = useTranslations("requestQuote");
 
   return (
-    <section className="relative overflow-visible bg-green-primary">
+    <section className="relative overflow-visible">
+      {/* Green Background - Full height on left, partial on right */}
+      <div className="absolute inset-0 bg-[#16A34A] z-0" />
+      {/* White overlay for bottom-right corner */}
+      <div className="absolute bottom-0 right-0 bg-white lg:w-[calc(50%-4rem)] h-32 lg:h-48 z-0" />
+
       {/* Box Image - Absolute positioned outside container */}
       <motion.div
         initial={{ opacity: 0, x: -100 }}
@@ -36,7 +41,7 @@ export default function RequestQuote() {
         </div>
       </motion.div>
 
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 relative z-10">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-8">
           {/* Left Content - Title and Rule Image */}
           <div className="flex flex-col justify-center">
@@ -68,17 +73,11 @@ export default function RequestQuote() {
             </motion.div>
 
             {/* Section Title */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="mb-8 lg:mb-12 lg:mt-96"
-            >
+            <div className="mb-8 lg:mb-12 lg:mt-96">
               <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-bold text-white  tracking-wider leading-tight">
                 {t("sectionTitle")}
               </h2>
-            </motion.div>
+            </div>
 
             {/* Rule/Process Image */}
             <motion.div
@@ -100,7 +99,7 @@ export default function RequestQuote() {
           </div>
 
           {/* Right Content - Form */}
-          <div className="flex items-center justify-center">
+          <div className="flex items-start justify-center py-12 lg:py-16 px-4 lg:px-8 relative z-10">
             <motion.div
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}

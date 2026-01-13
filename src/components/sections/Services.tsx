@@ -13,45 +13,38 @@ export default function Services() {
   const services = [
     {
       number: "01",
-      title: t("list.airFreight.title"),
-      description: t("list.airFreight.description"),
-      image: "/xe-oto.png",
-      link: "/services/air-freight",
+      title: t("list.transportation.title"),
+      description: t("list.transportation.description"),
+      image: "/service-icon/transport.png",
+      link: "/services/transportation",
     },
     {
       number: "02",
-      title: t("list.roadFreight.title"),
-      description: t("list.roadFreight.description"),
-      image: "/xe-oto.png",
-      link: "/services/road-freight",
+      title: t("list.fulfillment.title"),
+      description: t("list.fulfillment.description"),
+      image: "/service-icon/fulfillment.png",
+      link: "/services/fulfillment",
     },
     {
       number: "03",
-      title: t("list.oceanFreight.title"),
-      description: t("list.oceanFreight.description"),
-      image: "/xe-oto.png",
-      link: "/services/ocean-freight",
-    },
-    {
-      number: "04",
-      title: t("list.railFreight.title"),
-      description: t("list.railFreight.description"),
-      image: "/xe-oto.png",
-      link: "/services/rail-freight",
-    },
-    {
-      number: "05",
       title: t("list.warehousing.title"),
       description: t("list.warehousing.description"),
-      image: "/xe-oto.png",
+      image: "/service-icon/warehorse.png",
       link: "/services/warehousing",
     },
     {
-      number: "06",
-      title: t("list.expressDelivery.title"),
-      description: t("list.expressDelivery.description"),
-      image: "/xe-oto.png",
-      link: "/services/express-delivery",
+      number: "04",
+      title: t("list.installation.title"),
+      description: t("list.installation.description"),
+      image: "/service-icon/maintain.png",
+      link: "/services/installation",
+    },
+    {
+      number: "05",
+      title: t("list.other.title"),
+      description: t("list.other.description"),
+      image: "/service-icon/other.png",
+      link: "/services/other",
     },
   ];
 
@@ -84,19 +77,19 @@ export default function Services() {
               <Link href={`/${locale}${service.link}`}>
                 <div className="group flex flex-col md:grid md:grid-cols-12 items-start md:items-center py-6 md:py-10 border-b border-gray-200 transition-colors duration-300 cursor-pointer gap-3 md:gap-0">
                   {/* Left - Number & Description */}
-                  <div className="md:col-span-3">
+                  <div className="md:col-span-2">
                     <span className="text-green-primary font-medium text-base md:text-lg mb-1 md:mb-2 block">
                       {service.number}
                     </span>
-                    <p className="text-gray-500 text-xs md:text-sm leading-relaxed md:pr-4 hidden md:block">
+                    <p className="text-gray-500 text-xs md:text-sm leading-relaxed md:pr-4 hidden lg:block">
                       {service.description}
                     </p>
                   </div>
 
                   {/* Center - Title */}
-                  <div className="md:col-span-5 flex items-center justify-start md:justify-center w-full">
+                  <div className="md:col-span-7 flex items-center justify-start md:justify-center w-full">
                     <h3
-                      className="text-xl sm:text-2xl md:text-3xl lg:text-5xl font-semibold text-gray-400 group-hover:text-green-dark transition-colors duration-300"
+                      className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-semibold text-gray-400 group-hover:text-green-dark transition-colors duration-300 whitespace-nowrap"
                       style={{ fontFamily: "serif" }}
                     >
                       {service.title}
@@ -104,7 +97,7 @@ export default function Services() {
                   </div>
 
                   {/* Right - Icon (appears on hover - desktop only) */}
-                  <div className="hidden md:flex md:col-span-3 items-center justify-center">
+                  <div className="hidden md:flex md:col-span-2 items-center justify-center">
                     <div className="relative w-24 h-16 md:w-32 md:h-20 opacity-0 -translate-x-8 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-500 ease-out">
                       <Image
                         src={service.image}

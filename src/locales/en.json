@@ -9,10 +9,13 @@
       "contact": "Contact"
     },
     "submenu": {
-      "airFreight": "Air Freight",
-      "roadFreight": "Road Freight",
-      "oceanFreight": "Ocean Freight",
-      "railFreight": "Rail Freight"
+      "transportation": "Transportation",
+      "expressDelivery": "Express Delivery",
+      "economyDelivery": "Economy Delivery",
+      "fulfillment": "Fulfillment",
+      "warehousing": "Warehousing & Storage",
+      "installation": "Installation & Maintenance",
+      "other": "Other"
     },
     "hotline": "1900 6463",
     "login": "Login",
@@ -38,29 +41,25 @@
   "services": {
     "title": "Transportation and Logistics Services",
     "list": {
-      "airFreight": {
-        "title": "Air Freight",
-        "description": "We help you easily find air freight storage solutions for your cargo needs."
+      "transportation": {
+        "title": "Transportation",
+        "description": "Fast and safe cargo transportation service with a nationwide network coverage."
       },
-      "roadFreight": {
-        "title": "Road Freight",
-        "description": "Road freight plays a crucial role in transporting goods and people efficiently."
-      },
-      "oceanFreight": {
-        "title": "Ocean Freight",
-        "description": "Global trade efficiently transporting various types of cargo across international waters."
-      },
-      "railFreight": {
-        "title": "Rail Freight",
-        "description": "Rail transportation solutions connecting major economic zones, environmentally friendly."
+      "fulfillment": {
+        "title": "Fulfillment",
+        "description": "Comprehensive fulfillment solutions from storage, packaging to last-mile delivery."
       },
       "warehousing": {
-        "title": "Warehousing Services",
+        "title": "Warehousing & Storage",
         "description": "Modern warehouse system, meeting professional storage and cargo management needs."
       },
-      "expressDelivery": {
-        "title": "Express Delivery",
-        "description": "Same-day express delivery service, ensuring goods reach customers on time."
+      "installation": {
+        "title": "Installation & Maintenance",
+        "description": "On-site installation and maintenance services for equipment and products with professional technical team."
+      },
+      "other": {
+        "title": "Other",
+        "description": "Customized services tailored to customer's specific needs, flexible and diverse."
       }
     }
   },
@@ -201,6 +200,232 @@
     "appStore": {
       "downloadOn": "Download on the",
       "store": "App Store"
+    }
+  },
+  "serviceDetail": {
+    "transportation": {
+      "badge": "Transportation Service",
+      "title": "Fast & Safe Cargo Transportation",
+      "description": "Professional cargo transportation service with nationwide coverage across 63 provinces, ensuring your goods reach recipients quickly and safely.",
+      "features": {
+        "feature1": "Nationwide delivery in 24-72 hours",
+        "feature2": "Real-time order tracking",
+        "feature3": "100% cargo insurance",
+        "feature4": "Fast COD collection"
+      },
+      "subServices": {
+        "express": {
+          "title": "Express Delivery",
+          "description": "Same-day or next-day delivery with guaranteed time"
+        },
+        "economy": {
+          "title": "Economy Delivery",
+          "description": "Cost-effective shipping solution for non-urgent goods"
+        }
+      }
+    },
+    "fulfillment": {
+      "badge": "Fulfillment Service",
+      "title": "Comprehensive Fulfillment Solutions",
+      "description": "End-to-end fulfillment service from warehousing, packaging, order processing to last-mile delivery.",
+      "features": {
+        "feature1": "Smart inventory management",
+        "feature2": "Professional packaging",
+        "feature3": "Automated order processing",
+        "feature4": "Multi-platform e-commerce integration"
+      }
+    },
+    "warehousing": {
+      "badge": "Warehousing Service",
+      "title": "Professional Warehousing & Storage",
+      "description": "Modern warehouse system meeting international standards with advanced WMS technology.",
+      "features": {
+        "feature1": "GDP/GSP certified warehouse",
+        "feature2": "WMS inventory management system",
+        "feature3": "Cold storage with multi-temperature zones",
+        "feature4": "24/7 security & fire protection"
+      }
+    },
+    "installation": {
+      "badge": "Installation Service",
+      "title": "On-site Installation & Maintenance",
+      "description": "Professional technicians, well-trained and ready to install and maintain products at customer locations.",
+      "features": {
+        "feature1": "Certified technicians",
+        "feature2": "On-time installation",
+        "feature3": "Service warranty",
+        "feature4": "24/7 technical support"
+      }
+    },
+    "other": {
+      "badge": "Other Services",
+      "title": "Customized Services for Your Needs",
+      "description": "Flexible logistics solutions designed specifically for each customer's unique requirements.",
+      "features": {
+        "feature1": "Customized logistics solutions",
+        "feature2": "Supply chain consulting",
+        "feature3": "Value-added services",
+        "feature4": "24/7 support"
+      }
+    },
+    "cta": {
+      "title": "Need more information?",
+      "description": "Contact us now for the most suitable solution",
+      "button": "Contact Now"
+    },
+    "whyChoose": "Why choose this service?",
+    "learnMore": "Learn More",
+    "expressDelivery": {
+      "badge": "Express Delivery",
+      "title": "Super Fast Delivery - On Time Every Hour",
+      "description": "Vietnam's leading express delivery service with guaranteed same-day or next-day delivery. Perfect for e-commerce orders, important documents, and urgent goods.",
+      "heroStats": {
+        "stat1": { "value": "2-4h", "label": "Intracity" },
+        "stat2": { "value": "24h", "label": "Intercity" },
+        "stat3": { "value": "99.5%", "label": "On-time" },
+        "stat4": { "value": "63", "label": "Provinces" }
+      },
+      "features": {
+        "title": "Outstanding Advantages",
+        "list": {
+          "feature1": {
+            "title": "Intracity 2-4 hours",
+            "description": "Super-fast delivery within Hanoi, HCMC and major cities in just 2-4 hours from pickup."
+          },
+          "feature2": {
+            "title": "Intercity within 24 hours",
+            "description": "Guaranteed intercity delivery within 24 hours for Hanoi-HCMC and main routes."
+          },
+          "feature3": {
+            "title": "Fast COD collection",
+            "description": "Support cash on delivery (COD) and bank transfer within 24-48 hours after successful delivery."
+          },
+          "feature4": {
+            "title": "Real-time tracking",
+            "description": "Real-time order status updates via SMS, App and Website."
+          },
+          "feature5": {
+            "title": "100% value insurance",
+            "description": "100% compensation for goods value in case of incidents during transportation."
+          },
+          "feature6": {
+            "title": "Free 3 re-deliveries",
+            "description": "Support up to 3 free re-deliveries if recipient is not available."
+          }
+        }
+      },
+      "process": {
+        "title": "Express Delivery Process",
+        "steps": {
+          "step1": { "title": "Place Order", "description": "Create order via App, Website or call 1900 6463" },
+          "step2": { "title": "Pickup", "description": "Courier picks up within 30-60 minutes intracity" },
+          "step3": { "title": "Transport", "description": "Goods transported through optimized hub system" },
+          "step4": { "title": "Delivery", "description": "Hand-deliver to recipient, confirm via OTP" }
+        }
+      },
+      "pricing": {
+        "title": "Reference Pricing",
+        "description": "Shipping rates based on weight and distance. Contact us for detailed quotation.",
+        "zones": {
+          "sameCity": { "title": "Intracity", "price": "From 15,000d", "time": "2-4 hours" },
+          "nearProvince": { "title": "Adjacent", "price": "From 22,000d", "time": "12-24 hours" },
+          "farProvince": { "title": "Intercity", "price": "From 30,000d", "time": "24-48 hours" }
+        }
+      },
+      "useCases": {
+        "title": "Suitable for",
+        "list": {
+          "case1": "Urgent e-commerce orders",
+          "case2": "Important documents & contracts",
+          "case3": "Gifts, fresh flowers, cakes",
+          "case4": "Spare parts & components",
+          "case5": "Product samples",
+          "case6": "Medicine & medical supplies"
+        }
+      },
+      "cta": {
+        "title": "Ship today",
+        "description": "Register business account to receive up to 30% discount",
+        "button": "Register Now",
+        "buttonSecondary": "Check Rates"
+      }
+    },
+    "economyDelivery": {
+      "badge": "Economy Delivery",
+      "title": "Cost-effective - Still Quality Assured",
+      "description": "Cost-optimized shipping solution for non-urgent orders. Suitable for bulk goods, oversized items, and scheduled deliveries.",
+      "heroStats": {
+        "stat1": { "value": "30%", "label": "Savings" },
+        "stat2": { "value": "3-5", "label": "Days" },
+        "stat3": { "value": "50kg", "label": "Max/parcel" },
+        "stat4": { "value": "24/7", "label": "Support" }
+      },
+      "features": {
+        "title": "Benefits",
+        "list": {
+          "feature1": {
+            "title": "Save up to 30% on costs",
+            "description": "20-30% lower rates than express delivery, suitable for bulk orders."
+          },
+          "feature2": {
+            "title": "Flexible scheduled delivery",
+            "description": "Choose delivery date as desired, matching recipient's schedule."
+          },
+          "feature3": {
+            "title": "Oversized items support",
+            "description": "Handle oversized, heavy items up to 50kg/parcel at preferential rates."
+          },
+          "feature4": {
+            "title": "Multi-point consolidation",
+            "description": "Support pickup from multiple locations, saving time and costs."
+          },
+          "feature5": {
+            "title": "Careful packaging",
+            "description": "Standard packaging, maximum protection during transportation."
+          },
+          "feature6": {
+            "title": "Regular reports",
+            "description": "Provide detailed delivery status reports for businesses."
+          }
+        }
+      },
+      "comparison": {
+        "title": "Comparison with Express",
+        "headers": { "feature": "Feature", "express": "Express", "economy": "Economy" },
+        "rows": {
+          "row1": { "feature": "Delivery time", "express": "24-48h", "economy": "3-5 days" },
+          "row2": { "feature": "Cost", "express": "Higher", "economy": "30% lower" },
+          "row3": { "feature": "Max weight", "express": "30kg", "economy": "50kg" },
+          "row4": { "feature": "COD", "express": "Yes", "economy": "Yes" },
+          "row5": { "feature": "Insurance", "express": "100%", "economy": "100%" }
+        }
+      },
+      "pricing": {
+        "title": "Preferential Pricing",
+        "description": "Most competitive market rates, volume discounts available.",
+        "zones": {
+          "sameCity": { "title": "Intracity", "price": "From 12,000d", "time": "1-2 days" },
+          "nearProvince": { "title": "Adjacent", "price": "From 18,000d", "time": "2-3 days" },
+          "farProvince": { "title": "Intercity", "price": "From 25,000d", "time": "3-5 days" }
+        }
+      },
+      "useCases": {
+        "title": "Who is it for?",
+        "list": {
+          "case1": "Budget online shops",
+          "case2": "Bulk orders",
+          "case3": "Heavy, oversized products",
+          "case4": "Scheduled batch deliveries",
+          "case5": "Non-urgent, cost-saving items",
+          "case6": "Businesses optimizing logistics"
+        }
+      },
+      "cta": {
+        "title": "Start saving now",
+        "description": "Register now for special offers for new customers",
+        "button": "Create Account",
+        "buttonSecondary": "Download Price List"
+      }
     }
   },
   "footer": {

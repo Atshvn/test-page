@@ -4,7 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, ChevronDown, Phone, Globe } from "lucide-react";
+import { Menu, X, ChevronDown, ChevronRight, Phone, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { useTranslations, useLocale } from "next-intl";
@@ -13,20 +13,41 @@ import { usePathname } from "next/navigation";
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null);
+  const [activeNestedSubmenu, setActiveNestedSubmenu] = useState<string | null>(null);
+  const [mobileExpandedItems, setMobileExpandedItems] = useState<string[]>([]);
   const t = useTranslations("header");
   const locale = useLocale();
   const pathname = usePathname();
 
-  const navItems = [
+  // Define submenu item type with optional children
+  type SubmenuItem = {
+    name: string;
+    href: string;
+    children?: { name: string; href: string }[];
+  };
+
+  const navItems: {
+    name: string;
+    href: string;
+    submenu?: SubmenuItem[];
+  }[] = [
     { name: t("nav.home"), href: "/" },
     {
       name: t("nav.services"),
       href: "/services",
       submenu: [
-        { name: t("submenu.airFreight"), href: "/services/air-freight" },
-        { name: t("submenu.roadFreight"), href: "/services/road-freight" },
-        { name: t("submenu.oceanFreight"), href: "/services/ocean-freight" },
-        { name: t("submenu.railFreight"), href: "/services/rail-freight" },
+        { 
+          name: t("submenu.transportation"), 
+          href: "/services/transportation",
+          children: [
+            { name: t("submenu.expressDelivery"), href: "/services/transportation/express" },
+            { name: t("submenu.economyDelivery"), href: "/services/transportation/economy" },
+          ]
+        },
+        { name: t("submenu.fulfillment"), href: "/services/fulfillment" },
+        { name: t("submenu.warehousing"), href: "/services/warehousing" },
+        { name: t("submenu.installation"), href: "/services/installation" },
+        { name: t("submenu.other"), href: "/services/other" },
       ],
     },
     { name: t("nav.about"), href: "/about" },
@@ -34,6 +55,14 @@ export default function Header() {
     { name: t("nav.blog"), href: "/blog" },
     { name: t("nav.contact"), href: "/contact" },
   ];
+
+  const toggleMobileExpand = (itemName: string) => {
+    setMobileExpandedItems(prev => 
+      prev.includes(itemName) 
+        ? prev.filter(name => name !== itemName)
+        : [...prev, itemName]
+    );
+  };
 
   const switchLanguage = (newLocale: string) => {
     if (!pathname) return;
@@ -91,16 +120,45 @@ export default function Header() {
                       initial={{ opacity: 0, y: 10 }}
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: 10 }}
-                      className="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg border border-gray-100 py-2"
+                      className="absolute top-full left-0 mt-2 w-56 bg-white rounded-lg shadow-lg border border-gray-100 py-2"
                     >
                       {item.submenu.map((subItem) => (
-                        <Link
+                        <div 
                           key={subItem.name}
-                          href={`/${locale}${subItem.href}`}
-                          className="block px-4 py-2 text-gray-700 hover:bg-green-50 hover:text-green-primary transition-colors"
+                          className="relative"
+                          onMouseEnter={() => subItem.children && setActiveNestedSubmenu(subItem.name)}
+                          onMouseLeave={() => setActiveNestedSubmenu(null)}
                         >
-                          {subItem.name}
-                        </Link>
+                          <Link
+                            href={`/${locale}${subItem.href}`}
+                            className="flex items-center justify-between px-4 py-2 text-gray-700 hover:bg-green-50 hover:text-green-primary transition-colors"
+                          >
+                            {subItem.name}
+                            {subItem.children && <ChevronRight className="w-4 h-4" />}
+                          </Link>
+                          
+                          {/* Nested Submenu (Level 2) */}
+                          <AnimatePresence>
+                            {subItem.children && activeNestedSubmenu === subItem.name && (
+                              <motion.div
+                                initial={{ opacity: 0, x: -10 }}
+                                animate={{ opacity: 1, x: 0 }}
+                                exit={{ opacity: 0, x: -10 }}
+                                className="absolute top-0 left-full ml-1 w-48 bg-white rounded-lg shadow-lg border border-gray-100 py-2"
+                              >
+                                {subItem.children.map((childItem) => (
+                                  <Link
+                                    key={childItem.name}
+                                    href={`/${locale}${childItem.href}`}
+                                    className="block px-4 py-2 text-gray-700 hover:bg-green-50 hover:text-green-primary transition-colors"
+                                  >
+                                    {childItem.name}
+                                  </Link>
+                                ))}
+                              </motion.div>
+                            )}
+                          </AnimatePresence>
+                        </div>
                       ))}
                     </motion.div>
                   )}
@@ -228,14 +286,45 @@ export default function Header() {
                         {item.submenu && (
                           <div className="ml-4 flex flex-col gap-1 pb-2">
                             {item.submenu.map((subItem) => (
-                              <Link
-                                key={subItem.name}
-                                href={`/${locale}${subItem.href}`}
-                                className="block py-2 text-gray-600 hover:text-green-primary transition-colors text-base"
-                                onClick={() => setIsOpen(false)}
-                              >
-                                {subItem.name}
-                              </Link>
+                              <div key={subItem.name}>
+                                {subItem.children ? (
+                                  <>
+                                    <button
+                                      onClick={() => toggleMobileExpand(subItem.name)}
+                                      className="flex items-center justify-between w-full py-2 text-gray-600 hover:text-green-primary transition-colors text-base"
+                                    >
+                                      {subItem.name}
+                                      <ChevronDown 
+                                        className={`w-4 h-4 transition-transform ${
+                                          mobileExpandedItems.includes(subItem.name) ? 'rotate-180' : ''
+                                        }`} 
+                                      />
+                                    </button>
+                                    {mobileExpandedItems.includes(subItem.name) && (
+                                      <div className="ml-4 flex flex-col gap-1 pb-2">
+                                        {subItem.children.map((childItem) => (
+                                          <Link
+                                            key={childItem.name}
+                                            href={`/${locale}${childItem.href}`}
+                                            className="block py-2 text-gray-500 hover:text-green-primary transition-colors text-sm"
+                                            onClick={() => setIsOpen(false)}
+                                          >
+                                            {childItem.name}
+                                          </Link>
+                                        ))}
+                                      </div>
+                                    )}
+                                  </>
+                                ) : (
+                                  <Link
+                                    href={`/${locale}${subItem.href}`}
+                                    className="block py-2 text-gray-600 hover:text-green-primary transition-colors text-base"
+                                    onClick={() => setIsOpen(false)}
+                                  >
+                                    {subItem.name}
+                                  </Link>
+                                )}
+                              </div>
                             ))}
                           </div>
                         )}

@@ -4,6 +4,7 @@ import {
   Services,
   About,
   RequestQuote,
+  TruckLineAnimation,
   Blog,
   CTA,
 } from "@/components/sections";
@@ -20,8 +21,8 @@ export default function Home() {
         <Services />
         <About />
         <RequestQuote />
+        <TruckLineAnimation />
         <Blog />
-        <CTA />
       </main>
       <AppDownload />
       <Footer />

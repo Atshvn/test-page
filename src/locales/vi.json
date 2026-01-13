@@ -9,10 +9,13 @@
       "contact": "Liên hệ"
     },
     "submenu": {
-      "airFreight": "Vận tải hàng không",
-      "roadFreight": "Vận tải đường bộ",
-      "oceanFreight": "Vận tải đường biển",
-      "railFreight": "Vận tải đường sắt"
+      "transportation": "Vận chuyển",
+      "expressDelivery": "Chuyển phát nhanh",
+      "economyDelivery": "Chuyển phát tiết kiệm",
+      "fulfillment": "Fulfillment",
+      "warehousing": "Kho bãi & lưu trữ",
+      "installation": "Lắp đặt & bảo dưỡng",
+      "other": "Khác"
     },
     "hotline": "1900 6463",
     "login": "Đăng nhập",
@@ -38,29 +41,25 @@
   "services": {
     "title": "Dịch vụ vận chuyển và hậu cần",
     "list": {
-      "airFreight": {
-        "title": "Vận tải hàng không",
-        "description": "Chúng tôi giúp bạn dễ dàng tìm kiếm các giải pháp lưu trữ hàng hóa bằng vận tải hàng không."
+      "transportation": {
+        "title": "Vận chuyển",
+        "description": "Dịch vụ vận chuyển hàng hóa nhanh chóng, an toàn với mạng lưới phủ khắp cả nước."
       },
-      "roadFreight": {
-        "title": "Vận tải đường bộ",
-        "description": "Vận tải đường bộ đóng vai trò vô cùng quan trọng trong việc vận chuyển hàng hóa và con người."
-      },
-      "oceanFreight": {
-        "title": "Vận tải đường biển",
-        "description": "Thương mại toàn cầu vận chuyển hiệu quả nhiều loại hàng hóa khác nhau trên khắp các vùng biển quốc tế."
-      },
-      "railFreight": {
-        "title": "Vận tải đường sắt",
-        "description": "Giải pháp vận tải đường sắt kết nối các khu kinh tế lớn, thân thiện với môi trường."
+      "fulfillment": {
+        "title": "Fulfillment",
+        "description": "Giải pháp fulfillment toàn diện từ lưu kho, đóng gói đến giao hàng cho khách cuối."
       },
       "warehousing": {
-        "title": "Dịch vụ kho bãi",
+        "title": "Kho bãi & lưu trữ",
         "description": "Hệ thống kho bãi hiện đại, đáp ứng nhu cầu lưu trữ và quản lý hàng hóa chuyên nghiệp."
       },
-      "expressDelivery": {
-        "title": "Giao hàng nhanh",
-        "description": "Dịch vụ giao hàng nhanh trong ngày, đảm bảo hàng hóa đến tay khách hàng đúng hẹn."
+      "installation": {
+        "title": "Lắp đặt & bảo dưỡng",
+        "description": "Dịch vụ lắp đặt và bảo dưỡng thiết bị, sản phẩm tận nơi với đội ngũ kỹ thuật chuyên nghiệp."
+      },
+      "other": {
+        "title": "Khác",
+        "description": "Các dịch vụ tùy chỉnh theo nhu cầu riêng của khách hàng, linh hoạt và đa dạng."
       }
     }
   },
@@ -201,6 +200,232 @@
     "appStore": {
       "downloadOn": "Download on the",
       "store": "App Store"
+    }
+  },
+  "serviceDetail": {
+    "transportation": {
+      "badge": "Dịch vụ vận chuyển",
+      "title": "Vận chuyển hàng hóa nhanh chóng & an toàn",
+      "description": "Dịch vụ vận chuyển hàng hóa chuyên nghiệp với mạng lưới phủ khắp 63 tỉnh thành, đảm bảo hàng hóa đến tay người nhận nhanh chóng và an toàn.",
+      "features": {
+        "feature1": "Giao hàng toàn quốc trong 24-72 giờ",
+        "feature2": "Theo dõi đơn hàng realtime",
+        "feature3": "Bảo hiểm hàng hóa 100%",
+        "feature4": "Thu hộ COD nhanh chóng"
+      },
+      "subServices": {
+        "express": {
+          "title": "Chuyển phát nhanh",
+          "description": "Giao hàng trong ngày hoặc hôm sau với thời gian cam kết"
+        },
+        "economy": {
+          "title": "Chuyển phát tiết kiệm",
+          "description": "Giải pháp vận chuyển tiết kiệm chi phí cho hàng hóa không gấp"
+        }
+      }
+    },
+    "fulfillment": {
+      "badge": "Dịch vụ Fulfillment",
+      "title": "Giải pháp Fulfillment toàn diện",
+      "description": "Dịch vụ fulfillment trọn gói từ lưu kho, đóng gói, xử lý đơn hàng đến giao hàng tận tay khách hàng cuối.",
+      "features": {
+        "feature1": "Quản lý tồn kho thông minh",
+        "feature2": "Đóng gói chuyên nghiệp",
+        "feature3": "Xử lý đơn hàng tự động",
+        "feature4": "Tích hợp đa sàn TMĐT"
+      }
+    },
+    "warehousing": {
+      "badge": "Dịch vụ kho bãi",
+      "title": "Kho bãi & Lưu trữ chuyên nghiệp",
+      "description": "Hệ thống kho bãi hiện đại, đạt chuẩn quốc tế với công nghệ quản lý WMS tiên tiến.",
+      "features": {
+        "feature1": "Kho đạt chuẩn GDP/GSP",
+        "feature2": "Hệ thống WMS quản lý tồn kho",
+        "feature3": "Kho lạnh, kho mát đa nhiệt độ",
+        "feature4": "An ninh 24/7, PCCC đầy đủ"
+      }
+    },
+    "installation": {
+      "badge": "Dịch vụ lắp đặt",
+      "title": "Lắp đặt & Bảo dưỡng tận nơi",
+      "description": "Đội ngũ kỹ thuật viên chuyên nghiệp, được đào tạo bài bản, sẵn sàng lắp đặt và bảo dưỡng sản phẩm tận nhà khách hàng.",
+      "features": {
+        "feature1": "Kỹ thuật viên được chứng nhận",
+        "feature2": "Lắp đặt đúng hẹn",
+        "feature3": "Bảo hành dịch vụ",
+        "feature4": "Hỗ trợ kỹ thuật 24/7"
+      }
+    },
+    "other": {
+      "badge": "Dịch vụ khác",
+      "title": "Dịch vụ tùy chỉnh theo nhu cầu",
+      "description": "Các giải pháp logistics linh hoạt, được thiết kế riêng theo yêu cầu đặc thù của từng khách hàng.",
+      "features": {
+        "feature1": "Giải pháp logistics tùy chỉnh",
+        "feature2": "Tư vấn chuỗi cung ứng",
+        "feature3": "Dịch vụ giá trị gia tăng",
+        "feature4": "Hỗ trợ 24/7"
+      }
+    },
+    "cta": {
+      "title": "Bạn cần tư vấn thêm?",
+      "description": "Liên hệ ngay với chúng tôi để được tư vấn giải pháp phù hợp nhất",
+      "button": "Liên hệ ngay"
+    },
+    "whyChoose": "Tại sao chọn dịch vụ này?",
+    "learnMore": "Tìm hiểu thêm",
+    "expressDelivery": {
+      "badge": "Chuyển phát nhanh",
+      "title": "Giao hàng siêu tốc - Đúng hẹn từng giờ",
+      "description": "Dịch vụ chuyển phát nhanh hàng đầu Việt Nam với cam kết giao hàng trong ngày hoặc hôm sau. Phù hợp cho các đơn hàng TMĐT, tài liệu quan trọng, hàng hóa cần gấp.",
+      "heroStats": {
+        "stat1": { "value": "2-4h", "label": "Nội thành" },
+        "stat2": { "value": "24h", "label": "Liên tỉnh" },
+        "stat3": { "value": "99.5%", "label": "Đúng hẹn" },
+        "stat4": { "value": "63", "label": "Tỉnh thành" }
+      },
+      "features": {
+        "title": "Ưu điểm vượt trội",
+        "list": {
+          "feature1": {
+            "title": "Giao nội thành 2-4 giờ",
+            "description": "Giao hàng siêu tốc trong nội thành Hà Nội, TP.HCM và các thành phố lớn chỉ trong 2-4 giờ kể từ khi lấy hàng."
+          },
+          "feature2": {
+            "title": "Liên tỉnh trong 24 giờ",
+            "description": "Cam kết giao hàng liên tỉnh trong vòng 24 giờ cho tuyến Hà Nội - TP.HCM và các tuyến chính."
+          },
+          "feature3": {
+            "title": "Thu hộ COD nhanh chóng",
+            "description": "Hỗ trợ thu hộ tiền mặt (COD) và chuyển khoản về tài khoản trong 24-48 giờ sau khi giao thành công."
+          },
+          "feature4": {
+            "title": "Theo dõi realtime",
+            "description": "Cập nhật trạng thái đơn hàng theo thời gian thực qua SMS, App và Website."
+          },
+          "feature5": {
+            "title": "Bảo hiểm 100% giá trị",
+            "description": "Đền bù 100% giá trị hàng hóa khi có sự cố trong quá trình vận chuyển."
+          },
+          "feature6": {
+            "title": "Giao lại miễn phí 3 lần",
+            "description": "Hỗ trợ giao lại miễn phí đến 3 lần nếu khách hàng không có mặt nhận hàng."
+          }
+        }
+      },
+      "process": {
+        "title": "Quy trình giao hàng nhanh",
+        "steps": {
+          "step1": { "title": "Đặt đơn", "description": "Tạo đơn qua App, Website hoặc gọi hotline 1900 6463" },
+          "step2": { "title": "Lấy hàng", "description": "Shipper đến lấy hàng trong 30-60 phút nội thành" },
+          "step3": { "title": "Vận chuyển", "description": "Hàng được vận chuyển qua hệ thống hub tối ưu" },
+          "step4": { "title": "Giao hàng", "description": "Giao tận tay người nhận, xác nhận qua OTP" }
+        }
+      },
+      "pricing": {
+        "title": "Bảng giá tham khảo",
+        "description": "Giá cước được tính theo khối lượng và khoảng cách. Liên hệ để nhận báo giá chi tiết.",
+        "zones": {
+          "sameCity": { "title": "Nội thành", "price": "Từ 15.000đ", "time": "2-4 giờ" },
+          "nearProvince": { "title": "Liền kề", "price": "Từ 22.000đ", "time": "12-24 giờ" },
+          "farProvince": { "title": "Liên tỉnh", "price": "Từ 30.000đ", "time": "24-48 giờ" }
+        }
+      },
+      "useCases": {
+        "title": "Phù hợp cho",
+        "list": {
+          "case1": "Đơn hàng TMĐT cần giao gấp",
+          "case2": "Tài liệu, hợp đồng quan trọng",
+          "case3": "Quà tặng, hoa tươi, bánh kem",
+          "case4": "Linh kiện, phụ tùng thay thế",
+          "case5": "Mẫu sản phẩm, hàng mẫu",
+          "case6": "Thuốc, vật tư y tế"
+        }
+      },
+      "cta": {
+        "title": "Gửi hàng ngay hôm nay",
+        "description": "Đăng ký tài khoản doanh nghiệp để nhận ưu đãi chiết khấu đến 30%",
+        "button": "Đăng ký ngay",
+        "buttonSecondary": "Tra cứu giá cước"
+      }
+    },
+    "economyDelivery": {
+      "badge": "Chuyển phát tiết kiệm",
+      "title": "Tiết kiệm chi phí - Vẫn đảm bảo chất lượng",
+      "description": "Giải pháp vận chuyển tối ưu chi phí cho các đơn hàng không gấp. Phù hợp cho hàng hóa số lượng lớn, hàng cồng kềnh, giao hàng theo lịch.",
+      "heroStats": {
+        "stat1": { "value": "30%", "label": "Tiết kiệm" },
+        "stat2": { "value": "3-5", "label": "Ngày giao" },
+        "stat3": { "value": "50kg", "label": "Tối đa/kiện" },
+        "stat4": { "value": "24/7", "label": "Hỗ trợ" }
+      },
+      "features": {
+        "title": "Lợi ích khi sử dụng",
+        "list": {
+          "feature1": {
+            "title": "Tiết kiệm đến 30% chi phí",
+            "description": "Giá cước thấp hơn 20-30% so với chuyển phát nhanh, phù hợp cho đơn hàng số lượng lớn."
+          },
+          "feature2": {
+            "title": "Giao hàng linh hoạt theo lịch",
+            "description": "Chọn ngày giao hàng theo ý muốn, phù hợp với lịch trình của người nhận."
+          },
+          "feature3": {
+            "title": "Hỗ trợ hàng cồng kềnh",
+            "description": "Nhận vận chuyển hàng cồng kềnh, hàng nặng đến 50kg/kiện với giá ưu đãi."
+          },
+          "feature4": {
+            "title": "Gom hàng đa điểm",
+            "description": "Hỗ trợ gom hàng từ nhiều điểm khác nhau, tiết kiệm thời gian và chi phí."
+          },
+          "feature5": {
+            "title": "Đóng gói cẩn thận",
+            "description": "Hàng hóa được đóng gói chuẩn, bảo vệ tối đa trong quá trình vận chuyển."
+          },
+          "feature6": {
+            "title": "Báo cáo định kỳ",
+            "description": "Cung cấp báo cáo chi tiết về tình trạng giao hàng cho doanh nghiệp."
+          }
+        }
+      },
+      "comparison": {
+        "title": "So sánh với Chuyển phát nhanh",
+        "headers": { "feature": "Đặc điểm", "express": "Nhanh", "economy": "Tiết kiệm" },
+        "rows": {
+          "row1": { "feature": "Thời gian giao", "express": "24-48h", "economy": "3-5 ngày" },
+          "row2": { "feature": "Chi phí", "express": "Cao hơn", "economy": "Thấp hơn 30%" },
+          "row3": { "feature": "Cân nặng tối đa", "express": "30kg", "economy": "50kg" },
+          "row4": { "feature": "Thu hộ COD", "express": "Có", "economy": "Có" },
+          "row5": { "feature": "Bảo hiểm", "express": "100%", "economy": "100%" }
+        }
+      },
+      "pricing": {
+        "title": "Bảng giá ưu đãi",
+        "description": "Giá cước cạnh tranh nhất thị trường, chiết khấu theo số lượng đơn hàng.",
+        "zones": {
+          "sameCity": { "title": "Nội thành", "price": "Từ 12.000đ", "time": "1-2 ngày" },
+          "nearProvince": { "title": "Liền kề", "price": "Từ 18.000đ", "time": "2-3 ngày" },
+          "farProvince": { "title": "Liên tỉnh", "price": "Từ 25.000đ", "time": "3-5 ngày" }
+        }
+      },
+      "useCases": {
+        "title": "Dành cho ai?",
+        "list": {
+          "case1": "Shop online bán hàng giá rẻ",
+          "case2": "Hàng hóa số lượng lớn",
+          "case3": "Sản phẩm nặng, cồng kềnh",
+          "case4": "Giao hàng theo đợt, theo lịch",
+          "case5": "Hàng không gấp, tiết kiệm chi phí",
+          "case6": "Doanh nghiệp cần tối ưu logistics"
+        }
+      },
+      "cta": {
+        "title": "Bắt đầu tiết kiệm ngay",
+        "description": "Đăng ký ngay để nhận ưu đãi đặc biệt cho khách hàng mới",
+        "button": "Đăng ký tài khoản",
+        "buttonSecondary": "Tải bảng giá"
+      }
     }
   },
   "footer": {
