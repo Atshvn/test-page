@@ -97,8 +97,8 @@ export default function TruckLineAnimation() {
           <Image
             src="/xe-icon.png"
             alt="NETCO Truck"
-            width={140}
-            height={84}
+            width={200}
+            height={120}
             className="object-contain drop-shadow-xl"
             style={{
               filter: "drop-shadow(0 10px 15px rgb(0 0 0 / 0.1))",
