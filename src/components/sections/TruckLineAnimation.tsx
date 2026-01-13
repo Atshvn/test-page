@@ -68,7 +68,7 @@ export default function TruckLineAnimation() {
           {/* Active path - colored */}
           <path
             d="M2 0V189.5C2 200.546 10.9543 209.5 22 209.5H384.192C395.238 209.5 404.192 218.454 404.192 229.5V321C404.192 332.046 413.146 341 424.192 341H1323.5"
-            stroke="#6B7280"
+            stroke="#10b981"
             strokeOpacity="0.4"
             strokeWidth="3"
           />
