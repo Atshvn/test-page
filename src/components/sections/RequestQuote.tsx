@@ -8,7 +8,7 @@ export default function RequestQuote() {
   const t = useTranslations("requestQuote");
 
   return (
-    <section className="relative overflow-visible">
+    <section className="relative overflow-hidden">
       {/* Green Background - Full height on left, partial on right */}
       <div className="absolute inset-0 bg-[#16A34A] z-0" />
       {/* White overlay for bottom-right corner */}
@@ -16,7 +16,7 @@ export default function RequestQuote() {
 
       {/* Box Image - Absolute positioned outside container */}
       <motion.div
-        initial={{ opacity: 0, x: -100 }}
+        initial={{ opacity: 0, x: -30 }}
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8 }}
@@ -47,8 +47,8 @@ export default function RequestQuote() {
           <div className="flex flex-col justify-center">
             {/* Box Image - Mobile/Tablet only */}
             <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: -20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
               whileHover={{
@@ -101,8 +101,8 @@ export default function RequestQuote() {
           {/* Right Content - Form */}
           <div className="flex items-start justify-center py-12 lg:py-16 px-4 lg:px-8 relative z-10">
             <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
               className="w-full max-w-lg"

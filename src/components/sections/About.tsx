@@ -22,8 +22,8 @@ export default function About() {
         <div className="grid lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-stretch">
           {/* Left Content - Full Height Image */}
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
             className="relative min-h-[500px] lg:min-h-[650px]"
@@ -39,8 +39,8 @@ export default function About() {
 
           {/* Right Content */}
           <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
             className="flex flex-col justify-center"

@@ -24,8 +24,8 @@ export default function Hero() {
   // Xe sẽ di chuyển từ nếp gấp thứ 2 (258px) đến form tracking (khoảng 60-70% width)
   // Sử dụng nhiều keyframes để tạo chuyển động mượt hơn
   const truckXRaw = useTransform(
-    scrollYProgress, 
-    [0, 0.3, 0.6, 1], 
+    scrollYProgress,
+    [0, 0.3, 0.6, 1],
     [258, 450, 650, 850]
   );
 
@@ -33,7 +33,7 @@ export default function Hero() {
   const truckX = useSpring(truckXRaw, {
     stiffness: 100,
     damping: 30,
-    mass: 0.5
+    mass: 0.5,
   });
 
   return (
@@ -63,8 +63,8 @@ export default function Hero() {
         <div className="grid lg:grid-cols-2 gap-6 lg:gap-8 items-start">
           {/* Left Content - Text and Animation */}
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="relative z-20 max-w-xl"
           >
@@ -220,7 +220,7 @@ export default function Hero() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{
               duration: 0.5,
-              ease: [0.4, 0, 0.2, 1]
+              ease: [0.4, 0, 0.2, 1],
             }}
           >
             <Image
@@ -231,7 +231,7 @@ export default function Hero() {
               className="object-contain drop-shadow-2xl"
               priority
               style={{
-                filter: "drop-shadow(0 20px 25px rgb(0 0 0 / 0.15))"
+                filter: "drop-shadow(0 20px 25px rgb(0 0 0 / 0.15))",
               }}
             />
           </motion.div>
