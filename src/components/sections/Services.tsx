@@ -15,7 +15,7 @@ export default function Services() {
       number: "01",
       title: t("list.transportation.title"),
       description: t("list.transportation.description"),
-      image: "/service-icon/transport.png",
+      image: "/service-icon/xe-oto.png",
       link: "/services/transportation",
     },
     {
@@ -81,17 +81,17 @@ export default function Services() {
                   <span className="text-green-primary font-medium text-base">
                     {service.number}
                   </span>
-                  
+
                   {/* Description */}
                   <p className="text-gray-500 text-sm leading-relaxed">
                     {service.description}
                   </p>
-                  
+
                   {/* Title */}
                   <h3 className="text-3xl sm:text-4xl font-semibold text-green-primary">
                     {service.title}
                   </h3>
-                  
+
                   {/* Arrow */}
                   <div className="flex justify-end pt-2">
                     <ArrowRight className="w-5 h-5 text-gray-300 group-hover:text-green-primary group-hover:translate-x-2 transition-all duration-300" />

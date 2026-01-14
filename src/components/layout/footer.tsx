@@ -326,23 +326,40 @@ export default function Footer() {
           </div>
 
           {/* Copyright */}
-          <div className="mt-6 md:mt-8 pt-4 md:pt-6 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-3 md:gap-4">
-            <p className="text-white/60 text-xs md:text-sm text-center md:text-left">
-              © {new Date().getFullYear()} {t("copyright")}
-            </p>
-            <div className="flex gap-4 md:gap-6">
-              <Link
-                href={`/${locale}/privacy`}
-                className="text-white/60 hover:text-white text-xs md:text-sm transition-colors"
-              >
-                {t("privacy")}
-              </Link>
-              <Link
-                href={`/${locale}/terms`}
-                className="text-white/60 hover:text-white text-xs md:text-sm transition-colors"
-              >
-                {t("terms")}
-              </Link>
+          <div className="mt-6 md:mt-8 pt-4 md:pt-6 border-t border-white/10">
+            <div className="flex flex-col md:flex-row justify-between items-center gap-4 md:gap-6">
+              <div className="flex flex-col sm:flex-row items-center gap-3 md:gap-4">
+                <p className="text-white/60 text-xs md:text-sm text-center md:text-left">
+                  © {new Date().getFullYear()} {t("copyright")}
+                </p>
+                <a
+                  href="http://online.gov.vn/Home/WebDetails/56503?AspxAutoDetectCookieSupport=1"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 hover:opacity-80 transition-opacity"
+                  title="Đã thông báo Bộ Công Thương"
+                >
+                  <img
+                    src="http://online.gov.vn/PublicImages/2015/08/27/11/20150827110756-dathongbao.png"
+                    alt="Đã thông báo Bộ Công Thương"
+                    className="h-10 md:h-12 w-auto"
+                  />
+                </a>
+              </div>
+              <div className="flex gap-4 md:gap-6">
+                <Link
+                  href={`/${locale}/privacy`}
+                  className="text-white/60 hover:text-white text-xs md:text-sm transition-colors"
+                >
+                  {t("privacy")}
+                </Link>
+                <Link
+                  href={`/${locale}/terms`}
+                  className="text-white/60 hover:text-white text-xs md:text-sm transition-colors"
+                >
+                  {t("terms")}
+                </Link>
+              </div>
             </div>
           </div>
         </div>

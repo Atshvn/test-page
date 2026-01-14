@@ -124,7 +124,7 @@ export default function About() {
                 className="text-center w-[calc(50%-1rem)] sm:w-auto cursor-pointer transition-all duration-200 ease-out"
               >
                 <p
-                  className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold tracking-tight leading-none mb-2 md:mb-4"
+                  className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-8xl font-bold tracking-tight leading-none mb-2 md:mb-4"
                   style={{
                     fontFamily: "'Inter', 'Helvetica Neue', Arial, sans-serif",
                     WebkitTextStroke: "1.5px #22c55e",

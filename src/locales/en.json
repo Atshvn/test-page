@@ -15,7 +15,13 @@
       "fulfillment": "Fulfillment",
       "warehousing": "Warehousing",
       "installation": "Installation & Maintenance",
-      "other": "Other"
+      "other": "Other",
+      "aboutUs": "About Us",
+      "visionMission": "Vision & Mission",
+      "businessPhilosophy": "Business Philosophy",
+      "contactUs": "Contact Us",
+      "postOfficeSystem": "Post Office Network",
+      "careers": "Careers"
     },
     "hotline": "1900 6463",
     "login": "Login",
