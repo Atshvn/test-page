@@ -13,7 +13,7 @@
       "expressDelivery": "Chuyển phát nhanh",
       "economyDelivery": "Chuyển phát tiết kiệm",
       "fulfillment": "Fulfillment",
-      "warehousing": "Kho bãi & lưu trữ",
+      "warehousing": "Kho bãi",
       "installation": "Lắp đặt & bảo dưỡng",
       "other": "Khác"
     },
@@ -50,7 +50,7 @@
         "description": "Giải pháp fulfillment toàn diện từ lưu kho, đóng gói đến giao hàng cho khách cuối."
       },
       "warehousing": {
-        "title": "Kho bãi & lưu trữ",
+        "title": "Kho bãi",
         "description": "Hệ thống kho bãi hiện đại, đáp ứng nhu cầu lưu trữ và quản lý hàng hóa chuyên nghiệp."
       },
       "installation": {
@@ -237,7 +237,7 @@
     },
     "warehousing": {
       "badge": "Dịch vụ kho bãi",
-      "title": "Kho bãi & Lưu trữ chuyên nghiệp",
+      "title": "Kho bãi",
       "description": "Hệ thống kho bãi hiện đại, đạt chuẩn quốc tế với công nghệ quản lý WMS tiên tiến.",
       "features": {
         "feature1": "Kho đạt chuẩn GDP/GSP",

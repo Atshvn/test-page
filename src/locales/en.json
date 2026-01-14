@@ -13,7 +13,7 @@
       "expressDelivery": "Express Delivery",
       "economyDelivery": "Economy Delivery",
       "fulfillment": "Fulfillment",
-      "warehousing": "Warehousing & Storage",
+      "warehousing": "Warehousing",
       "installation": "Installation & Maintenance",
       "other": "Other"
     },
@@ -50,7 +50,7 @@
         "description": "Comprehensive fulfillment solutions from storage, packaging to last-mile delivery."
       },
       "warehousing": {
-        "title": "Warehousing & Storage",
+        "title": "Warehousing",
         "description": "Modern warehouse system, meeting professional storage and cargo management needs."
       },
       "installation": {
@@ -237,7 +237,7 @@
     },
     "warehousing": {
       "badge": "Warehousing Service",
-      "title": "Professional Warehousing & Storage",
+      "title": "Professional Warehousing",
       "description": "Modern warehouse system meeting international standards with advanced WMS technology.",
       "features": {
         "feature1": "GDP/GSP certified warehouse",
