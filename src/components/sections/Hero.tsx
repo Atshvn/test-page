@@ -39,7 +39,7 @@ export default function Hero() {
   return (
     <section
       ref={containerRef}
-      className="relative min-h-[auto] lg:min-h-[calc(100vh-80px)] w-full overflow-hidden mt-20 bg-gray-50 lg:bg-transparent pb-8 lg:pb-0"
+      className="relative min-h-[auto] lg:min-h-[max(calc(100vh-80px),650px)] w-full overflow-hidden mt-20 bg-gray-50 lg:bg-transparent pb-8 lg:pb-0"
       style={{
         backgroundImage: "var(--hero-bg)",
         backgroundRepeat: "no-repeat",

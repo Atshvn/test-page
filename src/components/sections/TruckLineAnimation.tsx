@@ -31,12 +31,11 @@ export default function TruckLineAnimation() {
   return (
     <div
       ref={containerRef}
-      className="relative w-full hidden lg:block pointer-events-none"
+      className="relative w-full hidden lg:block pointer-events-none overflow-hidden"
       style={{
         height: "400px", // Tăng height để chứa xe
         marginTop: "-190px", // Đè lên phần trắng của RequestQuote
         zIndex: 30,
-        overflow: "visible", // Cho phép xe hiện full
       }}
     >
       {/* SVG Decoration Line - Flipped horizontally (scaleX: -1) */}
@@ -54,7 +53,7 @@ export default function TruckLineAnimation() {
           xmlns="http://www.w3.org/2000/svg"
           className="absolute right-0"
           style={{
-            minWidth: "100%",
+            maxWidth: "100%",
           }}
         >
           {/* Background path - light gray */}
@@ -80,7 +79,7 @@ export default function TruckLineAnimation() {
         className="absolute z-30"
         style={{
           left: useTransform(truckLeftPercent, (v) => `${v}%`),
-          bottom: "55px", // Điều chỉnh để xe nằm giữa line và hiện full
+          bottom: "14%", // Dùng % để responsive theo container height
           scaleX: -1, // Flip xe để quay đầu sang trái
           translateY: "50%", // Center xe theo chiều dọc
         }}
