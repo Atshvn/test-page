@@ -8,7 +8,7 @@ export default function RequestQuote() {
   const t = useTranslations("requestQuote");
 
   return (
-    <section className="relative overflow-hidden">
+    <section className="relative overflow-x-clip overflow-y-visible">
       {/* Green Background - Full height on left, partial on right */}
       <div className="absolute inset-0 bg-[#16A34A] z-0" />
       {/* White overlay for bottom-right corner */}
@@ -44,7 +44,7 @@ export default function RequestQuote() {
       <div className="container mx-auto px-4 relative z-10">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-8">
           {/* Left Content - Title and Rule Image */}
-          <div className="flex flex-col justify-center">
+          <div className="flex flex-col justify-end lg:pt-[420px] xl:pt-[450px] pb-4">
             {/* Box Image - Mobile/Tablet only */}
             <motion.div
               initial={{ opacity: 0, y: -20 }}
@@ -73,11 +73,17 @@ export default function RequestQuote() {
             </motion.div>
 
             {/* Section Title */}
-            <div className="mb-8 lg:mb-12 lg:mt-96">
-              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-bold text-white  tracking-wider leading-tight">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="mb-6 lg:mb-8"
+            >
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-4xl xl:text-5xl font-bold text-white tracking-wider leading-tight">
                 {t("sectionTitle")}
               </h2>
-            </div>
+            </motion.div>
 
             {/* Rule/Process Image */}
             <motion.div
@@ -87,12 +93,12 @@ export default function RequestQuote() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="w-full"
             >
-              <div className="relative w-full h-64 sm:h-80 md:h-96 ">
+              <div className="relative w-full h-48 sm:h-64 md:h-72 lg:h-56 xl:h-64">
                 <Image
                   src="/rule.png"
                   alt={t("images.ruleAlt")}
                   fill
-                  className="object-contain object-center lg:object-left"
+                  className="object-contain object-center lg:object-left-bottom"
                 />
               </div>
             </motion.div>

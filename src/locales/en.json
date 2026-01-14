@@ -9,7 +9,7 @@
       "contact": "Contact"
     },
     "submenu": {
-      "transportation": "Transportation",
+      "transportation": "Delivery",
       "expressDelivery": "Express Delivery",
       "economyDelivery": "Economy Delivery",
       "fulfillment": "Fulfillment",
@@ -42,8 +42,8 @@
     "title": "Transportation and Logistics Services",
     "list": {
       "transportation": {
-        "title": "Transportation",
-        "description": "Fast and safe cargo transportation service with a nationwide network coverage."
+        "title": "Delivery",
+        "description": "Fast and safe cargo delivery service with a nationwide network coverage."
       },
       "fulfillment": {
         "title": "Fulfillment",
@@ -204,9 +204,9 @@
   },
   "serviceDetail": {
     "transportation": {
-      "badge": "Transportation Service",
-      "title": "Fast & Safe Cargo Transportation",
-      "description": "Professional cargo transportation service with nationwide coverage across 63 provinces, ensuring your goods reach recipients quickly and safely.",
+      "badge": "Delivery Service",
+      "title": "Fast & Safe Cargo Delivery",
+      "description": "Professional cargo delivery service with nationwide coverage across 63 provinces, ensuring your goods reach recipients quickly and safely.",
       "features": {
         "feature1": "Nationwide delivery in 24-72 hours",
         "feature2": "Real-time order tracking",

@@ -88,10 +88,7 @@ export default function Services() {
                   </p>
                   
                   {/* Title */}
-                  <h3
-                    className="text-3xl sm:text-4xl font-semibold text-green-primary"
-                    style={{ fontFamily: "serif" }}
-                  >
+                  <h3 className="text-3xl sm:text-4xl font-semibold text-green-primary">
                     {service.title}
                   </h3>
                   
@@ -115,10 +112,7 @@ export default function Services() {
 
                   {/* Center - Title */}
                   <div className="md:col-span-7 flex items-center justify-center w-full">
-                    <h3
-                      className="text-3xl lg:text-4xl xl:text-5xl font-semibold text-gray-400 group-hover:text-green-dark transition-colors duration-300 whitespace-nowrap"
-                      style={{ fontFamily: "serif" }}
-                    >
+                    <h3 className="text-3xl lg:text-4xl xl:text-5xl font-semibold text-gray-400 group-hover:text-green-dark transition-colors duration-300 whitespace-nowrap">
                       {service.title}
                     </h3>
                   </div>
