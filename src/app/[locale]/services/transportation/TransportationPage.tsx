@@ -14,6 +14,16 @@ export default function TransportationPage() {
       href: "/services/transportation/express",
     },
     {
+      title: t("standard.title"),
+      description: t("standard.description"),
+      href: "/services/transportation/standard",
+    },
+    {
+      title: t("sameday.title"),
+      description: t("sameday.description"),
+      href: "/services/transportation/sameday",
+    },
+    {
       title: t("economy.title"),
       description: t("economy.description"),
       href: "/services/transportation/economy",

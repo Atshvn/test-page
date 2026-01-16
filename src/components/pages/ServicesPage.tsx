@@ -2,77 +2,16 @@
 
 import { motion } from "framer-motion";
 import {
-  Plane,
-  Truck,
-  Ship,
-  Train,
   Package,
   Clock,
   Shield,
   Headphones,
   ArrowRight,
 } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
+import { useTranslations, useLocale } from "next-intl";
 import { Button } from "@/components/ui/button";
-
-const services = [
-  {
-    icon: Plane,
-    title: "Air Freight",
-    description:
-      "Fast and reliable air freight services for time-sensitive cargo. Our global network ensures your shipments reach any destination worldwide with speed and precision.",
-    features: [
-      "Express delivery options",
-      "Real-time tracking",
-      "Temperature-controlled cargo",
-      "Dangerous goods handling",
-    ],
-    color: "bg-green-500",
-    link: "/services/air-freight",
-  },
-  {
-    icon: Truck,
-    title: "Road Freight",
-    description:
-      "Comprehensive road transportation solutions with flexible pickup and delivery options. We cover major routes across continents with our modern fleet.",
-    features: [
-      "Full truckload (FTL)",
-      "Less than truckload (LTL)",
-      "Express road delivery",
-      "Cross-border transport",
-    ],
-    color: "bg-orange-500",
-    link: "/services/road-freight",
-  },
-  {
-    icon: Ship,
-    title: "Ocean Freight",
-    description:
-      "Cost-effective sea freight for large shipments. We offer full container and less-than-container load options for all your maritime shipping needs.",
-    features: [
-      "FCL & LCL shipping",
-      "Port-to-port service",
-      "Door-to-door delivery",
-      "Customs clearance",
-    ],
-    color: "bg-green-500",
-    link: "/services/ocean-freight",
-  },
-  {
-    icon: Train,
-    title: "Rail Freight",
-    description:
-      "Efficient rail transportation connecting major economic zones. An eco-friendly alternative for bulk cargo with competitive transit times.",
-    features: [
-      "Intermodal solutions",
-      "Block train services",
-      "Containerized cargo",
-      "Heavy lift transport",
-    ],
-    color: "bg-purple-500",
-    link: "/services/rail-freight",
-  },
-];
 
 const benefits = [
   {
@@ -101,6 +40,83 @@ const benefits = [
 ];
 
 export default function ServicesPage() {
+  const t = useTranslations("serviceDetail");
+  const servicesT = useTranslations("services");
+  const locale = useLocale();
+
+  const services = [
+    {
+      number: "01",
+      title: servicesT("list.transportation.title"),
+      description: servicesT("list.transportation.description"),
+      image: "/service-icon/xe-oto.png",
+      badge: t("transportation.badge"),
+      features: [
+        t("transportation.features.feature1"),
+        t("transportation.features.feature2"),
+        t("transportation.features.feature3"),
+        t("transportation.features.feature4"),
+      ],
+      link: "/services/transportation",
+    },
+    {
+      number: "02",
+      title: servicesT("list.fulfillment.title"),
+      description: servicesT("list.fulfillment.description"),
+      image: "/service-icon/fulfillment.png",
+      badge: t("fulfillment.badge"),
+      features: [
+        t("fulfillment.features.feature1"),
+        t("fulfillment.features.feature2"),
+        t("fulfillment.features.feature3"),
+        t("fulfillment.features.feature4"),
+      ],
+      link: "/services/fulfillment",
+    },
+    {
+      number: "03",
+      title: servicesT("list.warehousing.title"),
+      description: servicesT("list.warehousing.description"),
+      image: "/service-icon/warehorse.png",
+      badge: t("warehousing.badge"),
+      features: [
+        t("warehousing.features.feature1"),
+        t("warehousing.features.feature2"),
+        t("warehousing.features.feature3"),
+        t("warehousing.features.feature4"),
+      ],
+      link: "/services/warehousing",
+    },
+    {
+      number: "04",
+      title: servicesT("list.installation.title"),
+      description: servicesT("list.installation.description"),
+      image: "/service-icon/maintain.png",
+      badge: t("installation.badge"),
+      features: [
+        t("installation.features.feature1"),
+        t("installation.features.feature2"),
+        t("installation.features.feature3"),
+        t("installation.features.feature4"),
+      ],
+      link: "/services/installation",
+    },
+    {
+      number: "05",
+      title: servicesT("list.other.title"),
+      description: servicesT("list.other.description"),
+      image: "/service-icon/other.png",
+      badge: t("other.badge"),
+      features: [
+        t("other.features.feature1"),
+        t("other.features.feature2"),
+        t("other.features.feature3"),
+        t("other.features.feature4"),
+      ],
+      link: "/services/other",
+    },
+  ];
+
   return (
     <main className="pt-20">
       {/* Hero Section */}
@@ -113,15 +129,13 @@ export default function ServicesPage() {
             className="text-center max-w-3xl mx-auto"
           >
             <span className="inline-block bg-green-100 text-green-primary px-4 py-2 rounded-full text-sm font-medium mb-4">
-              Our Services
+              {servicesT("title")}
             </span>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-green-dark mb-6">
-              Comprehensive Freight Solutions
+              {servicesT("title")}
             </h1>
             <p className="text-xl text-gray-600">
-              We offer a complete range of logistics services tailored to meet
-              your specific business needs, ensuring your cargo reaches its
-              destination safely and on time.
+              {servicesT("list.transportation.description")}
             </p>
           </motion.div>
         </div>
@@ -133,7 +147,7 @@ export default function ServicesPage() {
           <div className="space-y-20">
             {services.map((service, index) => (
               <motion.div
-                key={service.title}
+                key={service.number}
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -143,10 +157,13 @@ export default function ServicesPage() {
                 }`}
               >
                 <div className={index % 2 === 1 ? "lg:order-2" : ""}>
-                  <div
-                    className={`w-16 h-16 ${service.color} rounded-2xl flex items-center justify-center mb-6`}
-                  >
-                    <service.icon className="w-8 h-8 text-white" />
+                  <div className="flex items-center gap-3 mb-4">
+                    <span className="text-green-primary font-medium text-lg">
+                      {service.number}
+                    </span>
+                    <span className="text-sm text-gray-500 bg-green-100 px-3 py-1 rounded-full">
+                      {service.badge}
+                    </span>
                   </div>
                   <h2 className="text-3xl md:text-4xl font-bold text-green-dark mb-4">
                     {service.title}
@@ -155,8 +172,8 @@ export default function ServicesPage() {
                     {service.description}
                   </p>
                   <ul className="space-y-3 mb-8">
-                    {service.features.map((feature) => (
-                      <li key={feature} className="flex items-center gap-3">
+                    {service.features.map((feature, idx) => (
+                      <li key={idx} className="flex items-center gap-3">
                         <div className="w-5 h-5 bg-green-100 rounded-full flex items-center justify-center">
                           <svg
                             className="w-3 h-3 text-green-500"
@@ -176,16 +193,28 @@ export default function ServicesPage() {
                       </li>
                     ))}
                   </ul>
-                  <Button className="bg-green-primary hover:bg-green-dark text-white">
-                    Learn More
-                    <ArrowRight className="w-4 h-4 ml-2" />
+                  <Button
+                    asChild
+                    className="bg-green-primary hover:bg-green-dark text-white"
+                  >
+                    <Link href={`/${locale}${service.link}`}>
+                      {t("learnMore")}
+                      <ArrowRight className="w-4 h-4 ml-2" />
+                    </Link>
                   </Button>
                 </div>
                 <div
                   className={`relative ${index % 2 === 1 ? "lg:order-1" : ""}`}
                 >
-                  <div className="bg-gray-100 rounded-2xl aspect-video flex items-center justify-center">
-                    <service.icon className="w-24 h-24 text-gray-300" />
+                  <div className="bg-gradient-to-br from-green-50 to-green-100 rounded-2xl aspect-video flex items-center justify-center p-8">
+                    <div className="relative w-full h-full">
+                      <Image
+                        src={service.image}
+                        alt={service.title}
+                        fill
+                        className="object-contain"
+                      />
+                    </div>
                   </div>
                 </div>
               </motion.div>
@@ -205,7 +234,7 @@ export default function ServicesPage() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-green-dark mb-4">
-              Why Choose Our Services?
+              {t("whyChoose")}
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               We go above and beyond to ensure your logistics experience is
@@ -246,18 +275,17 @@ export default function ServicesPage() {
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Ship Your Cargo?
+              {t("cta.title")}
             </h2>
             <p className="text-xl text-white/80 mb-8 max-w-2xl mx-auto">
-              Get a free quote today and experience world-class logistics
-              services.
+              {t("cta.description")}
             </p>
             <Button
               asChild
               size="lg"
               className="bg-orange-primary hover:bg-orange-600 text-white px-8"
             >
-              <Link href="/contact">Get a Free Quote</Link>
+              <Link href={`/${locale}/contact`}>{t("cta.button")}</Link>
             </Button>
           </motion.div>
         </div>

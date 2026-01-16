@@ -80,7 +80,6 @@ export default function TruckLineAnimation() {
         style={{
           left: useTransform(truckLeftPercent, (v) => `${v}%`),
           bottom: "14%", // Dùng % để responsive theo container height
-          scaleX: -1, // Flip xe để quay đầu sang trái
           translateY: "50%", // Center xe theo chiều dọc
         }}
       >
@@ -94,7 +93,7 @@ export default function TruckLineAnimation() {
           }}
         >
           <Image
-            src="/xe-icon.png"
+            src="/icon-xe-right.png"
             alt="NETCO Truck"
             width={200}
             height={120}

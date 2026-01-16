@@ -11,6 +11,8 @@
     "submenu": {
       "transportation": "Vận chuyển",
       "expressDelivery": "Chuyển phát nhanh",
+      "standardDelivery": "Chuyển phát tiêu chuẩn",
+      "samedayDelivery": "Chuyển phát trong ngày",
       "economyDelivery": "Chuyển phát tiết kiệm",
       "fulfillment": "Fulfillment",
       "warehousing": "Kho bãi",
@@ -21,9 +23,10 @@
       "businessPhilosophy": "Triết lý kinh doanh",
       "contactUs": "Liên hệ chúng tôi",
       "postOfficeSystem": "Hệ thống bưu cục",
-      "careers": "Tuyển dụng"
+      "careers": "Tuyển dụng",
+      "orderTracking": "Tra cứu đơn hàng",
+      "shippingCalculator": "Tính phí vận chuyển"
     },
-    "hotline": "1900 6463",
     "login": "Đăng nhập",
     "language": "Ngôn ngữ"
   },
@@ -96,6 +99,60 @@
       "vehicles": "Phương tiện",
       "centers": "Trung tâm",
       "employees": "Nhân sự"
+    },
+    "page": {
+      "badge": "GIỚI THIỆU",
+      "title": "Về Chúng Tôi",
+      "description": "NETCO Post - Sự lựa chọn hàng đầu cho doanh nghiệp và cá nhân trong lĩnh vực chuyển phát nhanh",
+      "companyIntro": "Được thành lập vào năm 2003, <strong>Công ty Cổ phần Thương mại và Chuyển phát nhanh Nội Bài</strong> đã xây dựng thành công thương hiệu Netco Post trong ngành Logistics - một công ty có kinh nghiệm hoạt động chính – Chuyển phát. Netco Post tự hào là thương hiệu có uy tín trong lĩnh vực chuyển phát nhanh tài liệu, hàng hóa trong nước và quốc tế với phương châm phục vụ <strong>\"Vì khách hàng phục vụ, Vì uy tín chuyên cần\u201d.</strong>",
+      "premierChoice": "Netco Post - Sự lựa chọn hàng đầu cho doanh nghiệp và cá nhân",
+      "innovation": "Để giữ vững vị thế tiên phong, Netco Post không ngừng đổi mới và hoàn thiện chất lượng dịch vụ.",
+      "customerTrust": "Với nền tảng vững chắc từ kinh nghiệm thực tiễn, Netco Post đã xây dựng được lòng tin từ đông đảo khách hàng cá nhân và doanh nghiệp. Sự hài lòng của khách hàng chính là động lực để chúng tôi không ngừng cải tiến dịch vụ.",
+      "techTitle": "Công nghệ là ngôn ngữ của tương lai",
+      "techDescription": "Netco Post liên tục cập nhật, cải tiến để thích ứng linh hoạt với nhu cầu của khách hàng, củng cố lòng tin luôn an tâm khi sử dụng dịch vụ của chúng tôi.",
+      "statsLabels": {
+        "experience": "Năm kinh nghiệm",
+        "customers": "Khách hàng thường xuyên",
+        "businesses": "Doanh nghiệp B2B",
+        "onTime": "Tỷ lệ giao đúng hẹn"
+      },
+      "highlights": {
+        "highlight1": {
+          "title": "Hơn 22 năm kinh nghiệm",
+          "description": "Trong ngành chuyển phát nhanh, tạo dựng uy tín và chất lượng dịch vụ."
+        },
+        "highlight2": {
+          "title": "60.000+ Khách hàng",
+          "description": "Phục vụ thường xuyên và 5.000 doanh nghiệp B2B tin tưởng lựa chọn."
+        },
+        "highlight3": {
+          "title": "Đối tác tin cậy",
+          "description": "Của các tập đoàn lớn, hỗ trợ tối ưu quy trình vận chuyển hàng hóa."
+        }
+      },
+      "technologies": {
+        "tech1": {
+          "title": "TMS & WMS",
+          "description": "Hệ thống quản lý vận tải và kho hàng, tăng tốc độ xử lý gấp 5 lần, tối ưu chi phí 30%."
+        },
+        "tech2": {
+          "title": "Trí tuệ nhân tạo (AI)",
+          "description": "Áp dụng AI vào quy trình vận hành và kinh doanh, giúp tối ưu thời gian và chi phí."
+        },
+        "tech3": {
+          "title": "ISO 9001:2015",
+          "description": "Hệ thống quản lý chất lượng theo tiêu chuẩn quốc tế, đảm bảo dịch vụ ổn định."
+        },
+        "tech4": {
+          "title": "Hệ thống thông minh",
+          "description": "Công nghệ định vị bưu phẩm và thanh toán thông minh, tra cứu đơn hàng dễ dàng."
+        }
+      },
+      "cta": {
+        "title": "Sẵn sàng làm việc với chúng tôi?",
+        "description": "Hãy trở thành một trong hàng ngàn doanh nghiệp tin tưởng sử dụng dịch vụ của NETCO.",
+        "button": "Liên Hệ Ngay"
+      }
     }
   },
   "howItWorks": {
@@ -154,10 +211,70 @@
       "ruleAlt": "Quy trình hoạt động NETCO"
     }
   },
+  "postOffice": {
+    "badge": "Hệ thống bưu cục",
+    "title": "Hệ thống bưu cục NETCO",
+    "description": "Tìm kiếm bưu cục gần bạn nhất với hệ thống bưu cục phủ khắp 63 tỉnh thành",
+    "searchPlaceholder": "Tìm kiếm theo tên, địa chỉ, mã bưu cục...",
+    "totalOffices": "Bưu cục",
+    "provinces": "Tỉnh thành",
+    "officeList": "Danh sách bưu cục",
+    "offices": "bưu cục",
+    "getDirections": "Chỉ đường",
+    "call": "Gọi điện",
+    "noResults": "Không tìm thấy bưu cục phù hợp",
+    "netcoOffice": "Bưu cục NETCO",
+    "cta": {
+      "title": "Cần hỗ trợ thêm?",
+      "description": "Liên hệ hotline hoặc đến bưu cục gần nhất để được tư vấn và hỗ trợ trực tiếp",
+      "contact": "Liên hệ ngay"
+    }
+  },
+  "blogDetail": {
+    "breadcrumb": {
+      "home": "Trang chủ",
+      "blog": "Tin tức"
+    },
+    "minRead": "phút đọc",
+    "share": "Chia sẻ",
+    "shareArticle": "Chia sẻ bài viết này",
+    "backToBlog": "Quay lại tin tức",
+    "relatedPosts": "Bài viết liên quan",
+    "relatedPostsDescription": "Khám phá thêm các bài viết hữu ích khác từ NETCO",
+    "defaultDescription": "Tin tức và cập nhật từ NETCO - Đơn vị chuyển phát hàng đầu Việt Nam",
+    "notFound": {
+      "title": "Không tìm thấy bài viết",
+      "description": "Bài viết bạn đang tìm kiếm không tồn tại hoặc đã bị xóa.",
+      "backButton": "Quay lại trang tin tức"
+    },
+    "cta": {
+      "title": "Bạn cần tư vấn về dịch vụ?",
+      "description": "Liên hệ ngay với NETCO để được tư vấn giải pháp logistics phù hợp nhất cho doanh nghiệp của bạn.",
+      "contact": "Liên hệ ngay",
+      "morePosts": "Xem thêm bài viết"
+    }
+  },
   "blog": {
     "badge": "Tin tức mới nhất",
     "title": "Tin tức & Blog",
+    "description": "Cập nhật những xu hướng, mẹo và thông tin mới nhất từ ngành logistics.",
     "viewAll": "Xem tất cả bài viết",
+    "searchPlaceholder": "Tìm kiếm bài viết...",
+    "featured": "Nổi bật",
+    "noPosts": "Chưa có bài viết nào.",
+    "loadMore": "Xem thêm bài viết",
+    "loading": "Đang tải...",
+    "noMorePosts": "Đã hết bài viết",
+    "pagination": {
+      "previous": "Trước",
+      "next": "Sau"
+    },
+    "newsletter": {
+      "title": "Đăng ký nhận bản tin",
+      "description": "Nhận tin tức và thông tin logistics mới nhất ngay trong hộp thư của bạn.",
+      "placeholder": "Nhập email của bạn",
+      "button": "Đăng ký"
+    },
     "posts": {
       "post1": {
         "title": "Tương lai của quản lý chuỗi cung ứng toàn cầu",
@@ -224,6 +341,14 @@
           "title": "Chuyển phát nhanh",
           "description": "Giao hàng trong ngày hoặc hôm sau với thời gian cam kết"
         },
+        "standard": {
+          "title": "Chuyển phát tiêu chuẩn",
+          "description": "Cân bằng giữa tốc độ và chi phí, giao hàng ổn định"
+        },
+        "sameday": {
+          "title": "Chuyển phát trong ngày",
+          "description": "Giao hàng siêu tốc trong cùng một ngày"
+        },
         "economy": {
           "title": "Chuyển phát tiết kiệm",
           "description": "Giải pháp vận chuyển tiết kiệm chi phí cho hàng hóa không gấp"
@@ -284,58 +409,94 @@
     "expressDelivery": {
       "badge": "Chuyển phát nhanh",
       "title": "Giao hàng siêu tốc - Đúng hẹn từng giờ",
-      "description": "Dịch vụ chuyển phát nhanh hàng đầu Việt Nam với cam kết giao hàng trong ngày hoặc hôm sau. Phù hợp cho các đơn hàng TMĐT, tài liệu quan trọng, hàng hóa cần gấp.",
+      "description": "Chuyển phát nhanh là dịch vụ giao hàng mà trong đó các bưu kiện hoặc hàng hóa được vận chuyển từ nơi gửi đến nơi nhận một cách nhanh chóng hơn so với dịch vụ chuyển phát tiêu chuẩn. Dịch vụ này thường được sử dụng cho các hàng hóa cần giao gấp hoặc có giá trị cao, và thường bao gồm các tính năng như theo dõi lô hàng, bảo hiểm hàng hóa và giao hàng trong ngày hoặc ngày hôm sau.",
       "heroStats": {
-        "stat1": { "value": "2-4h", "label": "Nội thành" },
-        "stat2": { "value": "24h", "label": "Liên tỉnh" },
-        "stat3": { "value": "99.5%", "label": "Đúng hẹn" },
-        "stat4": { "value": "63", "label": "Tỉnh thành" }
+        "stat1": {
+          "value": "1-2",
+          "label": "Ngày giao"
+        },
+        "stat2": {
+          "value": "34",
+          "label": "Tỉnh thành"
+        },
+        "stat3": {
+          "value": "99.5%",
+          "label": "Đúng hẹn"
+        },
+        "stat4": {
+          "value": "24/7",
+          "label": "Hỗ trợ"
+        }
       },
       "features": {
-        "title": "Ưu điểm vượt trội",
+        "title": "Tại sao chọn chuyển phát nhanh",
         "list": {
           "feature1": {
-            "title": "Giao nội thành 2-4 giờ",
-            "description": "Giao hàng siêu tốc trong nội thành Hà Nội, TP.HCM và các thành phố lớn chỉ trong 2-4 giờ kể từ khi lấy hàng."
+            "title": "Tốc độ Giao Hàng Nhanh",
+            "description": "Hàng hóa được vận chuyển và giao nhận trong thời gian ngắn hơn so với dịch vụ chuyển phát tiêu chuẩn, giúp bạn tiết kiệm thời gian và đáp ứng các nhu cầu gấp."
           },
           "feature2": {
-            "title": "Liên tỉnh trong 24 giờ",
-            "description": "Cam kết giao hàng liên tỉnh trong vòng 24 giờ cho tuyến Hà Nội - TP.HCM và các tuyến chính."
+            "title": "Đảm Bảo An Toàn",
+            "description": "Các gói hàng thường được xử lý cẩn thận hơn và có thể được bảo hiểm, giúp bảo vệ hàng hóa có giá trị cao hoặc dễ hỏng hóc."
           },
           "feature3": {
-            "title": "Thu hộ COD nhanh chóng",
-            "description": "Hỗ trợ thu hộ tiền mặt (COD) và chuyển khoản về tài khoản trong 24-48 giờ sau khi giao thành công."
+            "title": "Theo Dõi Thời Gian Thực",
+            "description": "Dịch vụ chuyển phát nhanh cung cấp tính năng theo dõi lô hàng theo thời gian thực, giúp bạn dễ dàng kiểm tra vị trí và tình trạng của gói hàng bất kỳ lúc nào."
           },
           "feature4": {
-            "title": "Theo dõi realtime",
-            "description": "Cập nhật trạng thái đơn hàng theo thời gian thực qua SMS, App và Website."
+            "title": "Giao Hàng Trong Ngày Hoặc Ngày Hôm Sau",
+            "description": "Hầu hết các dịch vụ chuyển phát nhanh đều cam kết giao hàng trong ngày hoặc ngày hôm sau, giúp bạn đáp ứng kịp thời các yêu cầu cấp bách."
           },
           "feature5": {
-            "title": "Bảo hiểm 100% giá trị",
-            "description": "Đền bù 100% giá trị hàng hóa khi có sự cố trong quá trình vận chuyển."
+            "title": "Tính Linh Hoạt Cao",
+            "description": "Dịch vụ chuyển phát nhanh thường cung cấp các tùy chọn linh hoạt về thời gian giao hàng và các dịch vụ bổ sung, như giao hàng vào cuối tuần hoặc ngoài giờ hành chính."
           },
           "feature6": {
-            "title": "Giao lại miễn phí 3 lần",
-            "description": "Hỗ trợ giao lại miễn phí đến 3 lần nếu khách hàng không có mặt nhận hàng."
+            "title": "Hỗ trợ 24/7",
+            "description": "Đội ngũ chăm sóc khách hàng luôn sẵn sàng hỗ trợ bạn mọi lúc, mọi nơi."
           }
         }
       },
       "process": {
         "title": "Quy trình giao hàng nhanh",
         "steps": {
-          "step1": { "title": "Đặt đơn", "description": "Tạo đơn qua App, Website hoặc gọi hotline 1900 6463" },
-          "step2": { "title": "Lấy hàng", "description": "Shipper đến lấy hàng trong 30-60 phút nội thành" },
-          "step3": { "title": "Vận chuyển", "description": "Hàng được vận chuyển qua hệ thống hub tối ưu" },
-          "step4": { "title": "Giao hàng", "description": "Giao tận tay người nhận, xác nhận qua OTP" }
+          "step1": {
+            "title": "Đặt đơn",
+            "description": "Tạo đơn qua App, Website hoặc gọi hotline 1900 6463"
+          },
+          "step2": {
+            "title": "Lấy hàng",
+            "description": "Shipper đến lấy hàng trong 30-60 phút nội thành"
+          },
+          "step3": {
+            "title": "Vận chuyển",
+            "description": "Hàng được vận chuyển qua hệ thống hub tối ưu"
+          },
+          "step4": {
+            "title": "Giao hàng",
+            "description": "Giao tận tay người nhận, xác nhận qua OTP"
+          }
         }
       },
       "pricing": {
-        "title": "Bảng giá tham khảo",
-        "description": "Giá cước được tính theo khối lượng và khoảng cách. Liên hệ để nhận báo giá chi tiết.",
+        "title": "Thời gian giao hàng dự kiến",
+        "description": "Thời gian giao hàng tùy thuộc vào khoảng cách và điều kiện vận chuyển thực tế.",
         "zones": {
-          "sameCity": { "title": "Nội thành", "price": "Từ 15.000đ", "time": "2-4 giờ" },
-          "nearProvince": { "title": "Liền kề", "price": "Từ 22.000đ", "time": "12-24 giờ" },
-          "farProvince": { "title": "Liên tỉnh", "price": "Từ 30.000đ", "time": "24-48 giờ" }
+          "sameCity": {
+            "title": "Nội thành",
+            "price": "Trong ngày",
+            "time": "4-8 giờ"
+          },
+          "nearProvince": {
+            "title": "Liền kề",
+            "price": "1 ngày",
+            "time": "Giao hôm sau"
+          },
+          "farProvince": {
+            "title": "Liên tỉnh",
+            "price": "1-2 ngày",
+            "time": "Giao trong 1-2 ngày"
+          }
         }
       },
       "useCases": {
@@ -351,9 +512,9 @@
       },
       "cta": {
         "title": "Gửi hàng ngay hôm nay",
-        "description": "Đăng ký tài khoản doanh nghiệp để nhận ưu đãi chiết khấu đến 30%",
-        "button": "Đăng ký ngay",
-        "buttonSecondary": "Tra cứu giá cước"
+        "description": "Liên hệ ngay để được tư vấn và nhận báo giá chi tiết",
+        "button": "Liên hệ ngay",
+        "buttonSecondary": "Tính phí vận chuyển"
       }
     },
     "economyDelivery": {
@@ -361,10 +522,22 @@
       "title": "Tiết kiệm chi phí - Vẫn đảm bảo chất lượng",
       "description": "Giải pháp vận chuyển tối ưu chi phí cho các đơn hàng không gấp. Phù hợp cho hàng hóa số lượng lớn, hàng cồng kềnh, giao hàng theo lịch.",
       "heroStats": {
-        "stat1": { "value": "30%", "label": "Tiết kiệm" },
-        "stat2": { "value": "3-5", "label": "Ngày giao" },
-        "stat3": { "value": "50kg", "label": "Tối đa/kiện" },
-        "stat4": { "value": "24/7", "label": "Hỗ trợ" }
+        "stat1": {
+          "value": "30%",
+          "label": "Tiết kiệm"
+        },
+        "stat2": {
+          "value": "3-5",
+          "label": "Ngày giao"
+        },
+        "stat3": {
+          "value": "50kg",
+          "label": "Tối đa/kiện"
+        },
+        "stat4": {
+          "value": "24/7",
+          "label": "Hỗ trợ"
+        }
       },
       "features": {
         "title": "Lợi ích khi sử dụng",
@@ -397,22 +570,58 @@
       },
       "comparison": {
         "title": "So sánh với Chuyển phát nhanh",
-        "headers": { "feature": "Đặc điểm", "express": "Nhanh", "economy": "Tiết kiệm" },
+        "headers": {
+          "feature": "Đặc điểm",
+          "express": "Nhanh",
+          "economy": "Tiết kiệm"
+        },
         "rows": {
-          "row1": { "feature": "Thời gian giao", "express": "24-48h", "economy": "3-5 ngày" },
-          "row2": { "feature": "Chi phí", "express": "Cao hơn", "economy": "Thấp hơn 30%" },
-          "row3": { "feature": "Cân nặng tối đa", "express": "30kg", "economy": "50kg" },
-          "row4": { "feature": "Thu hộ COD", "express": "Có", "economy": "Có" },
-          "row5": { "feature": "Bảo hiểm", "express": "100%", "economy": "100%" }
+          "row1": {
+            "feature": "Thời gian giao",
+            "express": "24-48h",
+            "economy": "3-5 ngày"
+          },
+          "row2": {
+            "feature": "Chi phí",
+            "express": "Cao hơn",
+            "economy": "Thấp hơn 30%"
+          },
+          "row3": {
+            "feature": "Cân nặng tối đa",
+            "express": "30kg",
+            "economy": "50kg"
+          },
+          "row4": {
+            "feature": "Thu hộ COD",
+            "express": "Có",
+            "economy": "Có"
+          },
+          "row5": {
+            "feature": "Bảo hiểm",
+            "express": "100%",
+            "economy": "100%"
+          }
         }
       },
       "pricing": {
         "title": "Bảng giá ưu đãi",
         "description": "Giá cước cạnh tranh nhất thị trường, chiết khấu theo số lượng đơn hàng.",
         "zones": {
-          "sameCity": { "title": "Nội thành", "price": "Từ 12.000đ", "time": "1-2 ngày" },
-          "nearProvince": { "title": "Liền kề", "price": "Từ 18.000đ", "time": "2-3 ngày" },
-          "farProvince": { "title": "Liên tỉnh", "price": "Từ 25.000đ", "time": "3-5 ngày" }
+          "sameCity": {
+            "title": "Nội thành",
+            "price": "Từ 12.000đ",
+            "time": "1-2 ngày"
+          },
+          "nearProvince": {
+            "title": "Liền kề",
+            "price": "Từ 18.000đ",
+            "time": "2-3 ngày"
+          },
+          "farProvince": {
+            "title": "Liên tỉnh",
+            "price": "Từ 25.000đ",
+            "time": "3-5 ngày"
+          }
         }
       },
       "useCases": {
@@ -432,7 +641,218 @@
         "button": "Đăng ký tài khoản",
         "buttonSecondary": "Tải bảng giá"
       }
+    },
+    "standardDelivery": {
+      "badge": "Chuyển phát tiêu chuẩn",
+      "title": "Cân bằng giữa tốc độ và chi phí",
+      "description": "Chuyển phát tiêu chuẩn là một dịch vụ vận chuyển hàng hóa hoặc tài liệu với thời gian giao hàng ở mức trung bình. Dịch vụ này thường được sử dụng cho những mặt hàng không cần giao ngay lập tức nhưng vẫn muốn đảm bảo hàng hóa đến nơi đúng hẹn và an toàn.",
+      "heroStats": {
+        "stat1": {
+          "value": "2-3",
+          "label": "Ngày giao"
+        },
+        "stat2": {
+          "value": "63",
+          "label": "Tỉnh thành"
+        },
+        "stat3": {
+          "value": "98%",
+          "label": "Đúng hẹn"
+        },
+        "stat4": {
+          "value": "24/7",
+          "label": "Hỗ trợ"
+        }
+      },
+      "features": {
+        "title": "Tại sao chọn chuyển phát tiêu chuẩn",
+        "list": {
+          "feature1": {
+            "title": "Cân bằng giữa tốc độ và chi phí",
+            "description": "Giá cước hợp lý hơn chuyển phát nhanh nhưng nhanh hơn tiết kiệm, phù hợp cho đa số nhu cầu."
+          },
+          "feature2": {
+            "title": "Độ tin cậy cao",
+            "description": "Khung thời gian giao hàng cụ thể với độ tin cậy cao, đảm bảo hàng đến đúng hẹn."
+          },
+          "feature3": {
+            "title": "Phù hợp hàng hóa thông thường",
+            "description": "Lựa chọn lý tưởng cho hàng hóa không dễ hư hỏng và không cần giao ngay lập tức."
+          },
+          "feature4": {
+            "title": "Theo dõi dễ dàng",
+            "description": "Cung cấp tùy chọn theo dõi hàng hóa, kiểm tra trạng thái đơn hàng bất cứ lúc nào."
+          },
+          "feature5": {
+            "title": "Phạm vi giao hàng rộng",
+            "description": "Bao phủ nhiều khu vực hơn, đặc biệt là các vùng xa xôi hoặc khó tiếp cận."
+          },
+          "feature6": {
+            "title": "Đảm bảo an toàn",
+            "description": "Hàng hóa được xử lý cẩn thận và có thể được bảo hiểm toàn bộ giá trị."
+          }
+        }
+      },
+      "pricing": {
+        "title": "Thời gian giao hàng dự kiến",
+        "description": "Thời gian giao hàng tùy thuộc vào khoảng cách và điều kiện vận chuyển thực tế.",
+        "zones": {
+          "sameCity": {
+            "title": "Nội thành",
+            "price": "1-2 ngày",
+            "time": "Giao trong 1-2 ngày"
+          },
+          "nearProvince": {
+            "title": "Liền kề",
+            "price": "2-3 ngày",
+            "time": "Giao trong 2-3 ngày"
+          },
+          "farProvince": {
+            "title": "Liên tỉnh",
+            "price": "3-4 ngày",
+            "time": "Giao trong 3-4 ngày"
+          }
+        }
+      },
+      "useCases": {
+        "title": "Phù hợp cho",
+        "list": {
+          "case1": "Đơn hàng TMĐT thông thường",
+          "case2": "Hàng hóa không dễ hư hỏng",
+          "case3": "Gửi hàng cá nhân, gia đình",
+          "case4": "Tài liệu, văn bản thông thường",
+          "case5": "Sản phẩm nội thất nhỏ gọn",
+          "case6": "Hàng hóa có thời gian linh hoạt"
+        }
+      },
+      "cta": {
+        "title": "Gửi hàng ngay hôm nay",
+        "description": "Liên hệ ngay để được tư vấn và nhận báo giá chi tiết",
+        "button": "Liên hệ ngay",
+        "buttonSecondary": "Tính phí vận chuyển"
+      }
+    },
+    "samedayDelivery": {
+      "badge": "Chuyển phát trong ngày",
+      "title": "Giao hàng siêu tốc - Trong cùng ngày",
+      "description": "Chuyển phát trong ngày là dịch vụ vận chuyển hàng hóa hoặc tài liệu với cam kết giao hàng trong cùng một ngày. Dịch vụ này được thiết kế cho những mặt hàng cần giao ngay lập tức, chẳng hạn như tài liệu quan trọng, hàng hóa khẩn cấp hoặc các đơn hàng cần xử lý nhanh.",
+      "heroStats": {
+        "stat1": {
+          "value": "4-8",
+          "label": "Giờ giao"
+        },
+        "stat2": {
+          "value": "10",
+          "label": "Tỉnh thành"
+        },
+        "stat3": {
+          "value": "99%",
+          "label": "Đúng hẹn"
+        },
+        "stat4": {
+          "value": "24/7",
+          "label": "Hỗ trợ"
+        }
+      },
+      "features": {
+        "title": "Tại sao chọn chuyển phát trong ngày",
+        "list": {
+          "feature1": {
+            "title": "Giao hàng ngay lập tức",
+            "description": "Lựa chọn lý tưởng cho tình huống cần giao hàng khẩn cấp, tài liệu quan trọng."
+          },
+          "feature2": {
+            "title": "Tiết kiệm thời gian tối đa",
+            "description": "Giúp tiết kiệm thời gian đáng kể, đáp ứng nhanh chóng các nhu cầu khẩn cấp."
+          },
+          "feature3": {
+            "title": "Độ tin cậy cao",
+            "description": "Đảm bảo giao hàng đúng hẹn trong cùng ngày, giảm rủi ro và tăng độ tin cậy."
+          },
+          "feature4": {
+            "title": "Theo dõi thời gian thực",
+            "description": "Theo dõi đơn hàng trực tuyến, dễ dàng kiểm tra trạng thái và vị trí hàng hóa."
+          },
+          "feature5": {
+            "title": "Hỗ trợ tình huống khẩn cấp",
+            "description": "Sự lựa chọn tuyệt vời cho các lĩnh vực y tế, tài chính và pháp lý."
+          },
+          "feature6": {
+            "title": "Vận chuyển an toàn",
+            "description": "Hàng hóa được bảo đảm an toàn tới tay người nhận với quy trình chuyên nghiệp."
+          }
+        }
+      },
+      "process": {
+        "title": "Quy trình giao hàng trong ngày",
+        "steps": {
+          "step1": {
+            "title": "Đặt đơn trước 9h30",
+            "description": "Tạo đơn qua App, Website hoặc gọi hotline 1900 6463"
+          },
+          "step2": {
+            "title": "Lấy hàng nhanh",
+            "description": "Shipper đến lấy hàng trong 30-60 phút"
+          },
+          "step3": {
+            "title": "Vận chuyển ưu tiên",
+            "description": "Hàng được ưu tiên vận chuyển trực tiếp đến điểm đích"
+          },
+          "step4": {
+            "title": "Giao hàng cùng ngày",
+            "description": "Giao tận tay từ 15h-24h cùng ngày"
+          }
+        }
+      },
+      "pricing": {
+        "title": "Khung giờ giao hàng",
+        "description": "Đặt hàng trước 9h30 sáng để nhận được hàng trong cùng ngày từ 15h-24h.",
+        "zones": {
+          "sameCity": {
+            "title": "Nội thành HN/HCM",
+            "price": "4-6 giờ",
+            "time": "Giao trong ngày"
+          },
+          "nearProvince": {
+            "title": "Ngoại thành",
+            "price": "6-8 giờ",
+            "time": "Giao trong ngày"
+          },
+          "farProvince": {
+            "title": "Thành phố khác",
+            "price": "8-10 giờ",
+            "time": "Giao trong ngày"
+          }
+        }
+      },
+      "useCases": {
+        "title": "Phù hợp cho",
+        "list": {
+          "case1": "Tài liệu, hợp đồng khẩn cấp",
+          "case2": "Hàng hóa khẩn cấp, gấp gáp",
+          "case3": "Quà tặng sinh nhật, kỷ niệm",
+          "case4": "Hoa tươi, bánh kem",
+          "case5": "Thuốc men, vật tư y tế",
+          "case6": "Linh kiện máy móc cần gấp"
+        }
+      },
+      "cta": {
+        "title": "Gửi hàng khẩn cấp ngay",
+        "description": "Liên hệ hotline 1900 6463 để được hỗ trợ nhanh nhất",
+        "button": "Gọi ngay 1900 6463",
+        "buttonSecondary": "Tạo đơn hàng"
+      }
     }
+  },
+  "privacy": {
+    "badge": "Chính sách bảo mật",
+    "title": "Chính sách bảo mật",
+    "description": "Quyền riêng tư của bạn rất quan trọng với chúng tôi. Tìm hiểu cách chúng tôi thu thập, sử dụng và bảo vệ thông tin cá nhân của bạn."
+  },
+  "terms": {
+    "badge": "Điều khoản sử dụng",
+    "title": "Điều khoản sử dụng",
+    "description": "Vui lòng đọc kỹ các điều khoản này trước khi sử dụng dịch vụ logistics và vận chuyển hàng hóa của chúng tôi."
   },
   "footer": {
     "companyName": "CÔNG TY CỔ PHẦN THƯƠNG MẠI VÀ CHUYỂN PHÁT NHANH NỘI BÀI",
@@ -440,8 +860,6 @@
     "issuedDate": "Cấp ngày 10/03/2003 do Sở kế hoạch và đầu tư TP Hà Nội cấp",
     "headquarters": "(TRỤ SỞ CHÍNH)",
     "supportHotline": "TỔNG ĐÀI HỖ TRỢ",
-    "email": "Email: info@netco.com.vn",
-    "hotline": "Hotline: 19000112",
     "regions": {
       "north": "Miền Bắc",
       "central": "Miền Trung",
@@ -456,5 +874,127 @@
     "copyright": "NETCO. Tất cả quyền được bảo lưu.",
     "privacy": "Chính sách bảo mật",
     "terms": "Điều khoản sử dụng"
+  },
+  "careers": {
+    "title": "Cơ hội nghề nghiệp",
+    "subtitle": "Tham gia đội ngũ của chúng tôi và phát triển sự nghiệp trong ngành logistics hàng đầu Việt Nam",
+    "search": "Tìm kiếm vị trí...",
+    "filterByLocation": "Lọc theo địa điểm",
+    "filterByDepartment": "Lọc theo phòng ban",
+    "clearFilters": "Xóa bộ lọc",
+    "resultsFound": "Tìm thấy {count} vị trí tuyển dụng",
+    "noResults": "Không tìm thấy vị trí tuyển dụng phù hợp",
+    "noResultsSubtitle": "Hãy thử điều chỉnh bộ lọc hoặc quay lại sau",
+    "viewDetails": "Xem chi tiết",
+    "applyNow": "Ứng tuyển ngay",
+    "deadline": "Hạn nộp",
+    "location": "Địa điểm",
+    "salary": "Mức lương",
+    "department": "Phòng ban",
+    "hotPosition": "Vị trí hot",
+    "jobDescription": "Mô tả công việc",
+    "requirements": "Yêu cầu",
+    "benefitsTitle": "Quyền lợi",
+    "shareJob": "Chia sẻ công việc",
+    "applyForPosition": "Ứng tuyển vị trí",
+    "form": {
+      "fullName": "Họ và tên",
+      "email": "Email",
+      "phone": "Số điện thoại",
+      "coverLetter": "Thư giới thiệu",
+      "uploadCV": "Tải lên CV/Resume",
+      "dragDropCV": "Click to upload hoặc kéo thả",
+      "fileTypes": "PDF, DOC, DOCX (MAX. 5MB)",
+      "required": "Bắt buộc",
+      "optional": "Không bắt buộc",
+      "submit": "Nộp hồ sơ ứng tuyển",
+      "submitting": "Đang gửi...",
+      "errors": {
+        "nameRequired": "Vui lòng nhập họ tên",
+        "emailRequired": "Vui lòng nhập email",
+        "emailInvalid": "Email không hợp lệ",
+        "phoneRequired": "Vui lòng nhập số điện thoại",
+        "phoneInvalid": "Số điện thoại không hợp lệ",
+        "cvRequired": "Vui lòng tải lên CV của bạn",
+        "fileSizeError": "File CV không được vượt quá 5MB",
+        "fileTypeError": "Chỉ chấp nhận file PDF, DOC, DOCX"
+      },
+      "success": "Nộp hồ sơ thành công! Chúng tôi sẽ liên hệ với bạn sớm.",
+      "error": "Có lỗi xảy ra. Vui lòng thử lại sau.",
+      "privacyNote": "Bằng cách nộp đơn, bạn đồng ý với chính sách bảo mật của chúng tôi."
+    },
+    "benefits": {
+      "competitiveSalary": {
+        "title": "Lương thưởng cạnh tranh",
+        "description": "Mức lương hấp dẫn + thưởng theo hiệu suất"
+      },
+      "insurance": {
+        "title": "Bảo hiểm đầy đủ",
+        "description": "BHXH, BHYT, BHTN theo quy định"
+      },
+      "training": {
+        "title": "Đào tạo phát triển",
+        "description": "Cơ hội học hỏi và thăng tiến"
+      },
+      "environment": {
+        "title": "Môi trường năng động",
+        "description": "Văn hóa làm việc trẻ trung, sáng tạo"
+      },
+      "travel": {
+        "title": "Du lịch hàng năm",
+        "description": "Team building & nghỉ mát"
+      },
+      "flexible": {
+        "title": "Làm việc linh hoạt",
+        "description": "Thời gian làm việc hợp lý"
+      }
+    },
+    "notFound": {
+      "title": "Không tìm thấy vị trí phù hợp?",
+      "description": "Hãy gửi CV của bạn cho chúng tôi. Khi có vị trí phù hợp, chúng tôi sẽ liên hệ ngay với bạn."
+    }
+  },
+  "calculator": {
+    "badge": "Dịch vụ",
+    "title": "Tính phí vận chuyển",
+    "subtitle": "Nhập thông tin gửi hàng để tính phí vận chuyển dự kiến",
+    "fromProvince": "Tỉnh/TP gửi",
+    "fromDistrict": "Quận/Huyện gửi",
+    "toProvince": "Tỉnh/TP nhận",
+    "toDistrict": "Quận/Huyện nhận",
+    "selectProvince": "Chọn tỉnh/thành phố",
+    "selectDistrict": "Chọn quận/huyện",
+    "weight": "Khối lượng (gram)",
+    "weightPlaceholder": "Nhập khối lượng (gram)",
+    "cod": "Thu hộ COD (đ)",
+    "codPlaceholder": "Nhập số tiền thu hộ",
+    "insured": "Giá trị hàng hóa (đ)",
+    "insuredPlaceholder": "Nhập giá trị hàng",
+    "size": "Kích thước (cm)",
+    "length": "Dài",
+    "width": "Rộng",
+    "height": "Cao",
+    "lengthPlaceholder": "Dài (cm)",
+    "widthPlaceholder": "Rộng (cm)",
+    "heightPlaceholder": "Cao (cm)",
+    "calculate": "Tính phí vận chuyển",
+    "calculating": "Đang tính phí...",
+    "viewServices": "Xem dịch vụ",
+    "note": "Lưu ý: Phí trên là ước tính. Phí chính xác sẽ được tính khi tạo đơn hàng dựa trên khối lượng quy đổi và các dịch vụ bổ sung.",
+    "success": "Tính phí thành công!",
+    "errors": {
+      "selectOriginCity": "Vui lòng chọn tỉnh/thành phố gửi hàng",
+      "selectDestinationCity": "Vui lòng chọn tỉnh/thành phố nhận hàng",
+      "selectDistrict": "Vui lòng chọn quận/huyện nhận hàng",
+      "enterWeight": "Vui lòng nhập khối lượng hàng hóa",
+      "calculateFailed": "Tính phí thất bại. Vui lòng thử lại sau"
+    },
+    "results": {
+      "title": "Dịch vụ phù hợp với bạn",
+      "subtitle": "Chọn dịch vụ phù hợp nhất với nhu cầu vận chuyển của bạn",
+      "estimatedDelivery": "Thời gian dự kiến",
+      "createOrder": "Tạo đơn hàng",
+      "days": "ngày"
+    }
   }
 }

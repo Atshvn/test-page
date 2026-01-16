@@ -11,6 +11,8 @@
     "submenu": {
       "transportation": "Delivery",
       "expressDelivery": "Express Delivery",
+      "standardDelivery": "Standard Delivery",
+      "samedayDelivery": "Same-day Delivery",
       "economyDelivery": "Economy Delivery",
       "fulfillment": "Fulfillment",
       "warehousing": "Warehousing",
@@ -21,9 +23,10 @@
       "businessPhilosophy": "Business Philosophy",
       "contactUs": "Contact Us",
       "postOfficeSystem": "Post Office Network",
-      "careers": "Careers"
+      "careers": "Careers",
+      "orderTracking": "Track Order",
+      "shippingCalculator": "Shipping Calculator"
     },
-    "hotline": "1900 6463",
     "login": "Login",
     "language": "Language"
   },
@@ -154,10 +157,70 @@
       "ruleAlt": "NETCO Operation Process"
     }
   },
+  "postOffice": {
+    "badge": "Post Office Network",
+    "title": "NETCO Post Office System",
+    "description": "Find the nearest post office with our network covering all 63 provinces nationwide",
+    "searchPlaceholder": "Search by name, address, post office code...",
+    "totalOffices": "Post Offices",
+    "provinces": "Provinces",
+    "officeList": "Post Office List",
+    "offices": "offices",
+    "getDirections": "Get Directions",
+    "call": "Call",
+    "noResults": "No matching post offices found",
+    "netcoOffice": "NETCO Post Office",
+    "cta": {
+      "title": "Need more assistance?",
+      "description": "Contact our hotline or visit the nearest post office for direct consultation and support",
+      "contact": "Contact Now"
+    }
+  },
+  "blogDetail": {
+    "breadcrumb": {
+      "home": "Home",
+      "blog": "Blog"
+    },
+    "minRead": "min read",
+    "share": "Share",
+    "shareArticle": "Share this article",
+    "backToBlog": "Back to Blog",
+    "relatedPosts": "Related Posts",
+    "relatedPostsDescription": "Explore more helpful articles from NETCO",
+    "defaultDescription": "News and updates from NETCO - Vietnam's leading express delivery company",
+    "notFound": {
+      "title": "Article Not Found",
+      "description": "The article you are looking for does not exist or has been removed.",
+      "backButton": "Back to Blog"
+    },
+    "cta": {
+      "title": "Need service consultation?",
+      "description": "Contact NETCO now to get the most suitable logistics solution for your business.",
+      "contact": "Contact Now",
+      "morePosts": "View More Posts"
+    }
+  },
   "blog": {
     "badge": "Latest News",
     "title": "News & Blog",
+    "description": "Stay updated with the latest trends, tips, and insights from the logistics industry.",
     "viewAll": "View all posts",
+    "searchPlaceholder": "Search articles...",
+    "featured": "Featured",
+    "noPosts": "No posts available.",
+    "loadMore": "Load More Articles",
+    "loading": "Loading...",
+    "noMorePosts": "No more posts",
+    "pagination": {
+      "previous": "Previous",
+      "next": "Next"
+    },
+    "newsletter": {
+      "title": "Subscribe to Our Newsletter",
+      "description": "Get the latest logistics news and insights delivered straight to your inbox.",
+      "placeholder": "Enter your email",
+      "button": "Subscribe"
+    },
     "posts": {
       "post1": {
         "title": "The Future of Global Supply Chain Management",
@@ -224,6 +287,14 @@
           "title": "Express Delivery",
           "description": "Same-day or next-day delivery with guaranteed time"
         },
+        "standard": {
+          "title": "Standard Delivery",
+          "description": "Balance between speed and cost, reliable delivery"
+        },
+        "sameday": {
+          "title": "Same-day Delivery",
+          "description": "Super-fast delivery within the same day"
+        },
         "economy": {
           "title": "Economy Delivery",
           "description": "Cost-effective shipping solution for non-urgent goods"
@@ -284,87 +355,223 @@
     "expressDelivery": {
       "badge": "Express Delivery",
       "title": "Super Fast Delivery - On Time Every Hour",
-      "description": "Vietnam's leading express delivery service with guaranteed same-day or next-day delivery. Perfect for e-commerce orders, important documents, and urgent goods.",
+      "description": "Express delivery is a shipping service in which parcels or goods are transported from the sender to the recipient faster than standard delivery services. This service is typically used for goods that need urgent delivery or have high value, and often includes features such as shipment tracking, cargo insurance, and same-day or next-day delivery.",
       "heroStats": {
-        "stat1": { "value": "2-4h", "label": "Intracity" },
-        "stat2": { "value": "24h", "label": "Intercity" },
-        "stat3": { "value": "99.5%", "label": "On-time" },
-        "stat4": { "value": "63", "label": "Provinces" }
+        "stat1": {
+          "value": "1-2",
+          "label": "Days"
+        },
+        "stat2": {
+          "value": "34",
+          "label": "Provinces"
+        },
+        "stat3": {
+          "value": "99.5%",
+          "label": "On-time"
+        },
+        "stat4": {
+          "value": "24/7",
+          "label": "Support"
+        }
       },
       "features": {
-        "title": "Outstanding Advantages",
+        "title": "Why Choose Express Delivery",
         "list": {
           "feature1": {
-            "title": "Intracity 2-4 hours",
-            "description": "Super-fast delivery within Hanoi, HCMC and major cities in just 2-4 hours from pickup."
+            "title": "Fast Delivery Speed",
+            "description": "Goods are transported and delivered in a shorter time than standard delivery services, helping you save time and meet urgent needs."
           },
           "feature2": {
-            "title": "Intercity within 24 hours",
-            "description": "Guaranteed intercity delivery within 24 hours for Hanoi-HCMC and main routes."
+            "title": "Guaranteed Safety",
+            "description": "Packages are usually handled more carefully and can be insured, helping protect high-value or fragile goods."
           },
           "feature3": {
-            "title": "Fast COD collection",
-            "description": "Support cash on delivery (COD) and bank transfer within 24-48 hours after successful delivery."
+            "title": "Real-time Tracking",
+            "description": "Express delivery service provides real-time shipment tracking, allowing you to easily check the location and status of your package at any time."
           },
           "feature4": {
-            "title": "Real-time tracking",
-            "description": "Real-time order status updates via SMS, App and Website."
+            "title": "Same-day Or Next-day Delivery",
+            "description": "Most express delivery services commit to same-day or next-day delivery, helping you meet urgent requirements in a timely manner."
           },
           "feature5": {
-            "title": "100% value insurance",
-            "description": "100% compensation for goods value in case of incidents during transportation."
+            "title": "High Flexibility",
+            "description": "Express delivery service usually provides flexible options for delivery time and additional services, such as weekend or after-hours delivery."
           },
           "feature6": {
-            "title": "Free 3 re-deliveries",
-            "description": "Support up to 3 free re-deliveries if recipient is not available."
+            "title": "24/7 Support",
+            "description": "Customer service team is always ready to assist you anytime, anywhere."
           }
         }
       },
       "process": {
-        "title": "Express Delivery Process",
+        "title": "Fast Delivery Process",
         "steps": {
-          "step1": { "title": "Place Order", "description": "Create order via App, Website or call 1900 6463" },
-          "step2": { "title": "Pickup", "description": "Courier picks up within 30-60 minutes intracity" },
-          "step3": { "title": "Transport", "description": "Goods transported through optimized hub system" },
-          "step4": { "title": "Delivery", "description": "Hand-deliver to recipient, confirm via OTP" }
+          "step1": {
+            "title": "Place Order",
+            "description": "Create order via App, Website or call hotline 1900 6463"
+          },
+          "step2": {
+            "title": "Pick Up",
+            "description": "Shipper picks up goods within 30-60 minutes in the city"
+          },
+          "step3": {
+            "title": "Transport",
+            "description": "Goods are transported through optimized hub system"
+          },
+          "step4": {
+            "title": "Deliver",
+            "description": "Hand-to-hand delivery, OTP confirmation"
+          }
         }
       },
       "pricing": {
-        "title": "Reference Pricing",
-        "description": "Shipping rates based on weight and distance. Contact us for detailed quotation.",
+        "title": "Estimated Delivery Time",
+        "description": "Delivery time depends on distance and actual shipping conditions.",
         "zones": {
-          "sameCity": { "title": "Intracity", "price": "From 15,000d", "time": "2-4 hours" },
-          "nearProvince": { "title": "Adjacent", "price": "From 22,000d", "time": "12-24 hours" },
-          "farProvince": { "title": "Intercity", "price": "From 30,000d", "time": "24-48 hours" }
+          "sameCity": {
+            "title": "Intracity",
+            "price": "Same day",
+            "time": "4-8 hours"
+          },
+          "nearProvince": {
+            "title": "Adjacent",
+            "price": "1 day",
+            "time": "Next day delivery"
+          },
+          "farProvince": {
+            "title": "Intercity",
+            "price": "1-2 days",
+            "time": "Delivery within 1-2 days"
+          }
         }
       },
       "useCases": {
-        "title": "Suitable for",
+        "title": "Suitable For",
         "list": {
           "case1": "Urgent e-commerce orders",
-          "case2": "Important documents & contracts",
+          "case2": "Important documents and contracts",
           "case3": "Gifts, fresh flowers, cakes",
-          "case4": "Spare parts & components",
+          "case4": "Spare parts and replacements",
           "case5": "Product samples",
-          "case6": "Medicine & medical supplies"
+          "case6": "Medicine and medical supplies"
         }
       },
       "cta": {
-        "title": "Ship today",
-        "description": "Register business account to receive up to 30% discount",
-        "button": "Register Now",
-        "buttonSecondary": "Check Rates"
+        "title": "Ship Today",
+        "description": "Contact us now for consultation and detailed quotation",
+        "button": "Contact Now",
+        "buttonSecondary": "Calculate Shipping Fee"
       }
+    },
+    "features": {
+      "title": "Outstanding Advantages",
+      "list": {
+        "feature1": {
+          "title": "Intracity 2-4 hours",
+          "description": "Super-fast delivery within Hanoi, HCMC and major cities in just 2-4 hours from pickup."
+        },
+        "feature2": {
+          "title": "Intercity within 24 hours",
+          "description": "Guaranteed intercity delivery within 24 hours for Hanoi-HCMC and main routes."
+        },
+        "feature3": {
+          "title": "Fast COD collection",
+          "description": "Support cash on delivery (COD) and bank transfer within 24-48 hours after successful delivery."
+        },
+        "feature4": {
+          "title": "Real-time tracking",
+          "description": "Real-time order status updates via SMS, App and Website."
+        },
+        "feature5": {
+          "title": "100% value insurance",
+          "description": "100% compensation for goods value in case of incidents during transportation."
+        },
+        "feature6": {
+          "title": "Free 3 re-deliveries",
+          "description": "Support up to 3 free re-deliveries if recipient is not available."
+        }
+      }
+    },
+    "process": {
+      "title": "Express Delivery Process",
+      "steps": {
+        "step1": {
+          "title": "Place Order",
+          "description": "Create order via App, Website or call 1900 6463"
+        },
+        "step2": {
+          "title": "Pickup",
+          "description": "Courier picks up within 30-60 minutes intracity"
+        },
+        "step3": {
+          "title": "Transport",
+          "description": "Goods transported through optimized hub system"
+        },
+        "step4": {
+          "title": "Delivery",
+          "description": "Hand-deliver to recipient, confirm via OTP"
+        }
+      }
+    },
+    "pricing": {
+      "title": "Reference Pricing",
+      "description": "Shipping rates based on weight and distance. Contact us for detailed quotation.",
+      "zones": {
+        "sameCity": {
+          "title": "Intracity",
+          "price": "From 15,000d",
+          "time": "2-4 hours"
+        },
+        "nearProvince": {
+          "title": "Adjacent",
+          "price": "From 22,000d",
+          "time": "12-24 hours"
+        },
+        "farProvince": {
+          "title": "Intercity",
+          "price": "From 30,000d",
+          "time": "24-48 hours"
+        }
+      }
+    },
+    "useCases": {
+      "title": "Suitable for",
+      "list": {
+        "case1": "Urgent e-commerce orders",
+        "case2": "Important documents & contracts",
+        "case3": "Gifts, fresh flowers, cakes",
+        "case4": "Spare parts & components",
+        "case5": "Product samples",
+        "case6": "Medicine & medical supplies"
+      }
+    },
+    "cta": {
+      "title": "Ship today",
+      "description": "Register business account to receive up to 30% discount",
+      "button": "Register Now",
+      "buttonSecondary": "Check Rates"
     },
     "economyDelivery": {
       "badge": "Economy Delivery",
       "title": "Cost-effective - Still Quality Assured",
       "description": "Cost-optimized shipping solution for non-urgent orders. Suitable for bulk goods, oversized items, and scheduled deliveries.",
       "heroStats": {
-        "stat1": { "value": "30%", "label": "Savings" },
-        "stat2": { "value": "3-5", "label": "Days" },
-        "stat3": { "value": "50kg", "label": "Max/parcel" },
-        "stat4": { "value": "24/7", "label": "Support" }
+        "stat1": {
+          "value": "30%",
+          "label": "Savings"
+        },
+        "stat2": {
+          "value": "3-5",
+          "label": "Days"
+        },
+        "stat3": {
+          "value": "50kg",
+          "label": "Max/parcel"
+        },
+        "stat4": {
+          "value": "24/7",
+          "label": "Support"
+        }
       },
       "features": {
         "title": "Benefits",
@@ -397,22 +604,58 @@
       },
       "comparison": {
         "title": "Comparison with Express",
-        "headers": { "feature": "Feature", "express": "Express", "economy": "Economy" },
+        "headers": {
+          "feature": "Feature",
+          "express": "Express",
+          "economy": "Economy"
+        },
         "rows": {
-          "row1": { "feature": "Delivery time", "express": "24-48h", "economy": "3-5 days" },
-          "row2": { "feature": "Cost", "express": "Higher", "economy": "30% lower" },
-          "row3": { "feature": "Max weight", "express": "30kg", "economy": "50kg" },
-          "row4": { "feature": "COD", "express": "Yes", "economy": "Yes" },
-          "row5": { "feature": "Insurance", "express": "100%", "economy": "100%" }
+          "row1": {
+            "feature": "Delivery time",
+            "express": "24-48h",
+            "economy": "3-5 days"
+          },
+          "row2": {
+            "feature": "Cost",
+            "express": "Higher",
+            "economy": "30% lower"
+          },
+          "row3": {
+            "feature": "Max weight",
+            "express": "30kg",
+            "economy": "50kg"
+          },
+          "row4": {
+            "feature": "COD",
+            "express": "Yes",
+            "economy": "Yes"
+          },
+          "row5": {
+            "feature": "Insurance",
+            "express": "100%",
+            "economy": "100%"
+          }
         }
       },
       "pricing": {
         "title": "Preferential Pricing",
         "description": "Most competitive market rates, volume discounts available.",
         "zones": {
-          "sameCity": { "title": "Intracity", "price": "From 12,000d", "time": "1-2 days" },
-          "nearProvince": { "title": "Adjacent", "price": "From 18,000d", "time": "2-3 days" },
-          "farProvince": { "title": "Intercity", "price": "From 25,000d", "time": "3-5 days" }
+          "sameCity": {
+            "title": "Intracity",
+            "price": "From 12,000d",
+            "time": "1-2 days"
+          },
+          "nearProvince": {
+            "title": "Adjacent",
+            "price": "From 18,000d",
+            "time": "2-3 days"
+          },
+          "farProvince": {
+            "title": "Intercity",
+            "price": "From 25,000d",
+            "time": "3-5 days"
+          }
         }
       },
       "useCases": {
@@ -432,7 +675,218 @@
         "button": "Create Account",
         "buttonSecondary": "Download Price List"
       }
+    },
+    "standardDelivery": {
+      "badge": "Standard Delivery",
+      "title": "Balance Between Speed and Cost",
+      "description": "Standard delivery is a shipping service for goods or documents with average delivery time. This service is commonly used for items that don't need immediate delivery but still want to ensure goods arrive on time and safely.",
+      "heroStats": {
+        "stat1": {
+          "value": "2-3",
+          "label": "Days"
+        },
+        "stat2": {
+          "value": "63",
+          "label": "Provinces"
+        },
+        "stat3": {
+          "value": "98%",
+          "label": "On-time"
+        },
+        "stat4": {
+          "value": "24/7",
+          "label": "Support"
+        }
+      },
+      "features": {
+        "title": "Why Choose Standard Delivery",
+        "list": {
+          "feature1": {
+            "title": "Balance Between Speed and Cost",
+            "description": "More affordable than express delivery but faster than economy, suitable for most needs."
+          },
+          "feature2": {
+            "title": "High Reliability",
+            "description": "Specific delivery timeframe with high reliability, ensuring goods arrive on schedule."
+          },
+          "feature3": {
+            "title": "Suitable for Regular Goods",
+            "description": "Ideal choice for non-perishable items that don't need immediate delivery."
+          },
+          "feature4": {
+            "title": "Easy Tracking",
+            "description": "Provides shipment tracking option, check order status anytime."
+          },
+          "feature5": {
+            "title": "Wide Delivery Coverage",
+            "description": "Covers more areas, especially remote or hard-to-reach regions."
+          },
+          "feature6": {
+            "title": "Safety Guarantee",
+            "description": "Goods handled carefully and can be fully insured for their value."
+          }
+        }
+      },
+      "pricing": {
+        "title": "Estimated Delivery Time",
+        "description": "Delivery time depends on distance and actual shipping conditions.",
+        "zones": {
+          "sameCity": {
+            "title": "Intracity",
+            "price": "1-2 days",
+            "time": "Delivery in 1-2 days"
+          },
+          "nearProvince": {
+            "title": "Adjacent",
+            "price": "2-3 days",
+            "time": "Delivery in 2-3 days"
+          },
+          "farProvince": {
+            "title": "Intercity",
+            "price": "3-4 days",
+            "time": "Delivery in 3-4 days"
+          }
+        }
+      },
+      "useCases": {
+        "title": "Suitable For",
+        "list": {
+          "case1": "Regular e-commerce orders",
+          "case2": "Non-perishable goods",
+          "case3": "Personal, family shipments",
+          "case4": "Regular documents, papers",
+          "case5": "Compact furniture items",
+          "case6": "Flexible timeline goods"
+        }
+      },
+      "cta": {
+        "title": "Ship Today",
+        "description": "Contact us now for consultation and detailed quotation",
+        "button": "Contact Now",
+        "buttonSecondary": "Calculate Shipping Fee"
+      }
+    },
+    "samedayDelivery": {
+      "badge": "Same-day Delivery",
+      "title": "Super Fast Delivery - Within the Same Day",
+      "description": "Same-day delivery is a shipping service for goods or documents with commitment to deliver within the same day. This service is designed for items needing immediate delivery, such as important documents, urgent goods, or orders requiring fast processing.",
+      "heroStats": {
+        "stat1": {
+          "value": "4-8",
+          "label": "Hours"
+        },
+        "stat2": {
+          "value": "10",
+          "label": "Provinces"
+        },
+        "stat3": {
+          "value": "99%",
+          "label": "On-time"
+        },
+        "stat4": {
+          "value": "24/7",
+          "label": "Support"
+        }
+      },
+      "features": {
+        "title": "Why Choose Same-day Delivery",
+        "list": {
+          "feature1": {
+            "title": "Immediate Delivery",
+            "description": "Ideal choice for urgent situations, important documents requiring immediate delivery."
+          },
+          "feature2": {
+            "title": "Maximum Time Savings",
+            "description": "Helps save significant time, quickly meeting urgent needs."
+          },
+          "feature3": {
+            "title": "High Reliability",
+            "description": "Guarantees on-time delivery within the same day, reducing risks and increasing reliability."
+          },
+          "feature4": {
+            "title": "Real-time Tracking",
+            "description": "Track orders online, easily check goods status and location."
+          },
+          "feature5": {
+            "title": "Emergency Support",
+            "description": "Excellent choice for medical, financial, and legal sectors."
+          },
+          "feature6": {
+            "title": "Safe Transportation",
+            "description": "Goods guaranteed safe to recipient with professional processes."
+          }
+        }
+      },
+      "process": {
+        "title": "Same-day Delivery Process",
+        "steps": {
+          "step1": {
+            "title": "Order Before 9:30 AM",
+            "description": "Create order via App, Website or call hotline 1900 6463"
+          },
+          "step2": {
+            "title": "Fast Pickup",
+            "description": "Shipper picks up within 30-60 minutes"
+          },
+          "step3": {
+            "title": "Priority Transport",
+            "description": "Goods prioritized for direct transport to destination"
+          },
+          "step4": {
+            "title": "Same-day Delivery",
+            "description": "Hand-delivered from 3PM-12AM same day"
+          }
+        }
+      },
+      "pricing": {
+        "title": "Delivery Time Slots",
+        "description": "Order before 9:30 AM to receive goods same day from 3PM-12AM.",
+        "zones": {
+          "sameCity": {
+            "title": "HN/HCM City Center",
+            "price": "4-6 hours",
+            "time": "Same day delivery"
+          },
+          "nearProvince": {
+            "title": "Suburb",
+            "price": "6-8 hours",
+            "time": "Same day delivery"
+          },
+          "farProvince": {
+            "title": "Other Cities",
+            "price": "8-10 hours",
+            "time": "Same day delivery"
+          }
+        }
+      },
+      "useCases": {
+        "title": "Suitable For",
+        "list": {
+          "case1": "Urgent documents, contracts",
+          "case2": "Emergency, rush goods",
+          "case3": "Birthday, anniversary gifts",
+          "case4": "Fresh flowers, cakes",
+          "case5": "Medicine, medical supplies",
+          "case6": "Urgent machine parts"
+        }
+      },
+      "cta": {
+        "title": "Ship Urgently Now",
+        "description": "Call hotline 1900 6463 for fastest support",
+        "button": "Call 1900 6463",
+        "buttonSecondary": "Create Order"
+      }
     }
+  },
+  "privacy": {
+    "badge": "Privacy Policy",
+    "title": "Privacy Policy",
+    "description": "Your privacy is important to us. Learn how we collect, use, and protect your personal information."
+  },
+  "terms": {
+    "badge": "Terms of Service",
+    "title": "Terms of Service",
+    "description": "Please read these terms carefully before using our logistics and freight services."
   },
   "footer": {
     "companyName": "NOI BAI TRADING AND EXPRESS JOINT STOCK COMPANY",
@@ -440,13 +894,11 @@
     "issuedDate": "Issued on March 10, 2003 by Hanoi Department of Planning and Investment",
     "headquarters": "(HEADQUARTERS)",
     "supportHotline": "SUPPORT HOTLINE",
-    "email": "Email: info@netco.com.vn",
-    "hotline": "Hotline: 19000112",
     "regions": {
       "north": "Northern Region",
       "central": "Central Region",
       "south": "HCM & Western Region",
-      "east": "Binh Duong & Eastern Highlands"
+      "east": "Binh Duong & Tay Nguyen Region"
     },
     "cta": {
       "question": "We deliver globally. Are you ready to ship with us?",
@@ -456,5 +908,127 @@
     "copyright": "NETCO. All rights reserved.",
     "privacy": "Privacy Policy",
     "terms": "Terms of Service"
+  },
+  "careers": {
+    "title": "Career Opportunities",
+    "subtitle": "Join our team and grow your career in Vietnam's leading logistics industry",
+    "search": "Search positions...",
+    "filterByLocation": "Filter by location",
+    "filterByDepartment": "Filter by department",
+    "clearFilters": "Clear filters",
+    "resultsFound": "Found {count} job positions",
+    "noResults": "No matching job positions found",
+    "noResultsSubtitle": "Try adjusting your filters or check back later",
+    "viewDetails": "View Details",
+    "applyNow": "Apply Now",
+    "deadline": "Deadline",
+    "location": "Location",
+    "salary": "Salary",
+    "department": "Department",
+    "hotPosition": "Hot Position",
+    "jobDescription": "Job Description",
+    "requirements": "Requirements",
+    "benefitsTitle": "Benefits",
+    "shareJob": "Share Job",
+    "applyForPosition": "Apply for Position",
+    "form": {
+      "fullName": "Full Name",
+      "email": "Email",
+      "phone": "Phone Number",
+      "coverLetter": "Cover Letter",
+      "uploadCV": "Upload CV/Resume",
+      "dragDropCV": "Click to upload or drag and drop",
+      "fileTypes": "PDF, DOC, DOCX (MAX. 5MB)",
+      "required": "Required",
+      "optional": "Optional",
+      "submit": "Submit Application",
+      "submitting": "Submitting...",
+      "errors": {
+        "nameRequired": "Please enter your full name",
+        "emailRequired": "Please enter your email",
+        "emailInvalid": "Invalid email address",
+        "phoneRequired": "Please enter your phone number",
+        "phoneInvalid": "Invalid phone number",
+        "cvRequired": "Please upload your CV",
+        "fileSizeError": "CV file must not exceed 5MB",
+        "fileTypeError": "Only PDF, DOC, DOCX files are accepted"
+      },
+      "success": "Application submitted successfully! We will contact you soon.",
+      "error": "An error occurred. Please try again later.",
+      "privacyNote": "By submitting your application, you agree to our privacy policy."
+    },
+    "benefits": {
+      "competitiveSalary": {
+        "title": "Competitive Salary",
+        "description": "Attractive salary + performance bonuses"
+      },
+      "insurance": {
+        "title": "Full Insurance",
+        "description": "Social, health, and unemployment insurance"
+      },
+      "training": {
+        "title": "Training & Development",
+        "description": "Learning opportunities and career advancement"
+      },
+      "environment": {
+        "title": "Dynamic Environment",
+        "description": "Young, creative work culture"
+      },
+      "travel": {
+        "title": "Annual Travel",
+        "description": "Team building & vacation trips"
+      },
+      "flexible": {
+        "title": "Flexible Work",
+        "description": "Reasonable working hours"
+      }
+    },
+    "notFound": {
+      "title": "Can't find the right position?",
+      "description": "Send us your CV. When a suitable position becomes available, we will contact you immediately."
+    }
+  },
+  "calculator": {
+    "badge": "Services",
+    "title": "Shipping Calculator",
+    "subtitle": "Enter shipment details to calculate estimated shipping fee",
+    "fromProvince": "From Province",
+    "fromDistrict": "From District",
+    "toProvince": "To Province",
+    "toDistrict": "To District",
+    "selectProvince": "Select province",
+    "selectDistrict": "Select district",
+    "weight": "Weight (gram)",
+    "weightPlaceholder": "Enter weight (gram)",
+    "cod": "COD Amount (VND)",
+    "codPlaceholder": "Enter COD amount",
+    "insured": "Insured Value (VND)",
+    "insuredPlaceholder": "Enter insured value",
+    "size": "Dimensions (cm)",
+    "length": "Length",
+    "width": "Width",
+    "height": "Height",
+    "lengthPlaceholder": "Length (cm)",
+    "widthPlaceholder": "Width (cm)",
+    "heightPlaceholder": "Height (cm)",
+    "calculate": "Calculate Shipping Fee",
+    "calculating": "Calculating...",
+    "viewServices": "View Services",
+    "note": "Note: The above fees are estimates. Exact fees will be calculated when creating an order based on dimensional weight and additional services.",
+    "success": "Calculation successful!",
+    "errors": {
+      "selectOriginCity": "Please select origin city",
+      "selectDestinationCity": "Please select destination city",
+      "selectDistrict": "Please select destination district",
+      "enterWeight": "Please enter weight",
+      "calculateFailed": "Calculation failed. Please try again later"
+    },
+    "results": {
+      "title": "Suitable Services For You",
+      "subtitle": "Choose the service that best fits your shipping needs",
+      "estimatedDelivery": "Estimated Delivery",
+      "createOrder": "Create Order",
+      "days": "days"
+    }
   }
 }

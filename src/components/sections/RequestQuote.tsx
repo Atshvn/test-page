@@ -3,9 +3,16 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
+import ContactForm2, { Province } from "@/components/forms/ContactForm2";
 
-export default function RequestQuote() {
+interface RequestQuoteProps {
+  provinces: Province[];
+  locale: string;
+}
+
+export default function RequestQuote({ provinces, locale }: RequestQuoteProps) {
   const t = useTranslations("requestQuote");
+  const isVietnamese = locale === "vi";
 
   return (
     <section className="relative overflow-x-clip overflow-y-visible">
@@ -117,89 +124,11 @@ export default function RequestQuote() {
                 {t("title")}
               </h2>
 
-              <form className="space-y-6 md:space-y-8">
-                {/* Row 1 */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-x-8">
-                  <div>
-                    <input
-                      type="text"
-                      placeholder={t("form.name")}
-                      className="w-full bg-transparent border-0 border-b-2 border-white/60 py-3 text-white placeholder-white/80 focus:outline-none focus:border-white text-base"
-                    />
-                  </div>
-                  <div>
-                    <input
-                      type="text"
-                      placeholder={t("form.cargoType")}
-                      className="w-full bg-transparent border-0 border-b-2 border-white/60 py-3 text-white placeholder-white/80 focus:outline-none focus:border-white text-base"
-                    />
-                  </div>
-                </div>
-
-                {/* Row 2 */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-x-8">
-                  <div>
-                    <input
-                      type="email"
-                      placeholder={t("form.email")}
-                      className="w-full bg-transparent border-0 border-b-2 border-white/60 py-3 text-white placeholder-white/80 focus:outline-none focus:border-white text-base"
-                    />
-                  </div>
-                  <div>
-                    <input
-                      type="text"
-                      placeholder={t("form.deliveryCity")}
-                      className="w-full bg-transparent border-0 border-b-2 border-white/60 py-3 text-white placeholder-white/80 focus:outline-none focus:border-white text-base"
-                    />
-                  </div>
-                </div>
-
-                {/* Row 3 */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-x-8">
-                  <div>
-                    <input
-                      type="text"
-                      placeholder={t("form.departureCity")}
-                      className="w-full bg-transparent border-0 border-b-2 border-white/60 py-3 text-white placeholder-white/80 focus:outline-none focus:border-white text-base"
-                    />
-                  </div>
-                  <div>
-                    <input
-                      type="text"
-                      placeholder={t("form.weight")}
-                      className="w-full bg-transparent border-0 border-b-2 border-white/60 py-3 text-white placeholder-white/80 focus:outline-none focus:border-white text-base"
-                    />
-                  </div>
-                </div>
-
-                {/* Row 4 */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-x-8">
-                  <div>
-                    <input
-                      type="tel"
-                      placeholder={t("form.phone")}
-                      className="w-full bg-transparent border-0 border-b-2 border-white/60 py-3 text-white placeholder-white/80 focus:outline-none focus:border-white text-base"
-                    />
-                  </div>
-                  <div>
-                    <input
-                      type="text"
-                      placeholder={t("form.height")}
-                      className="w-full bg-transparent border-0 border-b-2 border-white/60 py-3 text-white placeholder-white/80 focus:outline-none focus:border-white text-base"
-                    />
-                  </div>
-                </div>
-
-                {/* Submit Button */}
-                <div className="pt-6">
-                  <button
-                    type="submit"
-                    className="w-full sm:w-auto bg-white text-green-primary font-bold uppercase tracking-wider py-4 px-12 hover:bg-gray-100 transition-colors text-base rounded-md"
-                  >
-                    {t("form.submit")}
-                  </button>
-                </div>
-              </form>
+              <ContactForm2 
+                provinces={provinces} 
+                locale={locale} 
+                isVietnamese={isVietnamese}
+              />
             </motion.div>
           </div>
         </div>

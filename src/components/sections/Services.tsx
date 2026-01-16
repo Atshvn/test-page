@@ -59,7 +59,7 @@ export default function Services() {
           transition={{ duration: 0.6 }}
           className="mb-8 md:mb-12"
         >
-          <h2 className="text-2xl md:text-3xl lg:text-5xl font-bold text-green-dark">
+          <h2 className="text-3xl md:text-3xl lg:text-5xl font-bold text-green-dark">
             {t("title")}
           </h2>
         </motion.div>

@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Check, ArrowRight, Clock, MapPin, Shield, Truck } from "lucide-react";
+import { Check, ArrowRight, Clock, MapPin, Shield, Truck, Package, Zap, Wallet } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import Image from "next/image";
@@ -9,11 +9,12 @@ import { useTranslations, useLocale } from "next-intl";
 import { LucideIcon } from "lucide-react";
 
 interface SubServiceDetailPageProps {
-  serviceKey: "expressDelivery" | "economyDelivery";
+  serviceKey: "expressDelivery" | "economyDelivery" | "standardDelivery" | "samedayDelivery";
   icon: LucideIcon;
   image: string;
   color: string;
   showComparison?: boolean;
+  showProcess?: boolean;
 }
 
 export default function SubServiceDetailPage({
@@ -22,6 +23,7 @@ export default function SubServiceDetailPage({
   image,
   color,
   showComparison = false,
+  showProcess = false,
 }: SubServiceDetailPageProps) {
   const t = useTranslations("serviceDetail");
   const locale = useLocale();
@@ -99,6 +101,41 @@ export default function SubServiceDetailPage({
     t(`${serviceKey}.useCases.list.case6`),
   ];
 
+  // Define all services
+  const allServices = [
+    {
+      key: "expressDelivery",
+      title: t("transportation.subServices.express.title"),
+      description: t("transportation.subServices.express.description"),
+      href: "/services/transportation/express",
+      icon: Zap,
+    },
+    {
+      key: "standardDelivery",
+      title: t("transportation.subServices.standard.title"),
+      description: t("transportation.subServices.standard.description"),
+      href: "/services/transportation/standard",
+      icon: Package,
+    },
+    {
+      key: "samedayDelivery",
+      title: t("transportation.subServices.sameday.title"),
+      description: t("transportation.subServices.sameday.description"),
+      href: "/services/transportation/sameday",
+      icon: Clock,
+    },
+    {
+      key: "economyDelivery",
+      title: t("transportation.subServices.economy.title"),
+      description: t("transportation.subServices.economy.description"),
+      href: "/services/transportation/economy",
+      icon: Wallet,
+    },
+  ];
+
+  // Filter out the current service to show other services
+  const otherServices = allServices.filter((service) => service.key !== serviceKey);
+
   return (
     <main className="pt-20">
       {/* Hero Section */}
@@ -146,7 +183,7 @@ export default function SubServiceDetailPage({
                 <Button
                   asChild
                   size="lg"
-                  className={`${color} hover:opacity-90 text-white px-8`}
+                  className={`${color} hover:opacity-90 text-white hover:${color} px-8`}
                 >
                   <Link href={`/${locale}/contact`}>
                     {t(`${serviceKey}.cta.button`)}
@@ -232,8 +269,8 @@ export default function SubServiceDetailPage({
         </div>
       </section>
 
-      {/* Process Section - Only for Express */}
-      {serviceKey === "expressDelivery" && (
+      {/* Process Section - Only for Express and Sameday */}
+      {(showProcess || serviceKey === "expressDelivery") && (
         <section className="py-16 md:py-20 bg-gray-50">
           <div className="container mx-auto px-4">
             <motion.div
@@ -442,6 +479,65 @@ export default function SubServiceDetailPage({
                 </span>
               </motion.div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Other Services Section */}
+      <section className="py-16 md:py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-green-dark mb-4">
+              {locale === "vi" ? "Dịch vụ khác" : "Other Services"}
+            </h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              {locale === "vi" 
+                ? "Khám phá thêm các dịch vụ vận chuyển khác của NETCO"
+                : "Explore other delivery services from NETCO"}
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            {otherServices.map((service, index) => {
+              const ServiceIcon = service.icon;
+              return (
+                <motion.div
+                  key={service.key}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                >
+                  <Link href={`/${locale}${service.href}`}>
+                    <div className="bg-white border-2 border-gray-100 hover:border-green-500 rounded-2xl p-6 h-full transition-all hover:shadow-lg group">
+                      <div className="flex items-start gap-4 mb-4">
+                        <div className={`w-12 h-12 ${color} rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform`}>
+                          <ServiceIcon className="w-6 h-6 text-white" />
+                        </div>
+                        <div className="flex-1">
+                          <h3 className="text-lg font-bold text-green-dark mb-2 group-hover:text-green-primary transition-colors">
+                            {service.title}
+                          </h3>
+                        </div>
+                      </div>
+                      <p className="text-gray-600 text-sm mb-4 leading-relaxed">
+                        {service.description}
+                      </p>
+                      <div className="flex items-center text-green-primary font-medium text-sm group-hover:gap-2 transition-all">
+                        {locale === "vi" ? "Tìm hiểu thêm" : "Learn more"}
+                        <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+                      </div>
+                    </div>
+                  </Link>
+                </motion.div>
+              );
+            })}
           </div>
         </div>
       </section>

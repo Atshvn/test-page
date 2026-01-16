@@ -7,6 +7,7 @@ import { usePathname } from "next/navigation";
 
 import { Button } from "@/components/ui/button";
 import { ArrowRight, ArrowUp, Phone, Mail } from "lucide-react";
+import { COMPANY_INFO } from "@/lib/constants";
 
 export default function Footer() {
   const t = useTranslations("footer");
@@ -117,19 +118,19 @@ export default function Footer() {
 
             <div className="space-y-2 md:space-y-3">
               <a
-                href="mailto:info@netco.com.vn"
+                href={`mailto:${COMPANY_INFO.email}`}
                 className="flex items-center gap-2 text-white/90 hover:text-white transition-colors text-sm"
               >
                 <Mail className="w-3.5 h-3.5 md:w-4 md:h-4" />
-                <span>{t("email")}</span>
+                <span>Email: {COMPANY_INFO.email}</span>
               </a>
 
               <a
-                href="tel:19000112"
+                href={`tel:${COMPANY_INFO.hotlineTel}`}
                 className="flex items-center gap-2 text-white/90 hover:text-white transition-colors text-sm"
               >
                 <Phone className="w-3.5 h-3.5 md:w-4 md:h-4" />
-                <span>{t("hotline")}</span>
+                <span>Hotline: {COMPANY_INFO.hotline}</span>
               </a>
             </div>
 
@@ -214,7 +215,7 @@ export default function Footer() {
             {/* Center: App Store Links */}
             <div className="flex items-center gap-3 md:gap-4">
               <a
-                href="https://play.google.com/store/apps/details?id=com.netco"
+                href={COMPANY_INFO.app.android}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="transition-transform hover:scale-105"
@@ -239,7 +240,7 @@ export default function Footer() {
               </a>
 
               <a
-                href="https://apps.apple.com/app/netco"
+                href={COMPANY_INFO.app.ios}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="transition-transform hover:scale-105"
@@ -267,7 +268,7 @@ export default function Footer() {
             {/* Right: Social Media */}
             <div className="flex items-center gap-2 md:gap-3">
               <a
-                href="https://facebook.com/netco"
+                href={COMPANY_INFO.social.facebook}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-8 h-8 md:w-10 md:h-10 bg-blue-600 rounded-full flex items-center justify-center hover:opacity-80 transition-opacity"
@@ -281,7 +282,7 @@ export default function Footer() {
                 </svg>
               </a>
               <a
-                href="https://tiktok.com/@netco"
+                href={COMPANY_INFO.social.tiktok}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-8 h-8 md:w-10 md:h-10 bg-black rounded-full flex items-center justify-center hover:opacity-80 transition-opacity"
@@ -295,7 +296,7 @@ export default function Footer() {
                 </svg>
               </a>
               <a
-                href="https://youtube.com/netco"
+                href={COMPANY_INFO.social.youtube}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-8 h-8 md:w-10 md:h-10 bg-red-600 rounded-full flex items-center justify-center hover:opacity-80 transition-opacity"
@@ -309,7 +310,7 @@ export default function Footer() {
                 </svg>
               </a>
               <a
-                href="https://linkedin.com/company/netco"
+                href={COMPANY_INFO.social.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-8 h-8 md:w-10 md:h-10 bg-blue-700 rounded-full flex items-center justify-center hover:opacity-80 transition-opacity"
@@ -403,7 +404,7 @@ function FloatingButtons() {
 
       {/* Facebook Messenger */}
       <a
-        href="https://m.me/netco.vn"
+        href={COMPANY_INFO.social.messenger}
         target="_blank"
         rel="noopener noreferrer"
         className="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform"
@@ -420,7 +421,7 @@ function FloatingButtons() {
 
       {/* Phone */}
       <a
-        href="tel:19000112"
+        href={`tel:${COMPANY_INFO.hotlineTel}`}
         className="w-10 h-10 md:w-12 md:h-12 bg-green-500 rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform"
         aria-label="Call us"
       >
@@ -429,7 +430,7 @@ function FloatingButtons() {
 
       {/* Zalo */}
       <a
-        href="https://zalo.me/netco"
+        href={COMPANY_INFO.social.zalo}
         target="_blank"
         rel="noopener noreferrer"
         className="w-10 h-10 md:w-12 md:h-12 bg-blue-500 rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform"

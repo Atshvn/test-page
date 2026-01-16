@@ -9,7 +9,7 @@ export default function EconomyDeliveryPage() {
       serviceKey="economyDelivery"
       icon={Wallet}
       image="/service-icon/transport.png"
-      color="bg-red-500"
+      color="bg-green-500"
       showComparison={true}
     />
   );

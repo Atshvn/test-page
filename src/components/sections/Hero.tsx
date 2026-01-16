@@ -8,6 +8,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRef } from "react";
 import { useTranslations, useLocale } from "next-intl";
+import { COMPANY_INFO } from "@/lib/constants";
 
 export default function Hero() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -101,7 +102,7 @@ export default function Hero() {
                     {t("callUs")}{" "}
                   </span>
                   <span className="font-semibold text-green-primary text-sm sm:text-base">
-                    1900 6463
+                    {COMPANY_INFO.hotline}
                   </span>
                 </div>
               </div>
@@ -117,49 +118,52 @@ export default function Hero() {
         transition={{ duration: 0.6, delay: 0.4 }}
         className="relative lg:absolute lg:bottom-6 xl:bottom-8 lg:right-8 xl:right-16 z-30 w-full px-4 lg:px-0 lg:max-w-md xl:max-w-lg mt-6 lg:mt-0"
       >
-        <div className="bg-white p-4 sm:p-6 lg:p-5 xl:p-6 rounded-xl shadow-lg border border-gray-100 max-w-md mx-auto lg:max-w-md xl:max-w-lg lg:mx-0 lg:ml-auto">
-          <div className="flex items-center gap-2 mb-3 sm:mb-4">
-            <div className="w-5 h-5 sm:w-6 sm:h-6 bg-red-500 rounded-full flex items-center justify-center">
-              <Search className="w-2.5 h-2.5 sm:w-3 sm:h-3 text-white" />
+        <div className="bg-white p-6 sm:p-6 lg:p-5 xl:p-6 rounded-2xl shadow-xl border border-gray-100 max-w-md mx-auto lg:max-w-md xl:max-w-lg lg:mx-0 lg:ml-auto">
+          <div className="flex items-center gap-3 mb-5">
+            <div className="w-7 h-7 sm:w-8 sm:h-8 bg-red-500 rounded-full flex items-center justify-center shadow-md">
+              <Search className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-white" />
             </div>
-            <h3 className="font-semibold text-green-dark text-sm sm:text-base">
+            <h3 className="font-bold text-green-dark text-base sm:text-lg">
               {t("tracking.title")}
             </h3>
           </div>
 
           {/* Radio Options */}
-          <div className="flex flex-wrap gap-3 sm:gap-6 mb-3 sm:mb-4">
-            <label className="flex items-center gap-1.5 sm:gap-2 cursor-pointer">
+          <div className="flex flex-wrap gap-5 sm:gap-6 mb-5">
+            <label className="flex items-center gap-2.5 cursor-pointer hover:opacity-80 transition-opacity">
               <input
                 type="radio"
                 name="trackingType"
                 defaultChecked
-                className="w-3.5 h-3.5 sm:w-4 sm:h-4 accent-green-primary"
+                className="w-4 h-4 sm:w-4 sm:h-4 accent-green-primary cursor-pointer"
               />
-              <span className="text-xs sm:text-sm text-gray-600">
+              <span className="text-sm sm:text-sm text-gray-700 font-medium">
                 {t("tracking.trackingCode")}
               </span>
             </label>
-            <label className="flex items-center gap-1.5 sm:gap-2 cursor-pointer">
+            <label className="flex items-center gap-2.5 cursor-pointer hover:opacity-80 transition-opacity">
               <input
                 type="radio"
                 name="trackingType"
-                className="w-3.5 h-3.5 sm:w-4 sm:h-4 accent-green-primary"
+                className="w-4 h-4 sm:w-4 sm:h-4 accent-green-primary cursor-pointer"
               />
-              <span className="text-xs sm:text-sm text-gray-600">
+              <span className="text-sm sm:text-sm text-gray-700 font-medium">
                 {t("tracking.partnerCode")}
               </span>
             </label>
           </div>
 
           {/* Input and Button */}
-          <div className="flex flex-col sm:flex-row gap-2 sm:gap-3">
+          <div className="flex flex-col sm:flex-row gap-3 w-full">
             <Input
               type="text"
               placeholder={t("tracking.placeholder")}
-              className="flex-1 h-10 sm:h-12 border-gray-300 text-xs sm:text-sm"
+              className="flex-1 h-11 sm:flex-[2] py-3  focus-visible:ring-green-primary focus-visible:border-green-primary min-w-0"
             />
-            <Button className="bg-green-primary hover:bg-green-dark text-white h-10 sm:h-12 px-4 sm:px-6 md:px-8 uppercase tracking-wide text-xs sm:text-sm font-semibold w-full sm:w-auto">
+            <Button
+              size="lg"
+              className="bg-green-primary hover:bg-green-dark text-white h-11 sm:h-11 px-6 sm:px-8 rounded-lg uppercase tracking-wide text-[15px] sm:text-sm font-bold w-full sm:w-auto sm:flex-shrink-0 shadow-md hover:shadow-lg whitespace-nowrap"
+            >
               {t("tracking.button")}
             </Button>
           </div>

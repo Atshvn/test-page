@@ -1,41 +1,60 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { MapPin, Phone, Mail, Clock, Send } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
+import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import { COMPANY_INFO } from "@/lib/constants";
+import { useLocale } from "next-intl";
+import ContactForm, { type Province } from "@/components/forms/ContactForm";
 
-const contactInfo = [
-  {
-    icon: MapPin,
-    title: "Visit Us",
-    details: ["123 Logistics Street", "New York, NY 10001", "United States"],
-  },
-  {
-    icon: Phone,
-    title: "Call Us",
-    details: ["+1 234 567 890", "+1 234 567 891"],
-  },
-  {
-    icon: Mail,
-    title: "Email Us",
-    details: ["info@cargon.com", "support@cargon.com"],
-  },
-  {
-    icon: Clock,
-    title: "Working Hours",
-    details: ["Monday - Friday: 9AM - 6PM", "Saturday: 9AM - 1PM"],
-  },
-];
+interface ContactPageProps {
+  provinces: Province[];
+}
 
-export default function ContactPage() {
+export default function ContactPage({ provinces = [] }: ContactPageProps) {
+  const locale = useLocale();
+  const isVietnamese = locale === "vi";
+
+  const contactInfo = [
+    {
+      icon: MapPin,
+      title: isVietnamese ? "Địa chỉ" : "Visit Us",
+      details: isVietnamese
+        ? [
+            COMPANY_INFO.address.vi.street,
+            COMPANY_INFO.address.vi.city,
+            COMPANY_INFO.address.vi.country,
+          ]
+        : [
+            COMPANY_INFO.address.en.street,
+            COMPANY_INFO.address.en.city,
+            COMPANY_INFO.address.en.country,
+          ],
+    },
+    {
+      icon: Phone,
+      title: isVietnamese ? "Điện thoại" : "Call Us",
+      details: [COMPANY_INFO.hotline],
+    },
+    {
+      icon: Mail,
+      title: "Email",
+      details: [COMPANY_INFO.email, COMPANY_INFO.emailSupport],
+    },
+    {
+      icon: Clock,
+      title: isVietnamese ? "Giờ làm việc" : "Working Hours",
+      details: isVietnamese
+        ? [
+            COMPANY_INFO.workingHours.vi.weekdays,
+            COMPANY_INFO.workingHours.vi.saturday,
+          ]
+        : [
+            COMPANY_INFO.workingHours.en.weekdays,
+            COMPANY_INFO.workingHours.en.saturday,
+          ],
+    },
+  ];
+
   return (
     <main className="pt-20">
       {/* Hero Section */}
@@ -48,14 +67,15 @@ export default function ContactPage() {
             className="text-center max-w-3xl mx-auto"
           >
             <span className="inline-block bg-green-100 text-green-primary px-4 py-2 rounded-full text-sm font-medium mb-4">
-              Contact Us
+              {isVietnamese ? "Liên hệ" : "Contact Us"}
             </span>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-green-dark mb-6">
-              Get in Touch With Us
+              {isVietnamese ? "Liên hệ với chúng tôi" : "Get in Touch With Us"}
             </h1>
             <p className="text-xl text-gray-600">
-              Have a question or need a quote? We're here to help. Reach out to
-              us and we'll respond as soon as possible.
+              {isVietnamese
+                ? "Bạn có câu hỏi hoặc cần báo giá? Chúng tôi luôn sẵn sàng hỗ trợ bạn."
+                : "Have a question or need a quote? We're here to help. Reach out to us and we'll respond as soon as possible."}
             </p>
           </motion.div>
         </div>
@@ -74,7 +94,7 @@ export default function ContactPage() {
               className="lg:col-span-1"
             >
               <h2 className="text-2xl font-bold text-green-dark mb-8">
-                Contact Information
+                {isVietnamese ? "Thông tin liên hệ" : "Contact Information"}
               </h2>
               <div className="space-y-8">
                 {contactInfo.map((item) => (
@@ -105,102 +125,14 @@ export default function ContactPage() {
               transition={{ duration: 0.6 }}
               className="lg:col-span-2"
             >
-              <div className="bg-gray-50 p-8 md:p-10 rounded-2xl">
-                <h2 className="text-2xl font-bold text-green-dark mb-6">
-                  Send us a Message
-                </h2>
-                <form className="space-y-6">
-                  <div className="grid md:grid-cols-2 gap-6">
-                    <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">
-                        First Name
-                      </label>
-                      <Input placeholder="John" className="h-12 bg-white" />
-                    </div>
-                    <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">
-                        Last Name
-                      </label>
-                      <Input placeholder="Doe" className="h-12 bg-white" />
-                    </div>
-                  </div>
-
-                  <div className="grid md:grid-cols-2 gap-6">
-                    <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">
-                        Email Address
-                      </label>
-                      <Input
-                        type="email"
-                        placeholder="john@example.com"
-                        className="h-12 bg-white"
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">
-                        Phone Number
-                      </label>
-                      <Input
-                        type="tel"
-                        placeholder="+1 234 567 890"
-                        className="h-12 bg-white"
-                      />
-                    </div>
-                  </div>
-
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Subject
-                    </label>
-                    <Select>
-                      <SelectTrigger className="h-12 bg-white">
-                        <SelectValue placeholder="Select a subject" />
-                      </SelectTrigger>
-                      <SelectContent>
-                        <SelectItem value="general">General Inquiry</SelectItem>
-                        <SelectItem value="quote">Request a Quote</SelectItem>
-                        <SelectItem value="support">
-                          Customer Support
-                        </SelectItem>
-                        <SelectItem value="partnership">Partnership</SelectItem>
-                        <SelectItem value="other">Other</SelectItem>
-                      </SelectContent>
-                    </Select>
-                  </div>
-
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Message
-                    </label>
-                    <textarea
-                      rows={5}
-                      placeholder="Tell us about your inquiry..."
-                      className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-primary focus:border-transparent bg-white resize-none"
-                    />
-                  </div>
-
-                  <Button className="w-full bg-green-primary hover:bg-green-dark text-white h-12 text-lg">
-                    <Send className="w-5 h-5 mr-2" />
-                    Send Message
-                  </Button>
-                </form>
-              </div>
+              <ContactForm
+                provinces={provinces}
+                locale={locale}
+                isVietnamese={isVietnamese}
+              />
             </motion.div>
           </div>
         </div>
-      </section>
-
-      {/* Map */}
-      <section className="h-[400px] bg-gray-200">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193595.15830869428!2d-74.11976397304903!3d40.69766374874431!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY!5e0!3m2!1sen!2sus!4v1640000000000!5m2!1sen!2sus"
-          width="100%"
-          height="100%"
-          style={{ border: 0 }}
-          allowFullScreen
-          loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
-        />
       </section>
     </main>
   );
