@@ -24,6 +24,16 @@ export async function fetchAPI<T = unknown>(
   func: string,
   options?: { revalidate?: number | false },
 ): Promise<ApiResponse<T>> {
+  // Debug: Log environment config (remove after debugging)
+  console.log(`[API Debug] ${func}:`, {
+    hasApiEndpoint: !!env.API_ENDPOINT,
+    hasApiKey: !!env.API_KEY,
+    hasXApiKey: !!env.X_API_KEY,
+    hasApiToken: !!env.API_TOKEN,
+    hasClientId: !!env.CLIENT_ID,
+    endpoint: env.API_ENDPOINT?.substring(0, 30) + '...',
+  });
+
   // Validate required environment variables
   if (!env.API_KEY) {
     console.error(`[API Config Error] ${func}: API_KEY is not configured`);
