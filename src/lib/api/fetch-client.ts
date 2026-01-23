@@ -22,7 +22,7 @@ export interface ApiResponse<T = unknown> {
 export async function fetchAPI<T = unknown>(
   data: object,
   func: string,
-  options?: { revalidate?: number | false }
+  options?: { revalidate?: number | false },
 ): Promise<ApiResponse<T>> {
   // Validate required environment variables
   if (!env.API_KEY) {
@@ -60,10 +60,12 @@ export async function fetchAPI<T = unknown>(
 
     if (!response.ok) {
       // Log more details for debugging
-      const errorBody = await response.text().catch(() => "Unable to read response body");
+      const errorBody = await response
+        .text()
+        .catch(() => "Unable to read response body");
       console.error(
         `[API Error] ${func}: ${response.status} ${response.statusText}`,
-        process.env.NODE_ENV === "development" ? { errorBody } : ""
+        process.env.NODE_ENV === "development" ? { errorBody } : "",
       );
       return {
         success: false,
@@ -94,7 +96,7 @@ export async function fetchAPI<T = unknown>(
  */
 export async function fetchTrackingAPI<T = unknown>(
   data: object,
-  options?: { revalidate?: number | false }
+  options?: { revalidate?: number | false },
 ): Promise<ApiResponse<T>> {
   if (!env.API_ENDPOINT_TRACKING) {
     return {
@@ -128,10 +130,12 @@ export async function fetchTrackingAPI<T = unknown>(
     });
 
     if (!response.ok) {
-      const errorBody = await response.text().catch(() => "Unable to read response body");
+      const errorBody = await response
+        .text()
+        .catch(() => "Unable to read response body");
       console.error(
         `[Tracking API Error]: ${response.status} ${response.statusText}`,
-        process.env.NODE_ENV === "development" ? { errorBody } : ""
+        process.env.NODE_ENV === "development" ? { errorBody } : "",
       );
       return {
         success: false,
@@ -160,7 +164,7 @@ export async function fetchTrackingAPI<T = unknown>(
  * Upload file to server
  */
 export async function fetchUploadAPI(
-  formData: FormData
+  formData: FormData,
 ): Promise<ApiResponse<unknown>> {
   if (!env.API_ENDPOINT_UPLOAD) {
     return {
@@ -177,12 +181,12 @@ export async function fetchUploadAPI(
       {
         method: "POST",
         body: formData,
-      }
+      },
     );
 
     if (!response.ok) {
       console.error(
-        `[Upload API Error]: ${response.status} ${response.statusText}`
+        `[Upload API Error]: ${response.status} ${response.statusText}`,
       );
       return {
         success: false,

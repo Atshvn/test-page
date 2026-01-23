@@ -341,7 +341,7 @@ export default function Footer() {
                   title="Đã thông báo Bộ Công Thương"
                 >
                   <img
-                    src="http://online.gov.vn/PublicImages/2015/08/27/11/20150827110756-dathongbao.png"
+                    src="/bocongthuong.png"
                     alt="Đã thông báo Bộ Công Thương"
                     className="h-10 md:h-12 w-auto"
                   />
