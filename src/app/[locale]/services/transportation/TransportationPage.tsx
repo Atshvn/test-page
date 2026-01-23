@@ -156,10 +156,10 @@ export default function TransportationPage() {
             className="text-center mb-12"
           >
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-green-dark mb-4">
-              Các gói dịch vụ vận chuyển
+              {t("subServices.heading")}
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Chọn gói dịch vụ phù hợp với nhu cầu vận chuyển của bạn
+              {t("subServices.subheading")}
             </p>
           </motion.div>
 
@@ -191,7 +191,7 @@ export default function TransportationPage() {
                         {t(`subServices.${service.key}.description`)}
                       </p>
                       <div className="flex items-center text-green-primary font-medium">
-                        Tìm hiểu thêm
+                        {t("subServices.learnMore")}
                         <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-2 transition-transform" />
                       </div>
                     </div>
@@ -214,7 +214,7 @@ export default function TransportationPage() {
             className="text-center mb-12"
           >
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-green-dark mb-4">
-              Tại sao chọn vận chuyển NETCO?
+              {t("whyChoose.heading")}
             </h2>
           </motion.div>
 
@@ -222,23 +222,19 @@ export default function TransportationPage() {
             {[
               {
                 icon: Timer,
-                title: "Nhanh chóng",
-                desc: "Giao hàng trong 24-72h toàn quốc",
+                key: "fast",
               },
               {
                 icon: Shield,
-                title: "An toàn",
-                desc: "Bảo hiểm 100% giá trị hàng hóa",
+                key: "safe",
               },
               {
                 icon: MapPin,
-                title: "Phủ rộng",
-                desc: "Mạng lưới 63 tỉnh thành",
+                key: "wide",
               },
               {
                 icon: Package,
-                title: "Đa dạng",
-                desc: "4 gói dịch vụ linh hoạt",
+                key: "diverse",
               },
             ].map((item, index) => {
               const Icon = item.icon;
@@ -255,9 +251,9 @@ export default function TransportationPage() {
                     <Icon className="w-7 h-7 text-green-primary" />
                   </div>
                   <h3 className="text-lg font-bold text-green-dark mb-2">
-                    {item.title}
+                    {t(`whyChoose.reasons.${item.key}.title`)}
                   </h3>
-                  <p className="text-gray-600 text-sm">{item.desc}</p>
+                  <p className="text-gray-600 text-sm">{t(`whyChoose.reasons.${item.key}.description`)}</p>
                 </motion.div>
               );
             })}
@@ -276,7 +272,7 @@ export default function TransportationPage() {
             className="text-center mb-12"
           >
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-green-dark mb-4">
-              So sánh các gói dịch vụ
+              {t("comparison.heading")}
             </h2>
           </motion.div>
 
@@ -290,50 +286,50 @@ export default function TransportationPage() {
             <table className="w-full min-w-[600px] bg-white rounded-2xl overflow-hidden shadow-sm">
               <thead>
                 <tr className="bg-green-primary text-white">
-                  <th className="p-4 text-left">Đặc điểm</th>
+                  <th className="p-4 text-left">{t("comparison.table.feature")}</th>
                   <th className="p-4 text-center">
                     <div className="flex items-center justify-center gap-2">
                       <Zap className="w-4 h-4" />
-                      Nhanh
+                      {t("comparison.table.express")}
                     </div>
                   </th>
                   <th className="p-4 text-center">
                     <div className="flex items-center justify-center gap-2">
                       <Clock className="w-4 h-4" />
-                      Tiêu chuẩn
+                      {t("comparison.table.standard")}
                     </div>
                   </th>
                   <th className="p-4 text-center">
                     <div className="flex items-center justify-center gap-2">
                       <Calendar className="w-4 h-4" />
-                      Trong ngày
+                      {t("comparison.table.sameday")}
                     </div>
                   </th>
                   <th className="p-4 text-center">
                     <div className="flex items-center justify-center gap-2">
                       <Wallet className="w-4 h-4" />
-                      Tiết kiệm
+                      {t("comparison.table.economy")}
                     </div>
                   </th>
                 </tr>
               </thead>
               <tbody>
                 <tr className="border-b">
-                  <td className="p-4 font-medium">Thời gian giao</td>
-                  <td className="p-4 text-center">24-48h</td>
-                  <td className="p-4 text-center">2-3 ngày</td>
-                  <td className="p-4 text-center">4-8 giờ</td>
-                  <td className="p-4 text-center">3-5 ngày</td>
+                  <td className="p-4 font-medium">{t("comparison.table.deliveryTime")}</td>
+                  <td className="p-4 text-center">{t("comparison.table.deliveryTimeExpress")}</td>
+                  <td className="p-4 text-center">{t("comparison.table.deliveryTimeStandard")}</td>
+                  <td className="p-4 text-center">{t("comparison.table.deliveryTimeSameday")}</td>
+                  <td className="p-4 text-center">{t("comparison.table.deliveryTimeEconomy")}</td>
                 </tr>
                 <tr className="border-b bg-gray-50">
-                  <td className="p-4 font-medium">Giá cước</td>
-                  <td className="p-4 text-center">Cao</td>
-                  <td className="p-4 text-center">Trung bình</td>
-                  <td className="p-4 text-center">Cao nhất</td>
-                  <td className="p-4 text-center">Thấp nhất</td>
+                  <td className="p-4 font-medium">{t("comparison.table.price")}</td>
+                  <td className="p-4 text-center">{t("comparison.table.priceExpress")}</td>
+                  <td className="p-4 text-center">{t("comparison.table.priceStandard")}</td>
+                  <td className="p-4 text-center">{t("comparison.table.priceSameday")}</td>
+                  <td className="p-4 text-center">{t("comparison.table.priceEconomy")}</td>
                 </tr>
                 <tr className="border-b">
-                  <td className="p-4 font-medium">Thu hộ COD</td>
+                  <td className="p-4 font-medium">{t("comparison.table.cod")}</td>
                   <td className="p-4 text-center">
                     <Check className="w-5 h-5 text-green-500 mx-auto" />
                   </td>
@@ -348,7 +344,7 @@ export default function TransportationPage() {
                   </td>
                 </tr>
                 <tr className="border-b bg-gray-50">
-                  <td className="p-4 font-medium">Bảo hiểm</td>
+                  <td className="p-4 font-medium">{t("comparison.table.insurance")}</td>
                   <td className="p-4 text-center">
                     <Check className="w-5 h-5 text-green-500 mx-auto" />
                   </td>
@@ -363,15 +359,15 @@ export default function TransportationPage() {
                   </td>
                 </tr>
                 <tr>
-                  <td className="p-4 font-medium">Phù hợp với</td>
+                  <td className="p-4 font-medium">{t("comparison.table.bestFor")}</td>
                   <td className="p-4 text-center text-sm">
-                    Hàng gấp, giá trị cao
+                    {t("comparison.table.bestForExpress")}
                   </td>
                   <td className="p-4 text-center text-sm">
-                    Đơn hàng thông thường
+                    {t("comparison.table.bestForStandard")}
                   </td>
-                  <td className="p-4 text-center text-sm">Hàng khẩn cấp</td>
-                  <td className="p-4 text-center text-sm">Hàng số lượng lớn</td>
+                  <td className="p-4 text-center text-sm">{t("comparison.table.bestForSameday")}</td>
+                  <td className="p-4 text-center text-sm">{t("comparison.table.bestForEconomy")}</td>
                 </tr>
               </tbody>
             </table>

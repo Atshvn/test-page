@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, Globe } from "lucide-react";
+import { ArrowRight, Truck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { useTranslations, useLocale } from "next-intl";
@@ -27,7 +27,7 @@ export default function CTA() {
             transition={{ duration: 0.6 }}
           >
             <div className="inline-flex items-center gap-2 bg-white/10 text-white px-4 py-2 rounded-full mb-6">
-              <Globe className="w-4 h-4" />
+              <Truck className="w-4 h-4" />
               <span className="text-sm font-medium">{t("badge")}</span>
             </div>
 

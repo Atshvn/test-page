@@ -14,6 +14,7 @@ import {
 import { PageHero, Section, Container } from "@/components/ui/page-sections";
 import { useParams } from "next/navigation";
 import InfoSidebar from "@/components/ui/info-sidebar";
+import { CTA } from "@/components/sections";
 
 export default function AboutPage() {
   const params = useParams();
@@ -319,36 +320,7 @@ export default function AboutPage() {
           </div>
         </Container>
       </Section>
-
-      {/* CTA Section */}
-      <Section background="green" padding="lg">
-        <Container size="sm">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="text-center"
-          >
-            <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
-              {isVi
-                ? "Sẵn sàng làm việc với chúng tôi?"
-                : "Ready to Work With Us?"}
-            </h2>
-            <p className="text-lg text-white/90 mb-6">
-              {isVi
-                ? "Hãy trở thành một trong hàng ngàn doanh nghiệp tin tưởng sử dụng dịch vụ của NETCO."
-                : "Join thousands of businesses that trust NETCO for their logistics needs."}
-            </p>
-            <a
-              href={`/${locale}/contact`}
-              className="inline-block bg-white text-green-primary px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-            >
-              {isVi ? "Liên Hệ Ngay" : "Contact Us"}
-            </a>
-          </motion.div>
-        </Container>
-      </Section>
+      <CTA />
     </main>
   );
 }

@@ -300,8 +300,8 @@
     }
   },
   "cta": {
-    "badge": "Vận chuyển toàn cầu",
-    "title": "Gửi hàng của bạn đến bất kỳ đâu trên thế giới",
+    "badge": "Vận chuyển toàn quốc",
+    "title": "Gửi hàng nhanh chóng đến 34 tỉnh thành cả nước",
     "description": "Hàng ngàn doanh nghiệp đã tin tưởng giao phó nhu cầu logistics cho chúng tôi. Bắt đầu ngay hôm nay và trải nghiệm dịch vụ vận chuyển liền mạch.",
     "getStarted": "Bắt đầu ngay",
     "learnMore": "Tìm hiểu thêm",
@@ -337,6 +337,9 @@
         "feature4": "Thu hộ COD nhanh chóng"
       },
       "subServices": {
+        "heading": "Các gói dịch vụ vận chuyển",
+        "subheading": "Chọn gói dịch vụ phù hợp với nhu cầu vận chuyển của bạn",
+        "learnMore": "Tìm hiểu thêm",
         "express": {
           "title": "Chuyển phát nhanh",
           "description": "Giao hàng trong ngày hoặc hôm sau với thời gian cam kết"
@@ -352,6 +355,54 @@
         "economy": {
           "title": "Chuyển phát tiết kiệm",
           "description": "Giải pháp vận chuyển tiết kiệm chi phí cho hàng hóa không gấp"
+        }
+      },
+      "whyChoose": {
+        "heading": "Tại sao chọn vận chuyển NETCO?",
+        "reasons": {
+          "fast": {
+            "title": "Nhanh chóng",
+            "description": "Giao hàng trong 24-72h toàn quốc"
+          },
+          "safe": {
+            "title": "An toàn",
+            "description": "Bảo hiểm 100% giá trị hàng hóa"
+          },
+          "wide": {
+            "title": "Phủ rộng",
+            "description": "Mạng lưới 63 tỉnh thành"
+          },
+          "diverse": {
+            "title": "Đa dạng",
+            "description": "4 gói dịch vụ linh hoạt"
+          }
+        }
+      },
+      "comparison": {
+        "heading": "So sánh các gói dịch vụ",
+        "table": {
+          "feature": "Đặc điểm",
+          "express": "Nhanh",
+          "standard": "Tiêu chuẩn",
+          "sameday": "Trong ngày",
+          "economy": "Tiết kiệm",
+          "deliveryTime": "Thời gian giao",
+          "deliveryTimeExpress": "24-48h",
+          "deliveryTimeStandard": "2-3 ngày",
+          "deliveryTimeSameday": "4-8 giờ",
+          "deliveryTimeEconomy": "3-5 ngày",
+          "price": "Giá cước",
+          "priceExpress": "Cao",
+          "priceStandard": "Trung bình",
+          "priceSameday": "Cao nhất",
+          "priceEconomy": "Thấp nhất",
+          "cod": "Thu hộ COD",
+          "insurance": "Bảo hiểm",
+          "bestFor": "Phù hợp với",
+          "bestForExpress": "Hàng gấp, giá trị cao",
+          "bestForStandard": "Đơn hàng thông thường",
+          "bestForSameday": "Hàng khẩn cấp",
+          "bestForEconomy": "Hàng số lượng lớn"
         }
       },
       "cta": {

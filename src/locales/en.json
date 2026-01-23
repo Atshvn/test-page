@@ -246,8 +246,8 @@
     }
   },
   "cta": {
-    "badge": "Global Shipping",
-    "title": "Ship your goods anywhere in the world",
+    "badge": "Nationwide Shipping",
+    "title": "Fast delivery to 34 provinces nationwide",
     "description": "Thousands of businesses have trusted us with their logistics needs. Start today and experience seamless shipping services.",
     "getStarted": "Get Started",
     "learnMore": "Learn More",
@@ -283,6 +283,9 @@
         "feature4": "Fast COD collection"
       },
       "subServices": {
+        "heading": "Transportation Service Packages",
+        "subheading": "Choose the service package that suits your shipping needs",
+        "learnMore": "Learn more",
         "express": {
           "title": "Express Delivery",
           "description": "Same-day or next-day delivery with guaranteed time"
@@ -298,6 +301,54 @@
         "economy": {
           "title": "Economy Delivery",
           "description": "Cost-effective shipping solution for non-urgent goods"
+        }
+      },
+      "whyChoose": {
+        "heading": "Why choose NETCO transportation?",
+        "reasons": {
+          "fast": {
+            "title": "Fast",
+            "description": "Nationwide delivery in 24-72 hours"
+          },
+          "safe": {
+            "title": "Safe",
+            "description": "100% cargo value insurance"
+          },
+          "wide": {
+            "title": "Wide Coverage",
+            "description": "Network across 63 provinces"
+          },
+          "diverse": {
+            "title": "Diverse",
+            "description": "4 flexible service packages"
+          }
+        }
+      },
+      "comparison": {
+        "heading": "Compare Service Packages",
+        "table": {
+          "feature": "Feature",
+          "express": "Express",
+          "standard": "Standard",
+          "sameday": "Same-day",
+          "economy": "Economy",
+          "deliveryTime": "Delivery time",
+          "deliveryTimeExpress": "24-48h",
+          "deliveryTimeStandard": "2-3 days",
+          "deliveryTimeSameday": "4-8 hours",
+          "deliveryTimeEconomy": "3-5 days",
+          "price": "Shipping fee",
+          "priceExpress": "High",
+          "priceStandard": "Medium",
+          "priceSameday": "Highest",
+          "priceEconomy": "Lowest",
+          "cod": "COD collection",
+          "insurance": "Insurance",
+          "bestFor": "Best for",
+          "bestForExpress": "Urgent, high-value items",
+          "bestForStandard": "Regular orders",
+          "bestForSameday": "Emergency items",
+          "bestForEconomy": "Large quantities"
         }
       },
       "cta": {
