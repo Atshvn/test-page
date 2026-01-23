@@ -24,11 +24,26 @@ export async function fetchAPI<T = unknown>(
   func: string,
   options?: { revalidate?: number | false }
 ): Promise<ApiResponse<T>> {
+  // Validate required environment variables
+  if (!env.API_KEY) {
+    console.error(`[API Config Error] ${func}: API_KEY is not configured`);
+    return {
+      success: false,
+      error: "API configuration missing",
+    };
+  }
+
   const headers: Record<string, string> = {
     "Content-Type": "application/json",
-    "x-api-key": env.X_API_KEY || "",
-    Authorization: `Bearer ${env.API_TOKEN}`,
   };
+
+  // Only add optional headers if they exist
+  if (env.X_API_KEY) {
+    headers["x-api-key"] = env.X_API_KEY;
+  }
+  if (env.API_TOKEN) {
+    headers["Authorization"] = `Bearer ${env.API_TOKEN}`;
+  }
 
   try {
     const response = await fetch(env.API_ENDPOINT, {
@@ -44,8 +59,11 @@ export async function fetchAPI<T = unknown>(
     });
 
     if (!response.ok) {
+      // Log more details for debugging
+      const errorBody = await response.text().catch(() => "Unable to read response body");
       console.error(
-        `[API Error] ${func}: ${response.status} ${response.statusText}`
+        `[API Error] ${func}: ${response.status} ${response.statusText}`,
+        process.env.NODE_ENV === "development" ? { errorBody } : ""
       );
       return {
         success: false,
@@ -87,9 +105,15 @@ export async function fetchTrackingAPI<T = unknown>(
 
   const headers: Record<string, string> = {
     "Content-Type": "application/json",
-    "x-api-key": env.X_API_KEY || "",
-    Authorization: `Bearer ${env.API_TOKEN}`,
   };
+
+  // Only add optional headers if they exist
+  if (env.X_API_KEY) {
+    headers["x-api-key"] = env.X_API_KEY;
+  }
+  if (env.API_TOKEN) {
+    headers["Authorization"] = `Bearer ${env.API_TOKEN}`;
+  }
 
   try {
     const response = await fetch(env.API_ENDPOINT_TRACKING, {
@@ -104,8 +128,10 @@ export async function fetchTrackingAPI<T = unknown>(
     });
 
     if (!response.ok) {
+      const errorBody = await response.text().catch(() => "Unable to read response body");
       console.error(
-        `[Tracking API Error]: ${response.status} ${response.statusText}`
+        `[Tracking API Error]: ${response.status} ${response.statusText}`,
+        process.env.NODE_ENV === "development" ? { errorBody } : ""
       );
       return {
         success: false,
