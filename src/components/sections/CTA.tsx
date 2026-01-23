@@ -74,7 +74,7 @@ export default function CTA() {
               <p className="text-white/70">{t("stats.provinces")}</p>
             </div>
             <div>
-              <p className="text-4xl font-bold text-white">15K+</p>
+              <p className="text-4xl font-bold text-white">70K+</p>
               <p className="text-white/70">{t("stats.customers")}</p>
             </div>
             <div>

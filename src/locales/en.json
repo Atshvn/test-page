@@ -36,7 +36,7 @@
       "line2": "the",
       "line3": "Logistics"
     },
-    "subtitle": "We set the standard in freight transportation from point A to point B.",
+    "subtitle": "Comprehensive shipping and logistics solutions for all your business needs.",
     "getQuote": "Get a Quote",
     "callUs": "Call us:",
     "tracking": {
@@ -299,6 +299,12 @@
           "title": "Economy Delivery",
           "description": "Cost-effective shipping solution for non-urgent goods"
         }
+      },
+      "cta": {
+        "title": "Start shipping today",
+        "description": "Contact us now for consultation and best quotes",
+        "button": "Contact Now",
+        "buttonSecondary": "Call 1900 6463"
       }
     },
     "fulfillment": {
@@ -310,17 +316,162 @@
         "feature2": "Professional packaging",
         "feature3": "Automated order processing",
         "feature4": "Multi-platform e-commerce integration"
+      },
+      "heroStats": {
+        "stat1": { "value": "500+", "label": "Clients" },
+        "stat2": { "value": "10M+", "label": "Orders/year" },
+        "stat3": { "value": "99.5%", "label": "Accuracy" },
+        "stat4": { "value": "24/7", "label": "Operations" }
+      },
+      "concept": {
+        "title": "What is Fulfillment?",
+        "description": "Fulfillment service is one of the increasingly popular services in the e-commerce industry. This is a solution to help businesses save time, costs and enhance customer experience with faster delivery speed.",
+        "detail": "Fulfillment service is the process of managing packaging, shipping and storing products for businesses. This helps businesses focus on their core business activities and growth rather than managing logistics operations themselves."
+      },
+      "whyChoose": {
+        "title": "Why Choose Fulfillment?",
+        "reasons": {
+          "reason1": {
+            "title": "Save Time and Cost",
+            "description": "When using fulfillment service, businesses don't need to pack, ship and store products themselves, significantly saving time and costs."
+          },
+          "reason2": {
+            "title": "Enhance Customer Experience",
+            "description": "With faster delivery speed and on-time delivery, fulfillment service helps enhance customer experience and increase reliability."
+          },
+          "reason3": {
+            "title": "Improve Product Quality",
+            "description": "With professional packaging, storage and delivery, your products will be enhanced in reliability and quality."
+          },
+          "reason4": {
+            "title": "Expand Business Capability",
+            "description": "Fulfillment service helps reduce logistics and storage barriers, thereby increasing the business expansion capability."
+          }
+        }
+      },
+      "process": {
+        "title": "Fulfillment Process",
+        "steps": {
+          "step1": { "title": "Inbound", "description": "Receive goods from suppliers, check quantity and quality" },
+          "step2": { "title": "Storage", "description": "Classify and store goods in warehouse according to standards" },
+          "step3": { "title": "Order Processing", "description": "Receive orders from e-commerce platforms, process and prepare goods" },
+          "step4": { "title": "Packaging", "description": "Professional packaging, print shipping labels" },
+          "step5": { "title": "Delivery", "description": "Hand over to carriers, deliver to customers" },
+          "step6": { "title": "Reconciliation", "description": "Reconcile orders, handle returns if any" }
+        }
+      },
+      "services": {
+        "title": "Services Included",
+        "list": {
+          "service1": { "title": "Inventory Management", "description": "Track inventory quantity in real-time, alert when out of stock" },
+          "service2": { "title": "Order Processing", "description": "Automatically process orders from e-commerce platforms: Shopee, Lazada, Tiki..." },
+          "service3": { "title": "Professional Packaging", "description": "Standard packaging, maximum product protection" },
+          "service4": { "title": "Multi-channel Delivery", "description": "Connect with multiple carriers, choose the best price" },
+          "service5": { "title": "Returns Management", "description": "Handle returns, inspect and re-stock" },
+          "service6": { "title": "Analytics Reports", "description": "Dashboard to track KPIs, detailed reports" }
+        }
+      },
+      "pricing": {
+        "title": "Service Pricing",
+        "description": "Flexible pricing based on needs, no hidden fees",
+        "plans": {
+          "basic": { "title": "Basic", "price": "From $0.15/order", "features": ["Free storage for 30 days", "Process orders within 24h", "Standard packaging", "Email support"] },
+          "pro": { "title": "Professional", "price": "From $0.25/order", "features": ["Free storage for 60 days", "Process orders within 6h", "Premium packaging", "24/7 support", "API integration"] },
+          "enterprise": { "title": "Enterprise", "price": "Contact us", "features": ["Unlimited storage", "Process orders within 2h", "Custom packaging", "Dedicated Account Manager", "ERP integration"] }
+        }
+      },
+      "cta": {
+        "title": "Start Today",
+        "description": "Contact us now for free consultation and detailed quote",
+        "button": "Get Free Consultation",
+        "buttonSecondary": "View Detailed Pricing"
       }
     },
     "warehousing": {
       "badge": "Warehousing Service",
-      "title": "Professional Warehousing",
-      "description": "Modern warehouse system meeting international standards with advanced WMS technology.",
+      "title": "Modern Warehousing - Professional Management",
+      "description": "Modern warehouse system meeting international standards with advanced WMS technology, meeting all goods storage needs.",
       "features": {
         "feature1": "GDP/GSP certified warehouse",
         "feature2": "WMS inventory management system",
         "feature3": "Cold storage with multi-temperature zones",
         "feature4": "24/7 security & fire protection"
+      },
+      "heroStats": {
+        "stat1": { "value": "50,000", "label": "m² warehouse" },
+        "stat2": { "value": "15+", "label": "Nationwide warehouses" },
+        "stat3": { "value": "GDP/GSP", "label": "Certified" },
+        "stat4": { "value": "99.9%", "label": "Uptime" }
+      },
+      "types": {
+        "title": "Warehouse Types",
+        "list": {
+          "type1": {
+            "title": "Standard Warehouse",
+            "description": "Storage for regular goods, natural temperature control",
+            "features": ["Flexible area", "Suitable for all goods", "Optimal cost"]
+          },
+          "type2": {
+            "title": "Cool Storage",
+            "description": "Temperature controlled warehouse 15-25°C for sensitive goods",
+            "features": ["Temperature 15-25°C", "Humidity controlled", "Suitable for cosmetics, pharmaceuticals"]
+          },
+          "type3": {
+            "title": "Cold Storage",
+            "description": "Frozen warehouse 0-8°C or -18°C to -25°C for food",
+            "features": ["Multi-temperature range", "HACCP standard", "Suitable for food, vaccines"]
+          },
+          "type4": {
+            "title": "Bonded Warehouse",
+            "description": "Storage for import/export goods pending customs clearance",
+            "features": ["Customs licensed", "Deferred import tax", "Suitable for import/export goods"]
+          }
+        }
+      },
+      "wms": {
+        "title": "Modern WMS System",
+        "description": "Warehouse Management System - Smart warehouse management system",
+        "features": {
+          "feature1": { "title": "Real-time Inventory Management", "description": "Track goods quantity accurately in real-time" },
+          "feature2": { "title": "Location Management", "description": "Precisely locate goods position in warehouse (Location Management)" },
+          "feature3": { "title": "FIFO/FEFO", "description": "Manage expiry dates, release goods according to FIFO/FEFO principles" },
+          "feature4": { "title": "Barcode/QR Code", "description": "Scan barcodes, QR codes for quick inbound/outbound" },
+          "feature5": { "title": "Analytics Reports", "description": "Overview dashboard, detailed inventory reports" },
+          "feature6": { "title": "API Integration", "description": "Connect with ERP, TMS, other customer systems" }
+        }
+      },
+      "services": {
+        "title": "Additional Services",
+        "list": {
+          "service1": "Receive, count and warehouse goods",
+          "service2": "Classify, arrange goods as required",
+          "service3": "Packaging, labeling, palletizing",
+          "service4": "Manage inventory by batch, expiry date",
+          "service5": "Order processing, pick & pack",
+          "service6": "Cross-docking, consolidation",
+          "service7": "Value-added services (VAS)",
+          "service8": "Internal transport, last-mile delivery"
+        }
+      },
+      "certifications": {
+        "title": "Certifications & Standards",
+        "list": {
+          "cert1": { "title": "GDP", "description": "Good Distribution Practice" },
+          "cert2": { "title": "GSP", "description": "Good Storage Practice" },
+          "cert3": { "title": "ISO 9001", "description": "Quality Management System" },
+          "cert4": { "title": "HACCP", "description": "Food Safety Management System" }
+        }
+      },
+      "pricing": {
+        "title": "Warehouse Rental Pricing",
+        "description": "Flexible pricing based on area, duration and warehouse type",
+        "note": "Contact us for detailed quote based on specific needs"
+      },
+      "cta": {
+        "title": "Find the Right Warehouse",
+        "description": "Contact us now for the most suitable warehousing solution",
+        "button": "Get Free Consultation",
+        "buttonSecondary": "Visit Warehouse"
       }
     },
     "installation": {
@@ -332,6 +483,90 @@
         "feature2": "On-time installation",
         "feature3": "Service warranty",
         "feature4": "24/7 technical support"
+      },
+      "heroStats": {
+        "stat1": { "value": "500+", "label": "Technicians" },
+        "stat2": { "value": "63", "label": "Provinces" },
+        "stat3": { "value": "98%", "label": "Satisfaction" },
+        "stat4": { "value": "24h", "label": "Response" }
+      },
+      "overview": {
+        "title": "Professional Installation & Maintenance Service",
+        "description": "NETCO provides on-site installation and maintenance services for businesses. With professionally trained technicians, we ensure your products are installed correctly and operate stably.",
+        "highlights": {
+          "highlight1": "Technicians trained and certified by manufacturers",
+          "highlight2": "Coverage in 63 provinces, on-site installation within 24-48h",
+          "highlight3": "Service warranty, technical support after installation",
+          "highlight4": "ISO standard process, consistent quality assurance"
+        }
+      },
+      "services": {
+        "title": "Main Services",
+        "list": {
+          "service1": {
+            "title": "Air Conditioner Installation",
+            "description": "Install, relocate air conditioners: wall-mounted, ceiling, standing",
+            "features": ["New installation", "Relocation", "Gas refill, cleaning"]
+          },
+          "service2": {
+            "title": "Washing Machine & Refrigerator Installation",
+            "description": "Install and balance washing machines, refrigerators of all types",
+            "features": ["Proper technical installation", "Operation check", "Usage guidance"]
+          },
+          "service3": {
+            "title": "TV & Audio Installation",
+            "description": "Wall-mount TV installation, audio systems, speakers",
+            "features": ["Secure wall mounting", "Channel setup", "Device connection"]
+          },
+          "service4": {
+            "title": "Kitchen Equipment Installation",
+            "description": "Install induction cookers, range hoods, microwaves, ovens",
+            "features": ["Built-in installation", "Electric/gas connection", "Safety check"]
+          },
+          "service5": {
+            "title": "Water Heater Installation",
+            "description": "Install water heaters, solar water heaters",
+            "features": ["Pipe installation", "Safe electrical connection", "Operation test"]
+          },
+          "service6": {
+            "title": "Periodic Maintenance",
+            "description": "Maintenance service for home electronic appliances",
+            "features": ["Device cleaning", "Check, replace parts", "Post-maintenance warranty"]
+          }
+        }
+      },
+      "process": {
+        "title": "Installation Process",
+        "steps": {
+          "step1": { "title": "Receive Request", "description": "Receive order information from partner businesses" },
+          "step2": { "title": "Assign Technician", "description": "Assign technician by area and expertise" },
+          "step3": { "title": "Contact Customer", "description": "Technician contacts to confirm installation time" },
+          "step4": { "title": "On-site Installation", "description": "Perform installation according to standard process" },
+          "step5": { "title": "Check & Handover", "description": "Test operation, guide usage, handover" },
+          "step6": { "title": "Post-installation Support", "description": "Technical support, service warranty" }
+        }
+      },
+      "partners": {
+        "title": "Trusted Partners",
+        "description": "NETCO is proud to be the installation partner of leading electronics brands"
+      },
+      "pricing": {
+        "title": "Service Pricing",
+        "description": "Reference prices, specific quotes based on product type and location",
+        "categories": {
+          "cat1": { "title": "Air Conditioner", "price": "From $15" },
+          "cat2": { "title": "Washing Machine", "price": "From $7" },
+          "cat3": { "title": "Refrigerator", "price": "From $5" },
+          "cat4": { "title": "Wall-mount TV", "price": "From $10" },
+          "cat5": { "title": "Water Heater", "price": "From $10" },
+          "cat6": { "title": "Kitchen Equipment", "price": "From $7" }
+        }
+      },
+      "cta": {
+        "title": "Become an Installation Partner",
+        "description": "Contact us now to partner with NETCO's nationwide technician network",
+        "button": "Contact for Partnership",
+        "buttonSecondary": "Download Service Profile"
       }
     },
     "other": {
@@ -343,6 +578,81 @@
         "feature2": "Supply chain consulting",
         "feature3": "Value-added services",
         "feature4": "24/7 support"
+      },
+      "heroStats": {
+        "stat1": { "value": "100+", "label": "Projects" },
+        "stat2": { "value": "50+", "label": "Partners" },
+        "stat3": { "value": "24/7", "label": "Support" },
+        "stat4": { "value": "99%", "label": "Satisfaction" }
+      },
+      "overview": {
+        "title": "Comprehensive Logistics Solutions",
+        "description": "Besides core services, NETCO also provides many value-added services and customized solutions to meet all logistics needs of businesses."
+      },
+      "services": {
+        "title": "Other Services",
+        "list": {
+          "service1": {
+            "title": "Oversized Cargo Transport",
+            "description": "Transport oversized, overweight goods, industrial equipment, machinery",
+            "features": ["Specialized trucks", "Professional loading team", "Cargo insurance"]
+          },
+          "service2": {
+            "title": "Cold Chain Transport",
+            "description": "Transport fresh food, frozen goods, vaccines by refrigerated trucks",
+            "features": ["Specialized refrigerated trucks", "Temperature control -25°C to +15°C", "Real-time monitoring"]
+          },
+          "service3": {
+            "title": "Cross-border Logistics",
+            "description": "International freight transport, import-export customs clearance",
+            "features": ["Road transport to Cambodia, Laos", "Complete customs procedures", "Bonded warehouse"]
+          },
+          "service4": {
+            "title": "COD Collection Service",
+            "description": "Cash on delivery collection, quick transfer to customer accounts",
+            "features": ["COD up to $2,000/order", "24-48h reconciliation", "Daily transfer"]
+          },
+          "service5": {
+            "title": "Packaging & Crating",
+            "description": "Professional packaging service, wooden crating for high-value goods",
+            "features": ["Export wooden crating", "Shock-proof, moisture-proof", "Custom packaging"]
+          },
+          "service6": {
+            "title": "Supply Chain Consulting",
+            "description": "Consulting on supply chain optimization, logistics cost reduction",
+            "features": ["Analyze current processes", "Propose optimal solutions", "Implement and accompany"]
+          }
+        }
+      },
+      "vas": {
+        "title": "Value-Added Services (VAS)",
+        "list": {
+          "vas1": { "title": "Labeling & Tagging", "description": "Print product labels, price tags, barcodes" },
+          "vas2": { "title": "Combo & Kit Assembly", "description": "Package product combos, create gift kits" },
+          "vas3": { "title": "Quality Check", "description": "QC products before delivery to end customers" },
+          "vas4": { "title": "Returns Processing", "description": "Receive, inspect and process returned goods" },
+          "vas5": { "title": "Kitting & Assembly", "description": "Assemble products, package as required" },
+          "vas6": { "title": "Recycling & Defect Processing", "description": "Process defective goods, expired items as regulations" }
+        }
+      },
+      "industries": {
+        "title": "Industries Served",
+        "list": {
+          "industry1": "E-commerce",
+          "industry2": "Retail",
+          "industry3": "Electronics & Technology",
+          "industry4": "Pharmaceuticals & Healthcare",
+          "industry5": "Food & Beverage (F&B)",
+          "industry6": "Furniture & Home Appliances",
+          "industry7": "Cosmetics & Beauty",
+          "industry8": "Fashion & Apparel"
+        }
+      },
+      "cta": {
+        "title": "Have Special Requirements?",
+        "description": "Contact us now for the most suitable logistics solution for your business",
+        "button": "Get Free Consultation",
+        "buttonSecondary": "Call Hotline 1900 6463"
       }
     },
     "cta": {
@@ -1029,6 +1339,21 @@
       "estimatedDelivery": "Estimated Delivery",
       "createOrder": "Create Order",
       "days": "days"
+    }
+  },
+  "notFound": {
+    "title": "404 - Page Not Found",
+    "heading": "Oops! Page Not Found",
+    "description": "The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.",
+    "homeButton": "Go to Home",
+    "backButton": "Go Back",
+    "trackingButton": "Track Order",
+    "suggestions": {
+      "title": "You might be looking for:",
+      "services": "Our Services",
+      "tracking": "Track Shipment",
+      "contact": "Contact Support",
+      "blog": "News & Blog"
     }
   }
 }

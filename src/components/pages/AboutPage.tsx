@@ -1,7 +1,16 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Building2, Users, TrendingUp, Award, Cpu, Server, Gauge, CheckCircle2 } from "lucide-react";
+import {
+  Building2,
+  Users,
+  TrendingUp,
+  Award,
+  Cpu,
+  Server,
+  Gauge,
+  CheckCircle2,
+} from "lucide-react";
 import { PageHero, Section, Container } from "@/components/ui/page-sections";
 import { useParams } from "next/navigation";
 import InfoSidebar from "@/components/ui/info-sidebar";
@@ -12,25 +21,25 @@ export default function AboutPage() {
   const isVi = locale === "vi";
 
   const stats = [
-    { 
-      value: "23+", 
+    {
+      value: "23+",
       label: isVi ? "Năm kinh nghiệm" : "Years of Experience",
-      labelEn: "Years Experience" 
+      labelEn: "Years Experience",
     },
-    { 
-      value: "60K+", 
+    {
+      value: "60K+",
       label: isVi ? "Khách hàng thường xuyên" : "Regular Customers",
-      labelEn: "Regular Customers" 
+      labelEn: "Regular Customers",
     },
-    { 
-      value: "5K+", 
+    {
+      value: "5K+",
       label: isVi ? "Doanh nghiệp B2B" : "B2B Enterprises",
-      labelEn: "B2B Businesses" 
+      labelEn: "B2B Businesses",
     },
-    { 
-      value: "99.9%", 
+    {
+      value: "99.9%",
       label: isVi ? "Tỷ lệ giao đúng hẹn" : "On-time Delivery",
-      labelEn: "On-time Rate" 
+      labelEn: "On-time Rate",
     },
   ];
 
@@ -38,7 +47,7 @@ export default function AboutPage() {
     {
       icon: Building2,
       title: isVi ? "Hơn 23 năm kinh nghiệm" : "23+ Years Experience",
-      description: isVi 
+      description: isVi
         ? "Trong ngành chuyển phát nhanh, tạo dựng uy tín và chất lượng dịch vụ."
         : "In express delivery industry, building reputation and service quality.",
     },
@@ -105,7 +114,7 @@ export default function AboutPage() {
 
       {/* Main Content with Sidebar */}
       <Section background="gray" padding="lg">
-        <Container size="xl">
+        <Container size="xl" className="container">
           <div className="flex flex-col lg:flex-row gap-8">
             {/* Main Content */}
             <div className="flex-1 min-w-0">
@@ -124,27 +133,50 @@ export default function AboutPage() {
                     className="w-full rounded-xl mb-6"
                   />
                 </div>
-                
+
                 <p className="text-lg text-gray-700 leading-relaxed mb-6">
                   {isVi ? (
                     <>
-                      Được thành lập vào năm 2003, <strong>Công ty Cổ phần Thương mại và Chuyển phát nhanh Nội Bài</strong> đã xây dựng thành công thương hiệu Netco Post trong ngành Logistics - một công ty có kinh nghiệm hoạt động chính – Chuyển phát. Netco Post tự hào là thương hiệu có uy tín trong lĩnh vực chuyển phát nhanh tài liệu, hàng hóa trong nước và quốc tế với phương châm phục vụ <strong>"Vì khách hàng phục vụ, Vì uy tín chuyên cần".</strong>
+                      Được thành lập vào năm 2003,{" "}
+                      <strong>
+                        Công ty Cổ phần Thương mại và Chuyển phát nhanh Nội Bài
+                      </strong>{" "}
+                      đã xây dựng thành công thương hiệu Netco Post trong ngành
+                      Logistics - một công ty có kinh nghiệm hoạt động chính –
+                      Chuyển phát. Netco Post tự hào là thương hiệu có uy tín
+                      trong lĩnh vực chuyển phát nhanh tài liệu, hàng hóa trong
+                      nước và quốc tế với phương châm phục vụ{" "}
+                      <strong>
+                        "Vì khách hàng phục vụ, Vì uy tín chuyên cần".
+                      </strong>
                     </>
                   ) : (
                     <>
-                      Established in 2003, <strong>Noi Bai Express Trading and Delivery Joint Stock Company</strong> has successfully built the Netco Post brand in the Logistics industry - a company with experience in express delivery operations. Netco Post is proud to be a reputable brand in express delivery of documents and goods domestically and internationally with the service motto <strong>"For customers to serve, For dedicated reputation".</strong>
+                      Established in 2003,{" "}
+                      <strong>
+                        Noi Bai Express Trading and Delivery Joint Stock Company
+                      </strong>{" "}
+                      has successfully built the Netco Post brand in the
+                      Logistics industry - a company with experience in express
+                      delivery operations. Netco Post is proud to be a reputable
+                      brand in express delivery of documents and goods
+                      domestically and internationally with the service motto{" "}
+                      <strong>
+                        "For customers to serve, For dedicated reputation".
+                      </strong>
                     </>
                   )}
                 </p>
 
                 <h3 className="text-2xl font-bold text-green-dark mb-4">
-                  {isVi ? "Netco Post - Sự lựa chọn hàng đầu cho doanh nghiệp và cá nhân" : "Netco Post - The Premier Choice for Businesses and Individuals"}
+                  {isVi
+                    ? "Netco Post - Sự lựa chọn hàng đầu cho doanh nghiệp và cá nhân"
+                    : "Netco Post - The Premier Choice for Businesses and Individuals"}
                 </h3>
                 <p className="text-lg text-gray-700 leading-relaxed">
-                  {isVi 
+                  {isVi
                     ? "Để giữ vững vị thế tiên phong, Netco Post không ngừng đổi mới và hoàn thiện chất lượng dịch vụ."
-                    : "To maintain our pioneering position, Netco Post continuously innovates and improves service quality."
-                  }
+                    : "To maintain our pioneering position, Netco Post continuously innovates and improves service quality."}
                 </p>
               </motion.div>
 
@@ -162,7 +194,9 @@ export default function AboutPage() {
                       <p className="text-4xl md:text-5xl font-bold text-white mb-2">
                         {stat.value}
                       </p>
-                      <p className="text-white/90 text-sm md:text-base">{stat.label}</p>
+                      <p className="text-white/90 text-sm md:text-base">
+                        {stat.label}
+                      </p>
                     </div>
                   ))}
                 </div>
@@ -212,8 +246,7 @@ export default function AboutPage() {
                 <p className="text-lg text-gray-700 leading-relaxed">
                   {isVi
                     ? "Với nền tảng vững chắc từ kinh nghiệm thực tiễn, Netco Post đã xây dựng được lòng tin từ đông đảo khách hàng cá nhân và doanh nghiệp. Sự hài lòng của khách hàng chính là động lực để chúng tôi không ngừng cải tiến dịch vụ."
-                    : "With a solid foundation from practical experience, Netco Post has built trust from a large number of individual customers and businesses. Customer satisfaction is the driving force for us to continuously improve our services."
-                  }
+                    : "With a solid foundation from practical experience, Netco Post has built trust from a large number of individual customers and businesses. Customer satisfaction is the driving force for us to continuously improve our services."}
                 </p>
               </motion.div>
 
@@ -226,13 +259,14 @@ export default function AboutPage() {
                 className="bg-white rounded-2xl p-8 md:p-10 shadow-sm mb-8"
               >
                 <h2 className="text-3xl font-bold text-green-dark mb-4">
-                  {isVi ? "Công nghệ là ngôn ngữ của tương lai" : "Technology is the Language of the Future"}
+                  {isVi
+                    ? "Công nghệ là ngôn ngữ của tương lai"
+                    : "Technology is the Language of the Future"}
                 </h2>
                 <p className="text-lg text-gray-700 leading-relaxed mb-8">
                   {isVi
                     ? "Netco Post liên tục cập nhật, cải tiến để thích ứng linh hoạt với nhu cầu của khách hàng, củng cố lòng tin luôn an tâm khi sử dụng dịch vụ của chúng tôi."
-                    : "Netco Post continuously updates and innovates to flexibly adapt to customer needs, strengthening trust and peace of mind when using our services."
-                  }
+                    : "Netco Post continuously updates and innovates to flexibly adapt to customer needs, strengthening trust and peace of mind when using our services."}
                 </p>
 
                 <div className="mb-8">
@@ -297,7 +331,9 @@ export default function AboutPage() {
             className="text-center"
           >
             <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
-              {isVi ? "Sẵn sàng làm việc với chúng tôi?" : "Ready to Work With Us?"}
+              {isVi
+                ? "Sẵn sàng làm việc với chúng tôi?"
+                : "Ready to Work With Us?"}
             </h2>
             <p className="text-lg text-white/90 mb-6">
               {isVi

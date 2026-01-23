@@ -7,6 +7,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useTranslations, useLocale } from "next-intl";
 import { LucideIcon } from "lucide-react";
+import { CTA } from "@/components/sections";
 
 interface SubService {
   title: string;
@@ -15,7 +16,12 @@ interface SubService {
 }
 
 interface ServiceDetailPageProps {
-  serviceKey: "transportation" | "fulfillment" | "warehousing" | "installation" | "other";
+  serviceKey:
+    | "transportation"
+    | "fulfillment"
+    | "warehousing"
+    | "installation"
+    | "other";
   icon: LucideIcon;
   image: string;
   color: string;
@@ -79,7 +85,9 @@ export default function ServiceDetailPage({
               className="relative"
             >
               <div className="relative aspect-square max-w-md mx-auto">
-                <div className={`absolute inset-0 ${color} rounded-3xl opacity-10`}></div>
+                <div
+                  className={`absolute inset-0 ${color} rounded-3xl opacity-10`}
+                ></div>
                 <div className="absolute inset-4 bg-white rounded-2xl shadow-xl flex items-center justify-center">
                   <Image
                     src={image}
@@ -145,13 +153,17 @@ export default function ServiceDetailPage({
                 >
                   <Link href={`/${locale}${subService.href}`}>
                     <div className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-lg transition-shadow duration-300 group cursor-pointer h-full">
-                      <div className={`w-14 h-14 ${color} rounded-xl flex items-center justify-center mb-6`}>
+                      <div
+                        className={`w-14 h-14 ${color} rounded-xl flex items-center justify-center mb-6`}
+                      >
                         <Icon className="w-7 h-7 text-white" />
                       </div>
                       <h3 className="text-xl font-bold text-green-dark mb-3 group-hover:text-green-primary transition-colors">
                         {subService.title}
                       </h3>
-                      <p className="text-gray-600 mb-4">{subService.description}</p>
+                      <p className="text-gray-600 mb-4">
+                        {subService.description}
+                      </p>
                       <span className="inline-flex items-center text-green-primary font-medium">
                         {t("learnMore")}
                         <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-2 transition-transform" />
@@ -165,31 +177,7 @@ export default function ServiceDetailPage({
         </section>
       )}
 
-      {/* CTA Section */}
-      <section className="py-16 md:py-20 bg-green-primary">
-        <div className="container mx-auto px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-6">
-              {t("cta.title")}
-            </h2>
-            <p className="text-lg text-white/80 mb-8 max-w-2xl mx-auto">
-              {t("cta.description")}
-            </p>
-            <Button
-              asChild
-              size="lg"
-              className="bg-orange-primary hover:bg-orange-600 text-white px-8"
-            >
-              <Link href={`/${locale}/contact`}>{t("cta.button")}</Link>
-            </Button>
-          </motion.div>
-        </div>
-      </section>
+      <CTA />
     </main>
   );
 }

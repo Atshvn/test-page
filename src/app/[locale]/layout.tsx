@@ -6,6 +6,7 @@ import type { Metadata } from "next";
 import { ScrollRestoration } from "@/components/ScrollRestoration";
 import { Header, Footer } from "@/components/layout";
 import { PageTransition } from "@/components/PageTransition";
+import { TopLoader } from "@/components/TopLoader";
 import { Toaster } from "@/components/ui/sonner";
 import {
   generateSEO,
@@ -99,6 +100,17 @@ export default async function LocaleLayout({
           }}
         />
         <NextIntlClientProvider messages={messages}>
+          <TopLoader 
+            color="#16a34a"
+            height={3}
+            showSpinner={false}
+            crawl={true}
+            crawlSpeed={200}
+            initialPosition={0.08}
+            easing="ease"
+            speed={200}
+            shadow="0 0 10px #16a34a, 0 0 5px #16a34a"
+          />
           {/* <ScrollRestoration /> */}
           <Header />
           <PageTransition>

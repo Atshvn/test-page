@@ -6,14 +6,29 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import Image from "next/image";
 import Link from "next/link";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { useTranslations, useLocale } from "next-intl";
 import { COMPANY_INFO } from "@/lib/constants";
+import { useRouter } from "@/hooks/useRouter";
 
 export default function Hero() {
   const containerRef = useRef<HTMLDivElement>(null);
   const t = useTranslations("hero");
   const locale = useLocale();
+  const router = useRouter();
+
+  // Tracking form state
+  const [trackingCode, setTrackingCode] = useState("");
+  const [trackingType, setTrackingType] = useState("1"); // 1 = Tracking Code, 2 = DO Code
+
+  const handleTrackingSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (trackingCode.trim()) {
+      router.push(
+        `/${locale}/tracking?code=${encodeURIComponent(trackingCode.trim())}&type=${trackingType}`,
+      );
+    }
+  };
 
   // Scroll-based animation for the truck
   const { scrollYProgress } = useScroll({
@@ -27,7 +42,7 @@ export default function Hero() {
   const truckXRaw = useTransform(
     scrollYProgress,
     [0, 0.3, 0.6, 1],
-    [258, 450, 650, 850]
+    [258, 450, 650, 850],
   );
 
   // Apply spring animation for smooth movement
@@ -44,8 +59,8 @@ export default function Hero() {
       style={{
         backgroundImage: "var(--hero-bg)",
         backgroundRepeat: "no-repeat",
-        backgroundPosition: "center",
-        backgroundSize: "cover",
+        backgroundPosition: "center right",
+        backgroundSize: "auto 100%",
       }}
     >
       {/* CSS variable for background - hidden on mobile */}
@@ -118,7 +133,10 @@ export default function Hero() {
         transition={{ duration: 0.6, delay: 0.4 }}
         className="relative lg:absolute lg:bottom-6 xl:bottom-8 lg:right-8 xl:right-16 z-30 w-full px-4 lg:px-0 lg:max-w-md xl:max-w-lg mt-6 lg:mt-0"
       >
-        <div className="bg-white p-6 sm:p-6 lg:p-5 xl:p-6 rounded-2xl shadow-xl border border-gray-100 max-w-md mx-auto lg:max-w-md xl:max-w-lg lg:mx-0 lg:ml-auto">
+        <form
+          onSubmit={handleTrackingSubmit}
+          className="bg-white p-6 sm:p-6 lg:p-5 xl:p-6 rounded-2xl shadow-xl border border-gray-100 max-w-md mx-auto lg:max-w-md xl:max-w-lg lg:mx-0 lg:ml-auto"
+        >
           <div className="flex items-center gap-3 mb-5">
             <div className="w-7 h-7 sm:w-8 sm:h-8 bg-red-500 rounded-full flex items-center justify-center shadow-md">
               <Search className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-white" />
@@ -134,7 +152,9 @@ export default function Hero() {
               <input
                 type="radio"
                 name="trackingType"
-                defaultChecked
+                value="1"
+                checked={trackingType === "1"}
+                onChange={(e) => setTrackingType(e.target.value)}
                 className="w-4 h-4 sm:w-4 sm:h-4 accent-green-primary cursor-pointer"
               />
               <span className="text-sm sm:text-sm text-gray-700 font-medium">
@@ -145,6 +165,9 @@ export default function Hero() {
               <input
                 type="radio"
                 name="trackingType"
+                value="2"
+                checked={trackingType === "2"}
+                onChange={(e) => setTrackingType(e.target.value)}
                 className="w-4 h-4 sm:w-4 sm:h-4 accent-green-primary cursor-pointer"
               />
               <span className="text-sm sm:text-sm text-gray-700 font-medium">
@@ -157,17 +180,20 @@ export default function Hero() {
           <div className="flex flex-col sm:flex-row gap-3 w-full">
             <Input
               type="text"
+              value={trackingCode}
+              onChange={(e) => setTrackingCode(e.target.value)}
               placeholder={t("tracking.placeholder")}
               className="flex-1 h-11 sm:flex-[2] py-3  focus-visible:ring-green-primary focus-visible:border-green-primary min-w-0"
             />
             <Button
+              type="submit"
               size="lg"
               className="bg-green-primary hover:bg-green-dark text-white h-11 sm:h-11 px-6 sm:px-8 rounded-lg uppercase tracking-wide text-[15px] sm:text-sm font-bold w-full sm:w-auto sm:flex-shrink-0 shadow-md hover:shadow-lg whitespace-nowrap"
             >
               {t("tracking.button")}
             </Button>
           </div>
-        </div>
+        </form>
       </motion.div>
 
       {/* Hero Decoration Line - Full Width with Truck Animation */}

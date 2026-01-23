@@ -36,7 +36,7 @@
       "line2": "ngành",
       "line3": "Logistics"
     },
-    "subtitle": "Chúng tôi thiết lập tiêu chuẩn trong vận chuyển hàng hóa từ điểm A đến điểm B.",
+    "subtitle": "Giải pháp vận chuyển và logistics toàn diện cho mọi nhu cầu kinh doanh của bạn.",
     "getQuote": "Nhận báo giá",
     "callUs": "Hãy gọi cho chúng tôi:",
     "tracking": {
@@ -353,6 +353,12 @@
           "title": "Chuyển phát tiết kiệm",
           "description": "Giải pháp vận chuyển tiết kiệm chi phí cho hàng hóa không gấp"
         }
+      },
+      "cta": {
+        "title": "Bắt đầu gửi hàng ngay hôm nay",
+        "description": "Liên hệ ngay để được tư vấn và nhận báo giá tốt nhất",
+        "button": "Liên hệ ngay",
+        "buttonSecondary": "Gọi 1900 6463"
       }
     },
     "fulfillment": {
@@ -364,17 +370,162 @@
         "feature2": "Đóng gói chuyên nghiệp",
         "feature3": "Xử lý đơn hàng tự động",
         "feature4": "Tích hợp đa sàn TMĐT"
+      },
+      "heroStats": {
+        "stat1": { "value": "500+", "label": "Khách hàng" },
+        "stat2": { "value": "10M+", "label": "Đơn/năm" },
+        "stat3": { "value": "99.5%", "label": "Độ chính xác" },
+        "stat4": { "value": "24/7", "label": "Vận hành" }
+      },
+      "concept": {
+        "title": "Fulfillment là gì?",
+        "description": "Dịch vụ fulfillment là một trong những dịch vụ ngày càng phổ biến trong ngành thương mại điện tử. Đây là một giải pháp để giúp doanh nghiệp tiết kiệm thời gian, chi phí và tăng trải nghiệm khách hàng với tốc độ giao hàng nhanh hơn.",
+        "detail": "Dịch vụ fulfillment là quá trình quản lý đóng gói, vận chuyển và lưu trữ sản phẩm của doanh nghiệp. Điều này giúp cho doanh nghiệp tập trung vào các hoạt động kinh doanh chính và phát triển kinh doanh hơn là quản lý hoạt động logistics tự mình."
+      },
+      "whyChoose": {
+        "title": "Tại sao chọn Fulfillment?",
+        "reasons": {
+          "reason1": {
+            "title": "Tiết kiệm thời gian và chi phí",
+            "description": "Khi sử dụng dịch vụ fulfillment, doanh nghiệp không cần phải tự đóng gói, vận chuyển và lưu kho sản phẩm, giúp tiết kiệm thời gian và chi phí đáng kể."
+          },
+          "reason2": {
+            "title": "Tăng trải nghiệm khách hàng",
+            "description": "Với tốc độ giao hàng nhanh hơn và đáp ứng đúng hạn, dịch vụ fulfillment giúp tăng trải nghiệm khách hàng và nâng cao độ tin cậy."
+          },
+          "reason3": {
+            "title": "Nâng cao chất lượng sản phẩm",
+            "description": "Với việc được chuyên nghiệp đóng gói, bảo quản và giao hàng, sản phẩm của doanh nghiệp sẽ được nâng cao độ tin cậy và chất lượng."
+          },
+          "reason4": {
+            "title": "Tăng khả năng mở rộng kinh doanh",
+            "description": "Dịch vụ fulfillment giúp giảm bớt các rào cản về logistics và lưu trữ sản phẩm, từ đó tăng khả năng mở rộng kinh doanh của doanh nghiệp."
+          }
+        }
+      },
+      "process": {
+        "title": "Quy trình Fulfillment",
+        "steps": {
+          "step1": { "title": "Nhập kho", "description": "Tiếp nhận hàng hóa từ nhà cung cấp, kiểm tra số lượng và chất lượng" },
+          "step2": { "title": "Lưu trữ", "description": "Phân loại và lưu trữ hàng hóa trong kho theo tiêu chuẩn" },
+          "step3": { "title": "Xử lý đơn hàng", "description": "Nhận đơn từ các sàn TMĐT, xử lý và chuẩn bị hàng" },
+          "step4": { "title": "Đóng gói", "description": "Đóng gói chuyên nghiệp, in nhãn vận chuyển" },
+          "step5": { "title": "Giao hàng", "description": "Chuyển đơn cho đơn vị vận chuyển, giao đến tay khách hàng" },
+          "step6": { "title": "Đối soát", "description": "Đối soát đơn hàng, xử lý hoàn trả nếu có" }
+        }
+      },
+      "services": {
+        "title": "Dịch vụ bao gồm",
+        "list": {
+          "service1": { "title": "Quản lý tồn kho", "description": "Theo dõi số lượng hàng realtime, cảnh báo hết hàng" },
+          "service2": { "title": "Xử lý đơn hàng", "description": "Tự động xử lý đơn từ các sàn TMĐT: Shopee, Lazada, Tiki..." },
+          "service3": { "title": "Đóng gói chuyên nghiệp", "description": "Đóng gói theo tiêu chuẩn, bảo vệ hàng hóa tối đa" },
+          "service4": { "title": "Giao hàng đa kênh", "description": "Kết nối với nhiều đơn vị vận chuyển, chọn giá tốt nhất" },
+          "service5": { "title": "Quản lý hoàn trả", "description": "Xử lý hàng hoàn, kiểm tra và nhập kho lại" },
+          "service6": { "title": "Báo cáo analytics", "description": "Dashboard theo dõi KPIs, báo cáo chi tiết" }
+        }
+      },
+      "pricing": {
+        "title": "Bảng giá dịch vụ",
+        "description": "Giá linh hoạt theo nhu cầu, không phí ẩn",
+        "plans": {
+          "basic": { "title": "Cơ bản", "price": "Từ 3.000đ/đơn", "features": ["Lưu kho miễn phí 30 ngày", "Xử lý đơn trong 24h", "Đóng gói tiêu chuẩn", "Hỗ trợ qua email"] },
+          "pro": { "title": "Chuyên nghiệp", "price": "Từ 5.000đ/đơn", "features": ["Lưu kho miễn phí 60 ngày", "Xử lý đơn trong 6h", "Đóng gói cao cấp", "Hỗ trợ 24/7", "Tích hợp API"] },
+          "enterprise": { "title": "Doanh nghiệp", "price": "Liên hệ", "features": ["Lưu kho không giới hạn", "Xử lý đơn trong 2h", "Đóng gói tùy chỉnh", "Account Manager riêng", "Tích hợp ERP"] }
+        }
+      },
+      "cta": {
+        "title": "Bắt đầu ngay hôm nay",
+        "description": "Liên hệ ngay để nhận tư vấn miễn phí và báo giá chi tiết",
+        "button": "Nhận tư vấn miễn phí",
+        "buttonSecondary": "Xem bảng giá chi tiết"
       }
     },
     "warehousing": {
       "badge": "Dịch vụ kho bãi",
-      "title": "Kho bãi",
-      "description": "Hệ thống kho bãi hiện đại, đạt chuẩn quốc tế với công nghệ quản lý WMS tiên tiến.",
+      "title": "Kho bãi hiện đại - Quản lý chuyên nghiệp",
+      "description": "Hệ thống kho bãi hiện đại, đạt chuẩn quốc tế với công nghệ quản lý WMS tiên tiến, đáp ứng mọi nhu cầu lưu trữ hàng hóa.",
       "features": {
         "feature1": "Kho đạt chuẩn GDP/GSP",
         "feature2": "Hệ thống WMS quản lý tồn kho",
         "feature3": "Kho lạnh, kho mát đa nhiệt độ",
         "feature4": "An ninh 24/7, PCCC đầy đủ"
+      },
+      "heroStats": {
+        "stat1": { "value": "50.000", "label": "m² kho" },
+        "stat2": { "value": "15+", "label": "Kho toàn quốc" },
+        "stat3": { "value": "GDP/GSP", "label": "Chứng nhận" },
+        "stat4": { "value": "99.9%", "label": "Uptime" }
+      },
+      "types": {
+        "title": "Loại hình kho bãi",
+        "list": {
+          "type1": {
+            "title": "Kho thường",
+            "description": "Kho lưu trữ hàng hóa thông thường, kiểm soát nhiệt độ tự nhiên",
+            "features": ["Diện tích linh hoạt", "Phù hợp mọi loại hàng", "Chi phí tối ưu"]
+          },
+          "type2": {
+            "title": "Kho mát",
+            "description": "Kho kiểm soát nhiệt độ 15-25°C cho hàng hóa nhạy cảm",
+            "features": ["Nhiệt độ 15-25°C", "Độ ẩm kiểm soát", "Phù hợp mỹ phẩm, dược phẩm"]
+          },
+          "type3": {
+            "title": "Kho lạnh",
+            "description": "Kho đông lạnh 0-8°C hoặc -18°C đến -25°C cho thực phẩm",
+            "features": ["Đa dải nhiệt độ", "Chuẩn HACCP", "Phù hợp thực phẩm, vaccine"]
+          },
+          "type4": {
+            "title": "Kho ngoại quan",
+            "description": "Kho lưu trữ hàng hóa xuất nhập khẩu chờ thông quan",
+            "features": ["Được Hải quan cấp phép", "Hoãn thuế NK", "Phù hợp hàng XNK"]
+          }
+        }
+      },
+      "wms": {
+        "title": "Hệ thống WMS hiện đại",
+        "description": "Warehouse Management System - Hệ thống quản lý kho thông minh",
+        "features": {
+          "feature1": { "title": "Quản lý tồn kho realtime", "description": "Theo dõi số lượng hàng hóa chính xác theo thời gian thực" },
+          "feature2": { "title": "Quản lý vị trí", "description": "Định vị chính xác vị trí hàng hóa trong kho (Location Management)" },
+          "feature3": { "title": "FIFO/FEFO", "description": "Quản lý hạn sử dụng, xuất hàng theo nguyên tắc FIFO/FEFO" },
+          "feature4": { "title": "Barcode/QR Code", "description": "Quét mã vạch, mã QR để nhập/xuất kho nhanh chóng" },
+          "feature5": { "title": "Báo cáo analytics", "description": "Dashboard tổng quan, báo cáo chi tiết về tồn kho" },
+          "feature6": { "title": "Tích hợp API", "description": "Kết nối với ERP, TMS, các hệ thống khác của khách hàng" }
+        }
+      },
+      "services": {
+        "title": "Dịch vụ đi kèm",
+        "list": {
+          "service1": "Nhận hàng, kiểm đếm và nhập kho",
+          "service2": "Phân loại, sắp xếp hàng hóa theo yêu cầu",
+          "service3": "Đóng gói, dán nhãn, đóng pallet",
+          "service4": "Quản lý hàng tồn kho theo lô, hạn sử dụng",
+          "service5": "Xử lý đơn hàng, pick & pack",
+          "service6": "Cross-docking, consolidation",
+          "service7": "Dịch vụ giá trị gia tăng (VAS)",
+          "service8": "Vận chuyển nội bộ, last-mile delivery"
+        }
+      },
+      "certifications": {
+        "title": "Chứng nhận & Tiêu chuẩn",
+        "list": {
+          "cert1": { "title": "GDP", "description": "Good Distribution Practice - Thực hành phân phối tốt" },
+          "cert2": { "title": "GSP", "description": "Good Storage Practice - Thực hành bảo quản tốt" },
+          "cert3": { "title": "ISO 9001", "description": "Hệ thống quản lý chất lượng" },
+          "cert4": { "title": "HACCP", "description": "Hệ thống quản lý an toàn thực phẩm" }
+        }
+      },
+      "pricing": {
+        "title": "Bảng giá cho thuê kho",
+        "description": "Giá linh hoạt theo diện tích, thời gian và loại kho",
+        "note": "Liên hệ để nhận báo giá chi tiết theo nhu cầu cụ thể"
+      },
+      "cta": {
+        "title": "Tìm kho phù hợp",
+        "description": "Liên hệ ngay để được tư vấn giải pháp kho bãi phù hợp nhất",
+        "button": "Nhận tư vấn miễn phí",
+        "buttonSecondary": "Tham quan kho"
       }
     },
     "installation": {
@@ -386,6 +537,90 @@
         "feature2": "Lắp đặt đúng hẹn",
         "feature3": "Bảo hành dịch vụ",
         "feature4": "Hỗ trợ kỹ thuật 24/7"
+      },
+      "heroStats": {
+        "stat1": { "value": "500+", "label": "Kỹ thuật viên" },
+        "stat2": { "value": "63", "label": "Tỉnh thành" },
+        "stat3": { "value": "98%", "label": "Hài lòng" },
+        "stat4": { "value": "24h", "label": "Phản hồi" }
+      },
+      "overview": {
+        "title": "Dịch vụ lắp đặt & bảo dưỡng chuyên nghiệp",
+        "description": "NETCO cung cấp dịch vụ lắp đặt và bảo dưỡng sản phẩm tận nơi cho các doanh nghiệp. Với đội ngũ kỹ thuật viên được đào tạo chuyên nghiệp, chúng tôi đảm bảo sản phẩm của bạn được lắp đặt đúng cách và vận hành ổn định.",
+        "highlights": {
+          "highlight1": "Đội ngũ kỹ thuật viên được đào tạo và cấp chứng nhận bởi các hãng sản xuất",
+          "highlight2": "Phủ sóng 63 tỉnh thành, lắp đặt tận nơi trong 24-48h",
+          "highlight3": "Bảo hành dịch vụ, hỗ trợ kỹ thuật sau lắp đặt",
+          "highlight4": "Quy trình chuẩn ISO, đảm bảo chất lượng đồng nhất"
+        }
+      },
+      "services": {
+        "title": "Các dịch vụ chính",
+        "list": {
+          "service1": {
+            "title": "Lắp đặt điều hòa, máy lạnh",
+            "description": "Lắp đặt, di dời điều hòa các loại: treo tường, âm trần, tủ đứng",
+            "features": ["Lắp đặt mới", "Di dời", "Bơm gas, vệ sinh"]
+          },
+          "service2": {
+            "title": "Lắp đặt máy giặt, tủ lạnh",
+            "description": "Lắp đặt và cân bằng máy giặt, tủ lạnh các loại",
+            "features": ["Lắp đặt đúng kỹ thuật", "Kiểm tra vận hành", "Hướng dẫn sử dụng"]
+          },
+          "service3": {
+            "title": "Lắp đặt tivi, âm thanh",
+            "description": "Lắp đặt TV treo tường, hệ thống âm thanh, loa",
+            "features": ["Treo tường chắc chắn", "Cài đặt kênh", "Kết nối thiết bị"]
+          },
+          "service4": {
+            "title": "Lắp đặt thiết bị nhà bếp",
+            "description": "Lắp đặt bếp từ, máy hút mùi, lò vi sóng, lò nướng",
+            "features": ["Lắp đặt âm tủ", "Kết nối điện/gas", "Kiểm tra an toàn"]
+          },
+          "service5": {
+            "title": "Lắp đặt máy nước nóng",
+            "description": "Lắp đặt bình nóng lạnh, máy nước nóng năng lượng mặt trời",
+            "features": ["Lắp đặt đường ống", "Kết nối điện an toàn", "Test vận hành"]
+          },
+          "service6": {
+            "title": "Bảo dưỡng định kỳ",
+            "description": "Dịch vụ bảo dưỡng, bảo trì thiết bị điện tử gia dụng",
+            "features": ["Vệ sinh thiết bị", "Kiểm tra, thay thế linh kiện", "Bảo hành sau bảo dưỡng"]
+          }
+        }
+      },
+      "process": {
+        "title": "Quy trình lắp đặt",
+        "steps": {
+          "step1": { "title": "Tiếp nhận yêu cầu", "description": "Nhận thông tin đơn hàng từ doanh nghiệp đối tác" },
+          "step2": { "title": "Phân công kỹ thuật viên", "description": "Phân công KTV theo khu vực và chuyên môn" },
+          "step3": { "title": "Liên hệ khách hàng", "description": "KTV liên hệ xác nhận thời gian lắp đặt" },
+          "step4": { "title": "Lắp đặt tại nhà", "description": "Thực hiện lắp đặt theo quy trình chuẩn" },
+          "step5": { "title": "Kiểm tra & Bàn giao", "description": "Test vận hành, hướng dẫn sử dụng, bàn giao" },
+          "step6": { "title": "Hỗ trợ sau lắp đặt", "description": "Hỗ trợ kỹ thuật, bảo hành dịch vụ" }
+        }
+      },
+      "partners": {
+        "title": "Đối tác tin tưởng",
+        "description": "NETCO tự hào là đối tác lắp đặt của nhiều thương hiệu điện máy hàng đầu"
+      },
+      "pricing": {
+        "title": "Bảng giá dịch vụ",
+        "description": "Giá tham khảo, báo giá cụ thể theo từng loại sản phẩm và địa điểm",
+        "categories": {
+          "cat1": { "title": "Điều hòa", "price": "Từ 300.000đ" },
+          "cat2": { "title": "Máy giặt", "price": "Từ 150.000đ" },
+          "cat3": { "title": "Tủ lạnh", "price": "Từ 100.000đ" },
+          "cat4": { "title": "TV treo tường", "price": "Từ 200.000đ" },
+          "cat5": { "title": "Bình nóng lạnh", "price": "Từ 200.000đ" },
+          "cat6": { "title": "Thiết bị bếp", "price": "Từ 150.000đ" }
+        }
+      },
+      "cta": {
+        "title": "Trở thành đối tác lắp đặt",
+        "description": "Liên hệ ngay để hợp tác sử dụng mạng lưới kỹ thuật viên toàn quốc của NETCO",
+        "button": "Liên hệ hợp tác",
+        "buttonSecondary": "Tải profile dịch vụ"
       }
     },
     "other": {
@@ -397,6 +632,81 @@
         "feature2": "Tư vấn chuỗi cung ứng",
         "feature3": "Dịch vụ giá trị gia tăng",
         "feature4": "Hỗ trợ 24/7"
+      },
+      "heroStats": {
+        "stat1": { "value": "100+", "label": "Dự án" },
+        "stat2": { "value": "50+", "label": "Đối tác" },
+        "stat3": { "value": "24/7", "label": "Hỗ trợ" },
+        "stat4": { "value": "99%", "label": "Hài lòng" }
+      },
+      "overview": {
+        "title": "Giải pháp logistics toàn diện",
+        "description": "Ngoài các dịch vụ chính, NETCO còn cung cấp nhiều dịch vụ giá trị gia tăng và giải pháp tùy chỉnh để đáp ứng mọi nhu cầu logistics của doanh nghiệp."
+      },
+      "services": {
+        "title": "Các dịch vụ khác",
+        "list": {
+          "service1": {
+            "title": "Vận chuyển hàng cồng kềnh",
+            "description": "Vận chuyển hàng hóa quá khổ, quá tải, thiết bị công nghiệp, máy móc",
+            "features": ["Xe tải chuyên dụng", "Đội ngũ bốc xếp chuyên nghiệp", "Bảo hiểm hàng hóa"]
+          },
+          "service2": {
+            "title": "Vận chuyển hàng lạnh",
+            "description": "Vận chuyển thực phẩm tươi sống, hàng đông lạnh, vaccine bằng xe đông lạnh",
+            "features": ["Xe đông lạnh chuyên dụng", "Kiểm soát nhiệt độ -25°C đến +15°C", "Giám sát realtime"]
+          },
+          "service3": {
+            "title": "Cross-border logistics",
+            "description": "Vận chuyển hàng hóa quốc tế, thông quan xuất nhập khẩu",
+            "features": ["Vận chuyển đường bộ sang Campuchia, Lào", "Thủ tục hải quan trọn gói", "Kho ngoại quan"]
+          },
+          "service4": {
+            "title": "Dịch vụ thu hộ (COD)",
+            "description": "Thu tiền mặt hộ khi giao hàng, chuyển khoản về tài khoản khách hàng nhanh chóng",
+            "features": ["Thu COD đến 50 triệu/đơn", "Đối soát 24-48h", "Chuyển khoản hàng ngày"]
+          },
+          "service5": {
+            "title": "Đóng gói & Kiện hàng",
+            "description": "Dịch vụ đóng gói chuyên nghiệp, đóng kiện gỗ cho hàng hóa giá trị cao",
+            "features": ["Đóng kiện gỗ xuất khẩu", "Chống sốc, chống ẩm", "Đóng gói theo yêu cầu"]
+          },
+          "service6": {
+            "title": "Tư vấn chuỗi cung ứng",
+            "description": "Tư vấn tối ưu hóa chuỗi cung ứng, giảm chi phí logistics",
+            "features": ["Phân tích quy trình hiện tại", "Đề xuất giải pháp tối ưu", "Triển khai và đồng hành"]
+          }
+        }
+      },
+      "vas": {
+        "title": "Dịch vụ giá trị gia tăng (VAS)",
+        "list": {
+          "vas1": { "title": "In nhãn, dán tem", "description": "In nhãn sản phẩm, dán tem giá, mã vạch" },
+          "vas2": { "title": "Đóng combo, kit", "description": "Đóng gói combo sản phẩm, tạo kit quà tặng" },
+          "vas3": { "title": "Kiểm tra chất lượng", "description": "QC sản phẩm trước khi giao cho khách hàng cuối" },
+          "vas4": { "title": "Xử lý hàng hoàn", "description": "Tiếp nhận, kiểm tra và xử lý hàng hoàn trả" },
+          "vas5": { "title": "Kitting & Assembly", "description": "Lắp ráp sản phẩm, đóng gói theo yêu cầu" },
+          "vas6": { "title": "Tái chế, xử lý hàng lỗi", "description": "Xử lý hàng lỗi, hàng hết hạn theo quy định" }
+        }
+      },
+      "industries": {
+        "title": "Ngành hàng phục vụ",
+        "list": {
+          "industry1": "Thương mại điện tử (E-commerce)",
+          "industry2": "Bán lẻ (Retail)",
+          "industry3": "Điện tử, công nghệ",
+          "industry4": "Dược phẩm, y tế",
+          "industry5": "Thực phẩm, đồ uống (F&B)",
+          "industry6": "Nội thất, gia dụng",
+          "industry7": "Mỹ phẩm, làm đẹp",
+          "industry8": "Thời trang, may mặc"
+        }
+      },
+      "cta": {
+        "title": "Bạn có nhu cầu đặc biệt?",
+        "description": "Liên hệ ngay để được tư vấn giải pháp logistics phù hợp nhất với doanh nghiệp của bạn",
+        "button": "Nhận tư vấn miễn phí",
+        "buttonSecondary": "Gọi hotline 1900 6463"
       }
     },
     "cta": {
@@ -995,6 +1305,21 @@
       "estimatedDelivery": "Thời gian dự kiến",
       "createOrder": "Tạo đơn hàng",
       "days": "ngày"
+    }
+  },
+  "notFound": {
+    "title": "404 - Không tìm thấy trang",
+    "heading": "Ối! Trang không tồn tại",
+    "description": "Trang bạn đang tìm kiếm có thể đã bị xóa, thay đổi tên hoặc tạm thời không khả dụng.",
+    "homeButton": "Về trang chủ",
+    "backButton": "Quay lại trang trước",
+    "trackingButton": "Tra cứu đơn hàng",
+    "suggestions": {
+      "title": "Có thể bạn đang tìm:",
+      "services": "Dịch vụ của chúng tôi",
+      "tracking": "Tra cứu vận đơn",
+      "contact": "Liên hệ hỗ trợ",
+      "blog": "Tin tức & Blog"
     }
   }
 }

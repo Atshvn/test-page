@@ -2,7 +2,8 @@
 
 import { useEffect, useState } from "react";
 import { useLocale } from "next-intl";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useRouter } from "@/hooks/useRouter";
+import { useSearchParams } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   Search,
@@ -46,7 +47,7 @@ import AppDownload from "@/components/sections/AppDownload";
 const formatDate = (dateStr: string, format?: number) => {
   if (!dateStr) return "";
   const date = new Date(dateStr);
-  
+
   if (format === 7) {
     return date.toLocaleDateString("vi-VN");
   } else if (format === 10) {
@@ -67,7 +68,7 @@ const formatDate = (dateStr: string, format?: number) => {
       second: "2-digit",
     });
   }
-  
+
   return date.toLocaleString("vi-VN");
 };
 
@@ -94,7 +95,7 @@ export default function TrackingPage() {
   useEffect(() => {
     const code = searchParams.get("code") || "";
     const type = searchParams.get("type") || "1";
-    
+
     if (code) {
       setTrackingCode(code);
       setSearchType(type);
@@ -108,9 +109,7 @@ export default function TrackingPage() {
 
     if (!searchCode.trim()) {
       setError(
-        isVi
-          ? "Vui lòng nhập mã vận đơn"
-          : "Please enter tracking code"
+        isVi ? "Vui lòng nhập mã vận đơn" : "Please enter tracking code",
       );
       return;
     }
@@ -126,7 +125,7 @@ export default function TrackingPage() {
           Code: searchCode.trim(),
           FinishMonth: 3,
         });
-        console.log(result)
+        console.log(result);
       } else {
         result = await trackLadingByDO({
           Code: searchCode.trim(),
@@ -137,7 +136,7 @@ export default function TrackingPage() {
       if (result.success) {
         setData(result.data);
       }
-      
+
       // Update URL
       if (!code) {
         router.push(`/${locale}/tracking?code=${searchCode}&type=${typeToUse}`);
@@ -147,7 +146,7 @@ export default function TrackingPage() {
       setError(
         isVi
           ? "Có lỗi xảy ra khi tra cứu vận đơn"
-          : "Error occurred while tracking shipment"
+          : "Error occurred while tracking shipment",
       );
     } finally {
       setLoading(false);
@@ -162,8 +161,8 @@ export default function TrackingPage() {
   // Get order info based on search type
   const Info =
     searchType === "1"
-      ? data?.Data?.[0] ?? data?.Detail?.[0] ?? null
-      : data?.Detail?.[0] ?? data?.Data?.[0] ?? null;
+      ? (data?.Data?.[0] ?? data?.Detail?.[0] ?? null)
+      : (data?.Detail?.[0] ?? data?.Data?.[0] ?? null);
   const History = data?.DataDetail;
   const AnotherLading = data?.Detail;
 
@@ -171,10 +170,10 @@ export default function TrackingPage() {
   const getStatusBadge = (status?: string) => {
     if (!status) return null;
     const s = String(status).toLowerCase();
-    
+
     let colorClass = "bg-gray-100 text-gray-700 border-gray-300";
     let icon = <Clock className="w-4 h-4" />;
-    
+
     if (s.includes("thành công") || s.includes("delivered")) {
       colorClass = "bg-green-100 text-green-700 border-green-500";
       icon = <CheckCircle className="w-4 h-4" />;
@@ -189,16 +188,24 @@ export default function TrackingPage() {
       colorClass = "bg-red-100 text-red-700 border-red-500";
       icon = <XCircle className="w-4 h-4" />;
     }
-    
+
     return (
-      <div className={`inline-flex items-center gap-2 px-4 py-2 rounded-lg border-2 font-semibold ${colorClass}`}>
+      <div
+        className={`inline-flex items-center gap-2 px-4 py-2 rounded-lg border-2 font-semibold ${colorClass}`}
+      >
         {icon}
         <span>{status}</span>
       </div>
     );
   };
 
-  const EmptyState = ({ message, showIcon = true }: { message: string; showIcon?: boolean }) => (
+  const EmptyState = ({
+    message,
+    showIcon = true,
+  }: {
+    message: string;
+    showIcon?: boolean;
+  }) => (
     <div className="flex flex-col items-center justify-center gap-4 py-12 text-center">
       {showIcon && (
         <div className="h-20 w-20 rounded-full bg-gray-100 text-gray-400 flex items-center justify-center">
@@ -213,10 +220,8 @@ export default function TrackingPage() {
 
   return (
     <main className="min-h-screen bg-gray-50 pt-20">
-   
-
       {/* Hero Section with Search */}
-      <section className="py-8 md:py-12 bg-gradient-to-br from-red-50 via-white to-emerald-50">
+      <section className="py-8 md:py-12 bg-gradient-to-br from-green-50 via-white to-emerald-50">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -251,9 +256,7 @@ export default function TrackingPage() {
                         value={trackingCode}
                         onChange={(e) => setTrackingCode(e.target.value)}
                         placeholder={
-                          isVi
-                            ? "VD: CRG123456789"
-                            : "e.g., CRG123456789"
+                          isVi ? "VD: CRG123456789" : "e.g., CRG123456789"
                         }
                         className="h-12 pl-11 text-base"
                         disabled={loading}
@@ -286,14 +289,28 @@ export default function TrackingPage() {
                     className="flex items-center justify-center gap-6"
                   >
                     <div className="flex items-center space-x-2">
-                      <RadioGroupItem value="1" id="search-code" className="text-red-600 border-red-600 focus-visible:ring-red-600" />
-                      <Label htmlFor="search-code" className="text-sm font-medium cursor-pointer">
+                      <RadioGroupItem
+                        value="1"
+                        id="search-code"
+                        className="text-red-600 border-red-600 focus-visible:ring-red-600"
+                      />
+                      <Label
+                        htmlFor="search-code"
+                        className="text-sm font-medium cursor-pointer"
+                      >
                         {isVi ? "Mã vận đơn" : "Tracking Code"}
                       </Label>
                     </div>
                     <div className="flex items-center space-x-2">
-                      <RadioGroupItem value="2" id="search-do" className="text-red-600 border-red-600 focus-visible:ring-red-600" />
-                      <Label htmlFor="search-do" className="text-sm font-medium cursor-pointer">
+                      <RadioGroupItem
+                        value="2"
+                        id="search-do"
+                        className="text-red-600 border-red-600 focus-visible:ring-red-600"
+                      />
+                      <Label
+                        htmlFor="search-do"
+                        className="text-sm font-medium cursor-pointer"
+                      >
                         {isVi ? "Mã DO" : "DO Code"}
                       </Label>
                     </div>
@@ -317,7 +334,10 @@ export default function TrackingPage() {
                   {/* Support Info */}
                   <p className="text-xs text-center text-gray-500">
                     {isVi ? "Cần hỗ trợ?" : "Need help?"}{" "}
-                    <a href="mailto:info@netco.com.vn" className="text-green-primary hover:underline font-medium">
+                    <a
+                      href="mailto:info@netco.com.vn"
+                      className="text-green-primary hover:underline font-medium"
+                    >
                       info@netco.com.vn
                     </a>
                   </p>
@@ -353,8 +373,12 @@ export default function TrackingPage() {
                           <CardHeader>
                             <CardTitle className="flex items-center gap-2">
                               <Package className="w-5 h-5 text-green-primary" />
-                              {isVi ? "Vận đơn cùng mã DO:" : "Ladings with same DO code:"}{" "}
-                              <span className="text-red-600">{trackingCode}</span>
+                              {isVi
+                                ? "Vận đơn cùng mã DO:"
+                                : "Ladings with same DO code:"}{" "}
+                              <span className="text-red-600">
+                                {trackingCode}
+                              </span>
                             </CardTitle>
                             <p className="text-gray-600 text-sm">
                               {isVi
@@ -420,7 +444,9 @@ export default function TrackingPage() {
                           <CardHeader>
                             <CardTitle className="flex items-center gap-2">
                               <Box className="w-5 h-5 text-green-primary" />
-                              {isVi ? "Thông tin đơn hàng" : "Order Information"}
+                              {isVi
+                                ? "Thông tin đơn hàng"
+                                : "Order Information"}
                             </CardTitle>
                           </CardHeader>
                           <CardContent>
@@ -429,21 +455,35 @@ export default function TrackingPage() {
                               <div className="bg-gradient-to-br from-green-50 to-emerald-50 p-4 rounded-xl border border-green-100 space-y-3 min-w-0">
                                 <div className="flex items-center gap-2 text-green-700 font-semibold mb-2">
                                   <User className="w-5 h-5 flex-shrink-0" />
-                                  <span className="truncate">{isVi ? "Khách hàng" : "Customer"}</span>
+                                  <span className="truncate">
+                                    {isVi ? "Khách hàng" : "Customer"}
+                                  </span>
                                 </div>
                                 <div className="space-y-3 text-sm">
                                   <div>
-                                    <p className="text-gray-600 text-xs mb-1">{isVi ? "Tên" : "Name"}</p>
-                                    <p className="font-medium text-gray-900 break-words">{Info.CustomerName_Reality}</p>
+                                    <p className="text-gray-600 text-xs mb-1">
+                                      {isVi ? "Tên" : "Name"}
+                                    </p>
+                                    <p className="font-medium text-gray-900 break-words">
+                                      {Info.CustomerName_Reality}
+                                    </p>
                                   </div>
                                   <div>
-                                    <p className="text-gray-600 text-xs mb-1">{isVi ? "Địa chỉ" : "Address"}</p>
-                                    <p className="font-medium text-gray-900 break-words leading-relaxed">{Info.CustomerAddress_Reality}</p>
+                                    <p className="text-gray-600 text-xs mb-1">
+                                      {isVi ? "Địa chỉ" : "Address"}
+                                    </p>
+                                    <p className="font-medium text-gray-900 break-words leading-relaxed">
+                                      {Info.CustomerAddress_Reality}
+                                    </p>
                                   </div>
                                   <Separator />
                                   <Dialog>
                                     <DialogTrigger asChild>
-                                      <Button variant="outline" size="sm" className="w-full text-xs">
+                                      <Button
+                                        variant="outline"
+                                        size="sm"
+                                        className="w-full text-xs"
+                                      >
                                         <QrCode className="w-3 h-3 mr-1" />
                                         {isVi ? "Xem QR Code" : "View QR Code"}
                                       </Button>
@@ -451,13 +491,15 @@ export default function TrackingPage() {
                                     <DialogContent className="sm:max-w-[400px]">
                                       <DialogHeader>
                                         <DialogTitle className="text-center">
-                                          {isVi ? "Mã QR tra cứu" : "Tracking QR Code"}
+                                          {isVi
+                                            ? "Mã QR tra cứu"
+                                            : "Tracking QR Code"}
                                         </DialogTitle>
                                       </DialogHeader>
                                       <div className="flex flex-col items-center gap-4 py-4">
                                         <img
                                           src={`https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=${encodeURIComponent(
-                                            Info?.Code || ""
+                                            Info?.Code || "",
                                           )}`}
                                           alt="QR Code"
                                           width={250}
@@ -479,24 +521,38 @@ export default function TrackingPage() {
                               <div className="bg-gradient-to-br from-blue-50 to-cyan-50 p-4 rounded-xl border border-blue-100 space-y-3 min-w-0">
                                 <div className="flex items-center gap-2 text-blue-700 font-semibold mb-2">
                                   <Weight className="w-5 h-5 flex-shrink-0" />
-                                  <span className="truncate">{isVi ? "Thông tin kiện hàng" : "Package Info"}</span>
+                                  <span className="truncate">
+                                    {isVi
+                                      ? "Thông tin kiện hàng"
+                                      : "Package Info"}
+                                  </span>
                                 </div>
                                 <div className="space-y-2 text-sm">
                                   <div className="flex justify-between gap-2">
-                                    <span className="text-gray-600 flex-shrink-0">{isVi ? "Khối lượng" : "Weight"}</span>
+                                    <span className="text-gray-600 flex-shrink-0">
+                                      {isVi ? "Khối lượng" : "Weight"}
+                                    </span>
                                     <span className="font-semibold text-gray-900 text-right">
                                       {Info.Weight} {Info.Unit}
                                     </span>
                                   </div>
                                   <Separator />
                                   <div className="flex justify-between gap-2">
-                                    <span className="text-gray-600 flex-shrink-0">{isVi ? "Số lượng" : "Quantity"}</span>
-                                    <span className="font-semibold text-gray-900">{formatNumber(Info.Number)}</span>
+                                    <span className="text-gray-600 flex-shrink-0">
+                                      {isVi ? "Số lượng" : "Quantity"}
+                                    </span>
+                                    <span className="font-semibold text-gray-900">
+                                      {formatNumber(Info.Number)}
+                                    </span>
                                   </div>
                                   <Separator />
                                   <div>
-                                    <p className="text-gray-600 text-xs mb-1">{isVi ? "Dịch vụ" : "Service"}</p>
-                                    <p className="font-medium text-gray-900 break-words">{Info.ServiceName}</p>
+                                    <p className="text-gray-600 text-xs mb-1">
+                                      {isVi ? "Dịch vụ" : "Service"}
+                                    </p>
+                                    <p className="font-medium text-gray-900 break-words">
+                                      {Info.ServiceName}
+                                    </p>
                                   </div>
                                 </div>
                               </div>
@@ -505,24 +561,38 @@ export default function TrackingPage() {
                               <div className="bg-gradient-to-br from-orange-50 to-amber-50 p-4 rounded-xl border border-orange-100 space-y-3 min-w-0">
                                 <div className="flex items-center gap-2 text-orange-700 font-semibold mb-2">
                                   <Calendar className="w-5 h-5 flex-shrink-0" />
-                                  <span className="truncate">{isVi ? "Thời gian" : "Timeline"}</span>
+                                  <span className="truncate">
+                                    {isVi ? "Thời gian" : "Timeline"}
+                                  </span>
                                 </div>
                                 <div className="space-y-2 text-sm">
                                   <div>
-                                    <p className="text-gray-600 text-xs mb-1">{isVi ? "Ngày tạo" : "Created"}</p>
-                                    <p className="font-medium text-gray-900 break-words">{formatDate(Info.CreateDate, 10)}</p>
+                                    <p className="text-gray-600 text-xs mb-1">
+                                      {isVi ? "Ngày tạo" : "Created"}
+                                    </p>
+                                    <p className="font-medium text-gray-900 break-words">
+                                      {formatDate(Info.CreateDate, 10)}
+                                    </p>
                                   </div>
                                   <Separator />
                                   <div>
-                                    <p className="text-gray-600 text-xs mb-1">{isVi ? "Dự kiến giao" : "Est. Delivery"}</p>
-                                    <p className="font-medium text-gray-900 break-words">{formatDate(Info.DealineTime, 7)}</p>
+                                    <p className="text-gray-600 text-xs mb-1">
+                                      {isVi ? "Dự kiến giao" : "Est. Delivery"}
+                                    </p>
+                                    <p className="font-medium text-gray-900 break-words">
+                                      {formatDate(Info.DealineTime, 7)}
+                                    </p>
                                   </div>
                                   {Info.FinishDate && (
                                     <>
                                       <Separator />
                                       <div>
-                                        <p className="text-gray-600 text-xs mb-1">{isVi ? "Hoàn thành" : "Completed"}</p>
-                                        <p className="font-bold text-red-600 break-words">{formatDate(Info.FinishDate, 10)}</p>
+                                        <p className="text-gray-600 text-xs mb-1">
+                                          {isVi ? "Hoàn thành" : "Completed"}
+                                        </p>
+                                        <p className="font-bold text-red-600 break-words">
+                                          {formatDate(Info.FinishDate, 10)}
+                                        </p>
                                       </div>
                                     </>
                                   )}
@@ -545,7 +615,9 @@ export default function TrackingPage() {
                               target="_blank"
                             >
                               <ExternalLink className="w-4 h-4" />
-                              {isVi ? "Xem trên cổng khách hàng" : "View on customer portal"}
+                              {isVi
+                                ? "Xem trên cổng khách hàng"
+                                : "View on customer portal"}
                             </Link>
                           </CardHeader>
                           <CardContent>
@@ -562,7 +634,11 @@ export default function TrackingPage() {
                                         <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2">
                                           <div className="flex-1">
                                             <p className="font-medium text-gray-900">
-                                              {item.NoteCustomer || item.Note || (isVi ? "Đã tiếp nhận" : "Received")}
+                                              {item.NoteCustomer ||
+                                                item.Note ||
+                                                (isVi
+                                                  ? "Đã tiếp nhận"
+                                                  : "Received")}
                                             </p>
                                             <div className="flex items-center gap-1 text-xs text-gray-500 mt-1">
                                               <Clock className="w-3 h-3" />
@@ -577,7 +653,11 @@ export default function TrackingPage() {
                               </div>
                             ) : (
                               <EmptyState
-                                message={isVi ? "Chưa có lịch sử vận chuyển" : "No tracking history available"}
+                                message={
+                                  isVi
+                                    ? "Chưa có lịch sử vận chuyển"
+                                    : "No tracking history available"
+                                }
                                 showIcon={false}
                               />
                             )}
@@ -604,7 +684,10 @@ export default function TrackingPage() {
                                   href={`/${locale}/contact`}
                                   className="text-sm text-red-700 underline hover:text-red-900 font-medium"
                                 >
-                                  {isVi ? "Liên hệ chính thức" : "Official contact"} →
+                                  {isVi
+                                    ? "Liên hệ chính thức"
+                                    : "Official contact"}{" "}
+                                  →
                                 </Link>
                               </div>
                             </div>
@@ -626,20 +709,27 @@ export default function TrackingPage() {
               >
                 <div className="container mx-auto px-4">
                   <div className="max-w-2xl mx-auto">
-                    <Card className="border-2 border-orange-200">
+                    <Card className="border-2 border-green-200 bg-gradient-to-br from-green-50 to-white">
                       <CardContent className="p-8">
-                        <EmptyState
-                          message={
-                            isVi
-                              ? "Không tìm thấy vận đơn hoặc đã vượt quá thời hạn tra cứu (3 tháng). Vui lòng kiểm tra lại mã hoặc liên hệ hỗ trợ."
-                              : "Tracking code not found or exceeded lookup period (3 months). Please check your code or contact support."
-                          }
-                        />
-                        <div className="flex justify-center mt-6">
+                        <div className="flex flex-col items-center justify-center gap-4 py-8 text-center">
+                          <div className="h-20 w-20 rounded-full bg-green-100 text-green-primary flex items-center justify-center">
+                            <Package className="w-10 h-10" />
+                          </div>
+                          <h3 className="text-xl font-bold text-green-dark">
+                            {isVi
+                              ? "Không tìm thấy vận đơn"
+                              : "Tracking code not found"}
+                          </h3>
+                          <p className="text-base text-gray-600 max-w-md">
+                            {isVi
+                              ? "Vui lòng kiểm tra lại mã vận đơn hoặc liên hệ hỗ trợ để được trợ giúp."
+                              : "Please check your tracking code or contact support for assistance."}
+                          </p>
+                        </div>
+                        <div className="flex justify-center mt-4">
                           <Button
                             asChild
-                            variant="outline"
-                            className="border-green-primary text-green-primary hover:bg-green-50"
+                            className="bg-green-primary hover:bg-green-dark text-white"
                           >
                             <Link href={`/${locale}/contact`}>
                               {isVi ? "Liên hệ hỗ trợ" : "Contact Support"}
@@ -658,7 +748,6 @@ export default function TrackingPage() {
 
       {/* App Download Section - Always visible */}
       <AppDownload />
-
     </main>
   );
 }

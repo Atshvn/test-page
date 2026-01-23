@@ -1,42 +1,385 @@
 "use client";
 
-import { Truck } from "lucide-react";
-import ServiceDetailPage from "@/components/pages/ServiceDetailPage";
-import { useTranslations } from "next-intl";
+import { motion } from "framer-motion";
+import {
+  Truck,
+  Zap,
+  Clock,
+  Calendar,
+  Wallet,
+  Check,
+  ArrowRight,
+  Package,
+  Shield,
+  MapPin,
+  Timer,
+} from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
+import { useTranslations, useLocale } from "next-intl";
+import { Button } from "@/components/ui/button";
+import { CTA } from "@/components/sections";
+
+const subServiceIcons = [Zap, Clock, Calendar, Wallet];
+const subServiceColors = [
+  { bg: "bg-red-500", light: "bg-red-100", text: "text-red-600" },
+  { bg: "bg-blue-500", light: "bg-blue-100", text: "text-blue-600" },
+  { bg: "bg-orange-500", light: "bg-orange-100", text: "text-orange-600" },
+  { bg: "bg-green-500", light: "bg-green-100", text: "text-green-600" },
+];
 
 export default function TransportationPage() {
-  const t = useTranslations("serviceDetail.transportation.subServices");
+  const t = useTranslations("serviceDetail.transportation");
+  const locale = useLocale();
 
   const subServices = [
     {
-      title: t("express.title"),
-      description: t("express.description"),
+      key: "express",
+      icon: Zap,
+      color: subServiceColors[0],
       href: "/services/transportation/express",
     },
     {
-      title: t("standard.title"),
-      description: t("standard.description"),
+      key: "standard",
+      icon: Clock,
+      color: subServiceColors[1],
       href: "/services/transportation/standard",
     },
     {
-      title: t("sameday.title"),
-      description: t("sameday.description"),
+      key: "sameday",
+      icon: Calendar,
+      color: subServiceColors[2],
       href: "/services/transportation/sameday",
     },
     {
-      title: t("economy.title"),
-      description: t("economy.description"),
+      key: "economy",
+      icon: Wallet,
+      color: subServiceColors[3],
       href: "/services/transportation/economy",
     },
   ];
 
   return (
-    <ServiceDetailPage
-      serviceKey="transportation"
-      icon={Truck}
-      image="/service-icon/transport.png"
-      color="bg-green-500"
-      subServices={subServices}
-    />
+    <main className="pt-20">
+      {/* Hero Section */}
+      <section
+        className="relative py-16 md:py-24 overflow-hidden"
+        style={{
+          backgroundImage: "var(--hero-bg)",
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "center right",
+          backgroundSize: "auto 100%",
+        }}
+      >
+        {/* Gradient overlay - fade from left to transparent on right */}
+        <div className="absolute inset-0 bg-gradient-to-r from-green-50 via-white/90 to-transparent"></div>
+        {/* CSS variable for background - hidden on mobile */}
+        <style jsx>{`
+          section {
+            --hero-bg: none;
+          }
+          @media (min-width: 1024px) {
+            section {
+              --hero-bg: url(/bg.png);
+            }
+          }
+        `}</style>
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <span className="inline-block bg-green-100 text-green-primary px-4 py-2 rounded-full text-sm font-medium mb-4">
+                {t("badge")}
+              </span>
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-green-dark mb-6">
+                {t("title")}
+              </h1>
+              <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+                {t("description")}
+              </p>
+
+              {/* Key Features */}
+              <div className="grid grid-cols-2 gap-4 mb-8">
+                {[1, 2, 3, 4].map((num) => (
+                  <div
+                    key={num}
+                    className="flex items-center gap-3 bg-white p-3 rounded-xl shadow-sm"
+                  >
+                    <div className="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center">
+                      <Check className="w-4 h-4 text-green-primary" />
+                    </div>
+                    <span className="text-sm text-gray-700 font-medium">
+                      {t(`features.feature${num}`)}
+                    </span>
+                  </div>
+                ))}
+              </div>
+
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Button
+                  asChild
+                  size="lg"
+                  className="bg-green-primary hover:bg-green-dark text-white px-8"
+                >
+                  <Link href={`/${locale}/contact`}>
+                    {locale === "vi" ? "Liên hệ ngay" : "Contact Now"}
+                    <ArrowRight className="w-4 h-4 ml-2" />
+                  </Link>
+                </Button>
+                <Button
+                  asChild
+                  size="lg"
+                  variant="outline"
+                  className="border-green-primary text-green-primary hover:bg-green-50"
+                >
+                  <Link href={`/${locale}/tracking`}>
+                    {locale === "vi" ? "Tra cứu vận đơn" : "Track Order"}
+                  </Link>
+                </Button>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Sub Services - Cards */}
+      <section className="py-16 md:py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-green-dark mb-4">
+              Các gói dịch vụ vận chuyển
+            </h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              Chọn gói dịch vụ phù hợp với nhu cầu vận chuyển của bạn
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {subServices.map((service, index) => {
+              const Icon = service.icon;
+              return (
+                <motion.div
+                  key={service.key}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                >
+                  <Link
+                    href={`/${locale}${service.href}`}
+                    className="block h-full"
+                  >
+                    <div className="bg-white border-2 border-gray-100 hover:border-green-primary p-6 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 h-full group">
+                      <div
+                        className={`w-14 h-14 ${service.color.bg} rounded-xl flex items-center justify-center mb-4`}
+                      >
+                        <Icon className="w-7 h-7 text-white" />
+                      </div>
+                      <h3 className="text-xl font-bold text-green-dark mb-2 group-hover:text-green-primary transition-colors">
+                        {t(`subServices.${service.key}.title`)}
+                      </h3>
+                      <p className="text-gray-600 mb-4">
+                        {t(`subServices.${service.key}.description`)}
+                      </p>
+                      <div className="flex items-center text-green-primary font-medium">
+                        Tìm hiểu thêm
+                        <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-2 transition-transform" />
+                      </div>
+                    </div>
+                  </Link>
+                </motion.div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* Why Choose */}
+      <section className="py-16 md:py-20 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-green-dark mb-4">
+              Tại sao chọn vận chuyển NETCO?
+            </h2>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              {
+                icon: Timer,
+                title: "Nhanh chóng",
+                desc: "Giao hàng trong 24-72h toàn quốc",
+              },
+              {
+                icon: Shield,
+                title: "An toàn",
+                desc: "Bảo hiểm 100% giá trị hàng hóa",
+              },
+              {
+                icon: MapPin,
+                title: "Phủ rộng",
+                desc: "Mạng lưới 63 tỉnh thành",
+              },
+              {
+                icon: Package,
+                title: "Đa dạng",
+                desc: "4 gói dịch vụ linh hoạt",
+              },
+            ].map((item, index) => {
+              const Icon = item.icon;
+              return (
+                <motion.div
+                  key={item.title}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="bg-white p-6 rounded-2xl shadow-sm text-center"
+                >
+                  <div className="w-14 h-14 bg-green-100 rounded-xl flex items-center justify-center mx-auto mb-4">
+                    <Icon className="w-7 h-7 text-green-primary" />
+                  </div>
+                  <h3 className="text-lg font-bold text-green-dark mb-2">
+                    {item.title}
+                  </h3>
+                  <p className="text-gray-600 text-sm">{item.desc}</p>
+                </motion.div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* Comparison Table */}
+      <section className="py-16 md:py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-green-dark mb-4">
+              So sánh các gói dịch vụ
+            </h2>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="overflow-x-auto"
+          >
+            <table className="w-full min-w-[600px] bg-white rounded-2xl overflow-hidden shadow-sm">
+              <thead>
+                <tr className="bg-green-primary text-white">
+                  <th className="p-4 text-left">Đặc điểm</th>
+                  <th className="p-4 text-center">
+                    <div className="flex items-center justify-center gap-2">
+                      <Zap className="w-4 h-4" />
+                      Nhanh
+                    </div>
+                  </th>
+                  <th className="p-4 text-center">
+                    <div className="flex items-center justify-center gap-2">
+                      <Clock className="w-4 h-4" />
+                      Tiêu chuẩn
+                    </div>
+                  </th>
+                  <th className="p-4 text-center">
+                    <div className="flex items-center justify-center gap-2">
+                      <Calendar className="w-4 h-4" />
+                      Trong ngày
+                    </div>
+                  </th>
+                  <th className="p-4 text-center">
+                    <div className="flex items-center justify-center gap-2">
+                      <Wallet className="w-4 h-4" />
+                      Tiết kiệm
+                    </div>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="border-b">
+                  <td className="p-4 font-medium">Thời gian giao</td>
+                  <td className="p-4 text-center">24-48h</td>
+                  <td className="p-4 text-center">2-3 ngày</td>
+                  <td className="p-4 text-center">4-8 giờ</td>
+                  <td className="p-4 text-center">3-5 ngày</td>
+                </tr>
+                <tr className="border-b bg-gray-50">
+                  <td className="p-4 font-medium">Giá cước</td>
+                  <td className="p-4 text-center">Cao</td>
+                  <td className="p-4 text-center">Trung bình</td>
+                  <td className="p-4 text-center">Cao nhất</td>
+                  <td className="p-4 text-center">Thấp nhất</td>
+                </tr>
+                <tr className="border-b">
+                  <td className="p-4 font-medium">Thu hộ COD</td>
+                  <td className="p-4 text-center">
+                    <Check className="w-5 h-5 text-green-500 mx-auto" />
+                  </td>
+                  <td className="p-4 text-center">
+                    <Check className="w-5 h-5 text-green-500 mx-auto" />
+                  </td>
+                  <td className="p-4 text-center">
+                    <Check className="w-5 h-5 text-green-500 mx-auto" />
+                  </td>
+                  <td className="p-4 text-center">
+                    <Check className="w-5 h-5 text-green-500 mx-auto" />
+                  </td>
+                </tr>
+                <tr className="border-b bg-gray-50">
+                  <td className="p-4 font-medium">Bảo hiểm</td>
+                  <td className="p-4 text-center">
+                    <Check className="w-5 h-5 text-green-500 mx-auto" />
+                  </td>
+                  <td className="p-4 text-center">
+                    <Check className="w-5 h-5 text-green-500 mx-auto" />
+                  </td>
+                  <td className="p-4 text-center">
+                    <Check className="w-5 h-5 text-green-500 mx-auto" />
+                  </td>
+                  <td className="p-4 text-center">
+                    <Check className="w-5 h-5 text-green-500 mx-auto" />
+                  </td>
+                </tr>
+                <tr>
+                  <td className="p-4 font-medium">Phù hợp với</td>
+                  <td className="p-4 text-center text-sm">
+                    Hàng gấp, giá trị cao
+                  </td>
+                  <td className="p-4 text-center text-sm">
+                    Đơn hàng thông thường
+                  </td>
+                  <td className="p-4 text-center text-sm">Hàng khẩn cấp</td>
+                  <td className="p-4 text-center text-sm">Hàng số lượng lớn</td>
+                </tr>
+              </tbody>
+            </table>
+          </motion.div>
+        </div>
+      </section>
+
+      <CTA />
+    </main>
   );
 }

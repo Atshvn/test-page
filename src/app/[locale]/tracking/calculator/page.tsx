@@ -4,6 +4,7 @@ import { ShippingCalculatorForm } from '@/components/shipping-calculator/Shippin
 import { PageHero, Section, Container } from '@/components/ui/page-sections';
 import { BreadcrumbSection, Breadcrumb } from '@/components/ui/breadcrumb';
 import { generateSEO } from '@/lib/seo';
+import { CTA } from '@/components/sections';
 
 export async function generateMetadata({
   params,
@@ -61,8 +62,10 @@ export default async function ShippingCalculatorPage({
       <Section background="gray" padding="lg">
         <Container size="lg">
           <ShippingCalculatorForm locale={locale} />
+          
         </Container>
       </Section>
+      <CTA/>
     </main>
   );
 }

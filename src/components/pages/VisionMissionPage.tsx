@@ -1,7 +1,20 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Eye, Target, Zap, Heart, Shield, Users, TrendingUp, CheckCircle2, Award, Gauge, Rocket, BarChart3 } from "lucide-react";
+import {
+  Eye,
+  Target,
+  Zap,
+  Heart,
+  Shield,
+  Users,
+  TrendingUp,
+  CheckCircle2,
+  Award,
+  Gauge,
+  Rocket,
+  BarChart3,
+} from "lucide-react";
 import { PageHero, Section, Container } from "@/components/ui/page-sections";
 import { useParams } from "next/navigation";
 import InfoSidebar from "@/components/ui/info-sidebar";
@@ -13,8 +26,10 @@ export default function VisionMissionPage() {
   const isVi = locale === "vi";
 
   const coreValues = {
-    title: isVi ? "Giá Trị Cốt Lõi - Động lực thúc đẩy sự phát triển của Netco Post" : "Core Values - Driving Force of Netco Post Development",
-    intro: isVi 
+    title: isVi
+      ? "Giá Trị Cốt Lõi - Động lực thúc đẩy sự phát triển của Netco Post"
+      : "Core Values - Driving Force of Netco Post Development",
+    intro: isVi
       ? "Các Giá trị cốt lõi của Netco Post xoay quanh con người, nhấn mạnh vào năng lượng tích cực, đặt khách hàng làm trọng tâm, áp dụng và bảo vệ các tiêu chuẩn cao về tính chính trực, thúc đẩy tinh thần làm việc nhóm và không ngừng đổi mới, sáng tạo để đạt được lợi thế cạnh tranh."
       : "Netco Post's Core Values revolve around people, emphasizing positive energy, customer focus, upholding high integrity standards, promoting teamwork spirit, and continuous innovation to achieve competitive advantage.",
     values: [
@@ -62,32 +77,42 @@ export default function VisionMissionPage() {
   };
 
   const managementPrinciples = {
-    title: isVi ? "Nguyên tắc quản trị - Bảo chứng cho sự vận hành vượt trội" : "Management Principles - Guarantee for Superior Operations",
+    title: isVi
+      ? "Nguyên tắc quản trị - Bảo chứng cho sự vận hành vượt trội"
+      : "Management Principles - Guarantee for Superior Operations",
     intro: isVi
       ? "Đối với nguyên tắc quản lý, chúng ta tập trung vào tính linh hoạt toàn cầu và khả năng mở rộng quy mô nhanh và bền vững dựa trên sự dẫn dắt của công nghệ và chuyển đổi số."
       : "For management principles, we focus on global flexibility and rapid, sustainable scalability driven by technology leadership and digital transformation.",
     principles: [
       {
         title: isVi ? "Linh hoạt toàn cầu" : "Global Flexibility",
-        description: isVi ? "Khả năng thích ứng nhanh chóng trước mọi thay đổi của thị trường." : "Ability to quickly adapt to all market changes.",
+        description: isVi
+          ? "Khả năng thích ứng nhanh chóng trước mọi thay đổi của thị trường."
+          : "Ability to quickly adapt to all market changes.",
       },
       {
         title: isVi ? "Khả năng mở rộng" : "Scalability",
-        description: isVi ? "Đáp ứng nhu cầu vận chuyển của khách hàng ở mọi quy mô, từ nội địa đến quốc tế" : "Meeting customer shipping needs at all scales, from domestic to international",
+        description: isVi
+          ? "Đáp ứng nhu cầu vận chuyển của khách hàng ở mọi quy mô, từ nội địa đến quốc tế"
+          : "Meeting customer shipping needs at all scales, from domestic to international",
       },
       {
         title: isVi ? "Đảm bảo sự bền vững" : "Sustainability",
-        description: isVi ? "Kết hợp phát triển kinh doanh với trách nhiệm xã hội và môi trường." : "Combining business development with social and environmental responsibility.",
+        description: isVi
+          ? "Kết hợp phát triển kinh doanh với trách nhiệm xã hội và môi trường."
+          : "Combining business development with social and environmental responsibility.",
       },
       {
         title: isVi ? "Công nghệ làm động lực" : "Technology-Driven",
-        description: isVi ? "Hệ thống quản lý thông minh WMS, TMS, và AI giúp tối ưu hóa quy trình vận hành." : "Smart management systems WMS, TMS, and AI help optimize operational processes.",
+        description: isVi
+          ? "Hệ thống quản lý thông minh WMS, TMS, và AI giúp tối ưu hóa quy trình vận hành."
+          : "Smart management systems WMS, TMS, and AI help optimize operational processes.",
       },
     ],
     aspects: [
       {
         title: isVi ? "Triển khai nhất quán" : "Consistent Implementation",
-        description: isVi 
+        description: isVi
           ? "Cơ cấu tổ chức, hệ thống hoạt động, chức năng quản trị, quản lý tài chính, kiểm soát nội bộ và chiến lược tiếp thị của chúng ta đều dựa trên nền tảng nhất quán của Nguyên tắc quản lý."
           : "Our organizational structure, operating systems, governance functions, financial management, internal controls and marketing strategy are all based on the consistent foundation of Management Principles.",
       },
@@ -107,7 +132,9 @@ export default function VisionMissionPage() {
   };
 
   const qualityPolicy = {
-    title: isVi ? "Chính sách chất lượng - Chìa khóa đảm bảo sự hài lòng của khách hàng" : "Quality Policy - Key to Ensuring Customer Satisfaction",
+    title: isVi
+      ? "Chính sách chất lượng - Chìa khóa đảm bảo sự hài lòng của khách hàng"
+      : "Quality Policy - Key to Ensuring Customer Satisfaction",
     description: isVi
       ? "Netco Post cam kết đảm bảo mọi nhiệm vụ đều được lên kế hoạch kỹ lưỡng và với các mục tiêu được hiểu rõ. Mỗi công việc chỉ được xác định hoàn thành sau khi xem xét các mục tiêu đã đạt được hay chưa. Dù thực hiện bất kỳ công việc gì, chúng ta luôn tìm cách tốt nhất để thực hiện nhiệm vụ. Chúng ta không ngừng nỗ lực để tìm kiếm ra giải pháp tốt nhất."
       : "Netco Post is committed to ensuring all tasks are carefully planned with clearly understood objectives. Each task is only confirmed complete after reviewing whether objectives have been achieved. Whatever we do, we always seek the best way to execute the task. We continuously strive to find better solutions.",
@@ -123,7 +150,9 @@ export default function VisionMissionPage() {
         icon: Users,
         letter: "P",
         title: isVi ? "Con người (People)" : "People",
-        subtitle: isVi ? "Đội ngũ là tài sản, khách hàng là động lực." : "Team is asset, customers are motivation.",
+        subtitle: isVi
+          ? "Đội ngũ là tài sản, khách hàng là động lực."
+          : "Team is asset, customers are motivation.",
         description: isVi
           ? "Netco Post tự hào sở hữu đội ngũ chuyên nghiệp, tận tâm, luôn đặt chất lượng dịch vụ và sự hài lòng của khách hàng làm mục tiêu cao nhất."
           : "Netco Post is proud to have a professional, dedicated team that always puts service quality and customer satisfaction as the highest priority.",
@@ -132,7 +161,9 @@ export default function VisionMissionPage() {
         icon: CheckCircle2,
         letter: "P",
         title: isVi ? "Quy trình (Processes)" : "Processes",
-        subtitle: isVi ? "Mọi bước đều chặt chẽ, mọi hành trình đều hoàn hảo." : "Every step is rigorous, every journey is perfect.",
+        subtitle: isVi
+          ? "Mọi bước đều chặt chẽ, mọi hành trình đều hoàn hảo."
+          : "Every step is rigorous, every journey is perfect.",
         description: isVi
           ? "Từ tiếp nhận đơn hàng đến giao hàng tận tay, quy trình của Netco Post được tối ưu hóa để đảm bảo sự đồng bộ, chính xác và hiệu quả trong từng khâu."
           : "From order receipt to hand delivery, Netco Post's processes are optimized to ensure synchronization, accuracy and efficiency in every step.",
@@ -141,7 +172,9 @@ export default function VisionMissionPage() {
         icon: BarChart3,
         letter: "P",
         title: isVi ? "Nền tảng (Platforms)" : "Platforms",
-        subtitle: isVi ? "Công nghệ là nền móng cho sự bứt phá." : "Technology is the foundation for breakthroughs.",
+        subtitle: isVi
+          ? "Công nghệ là nền móng cho sự bứt phá."
+          : "Technology is the foundation for breakthroughs.",
         description: isVi
           ? "Hệ thống quản lý hiện đại như WMS, TMS, kết hợp trí tuệ nhân tạo (AI) giúp Netco Post vận hành thông minh, đồng bộ và an toàn tuyệt đối."
           : "Modern management systems like WMS, TMS, combined with artificial intelligence (AI) help Netco Post operate intelligently, synchronously and absolutely safely.",
@@ -150,7 +183,9 @@ export default function VisionMissionPage() {
         icon: Award,
         letter: "P",
         title: isVi ? "Sản phẩm (Products)" : "Products",
-        subtitle: isVi ? "Mọi nhu cầu vận chuyển với giải pháp phù hợp." : "Every shipping need with suitable solution.",
+        subtitle: isVi
+          ? "Mọi nhu cầu vận chuyển với giải pháp phù hợp."
+          : "Every shipping need with suitable solution.",
         description: isVi
           ? "Netco Post cung cấp đa dạng các gói dịch vụ, từ giao nhận nội địa đến quốc tế, đáp ứng linh hoạt mọi nhu cầu của cá nhân và doanh nghiệp."
           : "Netco Post provides diverse service packages, from domestic to international delivery, flexibly meeting all needs of individuals and businesses.",
@@ -159,7 +194,9 @@ export default function VisionMissionPage() {
         icon: Rocket,
         letter: "S",
         title: isVi ? "Tốc độ (Speed)" : "Speed",
-        subtitle: isVi ? "Nhanh không chỉ là lời hứa, mà là tiêu chuẩn." : "Speed is not just a promise, but a standard.",
+        subtitle: isVi
+          ? "Nhanh không chỉ là lời hứa, mà là tiêu chuẩn."
+          : "Speed is not just a promise, but a standard.",
         description: isVi
           ? "Với đội ngũ giàu kinh nghiệm và nền tảng công nghệ tiên tiến, Netco Post cam kết giao hàng đúng hẹn, mang lại sự hài lòng trong từng giây phút chờ đợi."
           : "With an experienced team and advanced technology platform, Netco Post is committed to on-time delivery, bringing satisfaction in every moment of waiting.",
@@ -198,7 +235,7 @@ export default function VisionMissionPage() {
 
       {/* Main Content with Sidebar */}
       <Section background="gray" padding="lg">
-        <Container size="xl">
+        <Container size="xl" className="container">
           <div className="flex flex-col lg:flex-row gap-8">
             {/* Main Content */}
             <div className="flex-1 min-w-0">
@@ -219,7 +256,11 @@ export default function VisionMissionPage() {
                   <div className="w-full md:w-2/5 shrink-0">
                     <Image
                       src="/images/tlkd.png"
-                      alt={isVi ? "Tại sao và chúng ta thực hiện như thế nào?" : "Why and how do we do it?"}
+                      alt={
+                        isVi
+                          ? "Tại sao và chúng ta thực hiện như thế nào?"
+                          : "Why and how do we do it?"
+                      }
                       width={600}
                       height={400}
                       className="w-full rounded-xl"
@@ -236,8 +277,6 @@ export default function VisionMissionPage() {
                 transition={{ duration: 0.6 }}
                 className="bg-gradient-to-br from-green-600 to-green-700 rounded-2xl p-8 md:p-10 shadow-lg mb-8"
               >
-             
-
                 <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 text-center">
                   {coreValues.title}
                 </h2>
@@ -259,7 +298,9 @@ export default function VisionMissionPage() {
                         </div>
                         <div className="flex-1">
                           <div className="flex items-center gap-3 mb-2">
-                            <span className="text-2xl font-bold text-white/80">{value.number}.</span>
+                            <span className="text-2xl font-bold text-white/80">
+                              {value.number}.
+                            </span>
                             <h3 className="text-xl font-bold text-white">
                               {value.title}
                             </h3>
@@ -291,11 +332,18 @@ export default function VisionMissionPage() {
 
                 <div className="grid md:grid-cols-2 gap-4 mb-8">
                   {managementPrinciples.principles.map((principle, idx) => (
-                    <div key={idx} className="flex items-start gap-3 p-4 bg-green-50 rounded-lg">
+                    <div
+                      key={idx}
+                      className="flex items-start gap-3 p-4 bg-green-50 rounded-lg"
+                    >
                       <CheckCircle2 className="w-5 h-5 text-green-primary shrink-0 mt-0.5" />
                       <div>
-                        <h4 className="font-bold text-green-dark mb-1">{principle.title}</h4>
-                        <p className="text-sm text-gray-600">{principle.description}</p>
+                        <h4 className="font-bold text-green-dark mb-1">
+                          {principle.title}
+                        </h4>
+                        <p className="text-sm text-gray-600">
+                          {principle.description}
+                        </p>
                       </div>
                     </div>
                   ))}
@@ -306,7 +354,9 @@ export default function VisionMissionPage() {
                   <div className="w-full md:w-2/5 shrink-0">
                     <Image
                       src="/images/nguyentacquantri.jpg"
-                      alt={isVi ? "Nguyên tắc quản trị" : "Management Principles"}
+                      alt={
+                        isVi ? "Nguyên tắc quản trị" : "Management Principles"
+                      }
                       width={400}
                       height={500}
                       className="w-full rounded-xl h-full object-cover"
@@ -345,7 +395,7 @@ export default function VisionMissionPage() {
                 <h2 className="text-3xl md:text-4xl font-bold text-green-dark mb-6">
                   {qualityPolicy.title}
                 </h2>
-                
+
                 <div className="flex flex-col md:flex-row gap-8 items-start">
                   <div className="flex-1">
                     <p className="text-lg text-gray-700 leading-relaxed">
@@ -384,7 +434,11 @@ export default function VisionMissionPage() {
                   <div className="relative h-[200px] md:h-[400px] rounded-xl overflow-hidden">
                     <Image
                       src="/images/dacdiemdoanhnghiep.jpg"
-                      alt={isVi ? "Đặc điểm doanh nghiệp" : "Enterprise Characteristics"}
+                      alt={
+                        isVi
+                          ? "Đặc điểm doanh nghiệp"
+                          : "Enterprise Characteristics"
+                      }
                       fill
                       className="object-cover object-top"
                     />
@@ -404,14 +458,44 @@ export default function VisionMissionPage() {
                   {fourP1S.elements.map((element, idx) => {
                     // Định nghĩa màu cho từng element dựa vào hình phamchat.jpg
                     const colorSchemes = [
-                      { bg: 'bg-blue-50', border: 'border-blue-200', icon: 'bg-blue-600', text: 'text-blue-700', letter: 'text-blue-600' }, // 01 People - Xanh dương đậm
-                      { bg: 'bg-cyan-50', border: 'border-cyan-200', icon: 'bg-cyan-500', text: 'text-cyan-700', letter: 'text-cyan-600' }, // 02 Process - Xanh cyan
-                      { bg: 'bg-teal-50', border: 'border-teal-200', icon: 'bg-teal-400', text: 'text-teal-700', letter: 'text-teal-500' }, // 03 Platform - Xanh ngọc
-                      { bg: 'bg-emerald-50', border: 'border-emerald-200', icon: 'bg-emerald-500', text: 'text-emerald-700', letter: 'text-emerald-600' }, // 04 Product - Xanh lục lam
-                      { bg: 'bg-green-50', border: 'border-green-200', icon: 'bg-green-500', text: 'text-green-700', letter: 'text-green-600' }, // 05 Speed - Xanh lá
+                      {
+                        bg: "bg-blue-50",
+                        border: "border-blue-200",
+                        icon: "bg-blue-600",
+                        text: "text-blue-700",
+                        letter: "text-blue-600",
+                      }, // 01 People - Xanh dương đậm
+                      {
+                        bg: "bg-cyan-50",
+                        border: "border-cyan-200",
+                        icon: "bg-cyan-500",
+                        text: "text-cyan-700",
+                        letter: "text-cyan-600",
+                      }, // 02 Process - Xanh cyan
+                      {
+                        bg: "bg-teal-50",
+                        border: "border-teal-200",
+                        icon: "bg-teal-400",
+                        text: "text-teal-700",
+                        letter: "text-teal-500",
+                      }, // 03 Platform - Xanh ngọc
+                      {
+                        bg: "bg-emerald-50",
+                        border: "border-emerald-200",
+                        icon: "bg-emerald-500",
+                        text: "text-emerald-700",
+                        letter: "text-emerald-600",
+                      }, // 04 Product - Xanh lục lam
+                      {
+                        bg: "bg-green-50",
+                        border: "border-green-200",
+                        icon: "bg-green-500",
+                        text: "text-green-700",
+                        letter: "text-green-600",
+                      }, // 05 Speed - Xanh lá
                     ];
                     const colors = colorSchemes[idx];
-                    
+
                     return (
                       <motion.div
                         key={idx}
@@ -423,18 +507,26 @@ export default function VisionMissionPage() {
                       >
                         <div className="flex items-start gap-4">
                           <div className="shrink-0">
-                            <div className={`w-14 h-14 ${colors.icon} rounded-xl flex items-center justify-center shadow-md`}>
+                            <div
+                              className={`w-14 h-14 ${colors.icon} rounded-xl flex items-center justify-center shadow-md`}
+                            >
                               <element.icon className="w-7 h-7 text-white" />
                             </div>
                           </div>
                           <div className="flex-1">
                             <div className="flex items-center gap-2 mb-2">
-                              <span className={`text-2xl font-bold ${colors.letter}`}>{element.letter}</span>
+                              <span
+                                className={`text-2xl font-bold ${colors.letter}`}
+                              >
+                                {element.letter}
+                              </span>
                               <h3 className="text-xl font-bold text-gray-800">
                                 {element.title}
                               </h3>
                             </div>
-                            <p className={`text-sm font-medium ${colors.text} mb-2`}>
+                            <p
+                              className={`text-sm font-medium ${colors.text} mb-2`}
+                            >
                               {element.subtitle}
                             </p>
                             <p className="text-gray-600 leading-relaxed text-sm">
@@ -454,7 +546,6 @@ export default function VisionMissionPage() {
           </div>
         </Container>
       </Section>
-
     </main>
   );
 }

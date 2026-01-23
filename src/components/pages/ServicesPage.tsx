@@ -12,6 +12,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useTranslations, useLocale } from "next-intl";
 import { Button } from "@/components/ui/button";
+import { CTA } from "@/components/sections";
 
 const benefits = [
   {
@@ -266,30 +267,7 @@ export default function ServicesPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 bg-green-primary">
-        <div className="container mx-auto px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              {t("cta.title")}
-            </h2>
-            <p className="text-xl text-white/80 mb-8 max-w-2xl mx-auto">
-              {t("cta.description")}
-            </p>
-            <Button
-              asChild
-              size="lg"
-              className="bg-orange-primary hover:bg-orange-600 text-white px-8"
-            >
-              <Link href={`/${locale}/contact`}>{t("cta.button")}</Link>
-            </Button>
-          </motion.div>
-        </div>
-      </section>
+      <CTA/>
     </main>
   );
 }

@@ -1,15 +1,30 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Check, ArrowRight, Clock, MapPin, Shield, Truck, Package, Zap, Wallet } from "lucide-react";
+import {
+  Check,
+  ArrowRight,
+  Clock,
+  MapPin,
+  Shield,
+  Truck,
+  Package,
+  Zap,
+  Wallet,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import Image from "next/image";
 import { useTranslations, useLocale } from "next-intl";
 import { LucideIcon } from "lucide-react";
+import { CTA } from "@/components/sections";
 
 interface SubServiceDetailPageProps {
-  serviceKey: "expressDelivery" | "economyDelivery" | "standardDelivery" | "samedayDelivery";
+  serviceKey:
+    | "expressDelivery"
+    | "economyDelivery"
+    | "standardDelivery"
+    | "samedayDelivery";
   icon: LucideIcon;
   image: string;
   color: string;
@@ -134,13 +149,36 @@ export default function SubServiceDetailPage({
   ];
 
   // Filter out the current service to show other services
-  const otherServices = allServices.filter((service) => service.key !== serviceKey);
+  const otherServices = allServices.filter(
+    (service) => service.key !== serviceKey,
+  );
 
   return (
     <main className="pt-20">
       {/* Hero Section */}
-      <section className="py-16 md:py-24 bg-gradient-to-br from-green-50 via-white to-green-50">
-        <div className="container mx-auto px-4">
+      <section
+        className="relative py-16 md:py-24 overflow-hidden"
+        style={{
+          backgroundImage: "var(--hero-bg)",
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "center right",
+          backgroundSize: "auto 100%",
+        }}
+      >
+        {/* Gradient overlay - fade from left to transparent on right */}
+        <div className="absolute inset-0 bg-gradient-to-r from-green-50 via-white/90 to-transparent"></div>
+        {/* CSS variable for background - hidden on mobile */}
+        <style jsx>{`
+          section {
+            --hero-bg: none;
+          }
+          @media (min-width: 1024px) {
+            section {
+              --hero-bg: url(/bg.png);
+            }
+          }
+        `}</style>
+        <div className="container mx-auto px-4 relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <motion.div
               initial={{ opacity: 0, x: -50 }}
@@ -169,7 +207,7 @@ export default function SubServiceDetailPage({
                     <p
                       className={`text-2xl font-bold ${color.replace(
                         "bg-",
-                        "text-"
+                        "text-",
                       )}`}
                     >
                       {stat.value}
@@ -200,27 +238,6 @@ export default function SubServiceDetailPage({
                     {t(`${serviceKey}.cta.buttonSecondary`)}
                   </Link>
                 </Button>
-              </div>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              className="relative"
-            >
-              <div className="relative aspect-square max-w-md mx-auto">
-                <div
-                  className={`absolute inset-0 ${color} rounded-3xl opacity-10`}
-                ></div>
-                <div className="absolute inset-4 bg-white rounded-2xl shadow-xl flex items-center justify-center overflow-hidden">
-                  <Image
-                    src={image}
-                    alt={t(`${serviceKey}.title`)}
-                    width={400}
-                    height={400}
-                    className="object-contain p-4"
-                  />
-                </div>
               </div>
             </motion.div>
           </div>
@@ -497,7 +514,7 @@ export default function SubServiceDetailPage({
               {locale === "vi" ? "Dịch vụ khác" : "Other Services"}
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              {locale === "vi" 
+              {locale === "vi"
                 ? "Khám phá thêm các dịch vụ vận chuyển khác của NETCO"
                 : "Explore other delivery services from NETCO"}
             </p>
@@ -517,7 +534,9 @@ export default function SubServiceDetailPage({
                   <Link href={`/${locale}${service.href}`}>
                     <div className="bg-white border-2 border-gray-100 hover:border-green-500 rounded-2xl p-6 h-full transition-all hover:shadow-lg group">
                       <div className="flex items-start gap-4 mb-4">
-                        <div className={`w-12 h-12 ${color} rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform`}>
+                        <div
+                          className={`w-12 h-12 ${color} rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform`}
+                        >
                           <ServiceIcon className="w-6 h-6 text-white" />
                         </div>
                         <div className="flex-1">
@@ -543,44 +562,7 @@ export default function SubServiceDetailPage({
       </section>
 
       {/* CTA Section */}
-      <section className={`py-16 md:py-20 ${color}`}>
-        <div className="container mx-auto px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-6">
-              {t(`${serviceKey}.cta.title`)}
-            </h2>
-            <p className="text-lg text-white/80 mb-8 max-w-2xl mx-auto">
-              {t(`${serviceKey}.cta.description`)}
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button
-                asChild
-                size="lg"
-                className="bg-white text-green-dark hover:bg-gray-100 px-8"
-              >
-                <Link href={`/${locale}/contact`}>
-                  {t(`${serviceKey}.cta.button`)}
-                </Link>
-              </Button>
-              <Button
-                asChild
-                size="lg"
-                variant="outline"
-                className="border-white text-black hover:bg-white/10 px-8"
-              >
-                <Link href={`/${locale}/tracking`}>
-                  {t(`${serviceKey}.cta.buttonSecondary`)}
-                </Link>
-              </Button>
-            </div>
-          </motion.div>
-        </div>
-      </section>
+      <CTA />
     </main>
   );
 }
