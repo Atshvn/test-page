@@ -1,13 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import {
-  MapPin,
-  Phone,
-  Search,
-  Navigation,
-  X,
-} from "lucide-react";
+import { MapPin, Phone, Search, Navigation, X } from "lucide-react";
 import { useState, useMemo } from "react";
 import { useTranslations } from "next-intl";
 import type { PostOffice } from "@/types";
@@ -66,7 +60,7 @@ export default function PostOfficePage({
     return postOffices.filter(
       (office) =>
         removeVietnameseAccents(office.POName).includes(query) ||
-        removeVietnameseAccents(office.POAddress).includes(query)
+        removeVietnameseAccents(office.POAddress).includes(query),
     );
   }, [postOffices, searchQuery]);
 
@@ -133,7 +127,7 @@ export default function PostOfficePage({
                 <div className="text-sm text-gray-600">{t("totalOffices")}</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-green-primary">63</div>
+                <div className="text-3xl font-bold text-green-primary">34</div>
                 <div className="text-sm text-gray-600">{t("provinces")}</div>
               </div>
             </div>
@@ -355,7 +349,7 @@ export default function PostOfficePage({
                 size="lg"
                 variant="default"
                 className=" bg-red-500 hover:bg-red-600 text-white hover:text-white"
-                onClick={() => window.location.href = `/${locale}/contact`}
+                onClick={() => (window.location.href = `/${locale}/contact`)}
               >
                 {t("cta.contact")}
               </Button>
