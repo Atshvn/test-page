@@ -9,7 +9,7 @@ import { useTranslations, useLocale } from "next-intl";
 export default function CTA() {
   const t = useTranslations("cta");
   const locale = useLocale();
-  
+
   return (
     <section className="py-20 bg-gradient-to-r from-green-primary to-green-dark relative overflow-hidden">
       {/* Background Pattern */}
