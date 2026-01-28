@@ -144,6 +144,12 @@ export default function About() {
               </motion.div>
             ))}
           </div>
+          
+          <div className="text-center mt-8 sm:mt-12">
+            <p className="text-gray-500 text-sm italic max-w-2xl mx-auto">
+              {t("statsNote")}
+            </p>
+          </div>
         </motion.div>
       </div>
     </section>
