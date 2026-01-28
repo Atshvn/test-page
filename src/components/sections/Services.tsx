@@ -27,20 +27,13 @@ export default function Services() {
     },
     {
       number: "03",
-      title: t("list.warehousing.title"),
-      description: t("list.warehousing.description"),
-      image: "/service-icon/warehorse.png",
-      link: "/services/warehousing",
-    },
-    {
-      number: "04",
       title: t("list.installation.title"),
       description: t("list.installation.description"),
       image: "/service-icon/maintain.png",
       link: "/services/installation",
     },
     {
-      number: "05",
+      number: "04",
       title: t("list.other.title"),
       description: t("list.other.description"),
       image: "/service-icon/other.png",

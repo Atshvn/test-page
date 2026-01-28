@@ -2,10 +2,7 @@
 
 import { motion } from "framer-motion";
 import {
-  Truck,
   Zap,
-  Clock,
-  Calendar,
   Wallet,
   Check,
   ArrowRight,
@@ -14,17 +11,13 @@ import {
   MapPin,
   Timer,
 } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
 import { useTranslations, useLocale } from "next-intl";
 import { Button } from "@/components/ui/button";
 import { CTA } from "@/components/sections";
 
-const subServiceIcons = [Zap, Clock, Calendar, Wallet];
 const subServiceColors = [
   { bg: "bg-red-500", light: "bg-red-100", text: "text-red-600" },
-  { bg: "bg-blue-500", light: "bg-blue-100", text: "text-blue-600" },
-  { bg: "bg-orange-500", light: "bg-orange-100", text: "text-orange-600" },
   { bg: "bg-green-500", light: "bg-green-100", text: "text-green-600" },
 ];
 
@@ -40,21 +33,9 @@ export default function TransportationPage() {
       href: "/services/transportation/express",
     },
     {
-      key: "standard",
-      icon: Clock,
-      color: subServiceColors[1],
-      href: "/services/transportation/standard",
-    },
-    {
-      key: "sameday",
-      icon: Calendar,
-      color: subServiceColors[2],
-      href: "/services/transportation/sameday",
-    },
-    {
       key: "economy",
       icon: Wallet,
-      color: subServiceColors[3],
+      color: subServiceColors[1],
       href: "/services/transportation/economy",
     },
   ];
@@ -135,8 +116,8 @@ export default function TransportationPage() {
                   variant="outline"
                   className="border-green-primary text-green-primary hover:bg-green-50"
                 >
-                  <Link href={`/${locale}/tracking`}>
-                    {locale === "vi" ? "Tra cứu vận đơn" : "Track Order"}
+                  <Link href={`/${locale}/tracking/calculator`}>
+                    {locale === "vi" ? "Ước tính cước phí" : "Calculate Shipping"}
                   </Link>
                 </Button>
               </div>
@@ -163,7 +144,7 @@ export default function TransportationPage() {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {subServices.map((service, index) => {
               const Icon = service.icon;
               return (
@@ -285,7 +266,7 @@ export default function TransportationPage() {
             transition={{ duration: 0.6 }}
             className="overflow-x-auto"
           >
-            <table className="w-full min-w-[600px] bg-white rounded-2xl overflow-hidden shadow-sm">
+            <table className="w-full max-w-3xl mx-auto bg-white rounded-2xl overflow-hidden shadow-sm">
               <thead>
                 <tr className="bg-green-primary text-white">
                   <th className="p-4 text-left">
@@ -295,18 +276,6 @@ export default function TransportationPage() {
                     <div className="flex items-center justify-center gap-2">
                       <Zap className="w-4 h-4" />
                       {t("comparison.table.express")}
-                    </div>
-                  </th>
-                  <th className="p-4 text-center">
-                    <div className="flex items-center justify-center gap-2">
-                      <Clock className="w-4 h-4" />
-                      {t("comparison.table.standard")}
-                    </div>
-                  </th>
-                  <th className="p-4 text-center">
-                    <div className="flex items-center justify-center gap-2">
-                      <Calendar className="w-4 h-4" />
-                      {t("comparison.table.sameday")}
                     </div>
                   </th>
                   <th className="p-4 text-center">
@@ -326,12 +295,6 @@ export default function TransportationPage() {
                     {t("comparison.table.deliveryTimeExpress")}
                   </td>
                   <td className="p-4 text-center">
-                    {t("comparison.table.deliveryTimeStandard")}
-                  </td>
-                  <td className="p-4 text-center">
-                    {t("comparison.table.deliveryTimeSameday")}
-                  </td>
-                  <td className="p-4 text-center">
                     {t("comparison.table.deliveryTimeEconomy")}
                   </td>
                 </tr>
@@ -343,24 +306,12 @@ export default function TransportationPage() {
                     {t("comparison.table.priceExpress")}
                   </td>
                   <td className="p-4 text-center">
-                    {t("comparison.table.priceStandard")}
-                  </td>
-                  <td className="p-4 text-center">
-                    {t("comparison.table.priceSameday")}
-                  </td>
-                  <td className="p-4 text-center">
                     {t("comparison.table.priceEconomy")}
                   </td>
                 </tr>
                 <tr className="border-b">
                   <td className="p-4 font-medium">
                     {t("comparison.table.cod")}
-                  </td>
-                  <td className="p-4 text-center">
-                    <Check className="w-5 h-5 text-green-500 mx-auto" />
-                  </td>
-                  <td className="p-4 text-center">
-                    <Check className="w-5 h-5 text-green-500 mx-auto" />
                   </td>
                   <td className="p-4 text-center">
                     <Check className="w-5 h-5 text-green-500 mx-auto" />
@@ -379,12 +330,6 @@ export default function TransportationPage() {
                   <td className="p-4 text-center">
                     <Check className="w-5 h-5 text-green-500 mx-auto" />
                   </td>
-                  <td className="p-4 text-center">
-                    <Check className="w-5 h-5 text-green-500 mx-auto" />
-                  </td>
-                  <td className="p-4 text-center">
-                    <Check className="w-5 h-5 text-green-500 mx-auto" />
-                  </td>
                 </tr>
                 <tr>
                   <td className="p-4 font-medium">
@@ -392,12 +337,6 @@ export default function TransportationPage() {
                   </td>
                   <td className="p-4 text-center text-sm">
                     {t("comparison.table.bestForExpress")}
-                  </td>
-                  <td className="p-4 text-center text-sm">
-                    {t("comparison.table.bestForStandard")}
-                  </td>
-                  <td className="p-4 text-center text-sm">
-                    {t("comparison.table.bestForSameday")}
                   </td>
                   <td className="p-4 text-center text-sm">
                     {t("comparison.table.bestForEconomy")}

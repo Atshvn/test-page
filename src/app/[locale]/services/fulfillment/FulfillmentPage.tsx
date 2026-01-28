@@ -15,7 +15,6 @@ import {
   Zap,
   TrendingUp,
 } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
 import { useTranslations, useLocale } from "next-intl";
 import { Button } from "@/components/ui/button";
@@ -112,8 +111,8 @@ export default function FulfillmentPage() {
                   variant="outline"
                   className="border-green-primary text-green-primary hover:bg-green-50"
                 >
-                  <Link href={`/${locale}/tracking`}>
-                    {locale === "vi" ? "Tra cứu vận đơn" : "Track Order"}
+                  <Link href={`/${locale}/tracking/calculator`}>
+                    {locale === "vi" ? "Ước tính cước phí" : "Calculate Shipping"}
                   </Link>
                 </Button>
               </div>
@@ -301,95 +300,6 @@ export default function FulfillmentPage() {
         </div>
       </section>
 
-      {/* Pricing Section */}
-      <section id="pricing" className="py-16 md:py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-12"
-          >
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-              {t("pricing.title")}
-            </h2>
-            <p className="text-gray-600">{t("pricing.description")}</p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            {["basic", "pro", "enterprise"].map((plan, index) => (
-              <motion.div
-                key={plan}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className={`rounded-2xl p-6 ${
-                  plan === "pro"
-                    ? "bg-green-primary text-white ring-4 ring-green-200"
-                    : "bg-gray-50"
-                }`}
-              >
-                <h3
-                  className={`text-xl font-bold mb-2 ${plan === "pro" ? "text-white" : "text-gray-900"}`}
-                >
-                  {t(`pricing.plans.${plan}.title`)}
-                </h3>
-                <div
-                  className={`text-2xl font-bold mb-4 ${plan === "pro" ? "text-white" : "text-green-primary"}`}
-                >
-                  {t(`pricing.plans.${plan}.price`)}
-                </div>
-                <ul className="space-y-3 mb-6">
-                  {(plan === "basic" ? [0, 1, 2, 3] : [0, 1, 2, 3, 4]).map(
-                    (idx) => {
-                      try {
-                        const feature = t(
-                          `pricing.plans.${plan}.features.${idx}`,
-                        );
-                        if (feature) {
-                          return (
-                            <li key={idx} className="flex items-start gap-2">
-                              <Check
-                                className={`w-5 h-5 mt-0.5 flex-shrink-0 ${plan === "pro" ? "text-white" : "text-green-primary"}`}
-                              />
-                              <span
-                                className={
-                                  plan === "pro"
-                                    ? "text-white/90"
-                                    : "text-gray-600"
-                                }
-                              >
-                                {feature}
-                              </span>
-                            </li>
-                          );
-                        }
-                        return null;
-                      } catch {
-                        return null;
-                      }
-                    },
-                  )}
-                </ul>
-                <Button
-                  asChild
-                  className={`w-full ${
-                    plan === "pro"
-                      ? "bg-white text-green-primary hover:bg-gray-100"
-                      : "bg-green-primary text-white hover:bg-green-dark"
-                  }`}
-                >
-                  <Link href={`/${locale}/contact`}>
-                    {locale === "vi" ? "Liên hệ ngay" : "Contact Now"}
-                  </Link>
-                </Button>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       <CTA />
     </main>

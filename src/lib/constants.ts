@@ -71,8 +71,8 @@ export const COMPANY_INFO = {
   nameShort: "NETCO",
 
   // Contact
-  hotline: "1900 6463",
-  hotlineTel: "19006463", // For tel: links
+  hotline: "1900 0112",
+  hotlineTel: "19000112", // For tel: links
   email: "info@netco.com.vn",
   emailSupport: "support@netco.com.vn",
 

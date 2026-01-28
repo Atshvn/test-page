@@ -60,21 +60,12 @@ export default function Header() {
               href: "/services/transportation/express",
             },
             {
-              name: t("submenu.standardDelivery"),
-              href: "/services/transportation/standard",
-            },
-            {
-              name: t("submenu.samedayDelivery"),
-              href: "/services/transportation/sameday",
-            },
-            {
               name: t("submenu.economyDelivery"),
               href: "/services/transportation/economy",
             },
           ],
         },
         { name: t("submenu.fulfillment"), href: "/services/fulfillment" },
-        { name: t("submenu.warehousing"), href: "/services/warehousing" },
         { name: t("submenu.installation"), href: "/services/installation" },
         { name: t("submenu.other"), href: "/services/other" },
       ],

@@ -52,14 +52,6 @@ export default function SubServiceDetailPage({
       value: t(`${serviceKey}.heroStats.stat2.value`),
       label: t(`${serviceKey}.heroStats.stat2.label`),
     },
-    {
-      value: t(`${serviceKey}.heroStats.stat3.value`),
-      label: t(`${serviceKey}.heroStats.stat3.label`),
-    },
-    {
-      value: t(`${serviceKey}.heroStats.stat4.value`),
-      label: t(`${serviceKey}.heroStats.stat4.label`),
-    },
   ];
 
   const features = [
@@ -116,7 +108,7 @@ export default function SubServiceDetailPage({
     t(`${serviceKey}.useCases.list.case6`),
   ];
 
-  // Define all services
+  // Define all services - only Express and Economy
   const allServices = [
     {
       key: "expressDelivery",
@@ -124,20 +116,6 @@ export default function SubServiceDetailPage({
       description: t("transportation.subServices.express.description"),
       href: "/services/transportation/express",
       icon: Zap,
-    },
-    {
-      key: "standardDelivery",
-      title: t("transportation.subServices.standard.title"),
-      description: t("transportation.subServices.standard.description"),
-      href: "/services/transportation/standard",
-      icon: Package,
-    },
-    {
-      key: "samedayDelivery",
-      title: t("transportation.subServices.sameday.title"),
-      description: t("transportation.subServices.sameday.description"),
-      href: "/services/transportation/sameday",
-      icon: Clock,
     },
     {
       key: "economyDelivery",
@@ -198,7 +176,7 @@ export default function SubServiceDetailPage({
               </p>
 
               {/* Hero Stats */}
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+              <div className="grid grid-cols-2 gap-6 max-w-md mx-auto mb-8">
                 {heroStats.map((stat, index) => (
                   <div
                     key={index}
@@ -234,8 +212,8 @@ export default function SubServiceDetailPage({
                   variant="outline"
                   className="border-green-primary text-green-primary hover:bg-green-50"
                 >
-                  <Link href={`/${locale}/tracking`}>
-                    {t(`${serviceKey}.cta.buttonSecondary`)}
+                  <Link href={`/${locale}/tracking/calculator`}>
+                    {locale === "vi" ? "Ước tính cước phí" : "Calculate Shipping"}
                   </Link>
                 </Button>
               </div>
@@ -326,8 +304,8 @@ export default function SubServiceDetailPage({
                     </p>
                   </div>
                   {index < 3 && (
-                    <div className="hidden md:block absolute top-1/2 -right-3 transform -translate-y-1/2">
-                      <ArrowRight className="w-6 h-6 text-gray-300" />
+                    <div className="hidden md:flex absolute top-1/2 -right-3 sm:-right-4 lg:-right-6 w-8 h-8 items-center justify-center transform -translate-y-1/2 z-10">
+                      <ArrowRight className="w-5 h-5 text-gray-300" />
                     </div>
                   )}
                 </motion.div>
@@ -358,39 +336,64 @@ export default function SubServiceDetailPage({
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="max-w-3xl mx-auto bg-white rounded-2xl shadow-lg overflow-hidden"
+              className="max-w-3xl mx-auto bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden"
             >
               <table className="w-full">
-                <thead className={`${color} text-white`}>
+                <thead className="bg-green-primary text-white">
                   <tr>
                     <th className="py-4 px-6 text-left">
                       {t(`${serviceKey}.comparison.headers.feature`)}
                     </th>
                     <th className="py-4 px-6 text-center">
-                      {t(`${serviceKey}.comparison.headers.express`)}
+                      <div className="flex items-center justify-center gap-2">
+                        <Zap className="w-4 h-4 fill-white" />
+                        {t(`${serviceKey}.comparison.headers.express`)}
+                      </div>
                     </th>
                     <th className="py-4 px-6 text-center">
-                      {t(`${serviceKey}.comparison.headers.economy`)}
+                      <div className="flex items-center justify-center gap-2">
+                        <Wallet className="w-4 h-4 fill-white" />
+                        {t(`${serviceKey}.comparison.headers.economy`)}
+                      </div>
                     </th>
                   </tr>
                 </thead>
                 <tbody>
-                  {[1, 2, 3, 4, 5].map((row, index) => (
-                    <tr
-                      key={row}
-                      className={index % 2 === 0 ? "bg-gray-50" : "bg-white"}
-                    >
-                      <td className="py-4 px-6 font-medium text-gray-700">
-                        {t(`${serviceKey}.comparison.rows.row${row}.feature`)}
-                      </td>
-                      <td className="py-4 px-6 text-center text-gray-600">
-                        {t(`${serviceKey}.comparison.rows.row${row}.express`)}
-                      </td>
-                      <td className="py-4 px-6 text-center font-semibold text-green-primary">
-                        {t(`${serviceKey}.comparison.rows.row${row}.economy`)}
-                      </td>
-                    </tr>
-                  ))}
+                  {[1, 2, 3, 4, 5].map((row, index) => {
+                    const expressVal = t(`${serviceKey}.comparison.rows.row${row}.express`);
+                    const economyVal = t(`${serviceKey}.comparison.rows.row${row}.economy`);
+                    
+                    return (
+                      <tr
+                        key={row}
+                        className={index % 2 === 0 ? "bg-white" : "bg-gray-50/50"}
+                      >
+                        <td className="py-4 px-6 font-medium text-gray-700">
+                          {t(`${serviceKey}.comparison.rows.row${row}.feature`)}
+                        </td>
+                        <td className="py-4 px-6 text-center text-gray-600">
+                          {expressVal === "checkmark" ? (
+                            <div className="flex justify-center">
+                              <Check className="w-5 h-5 text-green-500" />
+                            </div>
+                          ) : (
+                            expressVal
+                          )}
+                        </td>
+                        <td className="py-4 px-6 text-center text-gray-600">
+                          {economyVal === "checkmark" ? (
+                            <div className="flex justify-center">
+                              <Check className="w-5 h-5 text-green-500" />
+                            </div>
+                          ) : (
+                            <span className={economyVal.includes("%") ? "font-semibold text-green-primary" : ""}>
+                              {economyVal}
+                            </span>
+                          )}
+                        </td>
+                      </tr>
+                    );
+                  })}
                 </tbody>
               </table>
             </motion.div>
@@ -399,67 +402,69 @@ export default function SubServiceDetailPage({
       )}
 
       {/* Pricing Section */}
-      <section className="py-16 md:py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-12"
-          >
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-green-dark mb-4">
-              {t(`${serviceKey}.pricing.title`)}
-            </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              {t(`${serviceKey}.pricing.description`)}
-            </p>
-          </motion.div>
+      {serviceKey !== "economyDelivery" && (
+        <section className="py-16 md:py-20 bg-white">
+          <div className="container mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-green-dark mb-4">
+                {t(`${serviceKey}.pricing.title`)}
+              </h2>
+              <p className="text-gray-600 max-w-2xl mx-auto">
+                {t(`${serviceKey}.pricing.description`)}
+              </p>
+            </motion.div>
 
-          <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-            {pricingZones.map((zone, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className={`p-6 rounded-2xl text-center ${
-                  index === 1 ? `${color} text-white` : "bg-gray-50"
-                }`}
-              >
-                <MapPin
-                  className={`w-8 h-8 mx-auto mb-4 ${
-                    index === 1 ? "text-white" : color.replace("bg-", "text-")
-                  }`}
-                />
-                <h3
-                  className={`text-lg font-bold mb-2 ${
-                    index === 1 ? "text-white" : "text-green-dark"
+            <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+              {pricingZones.map((zone, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className={`p-6 rounded-2xl text-center ${
+                    index === 1 ? `${color} text-white` : "bg-gray-50"
                   }`}
                 >
-                  {zone.title}
-                </h3>
-                <p
-                  className={`text-2xl font-bold mb-2 ${
-                    index === 1 ? "text-white" : color.replace("bg-", "text-")
-                  }`}
-                >
-                  {zone.price}
-                </p>
-                <p
-                  className={`text-sm ${
-                    index === 1 ? "text-white/80" : "text-gray-600"
-                  }`}
-                >
-                  <Clock className="w-4 h-4 inline mr-1" />
-                  {zone.time}
-                </p>
-              </motion.div>
-            ))}
+                  <MapPin
+                    className={`w-8 h-8 mx-auto mb-4 ${
+                      index === 1 ? "text-white" : color.replace("bg-", "text-")
+                    }`}
+                  />
+                  <h3
+                    className={`text-lg font-bold mb-2 ${
+                      index === 1 ? "text-white" : "text-green-dark"
+                    }`}
+                  >
+                    {zone.title}
+                  </h3>
+                  <p
+                    className={`text-2xl font-bold mb-2 ${
+                      index === 1 ? "text-white" : color.replace("bg-", "text-")
+                    }`}
+                  >
+                    {zone.price}
+                  </p>
+                  <p
+                    className={`text-sm ${
+                      index === 1 ? "text-white/80" : "text-gray-600"
+                    }`}
+                  >
+                    <Clock className="w-4 h-4 inline mr-1" />
+                    {zone.time}
+                  </p>
+                </motion.div>
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
 
       {/* Use Cases Section */}
       <section className="py-16 md:py-20 bg-gray-50">
@@ -520,7 +525,7 @@ export default function SubServiceDetailPage({
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-1 gap-6 max-w-2xl mx-auto">
             {otherServices.map((service, index) => {
               const ServiceIcon = service.icon;
               return (

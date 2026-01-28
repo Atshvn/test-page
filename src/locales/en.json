@@ -16,7 +16,7 @@
       "economyDelivery": "Economy Delivery",
       "fulfillment": "Fulfillment",
       "warehousing": "Warehousing",
-      "installation": "Installation & Maintenance",
+      "installation": "Installation",
       "other": "Other",
       "aboutUs": "About Us",
       "visionMission": "Vision & Mission",
@@ -63,8 +63,8 @@
         "description": "Modern warehouse system, meeting professional storage and cargo management needs."
       },
       "installation": {
-        "title": "Installation & Maintenance",
-        "description": "On-site installation and maintenance services for equipment and products with professional technical team."
+        "title": "Installation",
+        "description": "On-site installation service for equipment and products after delivery with professional technical team."
       },
       "other": {
         "title": "Other",
@@ -160,7 +160,7 @@
   "postOffice": {
     "badge": "Post Office Network",
     "title": "NETCO Post Office System",
-    "description": "Find the nearest post office with our network covering all 63 provinces nationwide",
+    "description": "Find the nearest post office with our network covering all 34 provinces nationwide",
     "searchPlaceholder": "Search by name, address, post office code...",
     "totalOffices": "Post Offices",
     "provinces": "Provinces",
@@ -275,7 +275,7 @@
     "transportation": {
       "badge": "Delivery Service",
       "title": "Fast & Safe Cargo Delivery",
-      "description": "Professional cargo delivery service with nationwide coverage across 63 provinces, ensuring your goods reach recipients quickly and safely.",
+      "description": "Professional cargo delivery service with nationwide coverage across 34 provinces, ensuring your goods reach recipients quickly and safely.",
       "features": {
         "feature1": "Nationwide delivery in 24-72 hours",
         "feature2": "Real-time order tracking",
@@ -316,11 +316,11 @@
           },
           "wide": {
             "title": "Wide Coverage",
-            "description": "Network across 63 provinces"
+            "description": "Network across 34 provinces"
           },
           "diverse": {
             "title": "Diverse",
-            "description": "4 flexible service packages"
+            "description": "2 flexible service packages"
           }
         }
       },
@@ -336,12 +336,12 @@
           "deliveryTimeExpress": "24-48h",
           "deliveryTimeStandard": "2-3 days",
           "deliveryTimeSameday": "4-8 hours",
-          "deliveryTimeEconomy": "3-5 days",
+          "deliveryTimeEconomy": "3-7 days",
           "price": "Shipping fee",
-          "priceExpress": "High",
+          "priceExpress": "Standard",
           "priceStandard": "Medium",
           "priceSameday": "Highest",
-          "priceEconomy": "Lowest",
+          "priceEconomy": "Save 70%",
           "cod": "COD collection",
           "insurance": "Insurance",
           "bestFor": "Best for",
@@ -355,7 +355,7 @@
         "title": "Start shipping today",
         "description": "Contact us now for consultation and best quotes",
         "button": "Contact Now",
-        "buttonSecondary": "Call 1900 6463"
+        "buttonSecondary": "Call 1900 0112"
       }
     },
     "fulfillment": {
@@ -369,10 +369,22 @@
         "feature4": "Multi-platform e-commerce integration"
       },
       "heroStats": {
-        "stat1": { "value": "500+", "label": "Clients" },
-        "stat2": { "value": "10M+", "label": "Orders/year" },
-        "stat3": { "value": "99.5%", "label": "Accuracy" },
-        "stat4": { "value": "24/7", "label": "Operations" }
+        "stat1": {
+          "value": "23+",
+          "label": "Years Experience"
+        },
+        "stat2": {
+          "value": "34",
+          "label": "Provinces"
+        },
+        "stat3": {
+          "value": "24h",
+          "label": "Order Processing"
+        },
+        "stat4": {
+          "value": "3000m²",
+          "label": "Warehouse Area"
+        }
       },
       "concept": {
         "title": "What is Fulfillment?",
@@ -403,32 +415,59 @@
       "process": {
         "title": "Fulfillment Process",
         "steps": {
-          "step1": { "title": "Inbound", "description": "Receive goods from suppliers, check quantity and quality" },
-          "step2": { "title": "Storage", "description": "Classify and store goods in warehouse according to standards" },
-          "step3": { "title": "Order Processing", "description": "Receive orders from e-commerce platforms, process and prepare goods" },
-          "step4": { "title": "Packaging", "description": "Professional packaging, print shipping labels" },
-          "step5": { "title": "Delivery", "description": "Hand over to carriers, deliver to customers" },
-          "step6": { "title": "Reconciliation", "description": "Reconcile orders, handle returns if any" }
+          "step1": {
+            "title": "Inbound",
+            "description": "Receive goods from suppliers, check quantity and quality"
+          },
+          "step2": {
+            "title": "Storage",
+            "description": "Classify and store goods in warehouse according to standards"
+          },
+          "step3": {
+            "title": "Order Processing",
+            "description": "Receive orders from e-commerce platforms, process and prepare goods"
+          },
+          "step4": {
+            "title": "Packaging",
+            "description": "Professional packaging, print shipping labels"
+          },
+          "step5": {
+            "title": "Delivery",
+            "description": "Hand over to carriers, deliver to customers"
+          },
+          "step6": {
+            "title": "Reconciliation",
+            "description": "Reconcile orders, handle returns if any"
+          }
         }
       },
       "services": {
         "title": "Services Included",
         "list": {
-          "service1": { "title": "Inventory Management", "description": "Track inventory quantity in real-time, alert when out of stock" },
-          "service2": { "title": "Order Processing", "description": "Automatically process orders from e-commerce platforms: Shopee, Lazada, Tiki..." },
-          "service3": { "title": "Professional Packaging", "description": "Standard packaging, maximum product protection" },
-          "service4": { "title": "Multi-channel Delivery", "description": "Connect with multiple carriers, choose the best price" },
-          "service5": { "title": "Returns Management", "description": "Handle returns, inspect and re-stock" },
-          "service6": { "title": "Analytics Reports", "description": "Dashboard to track KPIs, detailed reports" }
-        }
-      },
-      "pricing": {
-        "title": "Service Pricing",
-        "description": "Flexible pricing based on needs, no hidden fees",
-        "plans": {
-          "basic": { "title": "Basic", "price": "From $0.15/order", "features": ["Free storage for 30 days", "Process orders within 24h", "Standard packaging", "Email support"] },
-          "pro": { "title": "Professional", "price": "From $0.25/order", "features": ["Free storage for 60 days", "Process orders within 6h", "Premium packaging", "24/7 support", "API integration"] },
-          "enterprise": { "title": "Enterprise", "price": "Contact us", "features": ["Unlimited storage", "Process orders within 2h", "Custom packaging", "Dedicated Account Manager", "ERP integration"] }
+          "service1": {
+            "title": "Inventory Management",
+            "description": "Track inventory quantity in real-time, alert when out of stock"
+          },
+          "service2": {
+            "title": "Order Processing",
+            "description": "Automatically process orders from e-commerce platforms: Shopee, Lazada, Tiki..."
+          },
+          "service3": {
+            "title": "Professional Packaging",
+            "description": "Standard packaging, maximum product protection"
+          },
+          "service4": {
+            "title": "Multi-channel Delivery",
+            "description": "Connect with multiple carriers, choose the best price"
+          },
+          "service5": {
+            "title": "Returns Management",
+            "description": "Handle returns, inspect and re-stock"
+          },
+          "service6": {
+            "title": "Analytics Reports",
+            "description": "Dashboard to track KPIs, detailed reports"
+          }
         }
       },
       "cta": {
@@ -449,10 +488,22 @@
         "feature4": "24/7 security & fire protection"
       },
       "heroStats": {
-        "stat1": { "value": "50,000", "label": "m² warehouse" },
-        "stat2": { "value": "15+", "label": "Nationwide warehouses" },
-        "stat3": { "value": "GDP/GSP", "label": "Certified" },
-        "stat4": { "value": "99.9%", "label": "Uptime" }
+        "stat1": {
+          "value": "50,000",
+          "label": "m² warehouse"
+        },
+        "stat2": {
+          "value": "15+",
+          "label": "Nationwide warehouses"
+        },
+        "stat3": {
+          "value": "GDP/GSP",
+          "label": "Certified"
+        },
+        "stat4": {
+          "value": "99.9%",
+          "label": "Uptime"
+        }
       },
       "types": {
         "title": "Warehouse Types",
@@ -460,22 +511,38 @@
           "type1": {
             "title": "Standard Warehouse",
             "description": "Storage for regular goods, natural temperature control",
-            "features": ["Flexible area", "Suitable for all goods", "Optimal cost"]
+            "features": [
+              "Flexible area",
+              "Suitable for all goods",
+              "Optimal cost"
+            ]
           },
           "type2": {
             "title": "Cool Storage",
             "description": "Temperature controlled warehouse 15-25°C for sensitive goods",
-            "features": ["Temperature 15-25°C", "Humidity controlled", "Suitable for cosmetics, pharmaceuticals"]
+            "features": [
+              "Temperature 15-25°C",
+              "Humidity controlled",
+              "Suitable for cosmetics, pharmaceuticals"
+            ]
           },
           "type3": {
             "title": "Cold Storage",
             "description": "Frozen warehouse 0-8°C or -18°C to -25°C for food",
-            "features": ["Multi-temperature range", "HACCP standard", "Suitable for food, vaccines"]
+            "features": [
+              "Multi-temperature range",
+              "HACCP standard",
+              "Suitable for food, vaccines"
+            ]
           },
           "type4": {
             "title": "Bonded Warehouse",
             "description": "Storage for import/export goods pending customs clearance",
-            "features": ["Customs licensed", "Deferred import tax", "Suitable for import/export goods"]
+            "features": [
+              "Customs licensed",
+              "Deferred import tax",
+              "Suitable for import/export goods"
+            ]
           }
         }
       },
@@ -483,12 +550,30 @@
         "title": "Modern WMS System",
         "description": "Warehouse Management System - Smart warehouse management system",
         "features": {
-          "feature1": { "title": "Real-time Inventory Management", "description": "Track goods quantity accurately in real-time" },
-          "feature2": { "title": "Location Management", "description": "Precisely locate goods position in warehouse (Location Management)" },
-          "feature3": { "title": "FIFO/FEFO", "description": "Manage expiry dates, release goods according to FIFO/FEFO principles" },
-          "feature4": { "title": "Barcode/QR Code", "description": "Scan barcodes, QR codes for quick inbound/outbound" },
-          "feature5": { "title": "Analytics Reports", "description": "Overview dashboard, detailed inventory reports" },
-          "feature6": { "title": "API Integration", "description": "Connect with ERP, TMS, other customer systems" }
+          "feature1": {
+            "title": "Real-time Inventory Management",
+            "description": "Track goods quantity accurately in real-time"
+          },
+          "feature2": {
+            "title": "Location Management",
+            "description": "Precisely locate goods position in warehouse (Location Management)"
+          },
+          "feature3": {
+            "title": "FIFO/FEFO",
+            "description": "Manage expiry dates, release goods according to FIFO/FEFO principles"
+          },
+          "feature4": {
+            "title": "Barcode/QR Code",
+            "description": "Scan barcodes, QR codes for quick inbound/outbound"
+          },
+          "feature5": {
+            "title": "Analytics Reports",
+            "description": "Overview dashboard, detailed inventory reports"
+          },
+          "feature6": {
+            "title": "API Integration",
+            "description": "Connect with ERP, TMS, other customer systems"
+          }
         }
       },
       "services": {
@@ -507,10 +592,22 @@
       "certifications": {
         "title": "Certifications & Standards",
         "list": {
-          "cert1": { "title": "GDP", "description": "Good Distribution Practice" },
-          "cert2": { "title": "GSP", "description": "Good Storage Practice" },
-          "cert3": { "title": "ISO 9001", "description": "Quality Management System" },
-          "cert4": { "title": "HACCP", "description": "Food Safety Management System" }
+          "cert1": {
+            "title": "GDP",
+            "description": "Good Distribution Practice"
+          },
+          "cert2": {
+            "title": "GSP",
+            "description": "Good Storage Practice"
+          },
+          "cert3": {
+            "title": "ISO 9001",
+            "description": "Quality Management System"
+          },
+          "cert4": {
+            "title": "HACCP",
+            "description": "Food Safety Management System"
+          }
         }
       },
       "pricing": {
@@ -527,8 +624,8 @@
     },
     "installation": {
       "badge": "Installation Service",
-      "title": "On-site Installation & Maintenance",
-      "description": "Professional technicians, well-trained and ready to install and maintain products at customer locations.",
+      "title": "On-site Installation After Delivery",
+      "description": "Professional technicians, well-trained and ready to install products at customer locations right after delivery.",
       "features": {
         "feature1": "Certified technicians",
         "feature2": "On-time installation",
@@ -536,18 +633,30 @@
         "feature4": "24/7 technical support"
       },
       "heroStats": {
-        "stat1": { "value": "500+", "label": "Technicians" },
-        "stat2": { "value": "63", "label": "Provinces" },
-        "stat3": { "value": "98%", "label": "Satisfaction" },
-        "stat4": { "value": "24h", "label": "Response" }
+        "stat1": {
+          "value": "500+",
+          "label": "Technicians"
+        },
+        "stat2": {
+          "value": "34",
+          "label": "Provinces"
+        },
+        "stat3": {
+          "value": "98%",
+          "label": "Satisfaction"
+        },
+        "stat4": {
+          "value": "24h",
+          "label": "Response"
+        }
       },
       "overview": {
-        "title": "Professional Installation & Maintenance Service",
-        "description": "NETCO provides on-site installation and maintenance services for businesses. With professionally trained technicians, we ensure your products are installed correctly and operate stably.",
+        "title": "Professional Installation Service After Delivery",
+        "description": "NETCO provides on-site installation service right after delivery for businesses. With professionally trained technicians, we ensure your products are installed correctly and operate stably upon delivery.",
         "highlights": {
           "highlight1": "Technicians trained and certified by manufacturers",
-          "highlight2": "Coverage in 63 provinces, on-site installation within 24-48h",
-          "highlight3": "Service warranty, technical support after installation",
+          "highlight2": "Coverage in 34 provinces, installation right after delivery",
+          "highlight3": "Proper technical installation, operation check before handover",
           "highlight4": "ISO standard process, consistent quality assurance"
         }
       },
@@ -557,44 +666,86 @@
           "service1": {
             "title": "Air Conditioner Installation",
             "description": "Install, relocate air conditioners: wall-mounted, ceiling, standing",
-            "features": ["New installation", "Relocation", "Gas refill, cleaning"]
+            "features": [
+              "New installation",
+              "Relocation",
+              "Gas refill, cleaning"
+            ]
           },
           "service2": {
             "title": "Washing Machine & Refrigerator Installation",
             "description": "Install and balance washing machines, refrigerators of all types",
-            "features": ["Proper technical installation", "Operation check", "Usage guidance"]
+            "features": [
+              "Proper technical installation",
+              "Operation check",
+              "Usage guidance"
+            ]
           },
           "service3": {
             "title": "TV & Audio Installation",
             "description": "Wall-mount TV installation, audio systems, speakers",
-            "features": ["Secure wall mounting", "Channel setup", "Device connection"]
+            "features": [
+              "Secure wall mounting",
+              "Channel setup",
+              "Device connection"
+            ]
           },
           "service4": {
             "title": "Kitchen Equipment Installation",
             "description": "Install induction cookers, range hoods, microwaves, ovens",
-            "features": ["Built-in installation", "Electric/gas connection", "Safety check"]
+            "features": [
+              "Built-in installation",
+              "Electric/gas connection",
+              "Safety check"
+            ]
           },
           "service5": {
             "title": "Water Heater Installation",
             "description": "Install water heaters, solar water heaters",
-            "features": ["Pipe installation", "Safe electrical connection", "Operation test"]
+            "features": [
+              "Pipe installation",
+              "Safe electrical connection",
+              "Operation test"
+            ]
           },
           "service6": {
             "title": "Periodic Maintenance",
             "description": "Maintenance service for home electronic appliances",
-            "features": ["Device cleaning", "Check, replace parts", "Post-maintenance warranty"]
+            "features": [
+              "Device cleaning",
+              "Check, replace parts",
+              "Post-maintenance warranty"
+            ]
           }
         }
       },
       "process": {
         "title": "Installation Process",
         "steps": {
-          "step1": { "title": "Receive Request", "description": "Receive order information from partner businesses" },
-          "step2": { "title": "Assign Technician", "description": "Assign technician by area and expertise" },
-          "step3": { "title": "Contact Customer", "description": "Technician contacts to confirm installation time" },
-          "step4": { "title": "On-site Installation", "description": "Perform installation according to standard process" },
-          "step5": { "title": "Check & Handover", "description": "Test operation, guide usage, handover" },
-          "step6": { "title": "Post-installation Support", "description": "Technical support, service warranty" }
+          "step1": {
+            "title": "Receive Request",
+            "description": "Receive order information from partner businesses"
+          },
+          "step2": {
+            "title": "Assign Technician",
+            "description": "Assign technician by area and expertise"
+          },
+          "step3": {
+            "title": "Contact Customer",
+            "description": "Technician contacts to confirm installation time"
+          },
+          "step4": {
+            "title": "On-site Installation",
+            "description": "Perform installation according to standard process"
+          },
+          "step5": {
+            "title": "Check & Handover",
+            "description": "Test operation, guide usage, handover"
+          },
+          "step6": {
+            "title": "Post-installation Support",
+            "description": "Technical support, service warranty"
+          }
         }
       },
       "partners": {
@@ -605,12 +756,30 @@
         "title": "Service Pricing",
         "description": "Reference prices, specific quotes based on product type and location",
         "categories": {
-          "cat1": { "title": "Air Conditioner", "price": "From $15" },
-          "cat2": { "title": "Washing Machine", "price": "From $7" },
-          "cat3": { "title": "Refrigerator", "price": "From $5" },
-          "cat4": { "title": "Wall-mount TV", "price": "From $10" },
-          "cat5": { "title": "Water Heater", "price": "From $10" },
-          "cat6": { "title": "Kitchen Equipment", "price": "From $7" }
+          "cat1": {
+            "title": "Air Conditioner",
+            "price": "From $15"
+          },
+          "cat2": {
+            "title": "Washing Machine",
+            "price": "From $7"
+          },
+          "cat3": {
+            "title": "Refrigerator",
+            "price": "From $5"
+          },
+          "cat4": {
+            "title": "Wall-mount TV",
+            "price": "From $10"
+          },
+          "cat5": {
+            "title": "Water Heater",
+            "price": "From $10"
+          },
+          "cat6": {
+            "title": "Kitchen Equipment",
+            "price": "From $7"
+          }
         }
       },
       "cta": {
@@ -631,10 +800,22 @@
         "feature4": "24/7 support"
       },
       "heroStats": {
-        "stat1": { "value": "100+", "label": "Projects" },
-        "stat2": { "value": "50+", "label": "Partners" },
-        "stat3": { "value": "24/7", "label": "Support" },
-        "stat4": { "value": "99%", "label": "Satisfaction" }
+        "stat1": {
+          "value": "100+",
+          "label": "Projects"
+        },
+        "stat2": {
+          "value": "50+",
+          "label": "Partners"
+        },
+        "stat3": {
+          "value": "24/7",
+          "label": "Support"
+        },
+        "stat4": {
+          "value": "99%",
+          "label": "Satisfaction"
+        }
       },
       "overview": {
         "title": "Comprehensive Logistics Solutions",
@@ -646,44 +827,86 @@
           "service1": {
             "title": "Oversized Cargo Transport",
             "description": "Transport oversized, overweight goods, industrial equipment, machinery",
-            "features": ["Specialized trucks", "Professional loading team", "Cargo insurance"]
+            "features": [
+              "Specialized trucks",
+              "Professional loading team",
+              "Cargo insurance"
+            ]
           },
           "service2": {
             "title": "Cold Chain Transport",
             "description": "Transport fresh food, frozen goods, vaccines by refrigerated trucks",
-            "features": ["Specialized refrigerated trucks", "Temperature control -25°C to +15°C", "Real-time monitoring"]
+            "features": [
+              "Specialized refrigerated trucks",
+              "Temperature control -25°C to +15°C",
+              "Real-time monitoring"
+            ]
           },
           "service3": {
             "title": "Cross-border Logistics",
             "description": "International freight transport, import-export customs clearance",
-            "features": ["Road transport to Cambodia, Laos", "Complete customs procedures", "Bonded warehouse"]
+            "features": [
+              "Road transport to Cambodia, Laos",
+              "Complete customs procedures",
+              "Bonded warehouse"
+            ]
           },
           "service4": {
             "title": "COD Collection Service",
             "description": "Cash on delivery collection, quick transfer to customer accounts",
-            "features": ["COD up to $2,000/order", "24-48h reconciliation", "Daily transfer"]
+            "features": [
+              "COD up to $2,000/order",
+              "24-48h reconciliation",
+              "Daily transfer"
+            ]
           },
           "service5": {
             "title": "Packaging & Crating",
             "description": "Professional packaging service, wooden crating for high-value goods",
-            "features": ["Export wooden crating", "Shock-proof, moisture-proof", "Custom packaging"]
+            "features": [
+              "Export wooden crating",
+              "Shock-proof, moisture-proof",
+              "Custom packaging"
+            ]
           },
           "service6": {
             "title": "Supply Chain Consulting",
             "description": "Consulting on supply chain optimization, logistics cost reduction",
-            "features": ["Analyze current processes", "Propose optimal solutions", "Implement and accompany"]
+            "features": [
+              "Analyze current processes",
+              "Propose optimal solutions",
+              "Implement and accompany"
+            ]
           }
         }
       },
       "vas": {
         "title": "Value-Added Services (VAS)",
         "list": {
-          "vas1": { "title": "Labeling & Tagging", "description": "Print product labels, price tags, barcodes" },
-          "vas2": { "title": "Combo & Kit Assembly", "description": "Package product combos, create gift kits" },
-          "vas3": { "title": "Quality Check", "description": "QC products before delivery to end customers" },
-          "vas4": { "title": "Returns Processing", "description": "Receive, inspect and process returned goods" },
-          "vas5": { "title": "Kitting & Assembly", "description": "Assemble products, package as required" },
-          "vas6": { "title": "Recycling & Defect Processing", "description": "Process defective goods, expired items as regulations" }
+          "vas1": {
+            "title": "Labeling & Tagging",
+            "description": "Print product labels, price tags, barcodes"
+          },
+          "vas2": {
+            "title": "Combo & Kit Assembly",
+            "description": "Package product combos, create gift kits"
+          },
+          "vas3": {
+            "title": "Quality Check",
+            "description": "QC products before delivery to end customers"
+          },
+          "vas4": {
+            "title": "Returns Processing",
+            "description": "Receive, inspect and process returned goods"
+          },
+          "vas5": {
+            "title": "Kitting & Assembly",
+            "description": "Assemble products, package as required"
+          },
+          "vas6": {
+            "title": "Recycling & Defect Processing",
+            "description": "Process defective goods, expired items as regulations"
+          }
         }
       },
       "industries": {
@@ -703,7 +926,7 @@
         "title": "Have Special Requirements?",
         "description": "Contact us now for the most suitable logistics solution for your business",
         "button": "Get Free Consultation",
-        "buttonSecondary": "Call Hotline 1900 6463"
+        "buttonSecondary": "Call Hotline 1900 0112"
       }
     },
     "cta": {
@@ -715,7 +938,7 @@
     "learnMore": "Learn More",
     "expressDelivery": {
       "badge": "Express Delivery",
-      "title": "Super Fast Delivery - On Time Every Hour",
+      "title": "Express Delivery",
       "description": "Express delivery is a shipping service in which parcels or goods are transported from the sender to the recipient faster than standard delivery services. This service is typically used for goods that need urgent delivery or have high value, and often includes features such as shipment tracking, cargo insurance, and same-day or next-day delivery.",
       "heroStats": {
         "stat1": {
@@ -739,28 +962,28 @@
         "title": "Why Choose Express Delivery",
         "list": {
           "feature1": {
-            "title": "Fast Delivery Speed",
-            "description": "Goods are transported and delivered in a shorter time than standard delivery services, helping you save time and meet urgent needs."
+            "title": "Time",
+            "description": "Fast, guaranteed on-time. Intracity typically same-day or 1-1.5 days, inter-region typically 1-3 days."
           },
           "feature2": {
-            "title": "Guaranteed Safety",
-            "description": "Packages are usually handled more carefully and can be insured, helping protect high-value or fragile goods."
+            "title": "Scope",
+            "description": "Nationwide and international."
           },
           "feature3": {
-            "title": "Real-time Tracking",
-            "description": "Express delivery service provides real-time shipment tracking, allowing you to easily check the location and status of your package at any time."
+            "title": "Goods Type",
+            "description": "Letters, files, documents, general goods, fragile items, electronics, e-commerce products (under 15kg for standard express)."
           },
           "feature4": {
-            "title": "Same-day Or Next-day Delivery",
-            "description": "Most express delivery services commit to same-day or next-day delivery, helping you meet urgent requirements in a timely manner."
+            "title": "Convenience",
+            "description": "Door-to-door pickup and delivery, real-time order tracking."
           },
           "feature5": {
-            "title": "High Flexibility",
-            "description": "Express delivery service usually provides flexible options for delivery time and additional services, such as weekend or after-hours delivery."
+            "title": "Value Added Services",
+            "description": "COD (Cash on Delivery), cargo insurance, express delivery (12-24h), 4h intracity delivery."
           },
           "feature6": {
-            "title": "24/7 Support",
-            "description": "Customer service team is always ready to assist you anytime, anywhere."
+            "title": "Cost",
+            "description": "Competitive rates, suitable for individual senders and businesses."
           }
         }
       },
@@ -769,7 +992,7 @@
         "steps": {
           "step1": {
             "title": "Place Order",
-            "description": "Create order via App, Website or call hotline 1900 6463"
+            "description": "Create order via App, Website or call hotline 1900 0112"
           },
           "step2": {
             "title": "Pick Up",
@@ -791,30 +1014,30 @@
         "zones": {
           "sameCity": {
             "title": "Intracity",
-            "price": "Same day",
-            "time": "4-8 hours"
+            "price": "1 day",
+            "time": "Delivery within 1 day"
           },
           "nearProvince": {
             "title": "Adjacent",
-            "price": "1 day",
-            "time": "Next day delivery"
+            "price": "1-2 days",
+            "time": "Delivery within 1-2 days"
           },
           "farProvince": {
             "title": "Intercity",
-            "price": "1-2 days",
-            "time": "Delivery within 1-2 days"
+            "price": "2-3 days",
+            "time": "Delivery within 2-3 days"
           }
         }
       },
       "useCases": {
         "title": "Suitable For",
         "list": {
-          "case1": "Urgent e-commerce orders",
-          "case2": "Important documents and contracts",
-          "case3": "Gifts, fresh flowers, cakes",
-          "case4": "Spare parts and replacements",
-          "case5": "Product samples",
-          "case6": "Medicine and medical supplies"
+          "case1": "Letters and important documents",
+          "case2": "Contracts and legal papers",
+          "case3": "General goods needing fast delivery",
+          "case4": "E-commerce orders within 1-2 days",
+          "case5": "Heavy goods needing fast shipping",
+          "case6": "Product samples"
         }
       },
       "cta": {
@@ -858,7 +1081,7 @@
       "steps": {
         "step1": {
           "title": "Place Order",
-          "description": "Create order via App, Website or call 1900 6463"
+          "description": "Create order via App, Website or call 1900 0112"
         },
         "step2": {
           "title": "Pickup",
@@ -918,28 +1141,20 @@
       "description": "Cost-optimized shipping solution for non-urgent orders. Suitable for bulk goods, oversized items, and scheduled deliveries.",
       "heroStats": {
         "stat1": {
-          "value": "30%",
-          "label": "Savings"
-        },
-        "stat2": {
-          "value": "3-5",
+          "value": "3-7",
           "label": "Days"
         },
-        "stat3": {
-          "value": "50kg",
-          "label": "Max/parcel"
-        },
-        "stat4": {
-          "value": "24/7",
-          "label": "Support"
+        "stat2": {
+          "value": "70%",
+          "label": "Save more"
         }
       },
       "features": {
         "title": "Benefits",
         "list": {
           "feature1": {
-            "title": "Save up to 30% on costs",
-            "description": "20-30% lower rates than express delivery, suitable for bulk orders."
+            "title": "Save up to 70% on costs",
+            "description": "Around 70% lower rates than express delivery, suitable for bulk orders."
           },
           "feature2": {
             "title": "Flexible scheduled delivery",
@@ -964,7 +1179,7 @@
         }
       },
       "comparison": {
-        "title": "Comparison with Express",
+        "title": "Service Plan Comparison",
         "headers": {
           "feature": "Feature",
           "express": "Express",
@@ -974,27 +1189,27 @@
           "row1": {
             "feature": "Delivery time",
             "express": "24-48h",
-            "economy": "3-5 days"
+            "economy": "3-7 days"
           },
           "row2": {
-            "feature": "Cost",
-            "express": "Higher",
-            "economy": "30% lower"
+            "feature": "Pricing",
+            "express": "Standard",
+            "economy": "Save 70%"
           },
           "row3": {
-            "feature": "Max weight",
-            "express": "30kg",
-            "economy": "50kg"
+            "feature": "COD Support",
+            "express": "checkmark",
+            "economy": "checkmark"
           },
           "row4": {
-            "feature": "COD",
-            "express": "Yes",
-            "economy": "Yes"
+            "feature": "Insurance",
+            "express": "checkmark",
+            "economy": "checkmark"
           },
           "row5": {
-            "feature": "Insurance",
-            "express": "100%",
-            "economy": "100%"
+            "feature": "Best for",
+            "express": "Urgent, high value",
+            "economy": "Bulk quantity"
           }
         }
       },
@@ -1005,17 +1220,17 @@
           "sameCity": {
             "title": "Intracity",
             "price": "From 12,000d",
-            "time": "1-2 days"
+            "time": "2-3 days"
           },
           "nearProvince": {
             "title": "Adjacent",
             "price": "From 18,000d",
-            "time": "2-3 days"
+            "time": "3-4 days"
           },
           "farProvince": {
             "title": "Intercity",
             "price": "From 25,000d",
-            "time": "3-5 days"
+            "time": "4-7 days"
           }
         }
       },
@@ -1047,7 +1262,7 @@
           "label": "Days"
         },
         "stat2": {
-          "value": "63",
+          "value": "34",
           "label": "Provinces"
         },
         "stat3": {
@@ -1183,7 +1398,7 @@
         "steps": {
           "step1": {
             "title": "Order Before 9:30 AM",
-            "description": "Create order via App, Website or call hotline 1900 6463"
+            "description": "Create order via App, Website or call hotline 1900 0112"
           },
           "step2": {
             "title": "Fast Pickup",
@@ -1233,8 +1448,8 @@
       },
       "cta": {
         "title": "Ship Urgently Now",
-        "description": "Call hotline 1900 6463 for fastest support",
-        "button": "Call 1900 6463",
+        "description": "Call hotline 1900 0112 for fastest support",
+        "button": "Call 1900 0112",
         "buttonSecondary": "Create Order"
       }
     }
@@ -1262,7 +1477,7 @@
       "east": "Binh Duong & Tay Nguyen Region"
     },
     "cta": {
-      "question": "We deliver globally. Are you ready to ship with us?",
+      "question": "Your trusted logistics partner for business growth. Ready to grow with NETCO?",
       "sendPackage": "SEND YOUR PACKAGE"
     },
     "connect": "CONNECT WITH US",

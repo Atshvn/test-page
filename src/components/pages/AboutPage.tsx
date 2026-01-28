@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import {
   Building2,
   Users,
@@ -15,6 +16,7 @@ import { PageHero, Section, Container } from "@/components/ui/page-sections";
 import { useParams } from "next/navigation";
 import InfoSidebar from "@/components/ui/info-sidebar";
 import { CTA } from "@/components/sections";
+import { ImageWithFallback } from "@/components/ui/image-with-fallback";
 
 export default function AboutPage() {
   const params = useParams();
@@ -128,11 +130,7 @@ export default function AboutPage() {
                 className="bg-white rounded-2xl p-8 md:p-10 shadow-sm mb-8"
               >
                 <div className="mb-8">
-                  <img
-                    src="https://mediaimages-v2.vps.vn/DeliverySignImages/2025/042025////___2025-04-21-08-42-24_1.jpg"
-                    alt="NETCO Post"
-                    className="w-full rounded-xl mb-6"
-                  />
+               
                 </div>
 
                 <p className="text-lg text-gray-700 leading-relaxed mb-6">
@@ -238,11 +236,17 @@ export default function AboutPage() {
                 className="bg-white rounded-2xl p-8 md:p-10 shadow-sm mb-8"
               >
                 <div className="mb-6">
-                  <img
-                    src="https://mediaimages-v2.vps.vn/DeliverySignImages/2025/042025////___2025-04-12-09-53-30_1.jpeg"
-                    alt="NETCO Customers"
-                    className="w-full rounded-xl"
-                  />
+                  <div className="mb-8">
+                    <ImageWithFallback
+                      src="/netco-award.png"
+                      alt="NETCO Technology"
+                      width={0}
+                      height={0}
+                      quality={100}
+                      sizes="100vw"
+                      className="w-full h-auto rounded-xl mb-6 object-cover"
+                    />
+                  </div>
                 </div>
                 <p className="text-lg text-gray-700 leading-relaxed">
                   {isVi
@@ -271,11 +275,17 @@ export default function AboutPage() {
                 </p>
 
                 <div className="mb-8">
-                  <img
-                    src="https://mediaimages-v2.vps.vn/DeliverySignImages/2025/042025////___2025-04-21-08-43-44_1.jpg"
-                    alt="NETCO Technology"
-                    className="w-full rounded-xl mb-6"
-                  />
+                  <div className="relative w-full">
+                    <ImageWithFallback
+                      src="/netco-future.png"
+                      alt="NETCO Technology"
+                      width={0}
+                      quality={100}
+                      height={0}
+                      sizes="100vw"
+                      className="w-full h-auto rounded-xl mb-6 object-cover"
+                    />
+                  </div>
                 </div>
 
                 <div className="grid md:grid-cols-2 gap-6">
@@ -299,20 +309,7 @@ export default function AboutPage() {
                 </div>
               </motion.div>
 
-              {/* Final Image */}
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
-                className="bg-white rounded-2xl p-6 shadow-sm"
-              >
-                <img
-                  src="https://mediaimages-v2.vps.vn/DeliverySignImages/2025/042025////___2025-04-21-08-43-53_1.jpg"
-                  alt="NETCO Services"
-                  className="w-full rounded-xl"
-                />
-              </motion.div>
+            
             </div>
 
             {/* Sidebar */}

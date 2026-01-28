@@ -16,7 +16,7 @@
       "economyDelivery": "Chuyển phát tiết kiệm",
       "fulfillment": "Fulfillment",
       "warehousing": "Kho bãi",
-      "installation": "Lắp đặt & bảo dưỡng",
+      "installation": "Lắp đặt",
       "other": "Khác",
       "aboutUs": "Về chúng tôi",
       "visionMission": "Tầm nhìn sứ mệnh",
@@ -63,8 +63,8 @@
         "description": "Hệ thống kho bãi hiện đại, đáp ứng nhu cầu lưu trữ và quản lý hàng hóa chuyên nghiệp."
       },
       "installation": {
-        "title": "Lắp đặt & bảo dưỡng",
-        "description": "Dịch vụ lắp đặt và bảo dưỡng thiết bị, sản phẩm tận nơi với đội ngũ kỹ thuật chuyên nghiệp."
+        "title": "Lắp đặt",
+        "description": "Dịch vụ lắp đặt thiết bị, sản phẩm tận nơi sau khi vận chuyển với đội ngũ kỹ thuật chuyên nghiệp."
       },
       "other": {
         "title": "Khác",
@@ -214,7 +214,7 @@
   "postOffice": {
     "badge": "Hệ thống bưu cục",
     "title": "Hệ thống bưu cục NETCO",
-    "description": "Tìm kiếm bưu cục gần bạn nhất với hệ thống bưu cục phủ khắp 63 tỉnh thành",
+    "description": "Tìm kiếm bưu cục gần bạn nhất với hệ thống bưu cục phủ khắp 34 tỉnh thành",
     "searchPlaceholder": "Tìm kiếm theo tên, địa chỉ, mã bưu cục...",
     "totalOffices": "Bưu cục",
     "provinces": "Tỉnh thành",
@@ -329,7 +329,7 @@
     "transportation": {
       "badge": "Dịch vụ vận chuyển",
       "title": "Vận chuyển hàng hóa nhanh chóng & an toàn",
-      "description": "Dịch vụ vận chuyển hàng hóa chuyên nghiệp với mạng lưới phủ khắp 63 tỉnh thành, đảm bảo hàng hóa đến tay người nhận nhanh chóng và an toàn.",
+      "description": "Dịch vụ vận chuyển hàng hóa chuyên nghiệp với mạng lưới phủ khắp 34 tỉnh thành, đảm bảo hàng hóa đến tay người nhận nhanh chóng và an toàn.",
       "features": {
         "feature1": "Giao hàng toàn quốc trong 24-72 giờ",
         "feature2": "Theo dõi đơn hàng realtime",
@@ -370,11 +370,11 @@
           },
           "wide": {
             "title": "Phủ rộng",
-            "description": "Mạng lưới 63 tỉnh thành"
+            "description": "Mạng lưới 34 tỉnh thành"
           },
           "diverse": {
             "title": "Đa dạng",
-            "description": "4 gói dịch vụ linh hoạt"
+            "description": "2 gói dịch vụ linh hoạt"
           }
         }
       },
@@ -390,12 +390,12 @@
           "deliveryTimeExpress": "24-48h",
           "deliveryTimeStandard": "2-3 ngày",
           "deliveryTimeSameday": "4-8 giờ",
-          "deliveryTimeEconomy": "3-5 ngày",
+          "deliveryTimeEconomy": "3-7 ngày",
           "price": "Giá cước",
-          "priceExpress": "Cao",
+          "priceExpress": "Chuẩn",
           "priceStandard": "Trung bình",
           "priceSameday": "Cao nhất",
-          "priceEconomy": "Thấp nhất",
+          "priceEconomy": "Tiết kiệm 70%",
           "cod": "Thu hộ COD",
           "insurance": "Bảo hiểm",
           "bestFor": "Phù hợp với",
@@ -409,7 +409,7 @@
         "title": "Bắt đầu gửi hàng ngay hôm nay",
         "description": "Liên hệ ngay để được tư vấn và nhận báo giá tốt nhất",
         "button": "Liên hệ ngay",
-        "buttonSecondary": "Gọi 1900 6463"
+        "buttonSecondary": "Gọi 1900 0112"
       }
     },
     "fulfillment": {
@@ -423,10 +423,22 @@
         "feature4": "Tích hợp đa sàn TMĐT"
       },
       "heroStats": {
-        "stat1": { "value": "500+", "label": "Khách hàng" },
-        "stat2": { "value": "10M+", "label": "Đơn/năm" },
-        "stat3": { "value": "99.5%", "label": "Độ chính xác" },
-        "stat4": { "value": "24/7", "label": "Vận hành" }
+        "stat1": {
+          "value": "23+",
+          "label": "Năm kinh nghiệm"
+        },
+        "stat2": {
+          "value": "34",
+          "label": "Tỉnh thành"
+        },
+        "stat3": {
+          "value": "24h",
+          "label": "Xử lý đơn"
+        },
+        "stat4": {
+          "value": "3000m²",
+          "label": "Diện tích kho"
+        }
       },
       "concept": {
         "title": "Fulfillment là gì?",
@@ -457,32 +469,59 @@
       "process": {
         "title": "Quy trình Fulfillment",
         "steps": {
-          "step1": { "title": "Nhập kho", "description": "Tiếp nhận hàng hóa từ nhà cung cấp, kiểm tra số lượng và chất lượng" },
-          "step2": { "title": "Lưu trữ", "description": "Phân loại và lưu trữ hàng hóa trong kho theo tiêu chuẩn" },
-          "step3": { "title": "Xử lý đơn hàng", "description": "Nhận đơn từ các sàn TMĐT, xử lý và chuẩn bị hàng" },
-          "step4": { "title": "Đóng gói", "description": "Đóng gói chuyên nghiệp, in nhãn vận chuyển" },
-          "step5": { "title": "Giao hàng", "description": "Chuyển đơn cho đơn vị vận chuyển, giao đến tay khách hàng" },
-          "step6": { "title": "Đối soát", "description": "Đối soát đơn hàng, xử lý hoàn trả nếu có" }
+          "step1": {
+            "title": "Nhập kho",
+            "description": "Tiếp nhận hàng hóa từ nhà cung cấp, kiểm tra số lượng và chất lượng"
+          },
+          "step2": {
+            "title": "Lưu trữ",
+            "description": "Phân loại và lưu trữ hàng hóa trong kho theo tiêu chuẩn"
+          },
+          "step3": {
+            "title": "Xử lý đơn hàng",
+            "description": "Nhận đơn từ các sàn TMĐT, xử lý và chuẩn bị hàng"
+          },
+          "step4": {
+            "title": "Đóng gói",
+            "description": "Đóng gói chuyên nghiệp, in nhãn vận chuyển"
+          },
+          "step5": {
+            "title": "Giao hàng",
+            "description": "Chuyển đơn cho đơn vị vận chuyển, giao đến tay khách hàng"
+          },
+          "step6": {
+            "title": "Đối soát",
+            "description": "Đối soát đơn hàng, xử lý hoàn trả nếu có"
+          }
         }
       },
       "services": {
         "title": "Dịch vụ bao gồm",
         "list": {
-          "service1": { "title": "Quản lý tồn kho", "description": "Theo dõi số lượng hàng realtime, cảnh báo hết hàng" },
-          "service2": { "title": "Xử lý đơn hàng", "description": "Tự động xử lý đơn từ các sàn TMĐT: Shopee, Lazada, Tiki..." },
-          "service3": { "title": "Đóng gói chuyên nghiệp", "description": "Đóng gói theo tiêu chuẩn, bảo vệ hàng hóa tối đa" },
-          "service4": { "title": "Giao hàng đa kênh", "description": "Kết nối với nhiều đơn vị vận chuyển, chọn giá tốt nhất" },
-          "service5": { "title": "Quản lý hoàn trả", "description": "Xử lý hàng hoàn, kiểm tra và nhập kho lại" },
-          "service6": { "title": "Báo cáo analytics", "description": "Dashboard theo dõi KPIs, báo cáo chi tiết" }
-        }
-      },
-      "pricing": {
-        "title": "Bảng giá dịch vụ",
-        "description": "Giá linh hoạt theo nhu cầu, không phí ẩn",
-        "plans": {
-          "basic": { "title": "Cơ bản", "price": "Từ 3.000đ/đơn", "features": ["Lưu kho miễn phí 30 ngày", "Xử lý đơn trong 24h", "Đóng gói tiêu chuẩn", "Hỗ trợ qua email"] },
-          "pro": { "title": "Chuyên nghiệp", "price": "Từ 5.000đ/đơn", "features": ["Lưu kho miễn phí 60 ngày", "Xử lý đơn trong 6h", "Đóng gói cao cấp", "Hỗ trợ 24/7", "Tích hợp API"] },
-          "enterprise": { "title": "Doanh nghiệp", "price": "Liên hệ", "features": ["Lưu kho không giới hạn", "Xử lý đơn trong 2h", "Đóng gói tùy chỉnh", "Account Manager riêng", "Tích hợp ERP"] }
+          "service1": {
+            "title": "Quản lý tồn kho",
+            "description": "Theo dõi số lượng hàng realtime, cảnh báo hết hàng"
+          },
+          "service2": {
+            "title": "Xử lý đơn hàng",
+            "description": "Tự động xử lý đơn từ các sàn TMĐT: Shopee, Lazada, Tiki..."
+          },
+          "service3": {
+            "title": "Đóng gói chuyên nghiệp",
+            "description": "Đóng gói theo tiêu chuẩn, bảo vệ hàng hóa tối đa"
+          },
+          "service4": {
+            "title": "Giao hàng đa kênh",
+            "description": "Kết nối với nhiều đơn vị vận chuyển, chọn giá tốt nhất"
+          },
+          "service5": {
+            "title": "Quản lý hoàn trả",
+            "description": "Xử lý hàng hoàn, kiểm tra và nhập kho lại"
+          },
+          "service6": {
+            "title": "Báo cáo analytics",
+            "description": "Dashboard theo dõi KPIs, báo cáo chi tiết"
+          }
         }
       },
       "cta": {
@@ -503,10 +542,22 @@
         "feature4": "An ninh 24/7, PCCC đầy đủ"
       },
       "heroStats": {
-        "stat1": { "value": "50.000", "label": "m² kho" },
-        "stat2": { "value": "15+", "label": "Kho toàn quốc" },
-        "stat3": { "value": "GDP/GSP", "label": "Chứng nhận" },
-        "stat4": { "value": "99.9%", "label": "Uptime" }
+        "stat1": {
+          "value": "50.000",
+          "label": "m² kho"
+        },
+        "stat2": {
+          "value": "15+",
+          "label": "Kho toàn quốc"
+        },
+        "stat3": {
+          "value": "GDP/GSP",
+          "label": "Chứng nhận"
+        },
+        "stat4": {
+          "value": "99.9%",
+          "label": "Uptime"
+        }
       },
       "types": {
         "title": "Loại hình kho bãi",
@@ -514,22 +565,38 @@
           "type1": {
             "title": "Kho thường",
             "description": "Kho lưu trữ hàng hóa thông thường, kiểm soát nhiệt độ tự nhiên",
-            "features": ["Diện tích linh hoạt", "Phù hợp mọi loại hàng", "Chi phí tối ưu"]
+            "features": [
+              "Diện tích linh hoạt",
+              "Phù hợp mọi loại hàng",
+              "Chi phí tối ưu"
+            ]
           },
           "type2": {
             "title": "Kho mát",
             "description": "Kho kiểm soát nhiệt độ 15-25°C cho hàng hóa nhạy cảm",
-            "features": ["Nhiệt độ 15-25°C", "Độ ẩm kiểm soát", "Phù hợp mỹ phẩm, dược phẩm"]
+            "features": [
+              "Nhiệt độ 15-25°C",
+              "Độ ẩm kiểm soát",
+              "Phù hợp mỹ phẩm, dược phẩm"
+            ]
           },
           "type3": {
             "title": "Kho lạnh",
             "description": "Kho đông lạnh 0-8°C hoặc -18°C đến -25°C cho thực phẩm",
-            "features": ["Đa dải nhiệt độ", "Chuẩn HACCP", "Phù hợp thực phẩm, vaccine"]
+            "features": [
+              "Đa dải nhiệt độ",
+              "Chuẩn HACCP",
+              "Phù hợp thực phẩm, vaccine"
+            ]
           },
           "type4": {
             "title": "Kho ngoại quan",
             "description": "Kho lưu trữ hàng hóa xuất nhập khẩu chờ thông quan",
-            "features": ["Được Hải quan cấp phép", "Hoãn thuế NK", "Phù hợp hàng XNK"]
+            "features": [
+              "Được Hải quan cấp phép",
+              "Hoãn thuế NK",
+              "Phù hợp hàng XNK"
+            ]
           }
         }
       },
@@ -537,12 +604,30 @@
         "title": "Hệ thống WMS hiện đại",
         "description": "Warehouse Management System - Hệ thống quản lý kho thông minh",
         "features": {
-          "feature1": { "title": "Quản lý tồn kho realtime", "description": "Theo dõi số lượng hàng hóa chính xác theo thời gian thực" },
-          "feature2": { "title": "Quản lý vị trí", "description": "Định vị chính xác vị trí hàng hóa trong kho (Location Management)" },
-          "feature3": { "title": "FIFO/FEFO", "description": "Quản lý hạn sử dụng, xuất hàng theo nguyên tắc FIFO/FEFO" },
-          "feature4": { "title": "Barcode/QR Code", "description": "Quét mã vạch, mã QR để nhập/xuất kho nhanh chóng" },
-          "feature5": { "title": "Báo cáo analytics", "description": "Dashboard tổng quan, báo cáo chi tiết về tồn kho" },
-          "feature6": { "title": "Tích hợp API", "description": "Kết nối với ERP, TMS, các hệ thống khác của khách hàng" }
+          "feature1": {
+            "title": "Quản lý tồn kho realtime",
+            "description": "Theo dõi số lượng hàng hóa chính xác theo thời gian thực"
+          },
+          "feature2": {
+            "title": "Quản lý vị trí",
+            "description": "Định vị chính xác vị trí hàng hóa trong kho (Location Management)"
+          },
+          "feature3": {
+            "title": "FIFO/FEFO",
+            "description": "Quản lý hạn sử dụng, xuất hàng theo nguyên tắc FIFO/FEFO"
+          },
+          "feature4": {
+            "title": "Barcode/QR Code",
+            "description": "Quét mã vạch, mã QR để nhập/xuất kho nhanh chóng"
+          },
+          "feature5": {
+            "title": "Báo cáo analytics",
+            "description": "Dashboard tổng quan, báo cáo chi tiết về tồn kho"
+          },
+          "feature6": {
+            "title": "Tích hợp API",
+            "description": "Kết nối với ERP, TMS, các hệ thống khác của khách hàng"
+          }
         }
       },
       "services": {
@@ -561,10 +646,22 @@
       "certifications": {
         "title": "Chứng nhận & Tiêu chuẩn",
         "list": {
-          "cert1": { "title": "GDP", "description": "Good Distribution Practice - Thực hành phân phối tốt" },
-          "cert2": { "title": "GSP", "description": "Good Storage Practice - Thực hành bảo quản tốt" },
-          "cert3": { "title": "ISO 9001", "description": "Hệ thống quản lý chất lượng" },
-          "cert4": { "title": "HACCP", "description": "Hệ thống quản lý an toàn thực phẩm" }
+          "cert1": {
+            "title": "GDP",
+            "description": "Good Distribution Practice - Thực hành phân phối tốt"
+          },
+          "cert2": {
+            "title": "GSP",
+            "description": "Good Storage Practice - Thực hành bảo quản tốt"
+          },
+          "cert3": {
+            "title": "ISO 9001",
+            "description": "Hệ thống quản lý chất lượng"
+          },
+          "cert4": {
+            "title": "HACCP",
+            "description": "Hệ thống quản lý an toàn thực phẩm"
+          }
         }
       },
       "pricing": {
@@ -581,8 +678,8 @@
     },
     "installation": {
       "badge": "Dịch vụ lắp đặt",
-      "title": "Lắp đặt & Bảo dưỡng tận nơi",
-      "description": "Đội ngũ kỹ thuật viên chuyên nghiệp, được đào tạo bài bản, sẵn sàng lắp đặt và bảo dưỡng sản phẩm tận nhà khách hàng.",
+      "title": "Lắp đặt tận nơi sau vận chuyển",
+      "description": "Đội ngũ kỹ thuật viên chuyên nghiệp, được đào tạo bài bản, sẵn sàng lắp đặt sản phẩm tận nhà khách hàng ngay sau khi vận chuyển.",
       "features": {
         "feature1": "Kỹ thuật viên được chứng nhận",
         "feature2": "Lắp đặt đúng hẹn",
@@ -590,18 +687,30 @@
         "feature4": "Hỗ trợ kỹ thuật 24/7"
       },
       "heroStats": {
-        "stat1": { "value": "500+", "label": "Kỹ thuật viên" },
-        "stat2": { "value": "63", "label": "Tỉnh thành" },
-        "stat3": { "value": "98%", "label": "Hài lòng" },
-        "stat4": { "value": "24h", "label": "Phản hồi" }
+        "stat1": {
+          "value": "500+",
+          "label": "Kỹ thuật viên"
+        },
+        "stat2": {
+          "value": "34",
+          "label": "Tỉnh thành"
+        },
+        "stat3": {
+          "value": "98%",
+          "label": "Hài lòng"
+        },
+        "stat4": {
+          "value": "24h",
+          "label": "Phản hồi"
+        }
       },
       "overview": {
-        "title": "Dịch vụ lắp đặt & bảo dưỡng chuyên nghiệp",
-        "description": "NETCO cung cấp dịch vụ lắp đặt và bảo dưỡng sản phẩm tận nơi cho các doanh nghiệp. Với đội ngũ kỹ thuật viên được đào tạo chuyên nghiệp, chúng tôi đảm bảo sản phẩm của bạn được lắp đặt đúng cách và vận hành ổn định.",
+        "title": "Dịch vụ lắp đặt chuyên nghiệp sau vận chuyển",
+        "description": "NETCO cung cấp dịch vụ lắp đặt sản phẩm tận nơi ngay sau khi vận chuyển cho các doanh nghiệp. Với đội ngũ kỹ thuật viên được đào tạo chuyên nghiệp, chúng tôi đảm bảo sản phẩm của bạn được lắp đặt đúng cách và vận hành ổn định ngay khi giao hàng.",
         "highlights": {
           "highlight1": "Đội ngũ kỹ thuật viên được đào tạo và cấp chứng nhận bởi các hãng sản xuất",
-          "highlight2": "Phủ sóng 63 tỉnh thành, lắp đặt tận nơi trong 24-48h",
-          "highlight3": "Bảo hành dịch vụ, hỗ trợ kỹ thuật sau lắp đặt",
+          "highlight2": "Phủ sóng 34 tỉnh thành, lắp đặt ngay sau khi giao hàng",
+          "highlight3": "Lắp đặt đúng kỹ thuật, kiểm tra vận hành trước khi bàn giao",
           "highlight4": "Quy trình chuẩn ISO, đảm bảo chất lượng đồng nhất"
         }
       },
@@ -611,44 +720,86 @@
           "service1": {
             "title": "Lắp đặt điều hòa, máy lạnh",
             "description": "Lắp đặt, di dời điều hòa các loại: treo tường, âm trần, tủ đứng",
-            "features": ["Lắp đặt mới", "Di dời", "Bơm gas, vệ sinh"]
+            "features": [
+              "Lắp đặt mới",
+              "Di dời",
+              "Bơm gas, vệ sinh"
+            ]
           },
           "service2": {
             "title": "Lắp đặt máy giặt, tủ lạnh",
             "description": "Lắp đặt và cân bằng máy giặt, tủ lạnh các loại",
-            "features": ["Lắp đặt đúng kỹ thuật", "Kiểm tra vận hành", "Hướng dẫn sử dụng"]
+            "features": [
+              "Lắp đặt đúng kỹ thuật",
+              "Kiểm tra vận hành",
+              "Hướng dẫn sử dụng"
+            ]
           },
           "service3": {
             "title": "Lắp đặt tivi, âm thanh",
             "description": "Lắp đặt TV treo tường, hệ thống âm thanh, loa",
-            "features": ["Treo tường chắc chắn", "Cài đặt kênh", "Kết nối thiết bị"]
+            "features": [
+              "Treo tường chắc chắn",
+              "Cài đặt kênh",
+              "Kết nối thiết bị"
+            ]
           },
           "service4": {
             "title": "Lắp đặt thiết bị nhà bếp",
             "description": "Lắp đặt bếp từ, máy hút mùi, lò vi sóng, lò nướng",
-            "features": ["Lắp đặt âm tủ", "Kết nối điện/gas", "Kiểm tra an toàn"]
+            "features": [
+              "Lắp đặt âm tủ",
+              "Kết nối điện/gas",
+              "Kiểm tra an toàn"
+            ]
           },
           "service5": {
             "title": "Lắp đặt máy nước nóng",
             "description": "Lắp đặt bình nóng lạnh, máy nước nóng năng lượng mặt trời",
-            "features": ["Lắp đặt đường ống", "Kết nối điện an toàn", "Test vận hành"]
+            "features": [
+              "Lắp đặt đường ống",
+              "Kết nối điện an toàn",
+              "Test vận hành"
+            ]
           },
           "service6": {
             "title": "Bảo dưỡng định kỳ",
             "description": "Dịch vụ bảo dưỡng, bảo trì thiết bị điện tử gia dụng",
-            "features": ["Vệ sinh thiết bị", "Kiểm tra, thay thế linh kiện", "Bảo hành sau bảo dưỡng"]
+            "features": [
+              "Vệ sinh thiết bị",
+              "Kiểm tra, thay thế linh kiện",
+              "Bảo hành sau bảo dưỡng"
+            ]
           }
         }
       },
       "process": {
         "title": "Quy trình lắp đặt",
         "steps": {
-          "step1": { "title": "Tiếp nhận yêu cầu", "description": "Nhận thông tin đơn hàng từ doanh nghiệp đối tác" },
-          "step2": { "title": "Phân công kỹ thuật viên", "description": "Phân công KTV theo khu vực và chuyên môn" },
-          "step3": { "title": "Liên hệ khách hàng", "description": "KTV liên hệ xác nhận thời gian lắp đặt" },
-          "step4": { "title": "Lắp đặt tại nhà", "description": "Thực hiện lắp đặt theo quy trình chuẩn" },
-          "step5": { "title": "Kiểm tra & Bàn giao", "description": "Test vận hành, hướng dẫn sử dụng, bàn giao" },
-          "step6": { "title": "Hỗ trợ sau lắp đặt", "description": "Hỗ trợ kỹ thuật, bảo hành dịch vụ" }
+          "step1": {
+            "title": "Tiếp nhận yêu cầu",
+            "description": "Nhận thông tin đơn hàng từ doanh nghiệp đối tác"
+          },
+          "step2": {
+            "title": "Phân công kỹ thuật viên",
+            "description": "Phân công KTV theo khu vực và chuyên môn"
+          },
+          "step3": {
+            "title": "Liên hệ khách hàng",
+            "description": "KTV liên hệ xác nhận thời gian lắp đặt"
+          },
+          "step4": {
+            "title": "Lắp đặt tại nhà",
+            "description": "Thực hiện lắp đặt theo quy trình chuẩn"
+          },
+          "step5": {
+            "title": "Kiểm tra & Bàn giao",
+            "description": "Test vận hành, hướng dẫn sử dụng, bàn giao"
+          },
+          "step6": {
+            "title": "Hỗ trợ sau lắp đặt",
+            "description": "Hỗ trợ kỹ thuật, bảo hành dịch vụ"
+          }
         }
       },
       "partners": {
@@ -659,12 +810,30 @@
         "title": "Bảng giá dịch vụ",
         "description": "Giá tham khảo, báo giá cụ thể theo từng loại sản phẩm và địa điểm",
         "categories": {
-          "cat1": { "title": "Điều hòa", "price": "Từ 300.000đ" },
-          "cat2": { "title": "Máy giặt", "price": "Từ 150.000đ" },
-          "cat3": { "title": "Tủ lạnh", "price": "Từ 100.000đ" },
-          "cat4": { "title": "TV treo tường", "price": "Từ 200.000đ" },
-          "cat5": { "title": "Bình nóng lạnh", "price": "Từ 200.000đ" },
-          "cat6": { "title": "Thiết bị bếp", "price": "Từ 150.000đ" }
+          "cat1": {
+            "title": "Điều hòa",
+            "price": "Từ 300.000đ"
+          },
+          "cat2": {
+            "title": "Máy giặt",
+            "price": "Từ 150.000đ"
+          },
+          "cat3": {
+            "title": "Tủ lạnh",
+            "price": "Từ 100.000đ"
+          },
+          "cat4": {
+            "title": "TV treo tường",
+            "price": "Từ 200.000đ"
+          },
+          "cat5": {
+            "title": "Bình nóng lạnh",
+            "price": "Từ 200.000đ"
+          },
+          "cat6": {
+            "title": "Thiết bị bếp",
+            "price": "Từ 150.000đ"
+          }
         }
       },
       "cta": {
@@ -685,10 +854,22 @@
         "feature4": "Hỗ trợ 24/7"
       },
       "heroStats": {
-        "stat1": { "value": "100+", "label": "Dự án" },
-        "stat2": { "value": "50+", "label": "Đối tác" },
-        "stat3": { "value": "24/7", "label": "Hỗ trợ" },
-        "stat4": { "value": "99%", "label": "Hài lòng" }
+        "stat1": {
+          "value": "100+",
+          "label": "Dự án"
+        },
+        "stat2": {
+          "value": "50+",
+          "label": "Đối tác"
+        },
+        "stat3": {
+          "value": "24/7",
+          "label": "Hỗ trợ"
+        },
+        "stat4": {
+          "value": "99%",
+          "label": "Hài lòng"
+        }
       },
       "overview": {
         "title": "Giải pháp logistics toàn diện",
@@ -700,44 +881,86 @@
           "service1": {
             "title": "Vận chuyển hàng cồng kềnh",
             "description": "Vận chuyển hàng hóa quá khổ, quá tải, thiết bị công nghiệp, máy móc",
-            "features": ["Xe tải chuyên dụng", "Đội ngũ bốc xếp chuyên nghiệp", "Bảo hiểm hàng hóa"]
+            "features": [
+              "Xe tải chuyên dụng",
+              "Đội ngũ bốc xếp chuyên nghiệp",
+              "Bảo hiểm hàng hóa"
+            ]
           },
           "service2": {
             "title": "Vận chuyển hàng lạnh",
             "description": "Vận chuyển thực phẩm tươi sống, hàng đông lạnh, vaccine bằng xe đông lạnh",
-            "features": ["Xe đông lạnh chuyên dụng", "Kiểm soát nhiệt độ -25°C đến +15°C", "Giám sát realtime"]
+            "features": [
+              "Xe đông lạnh chuyên dụng",
+              "Kiểm soát nhiệt độ -25°C đến +15°C",
+              "Giám sát realtime"
+            ]
           },
           "service3": {
             "title": "Cross-border logistics",
             "description": "Vận chuyển hàng hóa quốc tế, thông quan xuất nhập khẩu",
-            "features": ["Vận chuyển đường bộ sang Campuchia, Lào", "Thủ tục hải quan trọn gói", "Kho ngoại quan"]
+            "features": [
+              "Vận chuyển đường bộ sang Campuchia, Lào",
+              "Thủ tục hải quan trọn gói",
+              "Kho ngoại quan"
+            ]
           },
           "service4": {
             "title": "Dịch vụ thu hộ (COD)",
             "description": "Thu tiền mặt hộ khi giao hàng, chuyển khoản về tài khoản khách hàng nhanh chóng",
-            "features": ["Thu COD đến 50 triệu/đơn", "Đối soát 24-48h", "Chuyển khoản hàng ngày"]
+            "features": [
+              "Thu COD đến 50 triệu/đơn",
+              "Đối soát 24-48h",
+              "Chuyển khoản hàng ngày"
+            ]
           },
           "service5": {
             "title": "Đóng gói & Kiện hàng",
             "description": "Dịch vụ đóng gói chuyên nghiệp, đóng kiện gỗ cho hàng hóa giá trị cao",
-            "features": ["Đóng kiện gỗ xuất khẩu", "Chống sốc, chống ẩm", "Đóng gói theo yêu cầu"]
+            "features": [
+              "Đóng kiện gỗ xuất khẩu",
+              "Chống sốc, chống ẩm",
+              "Đóng gói theo yêu cầu"
+            ]
           },
           "service6": {
             "title": "Tư vấn chuỗi cung ứng",
             "description": "Tư vấn tối ưu hóa chuỗi cung ứng, giảm chi phí logistics",
-            "features": ["Phân tích quy trình hiện tại", "Đề xuất giải pháp tối ưu", "Triển khai và đồng hành"]
+            "features": [
+              "Phân tích quy trình hiện tại",
+              "Đề xuất giải pháp tối ưu",
+              "Triển khai và đồng hành"
+            ]
           }
         }
       },
       "vas": {
         "title": "Dịch vụ giá trị gia tăng (VAS)",
         "list": {
-          "vas1": { "title": "In nhãn, dán tem", "description": "In nhãn sản phẩm, dán tem giá, mã vạch" },
-          "vas2": { "title": "Đóng combo, kit", "description": "Đóng gói combo sản phẩm, tạo kit quà tặng" },
-          "vas3": { "title": "Kiểm tra chất lượng", "description": "QC sản phẩm trước khi giao cho khách hàng cuối" },
-          "vas4": { "title": "Xử lý hàng hoàn", "description": "Tiếp nhận, kiểm tra và xử lý hàng hoàn trả" },
-          "vas5": { "title": "Kitting & Assembly", "description": "Lắp ráp sản phẩm, đóng gói theo yêu cầu" },
-          "vas6": { "title": "Tái chế, xử lý hàng lỗi", "description": "Xử lý hàng lỗi, hàng hết hạn theo quy định" }
+          "vas1": {
+            "title": "In nhãn, dán tem",
+            "description": "In nhãn sản phẩm, dán tem giá, mã vạch"
+          },
+          "vas2": {
+            "title": "Đóng combo, kit",
+            "description": "Đóng gói combo sản phẩm, tạo kit quà tặng"
+          },
+          "vas3": {
+            "title": "Kiểm tra chất lượng",
+            "description": "QC sản phẩm trước khi giao cho khách hàng cuối"
+          },
+          "vas4": {
+            "title": "Xử lý hàng hoàn",
+            "description": "Tiếp nhận, kiểm tra và xử lý hàng hoàn trả"
+          },
+          "vas5": {
+            "title": "Kitting & Assembly",
+            "description": "Lắp ráp sản phẩm, đóng gói theo yêu cầu"
+          },
+          "vas6": {
+            "title": "Tái chế, xử lý hàng lỗi",
+            "description": "Xử lý hàng lỗi, hàng hết hạn theo quy định"
+          }
         }
       },
       "industries": {
@@ -757,7 +980,7 @@
         "title": "Bạn có nhu cầu đặc biệt?",
         "description": "Liên hệ ngay để được tư vấn giải pháp logistics phù hợp nhất với doanh nghiệp của bạn",
         "button": "Nhận tư vấn miễn phí",
-        "buttonSecondary": "Gọi hotline 1900 6463"
+        "buttonSecondary": "Gọi hotline 1900 0112"
       }
     },
     "cta": {
@@ -769,7 +992,7 @@
     "learnMore": "Tìm hiểu thêm",
     "expressDelivery": {
       "badge": "Chuyển phát nhanh",
-      "title": "Giao hàng siêu tốc - Đúng hẹn từng giờ",
+      "title": "Chuyển phát nhanh",
       "description": "Chuyển phát nhanh là dịch vụ giao hàng mà trong đó các bưu kiện hoặc hàng hóa được vận chuyển từ nơi gửi đến nơi nhận một cách nhanh chóng hơn so với dịch vụ chuyển phát tiêu chuẩn. Dịch vụ này thường được sử dụng cho các hàng hóa cần giao gấp hoặc có giá trị cao, và thường bao gồm các tính năng như theo dõi lô hàng, bảo hiểm hàng hóa và giao hàng trong ngày hoặc ngày hôm sau.",
       "heroStats": {
         "stat1": {
@@ -793,28 +1016,28 @@
         "title": "Tại sao chọn chuyển phát nhanh",
         "list": {
           "feature1": {
-            "title": "Tốc độ Giao Hàng Nhanh",
-            "description": "Hàng hóa được vận chuyển và giao nhận trong thời gian ngắn hơn so với dịch vụ chuyển phát tiêu chuẩn, giúp bạn tiết kiệm thời gian và đáp ứng các nhu cầu gấp."
+            "title": "Thời gian",
+            "description": "Nhanh chóng, cam kết đúng hẹn. Nội tỉnh thường trong ngày hoặc sau 1-1.5 ngày, liên miền thường từ 1-3 ngày."
           },
           "feature2": {
-            "title": "Đảm Bảo An Toàn",
-            "description": "Các gói hàng thường được xử lý cẩn thận hơn và có thể được bảo hiểm, giúp bảo vệ hàng hóa có giá trị cao hoặc dễ hỏng hóc."
+            "title": "Phạm vi",
+            "description": "Toàn quốc và quốc tế."
           },
           "feature3": {
-            "title": "Theo Dõi Thời Gian Thực",
-            "description": "Dịch vụ chuyển phát nhanh cung cấp tính năng theo dõi lô hàng theo thời gian thực, giúp bạn dễ dàng kiểm tra vị trí và tình trạng của gói hàng bất kỳ lúc nào."
+            "title": "Loại hàng hóa",
+            "description": "Thư từ, hồ sơ, tài liệu, hàng hóa phổ thông, hàng dễ vỡ, đồ công nghệ, sản phẩm thương mại điện tử (dưới 15kg đối với chuyển phát nhanh tiêu chuẩn)."
           },
           "feature4": {
-            "title": "Giao Hàng Trong Ngày Hoặc Ngày Hôm Sau",
-            "description": "Hầu hết các dịch vụ chuyển phát nhanh đều cam kết giao hàng trong ngày hoặc ngày hôm sau, giúp bạn đáp ứng kịp thời các yêu cầu cấp bách."
+            "title": "Tiện ích",
+            "description": "Lấy hàng tận nơi (door-to-door), giao hàng tận tay, tra cứu đơn hàng (tracking) theo thời gian thực."
           },
           "feature5": {
-            "title": "Tính Linh Hoạt Cao",
-            "description": "Dịch vụ chuyển phát nhanh thường cung cấp các tùy chọn linh hoạt về thời gian giao hàng và các dịch vụ bổ sung, như giao hàng vào cuối tuần hoặc ngoài giờ hành chính."
+            "title": "Dịch vụ gia tăng",
+            "description": "Ship COD (thu tiền hộ), bảo hiểm hàng hóa, chuyển phát hỏa tốc (12-24h), chuyển phát 4h nội tỉnh."
           },
           "feature6": {
-            "title": "Hỗ trợ 24/7",
-            "description": "Đội ngũ chăm sóc khách hàng luôn sẵn sàng hỗ trợ bạn mọi lúc, mọi nơi."
+            "title": "Chi phí",
+            "description": "Cước phí cạnh tranh, phù hợp cho cá nhân gửi lẻ và doanh nghiệp."
           }
         }
       },
@@ -823,7 +1046,7 @@
         "steps": {
           "step1": {
             "title": "Đặt đơn",
-            "description": "Tạo đơn qua App, Website hoặc gọi hotline 1900 6463"
+            "description": "Tạo đơn qua App, Website hoặc gọi hotline 1900 0112"
           },
           "step2": {
             "title": "Lấy hàng",
@@ -845,30 +1068,30 @@
         "zones": {
           "sameCity": {
             "title": "Nội thành",
-            "price": "Trong ngày",
-            "time": "4-8 giờ"
+            "price": "1 ngày",
+            "time": "Giao trong 1 ngày"
           },
           "nearProvince": {
             "title": "Liền kề",
-            "price": "1 ngày",
-            "time": "Giao hôm sau"
+            "price": "1-2 ngày",
+            "time": "Giao trong 1-2 ngày"
           },
           "farProvince": {
             "title": "Liên tỉnh",
-            "price": "1-2 ngày",
-            "time": "Giao trong 1-2 ngày"
+            "price": "2-3 ngày",
+            "time": "Giao trong 2-3 ngày"
           }
         }
       },
       "useCases": {
         "title": "Phù hợp cho",
         "list": {
-          "case1": "Đơn hàng TMĐT cần giao gấp",
-          "case2": "Tài liệu, hợp đồng quan trọng",
-          "case3": "Quà tặng, hoa tươi, bánh kem",
-          "case4": "Linh kiện, phụ tùng thay thế",
-          "case5": "Mẫu sản phẩm, hàng mẫu",
-          "case6": "Thuốc, vật tư y tế"
+          "case1": "Thư từ, tài liệu quan trọng",
+          "case2": "Hợp đồng, giấy tờ pháp lý",
+          "case3": "Hàng hóa bình thường cần giao nhanh",
+          "case4": "Đơn hàng TMĐT giao trong 1-2 ngày",
+          "case5": "Hàng nặng cần vận chuyển nhanh",
+          "case6": "Mẫu sản phẩm, hàng mẫu"
         }
       },
       "cta": {
@@ -884,20 +1107,12 @@
       "description": "Giải pháp vận chuyển tối ưu chi phí cho các đơn hàng không gấp. Phù hợp cho hàng hóa số lượng lớn, hàng cồng kềnh, giao hàng theo lịch.",
       "heroStats": {
         "stat1": {
-          "value": "30%",
-          "label": "Tiết kiệm"
-        },
-        "stat2": {
-          "value": "3-5",
+          "value": "3-7",
           "label": "Ngày giao"
         },
-        "stat3": {
-          "value": "50kg",
-          "label": "Tối đa/kiện"
-        },
-        "stat4": {
-          "value": "24/7",
-          "label": "Hỗ trợ"
+        "stat2": {
+          "value": "70%",
+          "label": "Tiết kiệm hơn"
         }
       },
       "features": {
@@ -930,7 +1145,7 @@
         }
       },
       "comparison": {
-        "title": "So sánh với Chuyển phát nhanh",
+        "title": "So sánh các gói dịch vụ",
         "headers": {
           "feature": "Đặc điểm",
           "express": "Nhanh",
@@ -940,27 +1155,27 @@
           "row1": {
             "feature": "Thời gian giao",
             "express": "24-48h",
-            "economy": "3-5 ngày"
+            "economy": "3-7 ngày"
           },
           "row2": {
-            "feature": "Chi phí",
-            "express": "Cao hơn",
-            "economy": "Thấp hơn 30%"
+            "feature": "Giá cước",
+            "express": "Chuẩn",
+            "economy": "Tiết kiệm 70%"
           },
           "row3": {
-            "feature": "Cân nặng tối đa",
-            "express": "30kg",
-            "economy": "50kg"
+            "feature": "Thu hộ COD",
+            "express": "checkmark",
+            "economy": "checkmark"
           },
           "row4": {
-            "feature": "Thu hộ COD",
-            "express": "Có",
-            "economy": "Có"
+            "feature": "Bảo hiểm",
+            "express": "checkmark",
+            "economy": "checkmark"
           },
           "row5": {
-            "feature": "Bảo hiểm",
-            "express": "100%",
-            "economy": "100%"
+            "feature": "Phù hợp với",
+            "express": "Hàng gấp, giá trị cao",
+            "economy": "Hàng số lượng lớn"
           }
         }
       },
@@ -971,17 +1186,17 @@
           "sameCity": {
             "title": "Nội thành",
             "price": "Từ 12.000đ",
-            "time": "1-2 ngày"
+            "time": "2-3 ngày"
           },
           "nearProvince": {
             "title": "Liền kề",
             "price": "Từ 18.000đ",
-            "time": "2-3 ngày"
+            "time": "3-4 ngày"
           },
           "farProvince": {
             "title": "Liên tỉnh",
             "price": "Từ 25.000đ",
-            "time": "3-5 ngày"
+            "time": "4-7 ngày"
           }
         }
       },
@@ -1013,7 +1228,7 @@
           "label": "Ngày giao"
         },
         "stat2": {
-          "value": "63",
+          "value": "34",
           "label": "Tỉnh thành"
         },
         "stat3": {
@@ -1149,7 +1364,7 @@
         "steps": {
           "step1": {
             "title": "Đặt đơn trước 9h30",
-            "description": "Tạo đơn qua App, Website hoặc gọi hotline 1900 6463"
+            "description": "Tạo đơn qua App, Website hoặc gọi hotline 1900 0112"
           },
           "step2": {
             "title": "Lấy hàng nhanh",
@@ -1199,8 +1414,8 @@
       },
       "cta": {
         "title": "Gửi hàng khẩn cấp ngay",
-        "description": "Liên hệ hotline 1900 6463 để được hỗ trợ nhanh nhất",
-        "button": "Gọi ngay 1900 6463",
+        "description": "Liên hệ hotline 1900 0112 để được hỗ trợ nhanh nhất",
+        "button": "Gọi ngay 1900 0112",
         "buttonSecondary": "Tạo đơn hàng"
       }
     }
@@ -1228,7 +1443,7 @@
       "east": "Bình Dương & Miền Đông Tây Nguyên"
     },
     "cta": {
-      "question": "Chúng tôi giao hàng toàn cầu. Bạn đã sẵn sàng giao hàng cùng chúng tôi chưa?",
+      "question": "Đối tác vận chuyển tin cậy cho doanh nghiệp của bạn. Sẵn sàng phát triển cùng NETCO?",
       "sendPackage": "GỬI GÓI HÀNG CỦA BẠN"
     },
     "connect": "KẾT NỐI VỚI CHÚNG TÔI",

@@ -125,8 +125,8 @@ export default function OtherPage() {
                   variant="outline"
                   className="border-green-primary text-green-primary hover:bg-green-50"
                 >
-                  <Link href={`/${locale}/tracking`}>
-                    {locale === "vi" ? "Tra cứu vận đơn" : "Track Order"}
+                  <Link href={`/${locale}/tracking/calculator`}>
+                    {locale === "vi" ? "Ước tính cước phí" : "Calculate Shipping"}
                   </Link>
                 </Button>
               </div>

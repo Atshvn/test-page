@@ -39,11 +39,12 @@ export default function CTA() {
               {t("description")}
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            {/* Main Action Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-4">
               <Button
                 asChild
                 size="lg"
-                className="bg-red-500 hover:bg-red-600 text-white px-8 py-6.5 text-lg "
+                className="bg-red-500 hover:bg-red-600 text-white px-8 py-6 text-lg"
               >
                 <Link href={`/${locale}/contact`}>
                   {t("getStarted")}
@@ -54,9 +55,33 @@ export default function CTA() {
                 asChild
                 size="lg"
                 variant="outline"
-                className="border-white hover:bg-white hover:text-green-dark px-8 py-6 text-lg"
+                className="border-white text-green-dark hover:bg-white hover:text-green-dark px-8 py-6 text-lg"
               >
                 <Link href={`/${locale}/about`}>{t("learnMore")}</Link>
+              </Button>
+            </div>
+
+            {/* Secondary Action Buttons */}
+            <div className="flex flex-col sm:flex-row gap-3 justify-center">
+              <Button
+                asChild
+                size="default"
+                variant="ghost"
+                className="text-white hover:bg-white/10 border border-white/30"
+              >
+                <Link href={`/${locale}/contact/post-offices`}>
+                  {locale === "vi" ? "Hệ thống bưu cục" : "Post Office Network"}
+                </Link>
+              </Button>
+              <Button
+                asChild
+                size="default"
+                variant="ghost"
+                className="text-white hover:bg-white/10 border border-white/30"
+              >
+                <Link href={`/${locale}/tracking/calculator`}>
+                  {locale === "vi" ? "Ước tính cước phí" : "Calculate Shipping"}
+                </Link>
               </Button>
             </div>
           </motion.div>

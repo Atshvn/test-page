@@ -76,20 +76,6 @@ export default function ServicesPage() {
     },
     {
       number: "03",
-      title: servicesT("list.warehousing.title"),
-      description: servicesT("list.warehousing.description"),
-      image: "/service-icon/warehorse.png",
-      badge: t("warehousing.badge"),
-      features: [
-        t("warehousing.features.feature1"),
-        t("warehousing.features.feature2"),
-        t("warehousing.features.feature3"),
-        t("warehousing.features.feature4"),
-      ],
-      link: "/services/warehousing",
-    },
-    {
-      number: "04",
       title: servicesT("list.installation.title"),
       description: servicesT("list.installation.description"),
       image: "/service-icon/maintain.png",
@@ -103,7 +89,7 @@ export default function ServicesPage() {
       link: "/services/installation",
     },
     {
-      number: "05",
+      number: "04",
       title: servicesT("list.other.title"),
       description: servicesT("list.other.description"),
       image: "/service-icon/other.png",
